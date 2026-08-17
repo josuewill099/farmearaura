@@ -1,0 +1,201 @@
+{
+"code":"es-AR","lang":"es-AR","path":"/","region":"Argentina","isDefault":true,
+"app":{
+ "title":"Calculadora de Puntos de Aura — farmearaura.com",
+ "desc":"Calculá tus puntos de aura en 7 preguntas y compartí tu tarjeta. Modo Gamer, Colegio y Joda.",
+ "tag1":"7 situaciones. Un número.","tag2":"Tu aura real, sin filtros.",
+ "nameLabel":"Tu nombre o @","fine1":"Sin cuenta. Sin fotos. Sin guardar nada.","fine2":"Todo pasa adentro de tu celular.",
+ "guideLink":"¿Qué es farmear aura?","guideHref":"/que-es-farmear-aura/",
+ "shareText":"Saqué {score} puntos de aura. Calculá la tuya en farmearaura.com",
+ "cardTagline":"Calculá la tuya en 7 preguntas"
+},
+"modes":{
+ "gamer":{"ic":"🎮","name":"MODO GAMER","desc":"Ranked, randoms y clutches"},
+ "escuela":{"ic":"🎒","name":"MODO COLEGIO","desc":"Pasillos, pruebas y exposiciones"},
+ "fiesta":{"ic":"🍹","name":"MODO JODA Y CRUSH","desc":"Mensajes a las 2 am y otros crímenes"}
+},
+"tiers":[
+ [400000,"S","GRANJERO SUPREMO","Tu presencia entra al lugar antes que vos.","#FFC53D"],
+ [250000,"A","AURA IMPARABLE","La gente cuenta anécdotas tuyas que ni te acordás.","#FFC53D"],
+ [120000,"B","AURA ESTABLE","Sólido. Nadie te va a hacer un video.","#00F0FF"],
+ [0,"C","AURA EN PRÁCTICA","Vas bien. Solo evitá explicar tus chistes.","#B026FF"],
+ [-120000,"D","AURA EN ROJO","Recuperable. Empezá por no mandar dobles mensajes.","#FF2E5B"],
+ [-9000000000,"F","BANCARROTA DE AURA","Necesitás agarrar un vaso en el aire urgente.","#FF2E5B"]
+],
+"questions":{
+"gamer":[
+{"q":"Quedás 1v4 en el último round con 12 de vida.","a":[
+ {"t":"Ganás el clutch y no decís nada en el chat de voz","v":90000,"r":"Silencio total. <b>Eso es aura pura.</b>"},
+ {"t":"Ganás y escribís \"ez\"","v":-10000,"r":"Ganaste el round, perdiste el respeto."},
+ {"t":"Te morís al primer tiro","v":-30000,"r":"Alguien ya subió el clip."}]},
+{"q":"Te gritan para bajar a comer justo cuando arranca la ranked.","a":[
+ {"t":"\"Ya voy\" y seguís jugando 40 minutos","v":-20000,"r":"La comida fría también resta."},
+ {"t":"Pausás, bajás, comés y volvés","v":30000,"r":"Disciplina. Nadie se la espera de un gamer."},
+ {"t":"Contestás mal y después perdés la partida","v":-60000,"r":"Karma instantáneo."}]},
+{"q":"Un random de tu equipo te insulta en el chat de voz.","a":[
+ {"t":"Lo silenciás y hacés la mejor partida de tu vida","v":95000,"r":"<b>Modo dios.</b> No contestar es la respuesta."},
+ {"t":"Le contestás 20 mensajes seguidos","v":-25000,"r":"Escribir párrafos nunca dio aura."},
+ {"t":"Te salís de la partida","v":-40000,"r":"Rendirse sale caro."}]},
+{"q":"Le enseñás a jugar a alguien que nunca agarró un joystick.","a":[
+ {"t":"Lo dejás ganar y te hacés el sorprendido","v":55000,"r":"Aura silenciosa. La mejor clase."},
+ {"t":"Le explicás los controles con paciencia","v":35000,"r":"Correcto, pero no lo va a grabar nadie."},
+ {"t":"Le ganás 10-0 sin piedad","v":-15000,"r":"Le ganaste a alguien que no sabía qué botón era."}]},
+{"q":"Se te corta el internet en medio de una partida importante.","a":[
+ {"t":"Reiniciás el router y volvés en 40 segundos","v":50000,"r":"Técnico certificado por la calle."},
+ {"t":"Aceptás la derrota en silencio","v":15000,"r":"Tranquilo. Sin drama."},
+ {"t":"Culpás al internet en el grupo por tres días","v":-25000,"r":"Ya saben todos que fuiste vos."}]},
+{"q":"Alguien en el lobby te dice que tenés una skin fea.","a":[
+ {"t":"\"Es la default, flaco\" y ganás la partida","v":80000,"r":"<b>Ganar con la default</b> es el nivel más alto."},
+ {"t":"Le mandás captura de cuánto te salió","v":-20000,"r":"Explicar el precio te bajó el precio."},
+ {"t":"Te cambiás de skin al toque","v":-35000,"r":"Te editaron la personalidad en vivo."}]},
+{"q":"Hacés una jugada imposible sin querer y todos creen que fue a propósito.","a":[
+ {"t":"No decís nada y asentís","v":100000,"r":"<b>Acá nace la leyenda.</b>"},
+ {"t":"Confesás que fue suerte","v":20000,"r":"Honesto. Caro, pero honesto."},
+ {"t":"Decís \"obvio, lo practiqué\"","v":-15000,"r":"No te creyó nadie."}]},
+{"q":"Llevás 3 horas jugando y te acordás de que la tarea es para mañana.","a":[
+ {"t":"Cerrás todo y la hacés","v":40000,"r":"Aura de persona funcional. Rara y valiosa."},
+ {"t":"Jugás \"una más\" hasta las 2 de la mañana","v":-25000,"r":"Nunca fue una más."},
+ {"t":"Pedís las respuestas al grupo a las 6 am","v":-5000,"r":"Sobreviviste. Sin gloria."}]},
+{"q":"Tu amigo quiere jugar al juego que odiás.","a":[
+ {"t":"Jugás igual y hasta te divertís","v":45000,"r":"Amistad: +1. Aura: también."},
+ {"t":"Te quejás toda la partida","v":-20000,"r":"Nadie quiere ese compañero."},
+ {"t":"Inventás que no tenés internet","v":-30000,"r":"Te vio en línea. Obvio."}]}
+],
+"escuela":[
+{"q":"Te tropezás subiendo la escalera. Se da vuelta todo el pasillo.","a":[
+ {"t":"Te levantás y seguís como si nada, sin mirar a nadie","v":45000,"r":"<b>No mirar atrás</b> vale más que no caerse."},
+ {"t":"Te reís fuerte y decís \"estoy bien\"","v":-5000,"r":"No preguntó nadie."},
+ {"t":"Te quedás en el piso tres segundos de más","v":-35000,"r":"Esos tres segundos ya son un video."}]},
+{"q":"El profe te pregunta algo y estabas en cualquiera.","a":[
+ {"t":"Contestás cualquier cosa con total seguridad… y acertás","v":95000,"r":"<b>Nadie va a saber nunca lo que pasó.</b>"},
+ {"t":"\"¿Puede repetir la pregunta?\" con voz tranquila","v":25000,"r":"Elegante. Ganaste 4 segundos."},
+ {"t":"Mirás a tu compañero con cara de auxilio","v":-20000,"r":"El profe también miró."}]},
+{"q":"Saludás con la mano a alguien… que saludaba al de atrás tuyo.","a":[
+ {"t":"Convertís el saludo en un estiramiento de brazo","v":60000,"r":"<b>Recuperación de nivel profesional.</b>"},
+ {"t":"Saludás igual y decís \"hola\"","v":10000,"r":"Valiente. Incómodo, pero valiente."},
+ {"t":"Bajás la mano despacio mirando el piso","v":-50000,"r":"Clásico. Doloroso. Caro."}]},
+{"q":"Te toca exponer y se cae la presentación.","a":[
+ {"t":"Exponés de memoria, sin diapositivas","v":100000,"r":"<b>Te respetó el curso entero.</b>"},
+ {"t":"Leés del celu temblando","v":-10000,"r":"Se notó. Pero terminaste."},
+ {"t":"Pedís cambiar de día","v":-25000,"r":"Solo pateaste la vergüenza para adelante."}]},
+{"q":"Alguien dice tu apodo del año pasado adelante de tus amigos nuevos.","a":[
+ {"t":"Lo repetís vos primero y te reís","v":50000,"r":"Le sacaste el arma en un segundo."},
+ {"t":"Le contestás con el apodo de esa persona","v":15000,"r":"Empate. Acá no ganó aura nadie."},
+ {"t":"Te ponés colorado y cambiás de tema","v":-20000,"r":"Volviste a tener ese apodo."}]},
+{"q":"Es el examen y terminás en 15 minutos.","a":[
+ {"t":"Entregás primero y salís caminando lento","v":70000,"r":"<b>La salida lenta es la parte importante.</b>"},
+ {"t":"Te quedás hasta el final revisando","v":15000,"r":"Inteligente. Invisible."},
+ {"t":"Entregás primero y volvés porque te faltó una hoja","v":-55000,"r":"La salida épica duró 11 segundos."}]},
+{"q":"Te sentás y la silla hace un ruido… muy específico.","a":[
+ {"t":"Mirás la silla con cara de decepción","v":55000,"r":"<b>Le echaste la culpa al mueble y funcionó.</b>"},
+ {"t":"No reaccionás para nada","v":20000,"r":"Frío. Efectivo."},
+ {"t":"Decís \"fue la silla\" tres veces","v":-40000,"r":"A la tercera ya no te creía nadie."}]},
+{"q":"Primer día en un curso nuevo. No se sienta nadie con vos.","a":[
+ {"t":"Le hablás primero a alguien","v":55000,"r":"Eso necesita más aura que cualquier clutch."},
+ {"t":"Ponés tus cosas y te ponés los auriculares, tranquilo","v":35000,"r":"Aura de misterio. Funciona."},
+ {"t":"Hacés que escribís algo importante en el celu","v":-10000,"r":"Estabas mirando la hora. Nos pasa a todos."}]},
+{"q":"Te devuelven la prueba y sacaste la nota más alta del curso.","a":[
+ {"t":"Doblás la hoja y la guardás sin decir nada","v":85000,"r":"<b>Ganar en silencio.</b> Nivel máximo."},
+ {"t":"Subís la foto al estado","v":-15000,"r":"Necesitabas testigos. Ahí se fue."},
+ {"t":"Preguntás fuerte \"¿y vos cuánto sacaste?\"","v":-30000,"r":"Todos entendieron perfectamente qué estabas haciendo."}]}
+],
+"fiesta":[
+{"q":"Le escribís a tu crush. Aparece \"escribiendo…\" y se corta. Tres veces.","a":[
+ {"t":"Bloqueás el celu y te vas a dormir","v":70000,"r":"<b>Bancársela es aura.</b>"},
+ {"t":"Mandás \"?\"","v":-35000,"r":"Ese signo te salió carísimo."},
+ {"t":"Mandás tres mensajes más explicando el primero","v":-70000,"r":"Cada mensaje fue un retiro de tu cuenta."}]},
+{"q":"Llegás a la joda y no conocés absolutamente a nadie.","a":[
+ {"t":"Vas derecho a la cocina y hablás con el que esté ahí","v":60000,"r":"<b>La cocina siempre fue el lugar.</b>"},
+ {"t":"Te vas a los 10 minutos sin saludar a nadie","v":20000,"r":"Irse sin avisar tiene su propia aura."},
+ {"t":"Te quedás en un rincón con el celular","v":-25000,"r":"No te vio nadie. Ese es el tema."}]},
+{"q":"Se te cae un vaso y lo agarrás antes de que toque el piso.","a":[
+ {"t":"Lo agarrás y seguís hablando sin mirar","v":120000,"r":"<b>+120.000. La jugada más cara del juego.</b>"},
+ {"t":"Lo agarrás y gritás \"¡la agarré!\"","v":25000,"r":"Lo lograste y lo arruinaste al mismo tiempo."},
+ {"t":"Lo agarrás pero se te vuelca todo encima","v":-30000,"r":"Técnicamente lo agarraste."}]},
+{"q":"Suena tu tema favorito y no lo conoce nadie.","a":[
+ {"t":"Lo cantás entero igual","v":50000,"r":"Confianza sin público. Vale doble."},
+ {"t":"Explicás de qué disco es y de qué año","v":-20000,"r":"Nadie preguntó el año."},
+ {"t":"Cambiás el tema vos mismo","v":-15000,"r":"Te rendiste con tu propia canción."}]},
+{"q":"Alguien te pregunta qué te gusta hacer.","a":[
+ {"t":"Contestás en una frase y devolvés la pregunta","v":45000,"r":"Conversación desbloqueada."},
+ {"t":"Hablás seis minutos sin parar","v":-25000,"r":"Ya no te escuchaba desde el minuto dos."},
+ {"t":"Decís \"nada\" y se muere la charla","v":-35000,"r":"Ocho segundos de silencio. Legendario, pero en rojo."}]},
+{"q":"Le mandaste mensaje a tu crush a las 2 de la mañana. Ya amaneció.","a":[
+ {"t":"Lo dejás ahí. Sin borrar. Sin explicar.","v":75000,"r":"<b>Bancarte el mensaje es lo máximo.</b>"},
+ {"t":"Borrás el mensaje (ya lo había visto)","v":-45000,"r":"\"Se eliminó este mensaje\" dice más que el mensaje."},
+ {"t":"Decís que te hackearon","v":-60000,"r":"Nadie hackea para escribir eso."}]},
+{"q":"Te sacan a bailar y no sabés bailar.","a":[
+ {"t":"Bailás horrible pero con toda la confianza","v":90000,"r":"<b>La confianza le gana a la técnica siempre.</b>"},
+ {"t":"Decís que no y te quedás mirando","v":-20000,"r":"El aura se quedó sentada con vos."},
+ {"t":"Inventás que te duele el pie","v":-30000,"r":"Renqueaste toda la noche por coherencia."}]},
+{"q":"Ves a alguien del cole en el súper, con la familia.","a":[
+ {"t":"Saludás normal","v":35000,"r":"Normal es más difícil de lo que suena."},
+ {"t":"Los dos se hacen los distraídos","v":-5000,"r":"Acuerdo mutuo. Cero aura, cero pérdida."},
+ {"t":"Te escondés en la góndola de los cereales","v":-40000,"r":"Te vio. Te vio escondiéndote."}]},
+{"q":"Foto grupal. Salís con los ojos cerrados y es la que suben.","a":[
+ {"t":"No decís nada","v":30000,"r":"Dejarla ahí es un acto de poder."},
+ {"t":"Pedís que la borren","v":-30000,"r":"Ahora la fueron a ver todos."},
+ {"t":"Pedís repetirla ocho veces","v":-50000,"r":"La octava salió peor."}]}
+]},
+"guide":{
+ "slug":"que-es-farmear-aura",
+ "headTerm":"farmear aura",
+ "title":"Qué es farmear aura: significado, origen y reglas | farmearaura.com",
+ "desc":"Farmear aura significa juntar puntos imaginarios de carisma sin esfuerzo. El significado, de dónde viene el término, cuánto vale cada situación y las reglas del aura farming.",
+ "h1":"Qué es farmear aura",
+ "answer":"<strong>Farmear aura</strong> significa juntar puntos imaginarios de carisma haciendo cosas que quedan bien sin esfuerzo: mantener la calma, no dar explicaciones y no buscar la reacción de nadie. Los puntos no existen y no los cuenta nadie, pero la regla social de atrás sí es real.",
+ "headings":["De dónde viene el término","Cómo funcionan los puntos de aura","Las 7 reglas para farmear aura","Lo que te saca aura","Glosario","Preguntas frecuentes"],
+ "origin":[
+  "La expresión junta dos palabras de mundos distintos. <strong>Farmear</strong> viene de los videojuegos: repetir una acción muchas veces para juntar recursos, experiencia u objetos. <strong>Aura</strong> se usa acá como sinónimo de presencia, de lo que transmite alguien cuando entra a un lugar. Farmear aura es, entonces, juntar presencia a propósito.",
+  "El término ya circulaba en comunidades de gaming y anime, pero explotó a mediados de 2025 con un video muy concreto: un nene indonesio de 11 años llamado <strong>Rayyan Arkan Dikha</strong>, con lentes negros y ropa tradicional, bailando en la punta de una canoa mientras su equipo remaba.",
+  "El video no era un reto de TikTok. Dikha estaba cumpliendo un rol real dentro del <strong>Pacu Jalur</strong>, una regata tradicional de la provincia de Riau que se corre desde hace siglos. Su función se llama <em>Togak Luan</em>: el bailarín que se para en la proa para animar a los remeros, un puesto que suelen ocupar chicos porque exige un equilibrio enorme. Dikha le contó a la BBC que los movimientos se le ocurrieron de forma espontánea, y meses después lo nombraron embajador turístico de su provincia.",
+  "Ese contraste es lo que definió el término: alguien haciendo algo difícil con cara de que no le cuesta nada, sin mirar a la cámara. Esa es la definición práctica del aura farming."
+ ],
+ "pointsIntro":"No existe una escala oficial. La convención es usar <strong>números redondos y exagerados</strong>, porque el tamaño de la cifra es parte del chiste: nadie dice \"+12 de aura\", se dice \"+50.000\". Los puntos se reparten en comentarios, en grupos de WhatsApp o entre amigos, siempre después del hecho.",
+ "ledger":[
+  ["Agarrar un vaso antes de que toque el piso y seguir hablando","+50.000","up"],
+  ["Contestar bien una pregunta sin haber estado prestando atención","+25.000","up"],
+  ["Sacar la mejor nota y guardar la hoja sin decir nada","+15.000","up"],
+  ["Saludar a alguien que saludaba al de atrás tuyo","−10.000","down"],
+  ["Mandar tres mensajes seguidos explicando el primero","−25.000","down"],
+  ["Borrar un mensaje que la otra persona ya vio","−45.000","down"]
+ ],
+ "pointsOutro":"Cuando el total queda abajo de cero se habla de <strong>aura negativa</strong>, y si es muy bajo, de <strong>bancarrota de aura</strong>. Es humor entre amigos: nadie lleva la cuenta en serio.",
+ "rulesIntro":"Aunque suene a chiste, el meme codifica reglas sociales bastante reconocibles. Estas son las que se repiten en casi todos los videos:",
+ "rules":[
+  ["No expliques lo que hiciste.","Explicar una acción buena la anula. Si la tenés que contar, ya no cuenta."],
+  ["Reaccioná tarde.","La calma se lee como control. Contestar al toque se lee como nervios."],
+  ["Nunca pidas la reacción.","Darte vuelta a ver si alguien te vio cancela todo el aura de la acción."],
+  ["Ganar en silencio vale más que ganar con anuncio.","Esta es la regla central del meme."],
+  ["La recuperación vale más que no caerse.","Tropezarte y seguir caminando sin mirar atrás da más aura que no haberte tropezado."],
+  ["Hacer algo por alguien sin testigos.","El aura sube cuando la acción no tenía público."],
+  ["Si decís \"eso fue aura\", perdiste el aura.","Nombrarlo lo destruye. Es la única regla absoluta."]
+ ],
+ "loseIntro":"El aura negativa es la mitad divertida del meme, y casi siempre se reduce a lo mismo: <strong>necesitar que los demás te confirmen algo</strong>. Los casos más citados:",
+ "lose":["Repetir un chiste que no escuchó nadie.","Explicar por qué tu chiste era bueno.","Escribir \"?\" cuando no te contestan.","Decir cuánto te salió algo sin que te pregunten.","Pedir que borren una foto (todos la van a ir a ver).","Poner una excusa que no te pidió nadie."],
+ "glossary":[
+  ["farmear aura / aura farming","Juntar carisma a propósito con acciones que parecen no costar esfuerzo."],
+  ["puntos de aura / aura points","Unidad ficticia para medir una acción. Siempre en cifras redondas y exageradas."],
+  ["aura negativa","Total acumulado abajo de cero después de un momento de vergüenza."],
+  ["bancarrota de aura","Aura negativa extrema. Se usa cuando alguien encadena varios errores seguidos."],
+  ["aura farming kid","Apodo con el que se conoce en internet a Rayyan Arkan Dikha, el nene de la canoa."],
+  ["edits de aura","Videos cortos que le ponen música épica a un momento cotidiano o a una escena de anime. Los personajes que se mueven poco y con calma —Piccolo es de los más buscados— son el formato favorito del género."]
+ ],
+ "faq":[
+  ["¿Qué significa farmear aura?","Significa juntar puntos imaginarios de carisma haciendo cosas que quedan bien sin esfuerzo: mantener la calma, no dar explicaciones y no buscar la reacción de nadie. Mezcla <em>farmear</em>, que en videojuegos es juntar recursos repitiendo una acción, con <em>aura</em>, entendida como la presencia de una persona."],
+  ["¿Qué es el aura farming?","Es la forma en inglés del mismo término, y la que se usa en TikTok en todo el mundo. Describe el acto de proyectar seguridad de manera deliberada pero aparentemente casual."],
+  ["¿Qué significa aura en TikTok?","En TikTok, aura no se refiere al campo energético del esoterismo, sino al carisma o la presencia social de alguien. Se usa como puntaje: una persona gana o pierde aura según lo bien o mal que quede en una situación."],
+  ["¿Cómo se farmea aura en la vida real?","No expliques lo que hiciste, reaccioná tarde y con calma, no pidas la reacción de nadie, ganá en silencio y recuperate bien cuando algo sale mal. La regla principal es que anunciar que estás farmeando aura te saca todo el aura."],
+  ["¿Qué son los puntos de aura o aura points?","Una unidad ficticia para medir el carisma de una acción. No hay escala oficial: la convención es usar números redondos y exagerados, como +1.000 por una buena respuesta o −50.000 por un momento de vergüenza."],
+  ["¿Se puede tener aura negativa?","Sí. Se asigna en broma cuando alguien pasa vergüenza o insiste demasiado con algo. Cuando el total es muy bajo se habla de bancarrota de aura. Es humor, no un juicio sobre la persona."],
+  ["¿Quién es el nene del barco del aura farming?","Rayyan Arkan Dikha, un chico indonesio de 11 años de la regencia de Kuantan Singingi, en Riau. Su rol en la regata Pacu Jalur era el de Togak Luan: el bailarín de la proa que anima a los remeros. Le contó a la BBC que inventó los movimientos de forma espontánea, y después lo nombraron embajador turístico de su provincia."],
+  ["¿Farmear aura tiene que ver con los colores del aura?","No. Son dos usos distintos de la misma palabra. El aura del esoterismo se refiere a un supuesto campo energético con colores y significados. El aura de TikTok es una metáfora del carisma y funciona como puntaje de broma, sin relación con creencias espirituales."],
+  ["¿Qué es la calculadora de puntos de aura?","Es un test gratis de siete situaciones que te da un puntaje total de aura y genera una tarjeta para compartir. Funciona en el navegador, no pide cuenta ni fotos y no guarda datos."]
+ ],
+ "promoK":"¿Y vos cuánta aura tenés?",
+ "promoP":"Siete situaciones. Un número. Sin cuenta, sin fotos, sin guardar nada.",
+ "promoBtn":"CALCULAR MIS PUNTOS DE AURA",
+ "ctaNav":"CALCULAR MI AURA",
+ "footerNote":"farmearaura.com — contenido de humor. Los puntos de aura no existen."
+}
+}

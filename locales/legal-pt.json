@@ -1,0 +1,119 @@
+{
+"lang":"pt","base":"/br/legal/","homeLabel":"Início","updated":"Última atualização: agosto de 2026",
+"navLabel":"Legal","sourcesH":"Fontes",
+"pages":{
+"privacidade":{
+ "slug":"privacidade",
+ "title":"Política de Privacidade | farmearaura.com",
+ "desc":"farmearaura.com não coleta dados pessoais. O teste funciona inteiramente no seu navegador e nada do que você digita sai do seu aparelho.",
+ "h1":"Política de Privacidade",
+ "lead":"<strong>Este site não coleta dados pessoais.</strong> Não tem conta, não tem formulário, não tem analytics e não existe banco de dados onde guardar nada. Tudo o que acontece no teste acontece dentro do seu navegador.",
+ "sections":[
+  ["Quem é o responsável",[
+   "Responsável pelo site: <strong>[SEU NOME OU RAZÃO SOCIAL]</strong>, [PAÍS].",
+   "E-mail de contato: <a href=\"mailto:contato@farmearaura.com\">contato@farmearaura.com</a>."
+  ]],
+  ["Quais dados são tratados",[
+   "Quando você faz o teste, as respostas que escolhe e o nome ou @ que digita servem apenas para calcular sua pontuação e desenhar seu card. Esse processamento acontece no seu próprio aparelho:",
+   {"ul":[
+    "Não são enviados para nenhum servidor.",
+    "Não são gravados em cookies nem no armazenamento do navegador.",
+    "Somem assim que você fecha ou recarrega a página."
+   ]},
+   "O site não aceita envio de fotos. O avatar do card é um emoji escolhido de uma lista."
+  ]],
+  ["O card que você compartilha",[
+   "A imagem do seu card é gerada no seu aparelho e não sobe para lugar nenhum. Se você usar o botão de compartilhar, o seu sistema operacional entrega essa imagem para o aplicativo que você escolher (TikTok, Instagram, WhatsApp ou outro). A partir daí vale a política de privacidade daquele aplicativo, não a nossa."
+  ]],
+  ["Terceiros",[
+   "Mesmo sem coletar dados, carregar qualquer página faz o seu aparelho se comunicar com quem a entrega. Neste caso:",
+   {"ul":[
+    "<strong>Cloudflare Pages</strong> hospeda e entrega o site. Como qualquer servidor, processa o seu endereço IP para conseguir responder à requisição e por segurança.",
+    "<strong>Google Fonts</strong> entrega as fontes tipográficas. Isso faz com que o seu endereço IP chegue ao Google ao carregar a página."
+   ]},
+   "Estamos migrando as fontes para hospedagem própria justamente para eliminar essa segunda conexão. Quando terminar, esta página será atualizada."
+  ]],
+  ["Crianças e adolescentes",[
+   "Boa parte de quem visita este site é adolescente. Por isso o site foi feito para não precisar de dado nenhum: não pede idade, nem nome real, nem e-mail, nem foto, e não há como se cadastrar.",
+   "Se você é mãe, pai ou responsável e tem qualquer dúvida sobre como o site funciona, escreva que a gente responde."
+  ]],
+  ["Seus direitos",[
+   "A LGPD garante o direito de acessar, corrigir e excluir seus dados pessoais. Aqui não há o que acessar, corrigir ou excluir, porque nada é armazenado. Ainda assim, se você tiver alguma dúvida ou pedido, pode escrever que respondemos."
+  ]],
+  ["Mudanças nesta política",[
+   "Se no futuro adicionarmos analytics, publicidade ou qualquer função que envolva coleta de dados, esta página será atualizada antes de a função entrar no ar, e a data no topo vai deixar isso claro."
+  ]]
+ ]},
+"cookies":{
+ "slug":"cookies",
+ "title":"Política de Cookies | farmearaura.com",
+ "desc":"farmearaura.com não usa cookies de análise, publicidade ou rastreamento. Explicamos o que é carregado ao visitar o site e como controlar isso.",
+ "h1":"Política de Cookies",
+ "lead":"<strong>Este site não usa cookies de análise, de publicidade nem de rastreamento.</strong> Não existe banner de consentimento porque não há o que consentir.",
+ "sections":[
+  ["O que é um cookie",[
+   "Cookie é um arquivinho que um site guarda no seu navegador para lembrar de alguma coisa entre visitas: que você fez login, qual idioma prefere ou, muito frequentemente, quais páginas você visitou para te mostrar anúncio depois."
+  ]],
+  ["O que este site usa",[
+   "Nenhum cookie próprio. Também não usamos <em>localStorage</em> nem <em>sessionStorage</em>: sua pontuação e seu nome ficam na memória da página e somem quando você recarrega.",
+   "O provedor que hospeda o site pode, em certas situações, definir um cookie estritamente necessário por segurança (por exemplo, para distinguir tráfego automatizado). Esse tipo de cookie não serve para traçar perfil nem para publicidade."
+  ]],
+  ["Como controlar mesmo assim",[
+   "Todo navegador permite ver, bloquear e apagar cookies nas configurações de privacidade. Bloquear tudo não atrapalha o funcionamento deste site, porque ele não depende disso."
+  ]],
+  ["Se isso mudar",[
+   "Se um dia adicionarmos analytics ou publicidade, vai aparecer um aviso de consentimento de verdade — com opção de recusar — antes de qualquer coisa carregar, e esta página será atualizada detalhando cada cookie."
+  ]]
+ ]},
+"sobre":{
+ "slug":"sobre",
+ "title":"Sobre o site | farmearaura.com",
+ "desc":"O que é o farmearaura.com, como o conteúdo é escrito e por que o teste não mede absolutamente nada de verdade.",
+ "h1":"Sobre o site",
+ "lead":"farmearaura.com é uma calculadora de pontos de aura e um guia de referência sobre <em>farmar aura</em>, o meme que em 2025 saiu do TikTok e entrou na linguagem do dia a dia.",
+ "sections":[
+  ["O que fazemos",[
+   "Duas coisas. A primeira é um teste de sete situações do cotidiano que devolve uma pontuação e um card para compartilhar. A segunda é um guia que explica de onde veio o termo, como funciona o sistema de pontos, o que é o campeonato de farmar aura e o que significam as expressões em volta.",
+   "O teste existe porque é divertido. O guia existe porque quem procura o que significa <em>farmar aura</em> encontra quase só textos copiados uns dos outros, sem citar de onde tiraram nada."
+  ]],
+  ["Como o conteúdo é escrito",[
+   {"ul":[
+    "Verificamos a origem do meme em fontes primárias e veículos reconhecidos, e citamos no fim do guia.",
+    "Separamos o que é documentado do que é convenção da internet. Se não existe escala oficial de pontos, a gente diz isso em vez de inventar uma.",
+    "Corrigimos. Se você achar um erro, escreva que a gente ajusta."
+   ]}
+  ]],
+  ["O que isto não é",[
+   "Não é teste de personalidade, não é ferramenta psicológica e não tem nada a ver com a aura do esoterismo ou com leitura de cores. Pontos de aura não existem: é piada de internet e este site trata como tal.",
+   "Um resultado baixo não diz nada sobre você. É uma piada com um número grande do lado."
+  ]],
+  ["Quem está por trás",[
+   "O site é mantido por <strong>[SEU NOME OU RAZÃO SOCIAL]</strong>, em [PAÍS]. Não é projeto de empresa de mídia nem tem redação: é um site pequeno, feito e atualizado por uma pessoa.",
+   "Pensou numa situação que deveria estar no teste? Manda para <a href=\"mailto:contato@farmearaura.com\">contato@farmearaura.com</a>."
+  ]]
+ ]},
+"contato":{
+ "slug":"contato",
+ "title":"Contato | farmearaura.com",
+ "desc":"Como falar com o farmearaura.com: correções, imprensa, sugestões de situações e dúvidas de privacidade.",
+ "h1":"Contato",
+ "lead":"Escreva para <strong><a href=\"mailto:contato@farmearaura.com\">contato@farmearaura.com</a></strong>. É o único canal e quem lê é uma pessoa.",
+ "sections":[
+  ["Para que você pode escrever",[
+   {"ul":[
+    "<strong>Correções.</strong> Se algo do guia está errado ou desatualizado, diga o quê e por quê.",
+    "<strong>Sugestões de situações.</strong> As melhores do teste vêm de quem viveu a situação.",
+    "<strong>Imprensa e parcerias.</strong>",
+    "<strong>Privacidade.</strong> Qualquer dúvida sobre como o site funciona, inclusive de mães, pais e responsáveis.",
+    "<strong>Remoção de conteúdo.</strong> Se você acha que algo publicado te afeta, conte o caso."
+   ]}
+  ]],
+  ["Por que não tem formulário",[
+   "Formulário de contato exige um servidor que receba e guarde o que você escreve. Como o resto do site não coleta nada, colocar um só para isso seria contraditório. Um e-mail direto faz o mesmo e ainda deixa a mensagem na sua caixa de enviados."
+  ]],
+  ["Tempo de resposta",[
+   "Normalmente alguns dias. É um projeto pequeno, não tem suporte 24 horas."
+  ]]
+ ]}
+}
+}
