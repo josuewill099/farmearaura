@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Calculadora de Puntos de Aura — farmearaura.com</title>
+<meta name="description" content="Calcula tus puntos de aura en 7 preguntas y comparte tu tarjeta. Modo Gamer, Escuela y Fiesta.">
+<meta name="theme-color" content="#0A0510">
+<meta property="og:title" content="Calculadora de Puntos de Aura">
+<meta property="og:description" content="7 preguntas. Un número. Tu aura real.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Chakra+Petch:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0A0510;
+  --ink:#150B22;
+  --panel:#1D1030;
+  --aura:#B026FF;
+  --cyan:#00F0FF;
+  --gold:#FFC53D;
+  --blood:#FF2E5B;
+  --bone:#EDE6F5;
+  --dim:#7B6A92;
+  --display:'Bungee',Impact,sans-serif;
+  --body:'Chakra Petch',sans-serif;
+  --data:'Share Tech Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  background:var(--void);
+  color:var(--bone);
+  font-family:var(--body);
+  overflow:hidden;
+  overscroll-behavior:none;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:60;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px);
+  mix-blend-mode:overlay;
+}
+body::after{
+  content:'';position:fixed;inset:-20%;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(60% 40% at 50% 0%,rgba(176,38,255,.30),transparent 70%),
+    radial-gradient(50% 35% at 15% 100%,rgba(0,240,255,.14),transparent 70%);
+  animation:drift 14s ease-in-out infinite alternate;
+}
+@keyframes drift{to{transform:translate3d(0,-3%,0) scale(1.08)}}
+
+#app{position:fixed;inset:0;display:flex;flex-direction:column;
+  max-width:520px;margin:0 auto;
+  padding:env(safe-area-inset-top) 20px env(safe-area-inset-bottom);}
+.screen{display:none;flex-direction:column;flex:1;min-height:0;animation:in .35s ease both}
+.screen.on{display:flex}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+
+/* ---------- INTRO ---------- */
+.brand{text-align:center;padding-top:min(9vh,70px)}
+.eyebrow{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.42em;
+  color:var(--cyan);text-transform:uppercase}
+.wordmark{font-family:var(--display);font-size:clamp(38px,12.5vw,60px);line-height:.92;margin-top:14px;
+  color:var(--bone);text-shadow:3px 0 0 var(--aura),-3px 0 0 var(--cyan);animation:chroma 5s steps(1) infinite}
+@keyframes chroma{
+  0%,88%{text-shadow:3px 0 0 var(--aura),-3px 0 0 var(--cyan)}
+  90%{text-shadow:-7px 2px 0 var(--blood),6px -2px 0 var(--cyan)}
+  92%{text-shadow:5px -3px 0 var(--gold),-4px 3px 0 var(--aura)}
+  94%{text-shadow:3px 0 0 var(--aura),-3px 0 0 var(--cyan)}
+}
+.sub{margin-top:16px;color:var(--dim);font-size:15px;line-height:1.5;letter-spacing:.01em}
+.sub b{color:var(--bone);font-weight:700}
+
+.namebox{margin-top:auto;padding-top:26px}
+.label{font-size:11px;letter-spacing:.3em;color:var(--dim);text-transform:uppercase;margin-bottom:9px;font-weight:700}
+input[type=text]{width:100%;background:var(--ink);border:2px solid #2E1A47;color:var(--bone);
+  font-family:var(--data);font-size:19px;letter-spacing:.06em;padding:15px 16px;border-radius:2px;outline:none}
+input[type=text]:focus{border-color:var(--aura);box-shadow:0 0 0 3px rgba(176,38,255,.2)}
+.emojis{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:12px}
+.emo{background:var(--ink);border:2px solid #2E1A47;border-radius:2px;font-size:21px;
+  padding:8px 0;cursor:pointer;line-height:1.2;transition:transform .12s,border-color .12s}
+.emo[aria-pressed=true]{border-color:var(--gold);background:#2A1B12;transform:scale(1.06)}
+
+.modes{margin:22px 0 20px;display:flex;flex-direction:column;gap:9px}
+.mode{display:flex;align-items:center;gap:13px;width:100%;text-align:left;cursor:pointer;
+  background:linear-gradient(100deg,var(--panel),var(--ink));border:2px solid #33204F;color:var(--bone);
+  padding:14px 16px;border-radius:3px;font-family:var(--body);transition:transform .12s,border-color .12s}
+.mode:active{transform:scale(.97)}
+.mode:hover{border-color:var(--aura)}
+.mode .ic{font-size:26px;filter:drop-shadow(0 0 10px rgba(176,38,255,.7))}
+.mode .t{font-family:var(--display);font-size:15px;letter-spacing:.01em}
+.mode .d{font-size:12px;color:var(--dim);margin-top:3px}
+.mode .go{margin-left:auto;font-family:var(--data);color:var(--cyan);font-size:20px}
+.fineprint{text-align:center;font-size:11px;color:#54476A;padding-bottom:12px;line-height:1.6}
+
+/* ---------- HUD ---------- */
+.hud{padding:14px 0 10px;position:relative}
+.hudtop{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;
+  letter-spacing:.24em;color:var(--dim);text-transform:uppercase;font-weight:700}
+.meter{font-family:var(--data);font-size:clamp(34px,11vw,50px);line-height:1;margin-top:4px;
+  font-variant-numeric:tabular-nums;transition:color .2s;color:var(--bone);text-align:center}
+.meter.pos{color:var(--gold);text-shadow:0 0 26px rgba(255,197,61,.75)}
+.meter.neg{color:var(--blood);text-shadow:0 0 26px rgba(255,46,91,.7)}
+.bars{display:flex;gap:4px;margin-top:11px}
+.bars i{flex:1;height:3px;background:#2A1A3E;border-radius:2px;transition:background .3s}
+.bars i.done{background:var(--cyan);box-shadow:0 0 8px rgba(0,240,255,.8)}
+.delta{position:absolute;left:50%;top:52px;transform:translateX(-50%);font-family:var(--display);
+  font-size:26px;pointer-events:none;opacity:0;white-space:nowrap;z-index:5}
+.delta.run{animation:pop 1.05s cubic-bezier(.2,.9,.3,1) both}
+@keyframes pop{
+  0%{opacity:0;transform:translate(-50%,14px) scale(.7)}
+  18%{opacity:1;transform:translate(-50%,-4px) scale(1.18)}
+  32%{transform:translate(-50%,0) scale(1)}
+  100%{opacity:0;transform:translate(-50%,-72px) scale(1)}
+}
+
+/* ---------- QUIZ ---------- */
+.qwrap{flex:1;display:flex;flex-direction:column;min-height:0;justify-content:center;gap:16px;padding:6px 0 18px}
+.qnum{font-family:var(--data);font-size:12px;color:var(--cyan);letter-spacing:.2em}
+.q{font-family:var(--display);font-size:clamp(20px,5.6vw,26px);line-height:1.32;letter-spacing:-.01em}
+.answers{display:flex;flex-direction:column;gap:8px}
+.ans{position:relative;width:100%;text-align:left;cursor:pointer;background:var(--ink);
+  border:2px solid #33204F;border-left:5px solid var(--aura);color:var(--bone);
+  font-family:var(--body);font-size:15px;font-weight:600;line-height:1.35;padding:14px 15px;border-radius:2px;
+  transition:transform .1s,background .15s,border-color .15s}
+.ans:active{transform:scale(.98)}
+.ans:hover{background:var(--panel);border-left-color:var(--cyan)}
+.ans:disabled{opacity:.35}
+.ans.picked{border-color:var(--gold);background:#241733;opacity:1}
+.verdict{min-height:44px;display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:14px;color:var(--dim);line-height:1.4;padding:0 6px}
+.verdict b{color:var(--gold)}
+
+/* ---------- RESULT ---------- */
+.rwrap{flex:1;display:flex;flex-direction:column;min-height:0;padding:10px 0 14px;gap:12px}
+.cardbox{flex:1;min-height:0;display:flex;justify-content:center;align-items:center}
+#cardImg{max-height:100%;max-width:100%;border-radius:4px;
+  box-shadow:0 0 0 1px #3A2456,0 24px 60px rgba(0,0,0,.75),0 0 70px rgba(176,38,255,.28)}
+.actions{display:flex;flex-direction:column;gap:8px}
+.btn{width:100%;cursor:pointer;font-family:var(--display);font-size:14px;padding:15px;border-radius:3px;
+  border:2px solid transparent;transition:transform .1s}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--gold);color:#150B22;box-shadow:0 0 30px rgba(255,197,61,.35)}
+.btn.ghost{background:transparent;border-color:#3A2456;color:var(--bone)}
+.row{display:flex;gap:8px}
+.row .btn{flex:1;font-size:12px;padding:13px 6px}
+.hint{text-align:center;font-size:11px;color:#54476A;line-height:1.6}
+canvas{display:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- INTRO -->
+  <section class="screen on" id="s-intro">
+    <div class="brand">
+      <div class="eyebrow">farmearaura.com</div>
+      <h1 class="wordmark">Calculadora<br>de Aura</h1>
+      <p class="sub">7 situaciones. Un número.<br><b>Tu aura real, sin filtros.</b></p>
+    </div>
+
+    <div class="namebox">
+      <div class="label">Tu nombre o @</div>
+      <input type="text" id="name" maxlength="14" placeholder="ANÓNIMO" autocomplete="off" spellcheck="false">
+      <div class="emojis" id="emojis"></div>
+    </div>
+
+    <div class="modes" id="modes"></div>
+    <p class="fineprint">Sin cuenta. Sin fotos. Sin guardar nada.<br>Todo pasa dentro de tu celular.<br>
+      <a href="/que-es-farmear-aura/" style="color:#7B6A92;text-underline-offset:3px">¿Qué es farmear aura?</a><!--LEGALLINKS--></p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="screen" id="s-quiz">
+    <div class="hud">
+      <div class="hudtop"><span id="modeName">—</span><span id="qCount">1 / 7</span></div>
+      <div class="meter" id="meter">0</div>
+      <div class="bars" id="bars"></div>
+      <div class="delta" id="delta"></div>
+    </div>
+    <div class="qwrap">
+      <div class="qnum" id="qnum">SITUACIÓN 01</div>
+      <h2 class="q" id="qtext">—</h2>
+      <div class="answers" id="answers"></div>
+      <div class="verdict" id="verdict"></div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="screen" id="s-result">
+    <div class="rwrap">
+      <div class="cardbox"><img id="cardImg" alt="Tu tarjeta de aura"></div>
+      <div class="actions">
+        <button class="btn primary" id="shareBtn">COMPARTIR MI TARJETA</button>
+        <div class="row">
+          <button class="btn ghost" id="dlBtn">DESCARGAR</button>
+          <button class="btn ghost" id="againBtn">OTRA VEZ</button>
+        </div>
+        <p class="hint" id="hint">Guarda la imagen y súbela a tu historia o a TikTok.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+<canvas id="cv" width="1080" height="1920"></canvas>
+
+<script>
+/* ============================================================
+   CONTENIDO — español neutro LATAM
+   ============================================================ */
+const MODES = {
+  gamer:{ic:'🎮',name:'MODO GAMER',desc:'Ranked, randoms y clutches',color:'cyan'},
+  escuela:{ic:'🎒',name:'MODO ESCUELA',desc:'Pasillos, exámenes y exposiciones',color:'aura'},
+  fiesta:{ic:'🍹',name:'MODO FIESTA Y CRUSH',desc:'Mensajes a las 2 am y otros crímenes',color:'gold'}
+};
+
+const Q = {
+gamer:[
+ {q:'Quedas 1v4 en el último round con 12 de vida.',a:[
+  {t:'Ganas el clutch y no dices nada en el chat de voz',v:90000,r:'Silencio absoluto. <b>Eso es aura pura.</b>'},
+  {t:'Ganas y escribes "ez" en el chat',v:-10000,r:'Ganaste el round, perdiste el respeto.'},
+  {t:'Mueres al primer disparo',v:-30000,r:'Alguien ya subió el clip.'}]},
+ {q:'Te gritan para bajar a comer justo cuando empieza la ranked.',a:[
+  {t:'"Ya voy" y sigues jugando 40 minutos',v:-20000,r:'La comida fría también resta.'},
+  {t:'Pausas, bajas, comes, regresas',v:30000,r:'Disciplina. Nadie lo espera de un gamer.'},
+  {t:'Contestas mal y después pierdes la partida',v:-60000,r:'Karma instantáneo.'}]},
+ {q:'Un random de tu equipo te insulta en el chat de voz.',a:[
+  {t:'Lo silencias y haces la mejor partida de tu vida',v:95000,r:'<b>Modo dios.</b> No contestar es la respuesta.'},
+  {t:'Le respondes 20 mensajes seguidos',v:-25000,r:'Escribir párrafos nunca dio aura.'},
+  {t:'Te sales de la partida',v:-40000,r:'Rendirse cuesta caro.'}]},
+ {q:'Le enseñas a jugar a alguien que nunca ha tocado un control.',a:[
+  {t:'Le dejas ganar y actúas sorprendido',v:55000,r:'Aura silenciosa. La mejor clase.'},
+  {t:'Le explicas los controles con paciencia',v:35000,r:'Correcto, pero nadie lo va a grabar.'},
+  {t:'Le ganas 10-0 sin piedad',v:-15000,r:'Ganaste contra alguien que no sabía qué botón era.'}]},
+ {q:'Se cae el internet en medio de una partida importante.',a:[
+  {t:'Reinicias el módem y vuelves en 40 segundos',v:50000,r:'Técnico certificado por la calle.'},
+  {t:'Aceptas la derrota en silencio',v:15000,r:'Tranquilo. Sin drama.'},
+  {t:'Culpas al internet en el grupo por tres días',v:-25000,r:'Todos ya saben que fuiste tú.'}]},
+ {q:'Alguien en el lobby dice que tu skin está fea.',a:[
+  {t:'"Es la default, hermano" y ganas la partida',v:80000,r:'<b>Ganar con la default</b> es el nivel más alto.'},
+  {t:'Le mandas captura de cuánto te costó',v:-20000,r:'Explicar el precio bajó tu valor.'},
+  {t:'Te cambias de skin de inmediato',v:-35000,r:'Te editaron la personalidad en vivo.'}]},
+ {q:'Haces una jugada imposible sin querer y todos creen que fue a propósito.',a:[
+  {t:'No dices nada y asientes',v:100000,r:'<b>La leyenda nace aquí.</b>'},
+  {t:'Confiesas que fue suerte',v:20000,r:'Honesto. Caro, pero honesto.'},
+  {t:'Dices "obvio, lo practiqué"',v:-15000,r:'Nadie te creyó.'}]},
+ {q:'Llevas 3 horas jugando y recuerdas que la tarea es para mañana.',a:[
+  {t:'Cierras todo y la haces',v:40000,r:'Aura de persona funcional. Rara y valiosa.'},
+  {t:'Juegas "una más" hasta las 2 am',v:-25000,r:'Nunca fue una más.'},
+  {t:'Pides las respuestas al grupo a las 6 am',v:-5000,r:'Sobreviviste. Sin gloria.'}]},
+ {q:'Tu amigo quiere jugar el juego que odias.',a:[
+  {t:'Juegas igual y hasta te diviertes',v:45000,r:'Amistad: +1. Aura: también.'},
+  {t:'Te quejas toda la partida',v:-20000,r:'Nadie quiere ese compañero.'},
+  {t:'Inventas que no tienes internet',v:-30000,r:'Te vio en línea. Obvio.'}]}
+],
+escuela:[
+ {q:'Te tropiezas subiendo las escaleras. Todo el pasillo voltea.',a:[
+  {t:'Te levantas y sigues como si nada, sin mirar a nadie',v:45000,r:'<b>No mirar atrás</b> vale más que no caerse.'},
+  {t:'Te ríes fuerte y dices "estoy bien"',v:-5000,r:'Nadie preguntó.'},
+  {t:'Te quedas en el piso tres segundos de más',v:-35000,r:'Esos tres segundos ya son un video.'}]},
+ {q:'El profe te pregunta algo y no estabas poniendo atención.',a:[
+  {t:'Contestas cualquier cosa con total seguridad… y aciertas',v:95000,r:'<b>Nadie sabrá jamás lo que pasó.</b>'},
+  {t:'"¿Puede repetir la pregunta?" con voz tranquila',v:25000,r:'Elegante. Ganaste 4 segundos.'},
+  {t:'Volteas a ver a tu compañero con cara de auxilio',v:-20000,r:'El profe también volteó.'}]},
+ {q:'Saludas con la mano a alguien… que saludaba a la persona detrás de ti.',a:[
+  {t:'Conviertes el saludo en un estiramiento de brazo',v:60000,r:'<b>Recuperación de nivel profesional.</b>'},
+  {t:'Saludas igual y dices "hola"',v:10000,r:'Valiente. Incómodo, pero valiente.'},
+  {t:'Bajas la mano lentamente mirando al piso',v:-50000,r:'Clásico. Doloroso. Caro.'}]},
+ {q:'Te toca exponer y se cae la presentación.',a:[
+  {t:'Expones de memoria, sin diapositivas',v:100000,r:'<b>El salón entero te respetó.</b>'},
+  {t:'Lees del celular temblando',v:-10000,r:'Se notó. Pero terminaste.'},
+  {t:'Pides cambiar de día',v:-25000,r:'Solo pospusiste la vergüenza.'}]},
+ {q:'Alguien dice tu apodo del año pasado enfrente de tus nuevos amigos.',a:[
+  {t:'Lo repites tú primero y te ríes',v:50000,r:'Le quitaste el arma en un segundo.'},
+  {t:'Contestas con el apodo de esa persona',v:15000,r:'Empate. Nadie ganó aura aquí.'},
+  {t:'Te pones rojo y cambias de tema',v:-20000,r:'Ahora ese es tu apodo otra vez.'}]},
+ {q:'Es examen y terminas en 15 minutos.',a:[
+  {t:'Entregas primero y sales caminando lento',v:70000,r:'<b>La salida lenta es la parte importante.</b>'},
+  {t:'Te quedas hasta el final revisando',v:15000,r:'Inteligente. Invisible.'},
+  {t:'Entregas primero y regresas porque te faltó una hoja',v:-55000,r:'La salida épica duró 11 segundos.'}]},
+ {q:'Te sientas y la silla hace un ruido… muy específico.',a:[
+  {t:'Miras la silla con cara de decepción',v:55000,r:'<b>Culpaste al mueble y funcionó.</b>'},
+  {t:'No reaccionas para nada',v:20000,r:'Frío. Efectivo.'},
+  {t:'Dices "fue la silla" tres veces',v:-40000,r:'A la tercera ya nadie te creía.'}]},
+ {q:'Primer día en un salón nuevo. Nadie se sienta contigo.',a:[
+  {t:'Le hablas primero a alguien',v:55000,r:'Se necesita más aura para eso que para cualquier clutch.'},
+  {t:'Pones tus cosas y te pones audífonos, tranquilo',v:35000,r:'Aura de misterio. Funciona.'},
+  {t:'Finges escribir algo importante en el celular',v:-10000,r:'Estabas viendo la hora. Todos lo hacemos.'}]},
+ {q:'Te devuelven el examen y sacaste la nota más alta del salón.',a:[
+  {t:'Doblas la hoja y la guardas sin decir nada',v:85000,r:'<b>Ganar en silencio.</b> Máximo nivel.'},
+  {t:'Subes la foto a tu estado',v:-15000,r:'Necesitabas testigos. Ahí se fue.'},
+  {t:'Preguntas en voz alta "¿y tú cuánto sacaste?"',v:-30000,r:'Todos supieron exactamente qué hacías.'}]}
+],
+fiesta:[
+ {q:'Le escribes a tu crush. Aparece "escribiendo…" y se detiene. Tres veces.',a:[
+  {t:'Bloqueas el celular y te vas a dormir',v:70000,r:'<b>La paciencia es aura.</b>'},
+  {t:'Escribes "?"',v:-35000,r:'Ese signo cuesta más de lo que parece.'},
+  {t:'Mandas tres mensajes más explicando el primero',v:-70000,r:'Cada mensaje fue un retiro de tu cuenta.'}]},
+ {q:'Llegas a la fiesta y no conoces absolutamente a nadie.',a:[
+  {t:'Vas directo a la cocina y hablas con quien esté ahí',v:60000,r:'<b>La cocina siempre fue el lugar correcto.</b>'},
+  {t:'Te vas a los 10 minutos sin despedirte',v:20000,r:'Irse sin avisar tiene su propia aura.'},
+  {t:'Te quedas en la esquina con el celular',v:-25000,r:'Nadie te vio. Ese es el problema.'}]},
+ {q:'Se te cae un vaso y lo atrapas antes de que toque el piso.',a:[
+  {t:'Lo atrapas y sigues la conversación sin voltear',v:120000,r:'<b>+120.000. La jugada más cara del juego.</b>'},
+  {t:'Lo atrapas y gritas "¡lo atrapé!"',v:25000,r:'Lo lograste y lo arruinaste al mismo tiempo.'},
+  {t:'Lo atrapas pero se derrama todo encima de ti',v:-30000,r:'Técnicamente lo atrapaste.'}]},
+ {q:'Suena tu canción favorita y nadie la conoce.',a:[
+  {t:'La cantas completa de todos modos',v:50000,r:'Confianza sin público. Vale doble.'},
+  {t:'Explicas de qué álbum es y en qué año salió',v:-20000,r:'Nadie preguntó el año.'},
+  {t:'Cambias la canción tú mismo',v:-15000,r:'Te rendiste con tu propia canción.'}]},
+ {q:'Alguien te pregunta qué te gusta hacer.',a:[
+  {t:'Contestas en una frase y devuelves la pregunta',v:45000,r:'Conversación desbloqueada.'},
+  {t:'Hablas seis minutos sin parar',v:-25000,r:'Ya no estaba escuchando en el minuto dos.'},
+  {t:'Dices "nada" y se muere la conversación',v:-35000,r:'Silencio de 8 segundos. Legendario, pero negativo.'}]},
+ {q:'Le mandaste mensaje a tu crush a las 2 am. Ya amaneció.',a:[
+  {t:'Lo dejas ahí. Sin borrar. Sin explicar.',v:75000,r:'<b>Asumir el mensaje es máxima aura.</b>'},
+  {t:'Borras el mensaje (ya lo había visto)',v:-45000,r:'"Se eliminó este mensaje" dice más que el mensaje.'},
+  {t:'Dices que te hackearon',v:-60000,r:'Nadie hackea para escribir eso.'}]},
+ {q:'Te invitan a bailar y no sabes bailar.',a:[
+  {t:'Bailas mal pero con toda la confianza del mundo',v:90000,r:'<b>La confianza le gana a la técnica siempre.</b>'},
+  {t:'Dices que no y te quedas mirando',v:-20000,r:'La aura se quedó en la silla contigo.'},
+  {t:'Inventas que te duele el pie',v:-30000,r:'Cojeaste el resto de la noche por coherencia.'}]},
+ {q:'Ves a alguien de tu salón en el súper, con su familia.',a:[
+  {t:'Saludas normal',v:35000,r:'Normal es más difícil de lo que suena.'},
+  {t:'Los dos fingen que no se vieron',v:-5000,r:'Acuerdo mutuo. Cero aura, cero pérdida.'},
+  {t:'Te escondes en el pasillo de los cereales',v:-40000,r:'Te vio. Te vio escondiéndote.'}]},
+ {q:'Foto grupal. Sales con los ojos cerrados y es la que suben.',a:[
+  {t:'No dices nada',v:30000,r:'Dejarla ahí es un acto de poder.'},
+  {t:'Pides que la borren',v:-30000,r:'Ahora todos la fueron a ver.'},
+  {t:'Pides repetirla ocho veces',v:-50000,r:'La octava salió peor.'}]}
+]};
+
+const TIERS = [
+ {min: 400000, rank:'S', name:'GRANJERO SUPREMO',   line:'Tu presencia entra al lugar antes que tú.', c:'#FFC53D'},
+ {min: 250000, rank:'A', name:'AURA IMPARABLE',     line:'La gente cuenta anécdotas tuyas que ni recuerdas.', c:'#FFC53D'},
+ {min: 120000, rank:'B', name:'AURA ESTABLE',       line:'Sólido. Nadie te va a hacer un video.', c:'#00F0FF'},
+ {min:      0, rank:'C', name:'AURA EN PRÁCTICAS',  line:'Vas bien. Solo evita explicar tus chistes.', c:'#B026FF'},
+ {min:-120000, rank:'D', name:'AURA EN ROJO',       line:'Recuperable. Empieza por no mandar dobles mensajes.', c:'#FF2E5B'},
+ {min:-9e9,    rank:'F', name:'BANCARROTA DE AURA', line:'Necesitas atrapar un vaso en el aire urgentemente.', c:'#FF2E5B'}
+];
+
+const EMOJIS = ['😎','💀','🔥','👑','🥶','🫠','🐐','👽','🎭','🦈','🧿','🍄'];
+
+/* ============================================================
+   ESTADO
+   ============================================================ */
+const S = {mode:null, set:[], i:0, score:0, shown:0, emoji:'😎', name:''};
+const $ = s => document.querySelector(s);
+const fmt = n => (n<0?'−':'+') + Math.abs(n).toLocaleString('es-MX');
+const tierOf = n => TIERS.find(t => n >= t.min);
+
+/* ---------- SFX sintetizado (sin archivos externos) ---------- */
+let ac = null;
+function unlock(){ if(!ac){ try{ ac = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){} } if(ac && ac.state==='suspended') ac.resume(); }
+function tone(f,t0,dur,type,vol){
+  if(!ac) return;
+  const o = ac.createOscillator(), g = ac.createGain();
+  o.type = type; o.frequency.setValueAtTime(f, ac.currentTime+t0);
+  g.gain.setValueAtTime(0, ac.currentTime+t0);
+  g.gain.linearRampToValueAtTime(vol, ac.currentTime+t0+0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001, ac.currentTime+t0+dur);
+  o.connect(g); g.connect(ac.destination);
+  o.start(ac.currentTime+t0); o.stop(ac.currentTime+t0+dur+0.02);
+}
+function sfx(good){
+  if(!ac) return;
+  if(good){ [523,659,784,1046].forEach((f,i)=>tone(f,i*0.055,0.22,'square',0.10)); }
+  else { [220,164,110].forEach((f,i)=>tone(f,i*0.07,0.30,'sawtooth',0.09)); }
+}
+function buzz(ms){ if(navigator.vibrate) try{navigator.vibrate(ms);}catch(e){} }
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+const emojiWrap = $('#emojis');
+EMOJIS.forEach((e,i)=>{
+  const b = document.createElement('button');
+  b.className='emo'; b.textContent=e; b.type='button';
+  b.setAttribute('aria-pressed', i===0?'true':'false');
+  b.setAttribute('aria-label','Avatar '+e);
+  b.onclick = () => { unlock(); S.emoji=e; [...emojiWrap.children].forEach(c=>c.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); buzz(8); };
+  emojiWrap.appendChild(b);
+});
+
+const modeWrap = $('#modes');
+Object.entries(MODES).forEach(([k,m])=>{
+  const b = document.createElement('button');
+  b.className='mode'; b.type='button';
+  b.innerHTML = `<span class="ic">${m.ic}</span><span><span class="t">${m.name}</span><span class="d">${m.desc}</span></span><span class="go">▶</span>`;
+  b.onclick = () => start(k);
+  modeWrap.appendChild(b);
+});
+
+/* ============================================================
+   QUIZ
+   ============================================================ */
+function show(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on')); $('#'+id).classList.add('on'); }
+
+function start(mode){
+  unlock();
+  S.mode = mode; S.i = 0; S.score = 0; S.shown = 0;
+  S.name = ($('#name').value || '').trim().toUpperCase() || 'ANÓNIMO';
+  S.set = [...Q[mode]].sort(()=>Math.random()-0.5).slice(0,7);
+  $('#modeName').textContent = MODES[mode].name;
+  const bars = $('#bars'); bars.innerHTML='';
+  for(let i=0;i<7;i++) bars.appendChild(document.createElement('i'));
+  $('#meter').textContent = '0'; $('#meter').className='meter';
+  show('s-quiz'); render();
+}
+
+function render(){
+  const item = S.set[S.i];
+  $('#qCount').textContent = (S.i+1)+' / 7';
+  $('#qnum').textContent = 'SITUACIÓN '+String(S.i+1).padStart(2,'0');
+  $('#qtext').textContent = item.q;
+  $('#verdict').innerHTML = '';
+  const wrap = $('#answers'); wrap.innerHTML='';
+  [...item.a].sort(()=>Math.random()-0.5).forEach(opt=>{
+    const b = document.createElement('button');
+    b.className='ans'; b.type='button'; b.textContent = opt.t;
+    b.onclick = () => pick(opt, b, wrap);
+    wrap.appendChild(b);
+  });
+}
+
+function pick(opt, btn, wrap){
+  unlock();
+  [...wrap.children].forEach(c=>c.disabled=true);
+  btn.classList.add('picked');
+  const from = S.shown;
+  S.score += opt.v;
+  countTo(from, S.score);
+  const d = $('#delta');
+  d.textContent = fmt(opt.v)+' AURA';
+  d.style.color = opt.v>=0 ? 'var(--gold)' : 'var(--blood)';
+  d.classList.remove('run'); void d.offsetWidth; d.classList.add('run');
+  $('#verdict').innerHTML = opt.r;
+  sfx(opt.v>=0); buzz(opt.v>=0?[10,40,10]:[60]);
+  $('#bars').children[S.i].classList.add('done');
+  setTimeout(()=>{ S.i++; if(S.i<7){ render(); } else { finish(); } }, 1250);
+}
+
+function countTo(from,to){
+  const el = $('#meter'), t0 = performance.now(), dur = 620;
+  function step(t){
+    const p = Math.min(1,(t-t0)/dur), e = 1-Math.pow(1-p,3);
+    const v = Math.round(from + (to-from)*e);
+    el.textContent = (v>0?'+':v<0?'−':'') + Math.abs(v).toLocaleString('es-MX');
+    el.className = 'meter ' + (v>0?'pos':v<0?'neg':'');
+    if(p<1) requestAnimationFrame(step); else S.shown = to;
+  }
+  requestAnimationFrame(step);
+}
+
+/* ============================================================
+   TARJETA (canvas 1080×1920 — todo en el dispositivo)
+   ============================================================ */
+async function finish(){
+  show('s-result');
+  await ensureFonts();
+  drawCard();
+  $('#cardImg').src = $('#cv').toDataURL('image/png');
+}
+
+async function ensureFonts(){
+  try{
+    await Promise.all([
+      document.fonts.load('400 100px Bungee'),
+      document.fonts.load('700 40px "Chakra Petch"'),
+      document.fonts.load('400 120px "Share Tech Mono"')
+    ]);
+    await document.fonts.ready;
+  }catch(e){}
+}
+
+function wrap(ctx,text,x,y,max,lh,limit){
+  const words = text.split(' '); let line='', n=0;
+  for(let i=0;i<words.length;i++){
+    const test = line ? line+' '+words[i] : words[i];
+    if(ctx.measureText(test).width > max && line){
+      ctx.fillText(line,x,y+n*lh); line=words[i]; n++;
+      if(limit && n>=limit){ break; }
+    } else line = test;
+  }
+  if(!limit || n<limit) ctx.fillText(line,x,y+n*lh);
+  return n+1;
+}
+
+function drawCard(){
+  const cv = $('#cv'), c = cv.getContext('2d');
+  const W=1080, H=1920, CX=540;
+  const t = tierOf(S.score);
+  const col = t.c;
+
+  // fondo
+  c.fillStyle='#0A0510'; c.fillRect(0,0,W,H);
+  let g = c.createRadialGradient(CX,600,40,CX,600,900);
+  g.addColorStop(0, hexA(col,.30)); g.addColorStop(1,'rgba(10,5,16,0)');
+  c.fillStyle=g; c.fillRect(0,0,W,H);
+  g = c.createRadialGradient(CX,1750,20,CX,1750,700);
+  g.addColorStop(0,'rgba(176,38,255,.20)'); g.addColorStop(1,'rgba(10,5,16,0)');
+  c.fillStyle=g; c.fillRect(0,0,W,H);
+
+  // scanlines
+  c.fillStyle='rgba(255,255,255,.035)';
+  for(let y=0;y<H;y+=4) c.fillRect(0,y,W,1);
+
+  // marco
+  c.strokeStyle=hexA(col,.55); c.lineWidth=5; c.strokeRect(40,40,W-80,H-80);
+  c.strokeStyle=col; c.lineWidth=9;
+  [[40,40,1,1],[W-40,40,-1,1],[40,H-40,1,-1],[W-40,H-40,-1,-1]].forEach(([x,y,dx,dy])=>{
+    c.beginPath(); c.moveTo(x+70*dx,y); c.lineTo(x,y); c.lineTo(x,y+70*dy); c.stroke();
+  });
+
+  c.textAlign='center';
+
+  // encabezado
+  c.fillStyle='#00F0FF'; c.font='700 30px "Chakra Petch", sans-serif';
+  c.fillText(spaced('TARJETA DE AURA'),CX,175);
+  c.fillStyle='#7B6A92'; c.font='600 32px "Chakra Petch", sans-serif';
+  c.fillText(MODES[S.mode].name,CX,232);
+
+  // rango
+  c.fillStyle=hexA(col,.10); c.font='400 620px Bungee, sans-serif';
+  c.fillText(t.rank,CX,1180);
+
+  // avatar
+  c.save();
+  c.shadowColor=col; c.shadowBlur=70;
+  c.strokeStyle=col; c.lineWidth=10;
+  c.beginPath(); c.arc(CX,520,150,0,Math.PI*2); c.stroke();
+  c.restore();
+  c.fillStyle='#150B22'; c.beginPath(); c.arc(CX,520,142,0,Math.PI*2); c.fill();
+  c.font='170px serif'; c.textBaseline='middle';
+  c.fillText(S.emoji,CX,530); c.textBaseline='alphabetic';
+
+  // nombre
+  c.fillStyle='#EDE6F5'; c.font='400 60px Bungee, sans-serif';
+  wrap(c,S.name,CX,790,880,66,1);
+
+  // puntaje
+  c.fillStyle='#7B6A92'; c.font='700 28px "Chakra Petch", sans-serif';
+  c.fillText(spaced('PUNTOS DE AURA'),CX,900);
+  c.save();
+  c.shadowColor=col; c.shadowBlur=55; c.fillStyle=col;
+  c.font='400 150px "Share Tech Mono", monospace';
+  c.fillText(fmt(S.score),CX,1055);
+  c.restore();
+
+  // tier
+  c.fillStyle='#EDE6F5'; c.font='400 66px Bungee, sans-serif';
+  const lines = wrap(c,t.name,CX,1225,900,80,2);
+
+  // veredicto
+  c.fillStyle='#9C8AB4'; c.font='400 38px "Chakra Petch", sans-serif';
+  wrap(c,t.line,CX,1225+lines*80+30,820,52,2);
+
+  // pie
+  c.strokeStyle='rgba(176,38,255,.35)'; c.lineWidth=3;
+  c.beginPath(); c.moveTo(140,1660); c.lineTo(940,1660); c.stroke();
+  c.save();
+  c.shadowColor='#B026FF'; c.shadowBlur=34; c.fillStyle='#EDE6F5';
+  c.font='400 52px Bungee, sans-serif';
+  c.fillText('farmearaura.com',CX,1760);
+  c.restore();
+  c.fillStyle='#7B6A92'; c.font='600 30px "Chakra Petch", sans-serif';
+  c.fillText('Calcula la tuya en 7 preguntas',CX,1818);
+}
+
+function spaced(s){ return s.split('').join(' '); }
+function hexA(hex,a){
+  const n = parseInt(hex.slice(1),16);
+  return `rgba(${n>>16&255},${n>>8&255},${n&255},${a})`;
+}
+
+/* ---------- Compartir / descargar ---------- */
+function cardBlob(){
+  return new Promise(res => $('#cv').toBlob(b=>res(b),'image/png'));
+}
+$('#shareBtn').onclick = async () => {
+  const blob = await cardBlob();
+  const file = new File([blob],'mi-aura.png',{type:'image/png'});
+  const text = `Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com`;
+  if(navigator.canShare && navigator.canShare({files:[file]})){
+    try{ await navigator.share({files:[file], text}); return; }catch(e){ if(e.name==='AbortError') return; }
+  }
+  download(blob);
+  $('#hint').textContent = 'Imagen guardada. Súbela a tu historia o a TikTok.';
+};
+$('#dlBtn').onclick = async () => { download(await cardBlob()); };
+function download(blob){
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'mi-aura-farmearaura.png';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+}
+$('#againBtn').onclick = () => { show('s-intro'); };
+
+document.addEventListener('touchstart', unlock, {once:true});
+document.addEventListener('click', unlock, {once:true});
+</script>
+</body>
+</html>
