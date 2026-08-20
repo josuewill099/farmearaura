@@ -286,7 +286,7 @@ def schema(l):
          "author": {"@type": "Organization", "name": "farmearaura.com", "url": DOMAIN + "/"},
          "publisher": {"@type": "Organization", "name": "farmearaura.com", "url": DOMAIN + "/"},
          "about": {"@id": f"{page}#termino"},
-         "mentions": [{"@type": "Event", "name": "Pacu Jalur",
+         "mentions": [{"@type": "Thing", "name": "Pacu Jalur",
                        "location": {"@type": "Place", "name": "Riau, Indonesia"}}]},
         {"@type": "FAQPage", "@id": f"{page}#faq",
          "isPartOf": {"@id": f"{page}#article"}, "inLanguage": l["lang"],
