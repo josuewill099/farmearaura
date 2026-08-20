@@ -20,6 +20,9 @@ NAV_LABELS = {
     "mx": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
     "es": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
     "br": {"calculadora": "Calculadora", "historia": "Batalhas", "ranking": "Ranking"},
+    "cl": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
+    "pe": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
+    "co": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
 }
 
 NAV_URLS = {
@@ -45,6 +48,21 @@ NAV_URLS = {
         "home": "https://farmearaura.com/br/",
         "historia": "https://farmearaura.com/br/batalha-de-aura/",
         "historia_ranking": "https://farmearaura.com/br/batalha-de-aura/ranking/",
+    },
+    "cl": {
+        "home": "https://farmearaura.com/cl/",
+        "historia": "https://farmearaura.com/cl/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/cl/duelos/historia/ranking/",
+    },
+    "pe": {
+        "home": "https://farmearaura.com/pe/",
+        "historia": "https://farmearaura.com/pe/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/pe/duelos/historia/ranking/",
+    },
+    "co": {
+        "home": "https://farmearaura.com/co/",
+        "historia": "https://farmearaura.com/co/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/co/duelos/historia/ranking/",
     },
 }
 
