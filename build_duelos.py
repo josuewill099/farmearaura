@@ -46,6 +46,23 @@ def nav_html(L, actual):
     return "".join(out)
 
 
+# Los otros duelos del sitio, para saltar de uno a otro desde cualquier pagina.
+# Este modulo (arquetipos, ar) no aparece en su propia lista: son "los otros".
+OTROS_DUELOS = [
+    ("🇦🇷", "Historia AR", "https://farmearaura.com/duelos/historia/"),
+    ("🇲🇽", "Historia MX", "https://farmearaura.com/mx/duelos/historia/"),
+    ("🇪🇸", "Historia ES", "https://farmearaura.com/es/duelos-de-aura/"),
+    ("🇧🇷", "Historia BR", "https://farmearaura.com/br/batalha-de-aura/"),
+]
+
+
+def duels_html():
+    return "".join(
+        '<a href="%s"><span aria-hidden="true">%s</span>%s</a>' % (href, flag, esc(label))
+        for flag, label, href in OTROS_DUELOS
+    )
+
+
 def jsonld(L, page, canonical):
     data = {
         "@context": "https://schema.org",
@@ -154,6 +171,7 @@ def build():
             ("JSONLD", jsonld(L, page, canonical)),
             ("HOME", home),
             ("NAV", nav_html(L, key)),
+            ("DUELS", duels_html()),
             ("H1", esc(page["h1"])),
             ("SUB", esc(page["sub"])),
             ("OFFLINE", esc(L["offline"])),

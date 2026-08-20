@@ -49,6 +49,18 @@ body::before{
 .nav a:hover{color:var(--bone)}
 .nav a[aria-current="page"]{color:var(--ink);background:var(--bone)}
 
+.duels{
+  display:flex;gap:6px;overflow-x:auto;padding:0 0 16px;margin:-4px 0 0;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.duels::-webkit-scrollbar{display:none}
+.duels a{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+  font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;
+  padding:6px 11px;border-radius:999px;border:1px solid var(--line);
+}
+.duels a:hover{color:var(--bone);border-color:var(--aura)}
+
 /* ---------- titles ---------- */
 h1{
   font-family:var(--display);text-transform:uppercase;

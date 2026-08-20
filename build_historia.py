@@ -88,13 +88,33 @@ def nav_html(L, actual):
     items = [("calculadora", base + L["home"]),
              ("votar", base + "/" + L["slug_votar"]),
              ("ranking", base + "/" + L["slug_ranking"])]
-    if L["loc"] == "ar":
-        items.append(("arquetipos", base + "/duelos/"))
     out = []
     for key, href in items:
         cur = ' aria-current="page"' if key == actual else ""
         out.append('<a href="%s"%s>%s</a>' % (href, cur, esc(L["nav"][key])))
     return "".join(out)
+
+
+# Los otros duelos del sitio, para saltar de uno a otro desde cualquier pagina.
+# El de arquetipos (unico, sin variantes por locale) mas los otros tres historia.
+ARQUETIPOS_DUELO = ("🇦🇷", "arquetipos", "https://farmearaura.com/duelos/")
+HISTORIA_DUELOS = {
+    "ar": ("🇦🇷", "Historia AR", "https://farmearaura.com/duelos/historia/"),
+    "mx": ("🇲🇽", "Historia MX", "https://farmearaura.com/mx/duelos/historia/"),
+    "es": ("🇪🇸", "Historia ES", "https://farmearaura.com/es/duelos-de-aura/"),
+    "br": ("🇧🇷", "Historia BR", "https://farmearaura.com/br/batalha-de-aura/"),
+}
+
+
+def duels_html(L, actual_loc):
+    items = [(ARQUETIPOS_DUELO[0], esc(L["nav"]["arquetipos"]), ARQUETIPOS_DUELO[2])]
+    for loc, (flag, label, href) in HISTORIA_DUELOS.items():
+        if loc != actual_loc:
+            items.append((flag, esc(label), href))
+    return "".join(
+        '<a href="%s"><span aria-hidden="true">%s</span>%s</a>' % (href, flag, label)
+        for flag, label, href in items
+    )
 
 
 def jsonld(L, page, canonical, figuras):
@@ -178,6 +198,7 @@ def build():
                 ("JSONLD", jsonld(L, page, canonical, figuras)),
                 ("HOME", base + L["home"]),
                 ("NAV", nav_html(L, key)),
+                ("DUELS", duels_html(L, loc)),
                 ("H1", page["h1"]),
                 ("SUB", esc(page["sub"])),
                 ("OFFLINE", esc(L["offline"])),
