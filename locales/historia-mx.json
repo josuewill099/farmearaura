@@ -1,0 +1,249 @@
+{
+  "loc": "mx",
+  "locale": "es-MX",
+  "lang": "es",
+  "numfmt": "es-MX",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "mx/duelos/historia/",
+  "slug_ranking": "mx/duelos/historia/ranking/",
+  "home": "/mx/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking",
+    "arquetipos": "Argentinos"
+  },
+  "votar": {
+    "title": "Duelos de aura: ¿quién tenía más aura en la historia? | Farmear Aura",
+    "description": "Einstein contra Cleopatra, Zapata contra Napoleón. Escoge quién tenía más aura y checa el ranking histórico en vivo.",
+    "h1": "¿Quién tenía <em>más aura</em> en la historia?",
+    "sub": "Dos personajes históricos. Escoge uno. El que gana le roba aura al otro.",
+    "cta": "Tenía más aura",
+    "otro": "Otro duelo",
+    "seo_h2": "Cómo se reparte la aura histórica",
+    "seo_p": "Los 28 personajes empiezan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que va arriba roba mucho, ganarle a uno hundido roba poquito. El ranking se mueve con los votos de toda la banda que entra, no nada más con los tuyos, y sí se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking histórico completo"
+  },
+  "ranking": {
+    "title": "Ranking de aura histórica — quién tiene más aura de la historia | Farmear Aura",
+    "description": "El ranking de aura de los personajes históricos, hecho con los votos de todos. Checa quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura histórica</em>",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+  "figuras": [
+    {
+      "id": "cleopatra",
+      "emoji": "👑",
+      "nombre": "Cleopatra",
+      "anios": "69 a.C. — 30 a.C.",
+      "oficio": "Última reina de Egipto"
+    },
+    {
+      "id": "davinci",
+      "emoji": "🎨",
+      "nombre": "Leonardo da Vinci",
+      "anios": "1452 — 1519",
+      "oficio": "Pintor e inventor"
+    },
+    {
+      "id": "einstein",
+      "emoji": "🧠",
+      "nombre": "Albert Einstein",
+      "anios": "1879 — 1955",
+      "oficio": "Físico"
+    },
+    {
+      "id": "tesla",
+      "emoji": "⚡",
+      "nombre": "Nikola Tesla",
+      "anios": "1856 — 1943",
+      "oficio": "Inventor"
+    },
+    {
+      "id": "curie",
+      "emoji": "☢️",
+      "nombre": "Marie Curie",
+      "anios": "1867 — 1934",
+      "oficio": "Dos premios Nobel"
+    },
+    {
+      "id": "frida",
+      "emoji": "🌺",
+      "nombre": "Frida Kahlo",
+      "anios": "1907 — 1954",
+      "oficio": "Pintora"
+    },
+    {
+      "id": "ada",
+      "emoji": "💾",
+      "nombre": "Ada Lovelace",
+      "anios": "1815 — 1852",
+      "oficio": "La primera programadora"
+    },
+    {
+      "id": "juana_arco",
+      "emoji": "⚔️",
+      "nombre": "Juana de Arco",
+      "anios": "1412 — 1431",
+      "oficio": "Comandó un ejército a los 17"
+    },
+    {
+      "id": "napoleon",
+      "emoji": "🎩",
+      "nombre": "Napoleón Bonaparte",
+      "anios": "1769 — 1821",
+      "oficio": "Emperador"
+    },
+    {
+      "id": "alejandro",
+      "emoji": "🗡️",
+      "nombre": "Alejandro Magno",
+      "anios": "356 a.C. — 323 a.C.",
+      "oficio": "Nunca perdió una batalla"
+    },
+    {
+      "id": "beethoven",
+      "emoji": "🎼",
+      "nombre": "Ludwig van Beethoven",
+      "anios": "1770 — 1827",
+      "oficio": "Compuso sordo"
+    },
+    {
+      "id": "mozart",
+      "emoji": "🎹",
+      "nombre": "Wolfgang Amadeus Mozart",
+      "anios": "1756 — 1791",
+      "oficio": "Compositor"
+    },
+    {
+      "id": "shakespeare",
+      "emoji": "🪶",
+      "nombre": "William Shakespeare",
+      "anios": "1564 — 1616",
+      "oficio": "Dramaturgo"
+    },
+    {
+      "id": "earhart",
+      "emoji": "✈️",
+      "nombre": "Amelia Earhart",
+      "anios": "1897 — 1937",
+      "oficio": "Aviadora"
+    },
+    {
+      "id": "socrates",
+      "emoji": "🏛️",
+      "nombre": "Sócrates",
+      "anios": "470 a.C. — 399 a.C.",
+      "oficio": "Filósofo"
+    },
+    {
+      "id": "galileo",
+      "emoji": "🔭",
+      "nombre": "Galileo Galilei",
+      "anios": "1564 — 1642",
+      "oficio": "Astrónomo"
+    },
+    {
+      "id": "vangogh",
+      "emoji": "🌻",
+      "nombre": "Vincent van Gogh",
+      "anios": "1853 — 1890",
+      "oficio": "Pintor"
+    },
+    {
+      "id": "brucelee",
+      "emoji": "🥋",
+      "nombre": "Bruce Lee",
+      "anios": "1940 — 1973",
+      "oficio": "Artista marcial"
+    },
+    {
+      "id": "tutankamon",
+      "emoji": "⚱️",
+      "nombre": "Tutankamón",
+      "anios": "1341 a.C. — 1323 a.C.",
+      "oficio": "Faraón a los 9 años"
+    },
+    {
+      "id": "hipatia",
+      "emoji": "📐",
+      "nombre": "Hipatia de Alejandría",
+      "anios": "355 — 415",
+      "oficio": "Matemática y astrónoma"
+    },
+    {
+      "id": "sorjuana",
+      "emoji": "🕯️",
+      "nombre": "Sor Juana Inés de la Cruz",
+      "anios": "1648 — 1695",
+      "oficio": "Poeta"
+    },
+    {
+      "id": "juarez",
+      "emoji": "⚖️",
+      "nombre": "Benito Juárez",
+      "anios": "1806 — 1872",
+      "oficio": "Presidente"
+    },
+    {
+      "id": "zapata",
+      "emoji": "🌽",
+      "nombre": "Emiliano Zapata",
+      "anios": "1879 — 1919",
+      "oficio": "Tierra y libertad"
+    },
+    {
+      "id": "villa",
+      "emoji": "🤠",
+      "nombre": "Pancho Villa",
+      "anios": "1878 — 1923",
+      "oficio": "Revolucionario"
+    },
+    {
+      "id": "nezahualcoyotl",
+      "emoji": "📜",
+      "nombre": "Nezahualcóyotl",
+      "anios": "1402 — 1472",
+      "oficio": "Rey poeta de Texcoco"
+    },
+    {
+      "id": "rivera",
+      "emoji": "🖌️",
+      "nombre": "Diego Rivera",
+      "anios": "1886 — 1957",
+      "oficio": "Muralista"
+    },
+    {
+      "id": "infante",
+      "emoji": "🎬",
+      "nombre": "Pedro Infante",
+      "anios": "1917 — 1957",
+      "oficio": "Ídolo del cine"
+    },
+    {
+      "id": "paz",
+      "emoji": "✒️",
+      "nombre": "Octavio Paz",
+      "anios": "1914 — 1998",
+      "oficio": "Nobel de Literatura"
+    }
+  ]
+}

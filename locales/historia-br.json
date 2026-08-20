@@ -1,0 +1,249 @@
+{
+  "loc": "br",
+  "locale": "pt-BR",
+  "lang": "pt",
+  "numfmt": "pt-BR",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "br/batalha-de-aura/",
+  "slug_ranking": "br/batalha-de-aura/ranking/",
+  "home": "/br/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Batalhas",
+    "ranking": "Ranking",
+    "arquetipos": "Argentinos"
+  },
+  "votar": {
+    "title": "Batalha de aura: quem tinha mais aura da história? | Farmear Aura",
+    "description": "Einstein contra Cleópatra, Pelé contra Napoleão. Escolha quem tinha mais aura e veja o ranking histórico ao vivo.",
+    "h1": "Quem tinha <em>mais aura</em> da história?",
+    "sub": "Duas figuras históricas. Escolha uma. Quem ganha rouba aura da outra.",
+    "cta": "Tinha mais aura",
+    "otro": "Outra batalha",
+    "seo_h2": "Como a aura histórica é dividida",
+    "seo_p": "As 28 figuras começam com 1.000 de aura cada uma. Em cada batalha quem ganha rouba pontos de quem perde: vencer alguém que está no topo rouba muito, vencer alguém afundado rouba pouco. O ranking se move com os votos de todo mundo que entra, não só com os seus, e dá pra terminar com aura negativa.",
+    "seo_link": "Ver o ranking histórico completo"
+  },
+  "ranking": {
+    "title": "Ranking de aura histórica — quem tem mais aura da história | Farmear Aura",
+    "description": "O ranking de aura das figuras históricas, feito com os votos de todo mundo. Veja quem manda e quem ficou no negativo.",
+    "h1": "Ranking de <em>aura histórica</em>",
+    "sub": "Muda a cada voto.",
+    "feed_titulo": "Últimas batalhas",
+    "vacio": "Ainda não tem batalha nenhuma. Estreia você.",
+    "link": "Voltar a votar"
+  },
+  "t": {
+    "robo": "roubou",
+    "de_aura": "de aura de",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "há %s s",
+      "min": "há %s min",
+      "hora": "há %s h",
+      "dia": "há %s d"
+    }
+  },
+  "offline": "Modo local: os votos ainda não são salvos.",
+  "footer": "É um jogo. Os pontos não significam nada e é por isso que importam.",
+  "figuras": [
+    {
+      "id": "cleopatra",
+      "emoji": "👑",
+      "nombre": "Cleópatra",
+      "anios": "69 a.C. — 30 a.C.",
+      "oficio": "Última rainha do Egito"
+    },
+    {
+      "id": "davinci",
+      "emoji": "🎨",
+      "nombre": "Leonardo da Vinci",
+      "anios": "1452 — 1519",
+      "oficio": "Pintor e inventor"
+    },
+    {
+      "id": "einstein",
+      "emoji": "🧠",
+      "nombre": "Albert Einstein",
+      "anios": "1879 — 1955",
+      "oficio": "Físico"
+    },
+    {
+      "id": "tesla",
+      "emoji": "⚡",
+      "nombre": "Nikola Tesla",
+      "anios": "1856 — 1943",
+      "oficio": "Inventor"
+    },
+    {
+      "id": "curie",
+      "emoji": "☢️",
+      "nombre": "Marie Curie",
+      "anios": "1867 — 1934",
+      "oficio": "Dois prêmios Nobel"
+    },
+    {
+      "id": "frida",
+      "emoji": "🌺",
+      "nombre": "Frida Kahlo",
+      "anios": "1907 — 1954",
+      "oficio": "Pintora"
+    },
+    {
+      "id": "ada",
+      "emoji": "💾",
+      "nombre": "Ada Lovelace",
+      "anios": "1815 — 1852",
+      "oficio": "A primeira programadora"
+    },
+    {
+      "id": "juana_arco",
+      "emoji": "⚔️",
+      "nombre": "Joana d'Arc",
+      "anios": "1412 — 1431",
+      "oficio": "Comandou um exército aos 17"
+    },
+    {
+      "id": "napoleon",
+      "emoji": "🎩",
+      "nombre": "Napoleão Bonaparte",
+      "anios": "1769 — 1821",
+      "oficio": "Imperador"
+    },
+    {
+      "id": "alejandro",
+      "emoji": "🗡️",
+      "nombre": "Alexandre, o Grande",
+      "anios": "356 a.C. — 323 a.C.",
+      "oficio": "Nunca perdeu uma batalha"
+    },
+    {
+      "id": "beethoven",
+      "emoji": "🎼",
+      "nombre": "Ludwig van Beethoven",
+      "anios": "1770 — 1827",
+      "oficio": "Compôs surdo"
+    },
+    {
+      "id": "mozart",
+      "emoji": "🎹",
+      "nombre": "Wolfgang Amadeus Mozart",
+      "anios": "1756 — 1791",
+      "oficio": "Compositor"
+    },
+    {
+      "id": "shakespeare",
+      "emoji": "🪶",
+      "nombre": "William Shakespeare",
+      "anios": "1564 — 1616",
+      "oficio": "Dramaturgo"
+    },
+    {
+      "id": "earhart",
+      "emoji": "✈️",
+      "nombre": "Amelia Earhart",
+      "anios": "1897 — 1937",
+      "oficio": "Aviadora"
+    },
+    {
+      "id": "socrates",
+      "emoji": "🏛️",
+      "nombre": "Sócrates",
+      "anios": "470 a.C. — 399 a.C.",
+      "oficio": "Filósofo"
+    },
+    {
+      "id": "galileo",
+      "emoji": "🔭",
+      "nombre": "Galileu Galilei",
+      "anios": "1564 — 1642",
+      "oficio": "Astrônomo"
+    },
+    {
+      "id": "vangogh",
+      "emoji": "🌻",
+      "nombre": "Vincent van Gogh",
+      "anios": "1853 — 1890",
+      "oficio": "Pintor"
+    },
+    {
+      "id": "brucelee",
+      "emoji": "🥋",
+      "nombre": "Bruce Lee",
+      "anios": "1940 — 1973",
+      "oficio": "Artista marcial"
+    },
+    {
+      "id": "tutankamon",
+      "emoji": "⚱️",
+      "nombre": "Tutancâmon",
+      "anios": "1341 a.C. — 1323 a.C.",
+      "oficio": "Faraó aos 9 anos"
+    },
+    {
+      "id": "hipatia",
+      "emoji": "📐",
+      "nombre": "Hipátia de Alexandria",
+      "anios": "355 — 415",
+      "oficio": "Matemática e astrônoma"
+    },
+    {
+      "id": "machado",
+      "emoji": "📗",
+      "nombre": "Machado de Assis",
+      "anios": "1839 — 1908",
+      "oficio": "Escritor"
+    },
+    {
+      "id": "dumont",
+      "emoji": "🛩️",
+      "nombre": "Santos Dumont",
+      "anios": "1873 — 1932",
+      "oficio": "Pai da aviação"
+    },
+    {
+      "id": "tarsila",
+      "emoji": "🖼️",
+      "nombre": "Tarsila do Amaral",
+      "anios": "1886 — 1973",
+      "oficio": "Pintora modernista"
+    },
+    {
+      "id": "carmen",
+      "emoji": "🍌",
+      "nombre": "Carmen Miranda",
+      "anios": "1909 — 1955",
+      "oficio": "Cantora e atriz"
+    },
+    {
+      "id": "zumbi",
+      "emoji": "🛡️",
+      "nombre": "Zumbi dos Palmares",
+      "anios": "1655 — 1695",
+      "oficio": "Líder quilombola"
+    },
+    {
+      "id": "pele",
+      "emoji": "⚽",
+      "nombre": "Pelé",
+      "anios": "1940 — 2022",
+      "oficio": "Rei do futebol"
+    },
+    {
+      "id": "senna",
+      "emoji": "🏎️",
+      "nombre": "Ayrton Senna",
+      "anios": "1960 — 1994",
+      "oficio": "Tricampeão de F1"
+    },
+    {
+      "id": "clarice",
+      "emoji": "🖋️",
+      "nombre": "Clarice Lispector",
+      "anios": "1920 — 1977",
+      "oficio": "Escritora"
+    }
+  ]
+}
