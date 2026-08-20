@@ -354,15 +354,31 @@ REDIRECTS = """/ar/                     /                         301
 /br/aura-farming/        /br/o-que-e-farmar-aura/  301
 """
 
-LLMS = f"""# farmearaura.com
+def build_llms():
+    U = nav_data.NAV_URLS
+    calculadora = "\n".join(
+        f"- {label}: {U[c]['home']} · guía: {DOMAIN}{LOC[c]['path']}{LOC[c]['guide']['slug']}/"
+        for c, label in [("ar", "Argentina (predeterminada)"), ("mx", "México"),
+                          ("es", "España"), ("br", "Brasil (português)")]
+    )
+    historicos = "\n".join(
+        f"- {label}: {U[c]['historia']} · ranking: {U[c]['historia_ranking']}"
+        for c, label in [("ar", "Argentina"), ("mx", "México"),
+                          ("es", "España"), ("br", "Brasil (português)")]
+    )
+    return f"""# farmearaura.com
 
-> Calculadora de puntos de aura y guía de referencia sobre el aura farming en español.
+> Calculadora de puntos de aura, duelos de aura y guía de referencia sobre el aura
+> farming, en español y portugués.
 
-## Versiones por región
-- Argentina (predeterminada): {DOMAIN}/ · guía: {DOMAIN}/que-es-farmear-aura/
-- México: {DOMAIN}/mx/ · guía: {DOMAIN}/mx/que-es-farmear-aura/
-- España: {DOMAIN}/es/ · guía: {DOMAIN}/es/aura-farming/
-- Brasil (português): {DOMAIN}/br/ · guia: {DOMAIN}/br/o-que-e-farmar-aura/
+## Calculadora (test de 7 preguntas)
+{calculadora}
+
+## Duelos de aura (arquetipos cotidianos, exclusivo de Argentina)
+Votar: {U['ar']['duelos']} · Ranking: {U['ar']['duelos_ranking']} · Historial: {U['ar']['duelos_historial']}
+
+## Duelos históricos (personajes de la historia, por región)
+{historicos}
 
 ## Definición canónica
 Farmear aura (en inglés, aura farming) significa acumular puntos imaginarios de carisma
@@ -377,7 +393,8 @@ no TikTok. O "campeonato de farmar aura" é uma disputa informal de poses, sem
 organização oficial.
 
 ## Notas
-Contenido de humor. Los puntos de aura no existen como medida real.
+Contenido de humor. Los puntos de aura no existen como medida real. Los rankings de
+duelos se deciden por votos de la comunidad (sistema Elo), no por hechos verificables.
 El test funciona en el navegador: no requiere cuenta, no admite fotos y no almacena datos.
 """
 
@@ -405,7 +422,7 @@ def main():
     (DIST / "sitemap.xml").write_text(build_sitemap(), "utf-8")
     (DIST / "robots.txt").write_text(ROBOTS, "utf-8")
     (DIST / "_redirects").write_text(REDIRECTS, "utf-8")
-    (DIST / "llms.txt").write_text(LLMS, "utf-8")
+    (DIST / "llms.txt").write_text(build_llms(), "utf-8")
     print("build ok ->", DIST)
 
 if __name__ == "__main__":
