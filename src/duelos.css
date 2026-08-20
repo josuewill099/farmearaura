@@ -71,11 +71,11 @@ body::before{
 /* ---------- titles ---------- */
 h1{
   font-family:var(--display);text-transform:uppercase;
-  font-size:clamp(30px,8.5vw,54px);line-height:.92;letter-spacing:-.02em;
+  font-size:clamp(30px,8.5vw,54px);line-height:.92;letter-spacing:.01em;
   margin:14px 0 8px;
 }
 h1 em{font-style:normal;color:var(--aura)}
-.sub{color:var(--muted);font-size:15px;margin:0 0 22px}
+.sub{color:var(--muted);font-size:15px;margin:0 0 22px;letter-spacing:.01em}
 
 /* ---------- duel ---------- */
 .arena{display:grid;gap:12px}
@@ -87,7 +87,7 @@ h1 em{font-style:normal;color:var(--aura)}
   background:linear-gradient(160deg,var(--ink-2),#0E0620);
   border-radius:20px;
   padding:22px 18px 18px;
-  text-align:left;
+  text-align:center;
   width:100%;
   color:inherit;
   font:inherit;
@@ -104,11 +104,11 @@ h1 em{font-style:normal;color:var(--aura)}
 .card .emoji{font-size:44px;line-height:1;display:block;margin-bottom:14px}
 .card .nombre{
   font-family:var(--display);text-transform:uppercase;
-  font-size:clamp(19px,5vw,25px);line-height:1.02;letter-spacing:-.01em;
+  font-size:clamp(19px,5vw,25px);line-height:1.02;letter-spacing:.01em;
   display:block;min-height:2.04em;
 }
 .card .meta{
-  display:flex;align-items:baseline;gap:8px;margin-top:16px;
+  display:flex;align-items:baseline;justify-content:center;gap:8px;margin-top:16px;
   font-family:var(--num);font-size:13px;color:var(--muted);
 }
 .card .meta b{color:var(--bone);font-size:17px;font-weight:600}
