@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "farmearaura",
+  "compatibility_date": "2026-08-15",
+  "main": "worker.js",
+  "assets": {
+    "directory": "dist"
+  },
+  "d1_databases": [
+    {
+      "binding": "AURA_DB",
+      "database_name": "aura",
+      "database_id": "0785b3cc-c580-4944-81f2-0f5dad20c5e6"
+    }
+  ]
+}

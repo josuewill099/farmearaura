@@ -1,5 +1,8 @@
 /**
- * Un solo archivo para toda la API de duelos.
+ * API de duelos, portada de functions/api/[[ruta]].js (convencion de Cloudflare
+ * Pages Functions) a un Worker normal, porque este proyecto se despliega con
+ * `wrangler deploy` (Workers + static assets), no con `wrangler pages deploy`.
+ * Bajo ese modelo las peticiones que no matchean un archivo en dist/ caen aca.
  *
  *   GET  /api/aura/estado
  *   POST /api/aura/voto
@@ -7,10 +10,6 @@
  *   GET  /api/historia/estado?loc=ar|mx|es|br
  *   POST /api/historia/voto
  *   GET  /api/historia/duelos?loc=ar|mx|es|br
- *
- * Reemplaza a functions/api/aura/{estado,voto,duelos}.js y
- * functions/api/historia/{estado,voto,duelos}.js. Si esos seis existen,
- * borralos: tienen prioridad sobre este y se pisan entre si.
  */
 
 const MODULOS = {
@@ -36,29 +35,36 @@ const K = 32;
 const MIN_MS = 400;
 const MAX_POR_HORA = 400;
 
-export async function onRequest({ request, env, params }) {
-  const ruta = [].concat(params.ruta || []);
-  const modulo = MODULOS[ruta[0]];
-  const accion = ruta[1];
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (!url.pathname.startsWith("/api/")) {
+      return new Response("Not Found", { status: 404 });
+    }
 
-  if (!modulo || !accion) return json({ error: "ruta_desconocida" }, 404);
-  if (!env.AURA_DB) return json({ error: "sin_base" }, 503);
+    const ruta = url.pathname.slice("/api/".length).split("/").filter(Boolean);
+    const modulo = MODULOS[ruta[0]];
+    const accion = ruta[1];
 
-  try {
-    if (accion === "estado" && request.method === "GET") {
-      return await estado(request, env, modulo);
+    if (!modulo || !accion) return json({ error: "ruta_desconocida" }, 404);
+    if (!env.AURA_DB) return json({ error: "sin_base" }, 503);
+
+    try {
+      if (accion === "estado" && request.method === "GET") {
+        return await estado(request, env, modulo);
+      }
+      if (accion === "duelos" && request.method === "GET") {
+        return await ultimos(request, env, modulo);
+      }
+      if (accion === "voto" && request.method === "POST") {
+        return await voto(request, env, modulo);
+      }
+    } catch {
+      return json({ error: "fallo" }, 500);
     }
-    if (accion === "duelos" && request.method === "GET") {
-      return await ultimos(request, env, modulo);
-    }
-    if (accion === "voto" && request.method === "POST") {
-      return await voto(request, env, modulo);
-    }
-  } catch {
-    return json({ error: "fallo" }, 500);
+    return json({ error: "metodo_no_permitido" }, 405);
   }
-  return json({ error: "metodo_no_permitido" }, 405);
-}
+};
 
 /* ------------------------------------------------------------------ */
 
