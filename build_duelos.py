@@ -13,6 +13,8 @@ import json
 import re
 from pathlib import Path
 
+import nav_data
+
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
@@ -31,36 +33,15 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def nav_html(L, actual):
-    base = L["base"].rstrip("/")
-    items = [
-        ("calculadora", base + "/"),
-        ("votar", base + "/" + L["votar"]["slug"]),
-        ("ranking", base + "/" + L["ranking"]["slug"]),
-        ("historial", base + "/" + L["historial"]["slug"]),
-    ]
-    out = []
-    for key, href in items:
-        cur = ' aria-current="page"' if key == actual else ""
-        out.append('<a href="%s"%s>%s</a>' % (href, cur, esc(L["nav"][key])))
-    return "".join(out)
+# El menu (calculadora / duelos / duelos historicos) vive en nav_data.py,
+# compartido con build.py y build_historia.py. "votar"/"ranking"/"historial"
+# son las claves de pagina de este builder; nav_data usa sus propias claves
+# ("duelos", "duelos_ranking", "duelos_historial") para marcar aria-current.
+NAV_CURRENT = {"votar": "duelos", "ranking": "duelos_ranking", "historial": "duelos_historial"}
 
 
-# Los otros duelos del sitio, para saltar de uno a otro desde cualquier pagina.
-# Este modulo (arquetipos, ar) no aparece en su propia lista: son "los otros".
-OTROS_DUELOS = [
-    ("🇦🇷", "Historia AR", "https://farmearaura.com/duelos/historia/"),
-    ("🇲🇽", "Historia MX", "https://farmearaura.com/mx/duelos/historia/"),
-    ("🇪🇸", "Historia ES", "https://farmearaura.com/es/duelos-de-aura/"),
-    ("🇧🇷", "Historia BR", "https://farmearaura.com/br/batalha-de-aura/"),
-]
-
-
-def duels_html():
-    return "".join(
-        '<a href="%s"><span aria-hidden="true">%s</span>%s</a>' % (href, flag, esc(label))
-        for flag, label, href in OTROS_DUELOS
-    )
+def nav_html(actual):
+    return nav_data.nav_html("ar", NAV_CURRENT[actual])
 
 
 def jsonld(L, page, canonical):
@@ -170,8 +151,7 @@ def build():
             ("CSS", css),
             ("JSONLD", jsonld(L, page, canonical)),
             ("HOME", home),
-            ("NAV", nav_html(L, key)),
-            ("DUELS", duels_html()),
+            ("NAV", nav_html(key)),
             ("H1", esc(page["h1"])),
             ("SUB", esc(page["sub"])),
             ("OFFLINE", esc(L["offline"])),

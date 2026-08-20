@@ -42,24 +42,31 @@ body::before{
 }
 .logo span{color:var(--aura)}
 .nav{display:flex;gap:4px}
-.nav a{
-  font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
+.nav>a,.nav .item>a{
+  display:inline-block;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
   padding:7px 10px;border-radius:999px;
 }
-.nav a:hover{color:var(--bone)}
-.nav a[aria-current="page"]{color:var(--ink);background:var(--bone)}
+.nav>a:hover,.nav .item>a:hover{color:var(--bone)}
+.nav>a[aria-current="page"],.nav .item>a[aria-current="page"]{color:var(--ink);background:var(--bone)}
 
-.duels{
-  display:flex;gap:6px;overflow-x:auto;padding:0 0 16px;margin:-4px 0 0;
-  scrollbar-width:none;-ms-overflow-style:none;
+/* ---------- dropdown: duelos / duelos historicos ---------- */
+.nav .item{position:relative}
+.nav .sub{
+  position:absolute;top:100%;left:0;margin-top:2px;z-index:30;min-width:150px;
+  display:flex;flex-direction:column;gap:2px;padding:6px;border-radius:12px;
+  background:var(--ink-2);border:1px solid var(--line);
+  opacity:0;visibility:hidden;transform:translateY(-4px);pointer-events:none;
+  transition:opacity .15s ease,transform .15s ease,visibility .15s;
 }
-.duels::-webkit-scrollbar{display:none}
-.duels a{
-  flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
-  font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;
-  padding:6px 11px;border-radius:999px;border:1px solid var(--line);
+.nav .item:hover .sub,.nav .item:focus-within .sub{
+  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
 }
-.duels a:hover{color:var(--bone);border-color:var(--aura)}
+.nav .sub a{
+  padding:8px 10px;border-radius:7px;font-size:13px;font-weight:600;
+  color:var(--muted);text-decoration:none;white-space:nowrap;
+}
+.nav .sub a:hover{background:var(--line);color:var(--bone)}
+.nav .sub a[aria-current="page"]{color:var(--bone);background:var(--line)}
 
 /* ---------- titles ---------- */
 h1{

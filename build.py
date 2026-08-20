@@ -12,6 +12,8 @@ Argentina is the default locale and lives at the root.
 """
 import json, re, pathlib, shutil, sys
 
+import nav_data
+
 ROOT   = pathlib.Path(__file__).parent
 SRC    = ROOT / "src"
 DIST   = ROOT / "dist"
@@ -118,6 +120,9 @@ def build_app(l):
 
     # --- head ---
     h = h.replace('<html lang="es">', f'<html lang="{l["lang"]}">', 1)
+    h = sub1(h, r'<nav class="nav">.*?</nav>',
+             '<nav class="nav">' + nav_data.nav_html(l["_code"], "home") + '</nav>')
+    h = h.replace('<a class="logo" href="/">', f'<a class="logo" href="{l["path"]}">', 1)
     h = sub1(h, r"<title>.*?</title>", f'<title>{esc(a["title"])}</title>')
     h = sub1(h, r'<meta name="description" content=".*?">',
              f'<meta name="description" content="{esc(a["desc"])}">')

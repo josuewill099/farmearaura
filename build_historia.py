@@ -12,6 +12,8 @@ import json
 import re
 from pathlib import Path
 
+import nav_data
+
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
@@ -83,38 +85,15 @@ def alternates(datos, tipo):
     return "\n".join(out)
 
 
-def nav_html(L, actual):
-    base = L["base"].rstrip("/")
-    items = [("calculadora", base + L["home"]),
-             ("votar", base + "/" + L["slug_votar"]),
-             ("ranking", base + "/" + L["slug_ranking"])]
-    out = []
-    for key, href in items:
-        cur = ' aria-current="page"' if key == actual else ""
-        out.append('<a href="%s"%s>%s</a>' % (href, cur, esc(L["nav"][key])))
-    return "".join(out)
+# El menu (calculadora / duelos / duelos historicos) vive en nav_data.py,
+# compartido con build.py y build_duelos.py. "votar"/"ranking" son las claves
+# de pagina de este builder; nav_data usa sus propias claves ("historia",
+# "historia_ranking") para marcar aria-current.
+NAV_CURRENT = {"votar": "historia", "ranking": "historia_ranking"}
 
 
-# Los otros duelos del sitio, para saltar de uno a otro desde cualquier pagina.
-# El de arquetipos (unico, sin variantes por locale) mas los otros tres historia.
-ARQUETIPOS_DUELO = ("🇦🇷", "arquetipos", "https://farmearaura.com/duelos/")
-HISTORIA_DUELOS = {
-    "ar": ("🇦🇷", "Historia AR", "https://farmearaura.com/duelos/historia/"),
-    "mx": ("🇲🇽", "Historia MX", "https://farmearaura.com/mx/duelos/historia/"),
-    "es": ("🇪🇸", "Historia ES", "https://farmearaura.com/es/duelos-de-aura/"),
-    "br": ("🇧🇷", "Historia BR", "https://farmearaura.com/br/batalha-de-aura/"),
-}
-
-
-def duels_html(L, actual_loc):
-    items = [(ARQUETIPOS_DUELO[0], esc(L["nav"]["arquetipos"]), ARQUETIPOS_DUELO[2])]
-    for loc, (flag, label, href) in HISTORIA_DUELOS.items():
-        if loc != actual_loc:
-            items.append((flag, esc(label), href))
-    return "".join(
-        '<a href="%s"><span aria-hidden="true">%s</span>%s</a>' % (href, flag, label)
-        for flag, label, href in items
-    )
+def nav_html(loc, actual):
+    return nav_data.nav_html(loc, NAV_CURRENT[actual])
 
 
 def jsonld(L, page, canonical, figuras):
@@ -197,8 +176,7 @@ def build():
                 ("CSS", css),
                 ("JSONLD", jsonld(L, page, canonical, figuras)),
                 ("HOME", base + L["home"]),
-                ("NAV", nav_html(L, key)),
-                ("DUELS", duels_html(L, loc)),
+                ("NAV", nav_html(loc, key)),
                 ("H1", page["h1"]),
                 ("SUB", esc(page["sub"])),
                 ("OFFLINE", esc(L["offline"])),

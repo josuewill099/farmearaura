@@ -58,8 +58,31 @@ body::after{
 .screen.on{display:flex}
 @keyframes in{from{opacity:0;transform:translateY(14px)}}
 
+/* ---------- HEADER / NAV ---------- */
+.top{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;
+  gap:10px;padding:10px 0 2px}
+.logo{font-family:var(--display);font-size:12px;letter-spacing:.1em;
+  color:var(--bone);text-decoration:none;text-transform:uppercase}
+.logo span{color:var(--aura)}
+.nav{display:flex;gap:2px}
+.nav>a,.nav .item>a{display:inline-block;font-family:var(--body);font-size:11px;
+  font-weight:700;color:var(--dim);text-decoration:none;padding:6px 8px;border-radius:999px}
+.nav>a:hover,.nav .item>a:hover{color:var(--bone)}
+.nav>a[aria-current="page"],.nav .item>a[aria-current="page"]{color:var(--void);background:var(--bone)}
+.nav .item{position:relative}
+.nav .sub{position:absolute;top:100%;left:0;margin-top:2px;z-index:30;min-width:140px;
+  display:flex;flex-direction:column;gap:2px;padding:6px;border-radius:10px;
+  background:var(--panel);border:1px solid #33204F;
+  opacity:0;visibility:hidden;transform:translateY(-4px);pointer-events:none;
+  transition:opacity .15s ease,transform .15s ease,visibility .15s}
+.nav .item:hover .sub,.nav .item:focus-within .sub{opacity:1;visibility:visible;
+  transform:translateY(0);pointer-events:auto}
+.nav .sub a{padding:7px 9px;border-radius:6px;font-family:var(--body);font-size:12px;
+  font-weight:700;color:var(--dim);text-decoration:none;white-space:nowrap}
+.nav .sub a:hover{background:#2A1B47;color:var(--bone)}
+
 /* ---------- INTRO ---------- */
-.brand{text-align:center;padding-top:min(9vh,70px)}
+.brand{text-align:center;padding-top:min(6vh,46px)}
 .eyebrow{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.42em;
   color:var(--cyan);text-transform:uppercase}
 .wordmark{font-family:var(--display);font-size:clamp(38px,12.5vw,60px);line-height:.92;margin-top:14px;
@@ -155,6 +178,11 @@ canvas{display:none}
 </head>
 <body>
 <div id="app">
+
+  <header class="top">
+    <a class="logo" href="/">FARMEAR <span>AURA</span></a>
+    <nav class="nav"><a href="https://farmearaura.com/" aria-current="page">Calculadora</a><div class="item"><a href="https://farmearaura.com/duelos/">Duelos</a><div class="sub"><a href="https://farmearaura.com/duelos/ranking/">Ranking</a><a href="https://farmearaura.com/duelos/historial/">Historial</a></div></div><div class="item"><a href="https://farmearaura.com/duelos/historia/">Duelos Históricos</a><div class="sub"><a href="https://farmearaura.com/duelos/historia/ranking/">Ranking</a></div></div></nav>
+  </header>
 
   <!-- INTRO -->
   <section class="screen on" id="s-intro">
