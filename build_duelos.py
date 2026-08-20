@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
-Genera el modulo de duelos dentro de dist/ sin tocar build.py.
+Genera el modulo de duelos (arquetipos cotidianos) para las siete locales,
+dentro de dist/ sin tocar build.py.
 
     python3 build.py            # el sitio de siempre
-    python3 build_duelos.py     # agrega /duelos/, /duelos/ranking/, /duelos/historial/
+    python3 build_duelos.py     # agrega /duelos/, /mx/duelos/, /es/duelos/, ...
 
-Tambien escribe seed.sql (para cargar los candidatos en D1) y suma las tres
-URLs a dist/sitemap.xml si ese archivo existe.
+Tambien escribe seed.sql (para cargar los candidatos en D1, con su columna
+loc) y suma las URLs a dist/sitemap.xml si ese archivo existe.
 """
 
 import json
@@ -18,7 +19,17 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co"]
 GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
+
+# ar vive en la raiz (nunca tuvo prefijo de pais); el resto cuelga de /{cc}/.
+HOME = {"ar": "/", "mx": "/mx/", "es": "/es/", "br": "/br/",
+        "cl": "/cl/", "pe": "/pe/", "co": "/co/"}
+HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
+            "es": ["es-ES"], "br": ["pt-BR"],
+            "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"]}
+OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR",
+      "cl": "es_CL", "pe": "es_PE", "co": "es_CO"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
@@ -40,8 +51,8 @@ def esc(s):
 NAV_CURRENT = {"votar": "duelos", "ranking": "duelos_ranking", "historial": "duelos_historial"}
 
 
-def nav_html(actual):
-    return nav_data.nav_html("ar", NAV_CURRENT[actual])
+def nav_html(loc, actual):
+    return nav_data.nav_html(loc, NAV_CURRENT[actual])
 
 
 def jsonld(L, page, canonical):
@@ -91,98 +102,142 @@ MAIN_VOTAR = """
 MAIN_RANKING = """
     <ol class="tabla skeleton" id="tabla"></ol>
     <section class="seo">
-      <p><a href="{{VOTAR_URL}}">Votá vos y movelo.</a></p>
+      <p><a href="{{VOTAR_URL}}">{{RANKING_CTA}}</a></p>
     </section>
 """
 
 MAIN_HISTORIAL = """
     <ul class="feed skeleton" id="feed"></ul>
     <section class="seo">
-      <p><a href="{{VOTAR_URL}}">Sumá tu duelo.</a></p>
+      <p><a href="{{VOTAR_URL}}">{{HISTORIAL_CTA}}</a></p>
     </section>
 """
 
+# "Vota y movelo" / "Suma tu duelo": microcopy que el AR original tenia
+# hardcodeada en voseo dentro de la plantilla. Al sumar mas locales no puede
+# seguir hardcodeada -- ninguno de los duelos-{loc}.json trae un campo para
+# esto, asi que vive aca en vez de pedirle una vuelta mas a cada archivo.
+RANKING_CTA = {
+    "ar": "Votá vos y movelo.", "mx": "Vota tú y muévelo.", "es": "Vota tú y muévelo.",
+    "br": "Vote e mexa o ranking.", "cl": "Vota tú y muévelo.", "pe": "Vota tú y muévelo.",
+    "co": "Vota tú y muévelo.",
+}
+HISTORIAL_CTA = {
+    "ar": "Sumá tu duelo.", "mx": "Suma tu duelo.", "es": "Suma tu duelo.",
+    "br": "Some o seu duelo.", "cl": "Suma tu duelo.", "pe": "Suma tu duelo.",
+    "co": "Suma tu duelo.",
+}
+
+
+def cargar():
+    return {
+        loc: json.loads((ROOT / "locales" / ("duelos-%s.json" % loc))
+                        .read_text(encoding="utf-8"))
+        for loc in LOCS
+    }
+
+
+def alternates(datos, tipo):
+    out = []
+    for loc in LOCS:
+        L = datos[loc]
+        url = L["base"].rstrip("/") + "/" + L[tipo]["slug"]
+        for hl in HREFLANG[loc]:
+            out.append('<link rel="alternate" hreflang="%s" href="%s">' % (hl, url))
+    return "\n".join(out)
+
 
 def build():
-    L = json.loads((ROOT / "locales" / "duelos-ar.json").read_text(encoding="utf-8"))
+    datos = cargar()
     tpl = (SRC / "duelos.tpl.html").read_text(encoding="utf-8")
     css = (SRC / "duelos.css").read_text(encoding="utf-8")
     js = (SRC / "duelos.js").read_text(encoding="utf-8")
-    base = L["base"].rstrip("/")
-    home = base + "/"
-    votar_url = base + "/" + L["votar"]["slug"]
 
-    paginas = [
-        ("votar", L["votar"], MAIN_VOTAR, {
-            "SEO_H2": esc(L["votar"]["seo_h2"]),
-            "SEO_P": esc(L["votar"]["seo_p"]),
-            "SEO_LINK": esc(L["votar"]["seo_link"]),
-            "HOME": home,
-        }, {"cta": L["votar"]["cta"], "robo": L["votar"]["robo"],
-            "de_aura": L["votar"]["de_aura"]}),
-        ("ranking", L["ranking"], MAIN_RANKING, {"VOTAR_URL": votar_url},
-         {"vacio": L["ranking"]["vacio"]}),
-        ("historial", L["historial"], MAIN_HISTORIAL, {"VOTAR_URL": votar_url},
-         {"vacio": L["historial"]["vacio"], "robo": L["votar"]["robo"],
-          "de_aura": L["votar"]["de_aura"]}),
-    ]
-
+    alt = {tipo: alternates(datos, tipo) for tipo in ("votar", "ranking", "historial")}
     urls = []
-    for key, page, main_tpl, main_vars, textos in paginas:
-        canonical = base + "/" + page["slug"]
-        main = main_tpl
-        for k, v in main_vars.items():
-            main = main.replace("{{%s}}" % k, v)
 
-        cfg = {
-            "pagina": key,
-            "k": L["k"],
-            "aura_inicial": L["aura_inicial"],
-            "candidatos": L["candidatos"],
-            "t": textos,
-        }
+    for loc in LOCS:
+        L = datos[loc]
+        base = L["base"].rstrip("/")
+        home = base + HOME[loc]
+        votar_url = base + "/" + L["votar"]["slug"]
 
-        html = tpl
-        for k, v in [
-            ("LANG", L["lang"]),
-            ("TITLE", esc(page["title"])),
-            ("DESC", esc(page["description"])),
-            ("CANONICAL", canonical),
-            ("CSS", css),
-            ("JSONLD", jsonld(L, page, canonical)),
-            ("HOME", home),
-            ("NAV", nav_html(key)),
-            ("H1", esc(page["h1"])),
-            ("SUB", esc(page["sub"])),
-            ("OFFLINE", esc(L["offline"])),
-            ("MAIN", main),
-            ("FOOTER", esc(L["footer"])),
-            ("CONFIG", json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))),
-            ("JS", js),
-        ]:
-            html = html.replace("{{%s}}" % k, v)
+        paginas = [
+            ("votar", L["votar"], MAIN_VOTAR, {
+                "SEO_H2": esc(L["votar"]["seo_h2"]),
+                "SEO_P": esc(L["votar"]["seo_p"]),
+                "SEO_LINK": esc(L["votar"]["seo_link"]),
+                "HOME": home,
+            }, {"cta": L["votar"]["cta"], "robo": L["votar"]["robo"],
+                "de_aura": L["votar"]["de_aura"]}),
+            ("ranking", L["ranking"], MAIN_RANKING,
+             {"VOTAR_URL": votar_url, "RANKING_CTA": esc(RANKING_CTA[loc])},
+             {"vacio": L["ranking"]["vacio"]}),
+            ("historial", L["historial"], MAIN_HISTORIAL,
+             {"VOTAR_URL": votar_url, "HISTORIAL_CTA": esc(HISTORIAL_CTA[loc])},
+             {"vacio": L["historial"]["vacio"], "robo": L["votar"]["robo"],
+              "de_aura": L["votar"]["de_aura"]}),
+        ]
 
-        html = html.replace(
-            "<!--ANALYTICS-->", (ANALYTICS % (GA4_ID, GA4_ID)) if GA4_ID else ""
-        )
+        for key, page, main_tpl, main_vars, textos in paginas:
+            canonical = base + "/" + page["slug"]
+            main = main_tpl
+            for k, v in main_vars.items():
+                main = main.replace("{{%s}}" % k, v)
 
-        out = DIST / page["slug"] / "index.html"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(html, encoding="utf-8")
-        urls.append(canonical)
-        print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))
+            cfg = {
+                "pagina": key,
+                "loc": loc,
+                "k": L["k"],
+                "aura_inicial": L["aura_inicial"],
+                "candidatos": L["candidatos"],
+                "t": textos,
+            }
 
-    # seed.sql
-    filas = ",\n".join(
-        "  ('%s', %d)" % (c["id"].replace("'", "''"), L["aura_inicial"])
-        for c in L["candidatos"]
-    )
+            html = tpl
+            for k, v in [
+                ("LANG", L["lang"]),
+                ("TITLE", esc(page["title"])),
+                ("DESC", esc(page["description"])),
+                ("CANONICAL", canonical),
+                ("ALTERNATES", alt[key]),
+                ("OGLOCALE", OG[loc]),
+                ("CSS", css),
+                ("JSONLD", jsonld(L, page, canonical)),
+                ("HOME", home),
+                ("NAV", nav_html(loc, key)),
+                ("H1", esc(page["h1"])),
+                ("SUB", esc(page["sub"])),
+                ("OFFLINE", esc(L["offline"])),
+                ("MAIN", main),
+                ("FOOTER", esc(L["footer"])),
+                ("CONFIG", json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))),
+                ("JS", js),
+            ]:
+                html = html.replace("{{%s}}" % k, v)
+
+            html = html.replace(
+                "<!--ANALYTICS-->", (ANALYTICS % (GA4_ID, GA4_ID)) if GA4_ID else ""
+            )
+
+            out = DIST / page["slug"] / "index.html"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(html, encoding="utf-8")
+            urls.append(canonical)
+            print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))
+
+    # seed.sql -- todas las locales juntas, con loc por fila
+    filas = []
+    for loc in LOCS:
+        for c in datos[loc]["candidatos"]:
+            filas.append("  ('%s', '%s', %d)" % (
+                loc, c["id"].replace("'", "''"), datos[loc]["aura_inicial"]))
     (ROOT / "seed.sql").write_text(
         "-- generado por build_duelos.py\n"
-        "INSERT OR IGNORE INTO candidatos (id, aura) VALUES\n%s;\n" % filas,
+        "INSERT OR IGNORE INTO candidatos (loc, id, aura) VALUES\n%s;\n" % ",\n".join(filas),
         encoding="utf-8",
     )
-    print("  -> seed.sql (%d candidatos)" % len(L["candidatos"]))
+    print("  -> seed.sql (%d candidatos)" % len(filas))
 
     # sitemap
     sm = DIST / "sitemap.xml"

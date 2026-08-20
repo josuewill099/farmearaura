@@ -3,9 +3,9 @@ Datos del menu de navegacion, compartidos por build.py, build_duelos.py y
 build_historia.py, para que los links entre calculadora / duelos / duelos
 historicos nunca queden desincronizados entre los tres builders.
 
-Cada locale ve solo lo suyo: "duelos" (arquetipos cotidianos) es exclusivo de
-ar, asi que solo ar tiene ese item en el menu. Los otros tres locales (mx, es,
-br) solo ven calculadora + su propio duelo historico.
+Las siete locales tienen ambos duelos: "duelos" (arquetipos cotidianos,
+reinventados con modismos locales en cada pais) y "historia" (personajes
+historicos). Antes "duelos" era exclusivo de ar; ya no.
 
 nav_html(loc, current) arma el <nav> completo. "current" indica en que pagina
 esta el visitante, para marcar aria-current en el item (y sub-item) correcto:
@@ -17,12 +17,18 @@ esta el visitante, para marcar aria-current en el item (y sub-item) correcto:
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
            "ranking": "Ranking", "historial": "Historial"},
-    "mx": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
-    "es": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
-    "br": {"calculadora": "Calculadora", "historia": "Batalhas", "ranking": "Ranking"},
-    "cl": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
-    "pe": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
-    "co": {"calculadora": "Calculadora", "historia": "Duelos Históricos", "ranking": "Ranking"},
+    "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+           "ranking": "Ranking", "historial": "Historial"},
+    "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+           "ranking": "Ranking", "historial": "Historial"},
+    "br": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
+           "ranking": "Ranking", "historial": "Histórico"},
+    "cl": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+           "ranking": "Ranking", "historial": "Historial"},
+    "pe": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+           "ranking": "Ranking", "historial": "Historial"},
+    "co": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+           "ranking": "Ranking", "historial": "Historial"},
 }
 
 NAV_URLS = {
@@ -36,31 +42,49 @@ NAV_URLS = {
     },
     "mx": {
         "home": "https://farmearaura.com/mx/",
+        "duelos": "https://farmearaura.com/mx/duelos/",
+        "duelos_ranking": "https://farmearaura.com/mx/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/mx/duelos/historial/",
         "historia": "https://farmearaura.com/mx/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/mx/duelos/historia/ranking/",
     },
     "es": {
         "home": "https://farmearaura.com/es/",
+        "duelos": "https://farmearaura.com/es/duelos/",
+        "duelos_ranking": "https://farmearaura.com/es/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/es/duelos/historial/",
         "historia": "https://farmearaura.com/es/duelos-de-aura/",
         "historia_ranking": "https://farmearaura.com/es/duelos-de-aura/ranking/",
     },
     "br": {
         "home": "https://farmearaura.com/br/",
+        "duelos": "https://farmearaura.com/br/duelos/",
+        "duelos_ranking": "https://farmearaura.com/br/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/br/duelos/historial/",
         "historia": "https://farmearaura.com/br/batalha-de-aura/",
         "historia_ranking": "https://farmearaura.com/br/batalha-de-aura/ranking/",
     },
     "cl": {
         "home": "https://farmearaura.com/cl/",
+        "duelos": "https://farmearaura.com/cl/duelos/",
+        "duelos_ranking": "https://farmearaura.com/cl/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/cl/duelos/historial/",
         "historia": "https://farmearaura.com/cl/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/cl/duelos/historia/ranking/",
     },
     "pe": {
         "home": "https://farmearaura.com/pe/",
+        "duelos": "https://farmearaura.com/pe/duelos/",
+        "duelos_ranking": "https://farmearaura.com/pe/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/pe/duelos/historial/",
         "historia": "https://farmearaura.com/pe/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/pe/duelos/historia/ranking/",
     },
     "co": {
         "home": "https://farmearaura.com/co/",
+        "duelos": "https://farmearaura.com/co/duelos/",
+        "duelos_ranking": "https://farmearaura.com/co/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/co/duelos/historial/",
         "historia": "https://farmearaura.com/co/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/co/duelos/historia/ranking/",
     },
@@ -80,19 +104,18 @@ def nav_html(loc, current):
 
     parts = ['<a href="%s"%s>%s</a>' % (U["home"], cur("home"), _esc(L["calculadora"]))]
 
-    if loc == "ar":
-        parts.append(
-            '<div class="item">'
-            '<a href="%s"%s>%s</a>'
-            '<div class="sub">'
-            '<a href="%s"%s>%s</a>'
-            '<a href="%s"%s>%s</a>'
-            '</div></div>' % (
-                U["duelos"], cur("duelos"), _esc(L["duelos"]),
-                U["duelos_ranking"], cur("duelos_ranking"), _esc(L["ranking"]),
-                U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]),
-            )
+    parts.append(
+        '<div class="item">'
+        '<a href="%s"%s>%s</a>'
+        '<div class="sub">'
+        '<a href="%s"%s>%s</a>'
+        '<a href="%s"%s>%s</a>'
+        '</div></div>' % (
+            U["duelos"], cur("duelos"), _esc(L["duelos"]),
+            U["duelos_ranking"], cur("duelos_ranking"), _esc(L["ranking"]),
+            U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]),
         )
+    )
 
     parts.append(
         '<div class="item">'

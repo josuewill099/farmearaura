@@ -1,0 +1,79 @@
+{
+  "locale": "es-CO",
+  "lang": "es",
+  "base": "https://farmearaura.com",
+  "brand": "FARMEAR AURA",
+  "aura_inicial": 1000,
+  "k": 32,
+
+  "nav": {
+    "votar": "Votar",
+    "ranking": "Ranking",
+    "historial": "Duelos",
+    "calculadora": "Calculadora"
+  },
+
+  "votar": {
+    "slug": "co/duelos/",
+    "title": "¿Quién tiene más aura? — Duelos de aura | Farmear Aura",
+    "description": "Elige quién tiene más aura. El que gana le roba puntos de aura al otro. Vota y mira el ranking en vivo.",
+    "h1": "¿Quién tiene más aura?",
+    "sub": "Elige uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "otro": "Otro duelo",
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "seo_h2": "Cómo funciona el duelo de aura",
+    "seo_p": "Cada personaje arranca con 1.000 de aura. Cuando votas, el que gana le roba puntos al que pierde: si le gana a alguien con más aura, le roba más; si le gana a uno que ya estaba abajo, le roba poquito. Los puntos se actualizan al toque y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Se puede quedar en números rojos, obvio.",
+    "seo_link": "¿Quieres saber cuánta aura tienes tú? Haz el test de aura."
+  },
+
+  "ranking": {
+    "slug": "co/duelos/ranking/",
+    "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+    "description": "El ranking de aura en vivo, armado con los votos de todos. Mira quién va primero y quién quedó en aura negativa.",
+    "h1": "Ranking de aura",
+    "sub": "Actualizado con cada voto.",
+    "col_aura": "aura",
+    "vacio": "Todavía no hay votos. Ve a votar."
+  },
+
+  "historial": {
+    "slug": "co/duelos/historial/",
+    "title": "Últimos duelos de aura | Farmear Aura",
+    "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+    "h1": "Últimos duelos",
+    "sub": "Los votos más recientes, uno por uno.",
+    "vacio": "Todavía no hay duelos. Estrénalo tú."
+  },
+
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+
+  "candidatos": [
+    { "id": "cano",      "emoji": "⚽", "nombre": "El que le hace un caño a alguien en la cancha del barrio y sigue caminando sin mirar atrás" },
+    { "id": "tarde",     "emoji": "🚪", "nombre": "La que llega tarde a la reunión y entra como si nada" },
+    { "id": "risa",      "emoji": "📱", "nombre": "El que se ríe solo mirando el celular en plena calle" },
+    { "id": "cinco",     "emoji": "📚", "nombre": "El que dice que no estudió nada y se saca cinco" },
+    { "id": "parcial",   "emoji": "🐀", "nombre": "El que pregunta cuándo es el parcial en plena clase" },
+    { "id": "bus",       "emoji": "🚌", "nombre": "La que llega a la estación justo cuando se abren las puertas del Transmilenio" },
+    { "id": "tullave",   "emoji": "💳", "nombre": "El que se le quedó la TuLlave en la casa" },
+    { "id": "izada",     "emoji": "🇨🇴", "nombre": "El que canta el himno a todo pulmón en la izada de bandera del lunes" },
+    { "id": "arepa",     "emoji": "🍳", "nombre": "El que se come una arepa con huevo fría parado frente a la nevera a las 3 am" },
+    { "id": "fondo",     "emoji": "💃", "nombre": "La que baila en el fondo del video de la fiesta" },
+    { "id": "guaro",     "emoji": "🥃", "nombre": "El que corta la vuelta del guaro y no avisa" },
+    { "id": "chaqueta",  "emoji": "🧥", "nombre": "El que presta la chaqueta y se congela de frío" },
+    { "id": "escenario", "emoji": "🎤", "nombre": "El que se cae en el acto del colegio y sigue como si nada" },
+    { "id": "penal",     "emoji": "🧤", "nombre": "El que atajó el penal en el recreo y quedó grabado para siempre" },
+    { "id": "foto",      "emoji": "📸", "nombre": "La que sale perfecta en la foto sin siquiera mirar la cámara" },
+    { "id": "alergia",   "emoji": "😭", "nombre": "El que llora con la película y dice que es alergia" },
+    { "id": "gol",       "emoji": "📢", "nombre": "El que grita el gol antes que todo el mundo" },
+    { "id": "banca",     "emoji": "😎", "nombre": "El que se manda la vaina y la banca hasta el final sin pestañear" },
+    { "id": "jaja",      "emoji": "💬", "nombre": "El que contesta 'jajaja' y no dice nada más" },
+    { "id": "novena",    "emoji": "🍮", "nombre": "La que llega a la novena con el postre" },
+    { "id": "parlante",  "emoji": "🔊", "nombre": "El que maneja el parlante en la previa de la rumba" },
+    { "id": "perro",     "emoji": "🐶", "nombre": "El que le habla al perro con vocecita de bebé" },
+    { "id": "dormido",   "emoji": "😴", "nombre": "El que se hace el dormido en el bus para no ceder la silla" },
+    { "id": "lapiz",     "emoji": "✏️", "nombre": "El que te devuelve el lápiz que le prestaste" }
+  ]
+}

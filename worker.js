@@ -17,7 +17,7 @@ const MODULOS = {
     candidatos: "candidatos",
     duelos: "duelos",
     votantes: "votantes",
-    locales: null,          // modulo de una sola locale, la tabla no tiene columna loc
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co"],
     limite: 60,
     poda: 5000
   },

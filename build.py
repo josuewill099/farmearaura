@@ -365,6 +365,11 @@ def build_llms():
         f"guía: {DOMAIN}{LOC[c]['path']}{LOC[c]['guide']['slug']}/"
         for c, label in REGIONES
     )
+    duelos = "\n".join(
+        f"- {label}: {U[c]['duelos']} · ranking: {U[c]['duelos_ranking']} · "
+        f"historial: {U[c]['duelos_historial']}"
+        for c, label in REGIONES
+    )
     historicos = "\n".join(
         f"- {label}: {U[c]['historia']} · ranking: {U[c]['historia_ranking']}"
         for c, label in REGIONES
@@ -377,8 +382,8 @@ def build_llms():
 ## Calculadora (test de 7 preguntas)
 {calculadora}
 
-## Duelos de aura (arquetipos cotidianos, exclusivo de Argentina)
-Votar: {U['ar']['duelos']} · Ranking: {U['ar']['duelos_ranking']} · Historial: {U['ar']['duelos_historial']}
+## Duelos de aura (arquetipos cotidianos, con modismos locales por región)
+{duelos}
 
 ## Duelos históricos (personajes de la historia, por región)
 {historicos}

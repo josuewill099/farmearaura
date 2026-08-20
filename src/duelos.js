@@ -1,6 +1,7 @@
 (function () {
   var C = window.DUELOS;
   var API = "/api/aura/";
+  var LOC = "?loc=" + encodeURIComponent(C.loc);
   var estado = null;
   var offline = false;
   var bloqueado = false;
@@ -28,7 +29,7 @@
   }
 
   function cargarEstado() {
-    return fetch(API + "estado", { headers: { accept: "application/json" } })
+    return fetch(API + "estado" + LOC, { headers: { accept: "application/json" } })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (d) {
         if (!d || !d.candidatos || !d.candidatos.length) throw 0;
@@ -131,7 +132,7 @@
       fetch(API + "voto", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ganador: g.id, perdedor: p.id })
+        body: JSON.stringify({ loc: C.loc, ganador: g.id, perdedor: p.id })
       })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (d) {
@@ -186,7 +187,7 @@
     C.candidatos.forEach(function (c) { copia[c.id] = c; });
     var ul = $("#feed");
 
-    fetch(API + "duelos", { headers: { accept: "application/json" } })
+    fetch(API + "duelos" + LOC, { headers: { accept: "application/json" } })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (d) {
         var items = (d.duelos || []).filter(function (x) { return copia[x.ganador] && copia[x.perdedor]; });

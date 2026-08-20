@@ -1,0 +1,79 @@
+{
+  "locale": "es-MX",
+  "lang": "es",
+  "base": "https://farmearaura.com",
+  "brand": "FARMEAR AURA",
+  "aura_inicial": 1000,
+  "k": 32,
+
+  "nav": {
+    "votar": "Votar",
+    "ranking": "Ranking",
+    "historial": "Duelos",
+    "calculadora": "Calculadora"
+  },
+
+  "votar": {
+    "slug": "mx/duelos/",
+    "title": "¿Quién tiene más aura? — Duelos de aura | Farmear Aura",
+    "description": "Elige quién tiene más aura. El que gana le roba puntos de aura al otro. Vota y mira el ranking en vivo.",
+    "h1": "¿Quién tiene más aura?",
+    "sub": "Elige uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "otro": "Otro duelo",
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "seo_h2": "Cómo funciona el duelo de aura",
+    "seo_p": "Cada personaje arranca con 1,000 de aura. Cuando votas, el que gana le roba puntos al que pierde: si le gana a alguien con más aura, le roba más; si le gana a uno que ya andaba abajo, le roba poquito. Los puntos se actualizan al momento y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Obvio que se puede quedar en negativo.",
+    "seo_link": "¿Quieres saber cuánta aura tienes tú? Haz el test de aura."
+  },
+
+  "ranking": {
+    "slug": "mx/duelos/ranking/",
+    "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+    "description": "El ranking de aura en vivo, armado con los votos de todos. Mira quién va primero y quién quedó en aura negativa.",
+    "h1": "Ranking de aura",
+    "sub": "Se actualiza con cada voto.",
+    "col_aura": "aura",
+    "vacio": "Todavía no hay votos. Ve a votar."
+  },
+
+  "historial": {
+    "slug": "mx/duelos/historial/",
+    "title": "Últimos duelos de aura | Farmear Aura",
+    "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+    "h1": "Últimos duelos",
+    "sub": "Los votos más recientes, uno por uno.",
+    "vacio": "Todavía no hay duelos. Estrénalo tú."
+  },
+
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+
+  "candidatos": [
+    { "id": "tunel",     "emoji": "⚽", "nombre": "El que le hace un túnel a alguien y sigue caminando como si nada" },
+    { "id": "tarde",     "emoji": "🚪", "nombre": "La que llega tarde al salón y entra como si nada" },
+    { "id": "risa",      "emoji": "📱", "nombre": "El que se ríe solo viendo el celular en el camión" },
+    { "id": "diez",      "emoji": "📚", "nombre": "El que dice que no estudió nada y saca 10" },
+    { "id": "fecha",     "emoji": "🐀", "nombre": "El que pregunta la fecha del examen a media clase" },
+    { "id": "camion",    "emoji": "🚌", "nombre": "La que llega justo cuando para el camión" },
+    { "id": "tarjeta",   "emoji": "💳", "nombre": "El que se le olvidó la tarjeta del Metro" },
+    { "id": "grito",     "emoji": "🇲🇽", "nombre": "El que grita '¡Viva México!' más fuerte que todos" },
+    { "id": "taco",      "emoji": "🌮", "nombre": "El que se come un taco frío a las 3 AM y ni le importa" },
+    { "id": "fondo",     "emoji": "💃", "nombre": "La que baila hasta atrás del video sin que se lo pidan" },
+    { "id": "botana",    "emoji": "🍿", "nombre": "El que se acaba la botana compartida y no dice nada" },
+    { "id": "chamarra",  "emoji": "🧥", "nombre": "El que presta la chamarra y se muere de frío" },
+    { "id": "tropiezo",  "emoji": "🎤", "nombre": "El que se tropieza en el lunes cívico y sigue como si nada" },
+    { "id": "penal",     "emoji": "🧤", "nombre": "El que atajó el penal en el recreo y ya se cree Memo Ochoa" },
+    { "id": "foto",      "emoji": "📸", "nombre": "La que sale perfecta en la foto sin ni voltear" },
+    { "id": "alergia",   "emoji": "😭", "nombre": "El que llora con la peli y dice que es alergia" },
+    { "id": "gol",       "emoji": "📢", "nombre": "El que grita el gol antes que nadie" },
+    { "id": "aguanta",   "emoji": "😎", "nombre": "El que se avienta una y la aguanta hasta el final" },
+    { "id": "jaja",      "emoji": "💬", "nombre": "El que contesta 'jaja' y ya no dice nada más" },
+    { "id": "postre",    "emoji": "🍮", "nombre": "La que llega a la carne asada con el postre" },
+    { "id": "bocina",    "emoji": "🔊", "nombre": "El que controla la bocina en la previa" },
+    { "id": "perro",     "emoji": "🐶", "nombre": "El que le habla al perro con vocecita de bebé" },
+    { "id": "dormido",   "emoji": "😴", "nombre": "El que se hace el dormido en el camión para no dar el asiento" },
+    { "id": "pluma",     "emoji": "✏️", "nombre": "El que te devuelve la pluma que le prestaste" }
+  ]
+}
