@@ -18,7 +18,7 @@ ROOT   = pathlib.Path(__file__).parent
 SRC    = ROOT / "src"
 DIST   = ROOT / "dist"
 DOMAIN = "https://farmearaura.com"
-ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us"]    # ar first = default
+ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus"]    # ar first = default
 GENERIC = {"es": "ar", "pt": "br", "en": "us"}   # bare language code -> owning locale
 
 def load(code):
@@ -28,7 +28,8 @@ LOC = {c: load(c) for c in ORDER}
 LEGAL = {k: json.loads((ROOT / "locales" / f"legal-{k}.json").read_text("utf-8"))
          for k in ("es", "pt", "en")}
 LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
-            "cl": "es", "pe": "es", "co": "es", "us": "en"}   # locale -> legal language
+            "cl": "es", "pe": "es", "co": "es", "us": "en",
+            "esus": "es"}   # locale -> legal language
 for _c, _l in LOC.items():
     _l["_code"] = _c
 DEFAULT = next(l for l in LOC.values() if l["isDefault"])
@@ -363,7 +364,8 @@ def build_llms():
     U = nav_data.NAV_URLS
     REGIONES = [("ar", "Argentina"), ("mx", "México"), ("es", "España"),
                 ("br", "Brasil (português)"), ("cl", "Chile"), ("pe", "Perú"),
-                ("co", "Colombia"), ("us", "United States (English)")]
+                ("co", "Colombia"), ("us", "United States (English)"),
+                ("esus", "Estados Unidos (español)")]
     calculadora = "\n".join(
         f"- {label}{' (predeterminada)' if c == 'ar' else ''}: {U[c]['home']} · "
         f"guía: {DOMAIN}{LOC[c]['path']}{LOC[c]['guide']['slug']}/"

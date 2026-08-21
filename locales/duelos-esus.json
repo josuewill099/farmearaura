@@ -1,0 +1,79 @@
+{
+  "locale": "es-US",
+  "lang": "es",
+  "base": "https://farmearaura.com",
+  "brand": "FARMEAR AURA",
+  "aura_inicial": 1000,
+  "k": 32,
+
+  "nav": {
+    "votar": "Votar",
+    "ranking": "Ranking",
+    "historial": "Duelos",
+    "calculadora": "Calculadora"
+  },
+
+  "votar": {
+    "slug": "es-us/duelos/",
+    "title": "¿Quién Tiene Más Aura? — Duelos de Aura | Farmear Aura",
+    "description": "Elige quién tiene más aura. El ganador le roba puntos de aura al otro. Vota y mira el ranking en vivo.",
+    "h1": "¿Quién tiene más aura?",
+    "sub": "Elige uno. El ganador le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "otro": "Otro duelo",
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "seo_h2": "Cómo funciona el duelo de aura",
+    "seo_p": "Cada personaje empieza con 1,000 de aura. Cuando votas, el ganador le roba puntos al perdedor: le ganas a alguien con más aura y robas más; le ganas a alguien que ya andaba bajo y casi no le quitas nada. Los puntos se actualizan al instante y son los mismos para todos los que votan, así que el ranking se construye completamente con los votos de la gente. Sí, puedes terminar en negativo.",
+    "seo_link": "¿Quieres saber cuánta aura tienes en realidad? Haz el test de aura."
+  },
+
+  "ranking": {
+    "slug": "es-us/duelos/ranking/",
+    "title": "Ranking de Aura — quién tiene más aura ahora mismo | Farmear Aura",
+    "description": "El ranking de aura en vivo, construido con los votos de todos. Mira quién va arriba y quién anda en números rojos.",
+    "h1": "Ranking de aura",
+    "sub": "Se actualiza con cada voto.",
+    "col_aura": "aura",
+    "vacio": "Todavía no hay votos. Ve a votar."
+  },
+
+  "historial": {
+    "slug": "es-us/duelos/historial/",
+    "title": "Últimos Duelos de Aura | Farmear Aura",
+    "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+    "h1": "Últimos duelos",
+    "sub": "Los votos más recientes, uno por uno.",
+    "vacio": "Todavía no hay duelos. Sé el primero."
+  },
+
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada, y por eso mismo importan.",
+
+  "candidatos": [
+    { "id": "juke",    "emoji": "🏈", "nombre": "El que amaga tan fuerte que deja al defensa tirado y sigue trotando como si nada" },
+    { "id": "late",    "emoji": "🚪", "nombre": "La que llega diez minutos tarde caminando tranquila y ni se disculpa" },
+    { "id": "laugh",   "emoji": "📱", "nombre": "El que se ríe a carcajadas viendo su teléfono en un tren en total silencio" },
+    { "id": "acer",    "emoji": "📚", "nombre": "El que jura que no estudió y aun así saca A" },
+    { "id": "quiz",    "emoji": "🙋", "nombre": "El que pregunta '¿esto va a venir en el examen?' cuando faltan dos minutos para que termine la clase" },
+    { "id": "bus",     "emoji": "🚌", "nombre": "La que llega a la parada justo cuando el bus está llegando" },
+    { "id": "metro",   "emoji": "💳", "nombre": "El que se le rechaza la tarjeta en el torniquete mientras toda la fila lo ve buscando efectivo" },
+    { "id": "anthem",  "emoji": "🇺🇸", "nombre": "El que canta el himno nacional a todo pulmón como si estuviera audicionando para el show de medio tiempo" },
+    { "id": "pizza",   "emoji": "🍕", "nombre": "El que se come la pizza fría directo del refri a las 3 AM" },
+    { "id": "bg",      "emoji": "💃", "nombre": "La que está bailando a todo dar en el fondo del video de otra persona" },
+    { "id": "aux",     "emoji": "🎧", "nombre": "El que agarra el aux y le brinca a la canción que todos estaban disfrutando" },
+    { "id": "hoodie",  "emoji": "🧥", "nombre": "El que presta su hoodie y se congela el resto de la noche" },
+    { "id": "stage",   "emoji": "🎤", "nombre": "La que se tropieza cruzando el escenario de graduación y sigue caminando como si nada" },
+    { "id": "recess",  "emoji": "🧤", "nombre": "El que bloquea el tiro que decide el partido en el recreo y nunca más lo vuelve a mencionar" },
+    { "id": "photo",   "emoji": "📸", "nombre": "La que sale perfecta en la foto sin siquiera estar viendo a la cámara" },
+    { "id": "cry",     "emoji": "😭", "nombre": "El que se le salen las lágrimas en la película y le echa la culpa a la alergia" },
+    { "id": "td",      "emoji": "📢", "nombre": "El que anuncia el touchdown antes de que pase" },
+    { "id": "clutch",  "emoji": "😎", "nombre": "El que suelta algo bien loco en voz alta y se lo aguanta el resto de la noche" },
+    { "id": "kk",      "emoji": "💬", "nombre": "El que responde 'jaja' a todo un párrafo de mensaje y lo deja ahí" },
+    { "id": "pie",     "emoji": "🥧", "nombre": "La que llega al Thanksgiving con el pie que todos en realidad querían" },
+    { "id": "speaker", "emoji": "🔊", "nombre": "El que controla la bocina en todo el pregame y nunca falla un beat" },
+    { "id": "dog",     "emoji": "🐶", "nombre": "El que le habla al perro con vocecita de bebé como si entendiera inglés" },
+    { "id": "nap",     "emoji": "😴", "nombre": "La que se hace la dormida en el bus para que nadie se siente a su lado" },
+    { "id": "pencil",  "emoji": "✏️", "nombre": "El que de verdad te regresa el lápiz que le prestaste" }
+  ]
+}

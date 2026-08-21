@@ -31,6 +31,8 @@ NAV_LABELS = {
            "ranking": "Ranking", "historial": "Historial"},
     "us": {"calculadora": "Calculator", "duelos": "Duels", "historia": "Historical Duels",
            "ranking": "Ranking", "historial": "Recent"},
+    "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+             "ranking": "Ranking", "historial": "Historial"},
 }
 
 NAV_URLS = {
@@ -97,6 +99,14 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/us/duels/historial/",
         "historia": "https://farmearaura.com/us/historical-duels/",
         "historia_ranking": "https://farmearaura.com/us/historical-duels/ranking/",
+    },
+    "esus": {
+        "home": "https://farmearaura.com/es-us/",
+        "duelos": "https://farmearaura.com/es-us/duelos/",
+        "duelos_ranking": "https://farmearaura.com/es-us/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/es-us/duelos/historial/",
+        "historia": "https://farmearaura.com/es-us/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/es-us/duelos/historia/ranking/",
     },
 }
 
