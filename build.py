@@ -173,6 +173,7 @@ def build_app(l):
         ("¿Qué es farmear aura?", a["guideLink"]),
         ('href="/que-es-farmear-aura/"', f'href="{a["guideHref"]}"'),
         ("Calcula la tuya en 7 preguntas", a["cardTagline"]),
+        ("Calculadora<br>de Aura", f'{a["wordmark"][0]}<br>{a["wordmark"][1]}'),
         ("<!--LEGALLINKS-->", app_legal_links(l)),
         ("<!--LEGALLINKS2-->", app_legal_links(l)),
         ("Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com",
