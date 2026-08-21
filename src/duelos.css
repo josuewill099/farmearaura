@@ -41,28 +41,40 @@ body::before{
   color:var(--bone);text-decoration:none;text-transform:uppercase;
 }
 .logo span{color:var(--aura)}
-.nav{display:flex;gap:4px}
+.nav{display:flex;gap:2px;align-items:center}
 .nav>a,.nav .item>a{
-  display:inline-block;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
-  padding:7px 10px;border-radius:999px;
+  display:inline-flex;align-items:center;min-height:38px;
+  font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
+  padding:9px 10px;border-radius:999px;
 }
 .nav>a:hover,.nav .item>a:hover{color:var(--bone)}
 .nav>a[aria-current="page"],.nav .item>a[aria-current="page"]{color:var(--ink);background:var(--bone)}
 
 /* ---------- dropdown: duelos / duelos historicos ---------- */
-.nav .item{position:relative}
+.nav .item{position:relative;display:flex;align-items:center}
+.nav .caret{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:38px;margin-left:-6px;padding:0;border:0;background:none;
+  color:var(--muted);font-size:10px;line-height:1;cursor:pointer;border-radius:999px;
+  transition:transform .15s ease,color .15s ease;
+}
+.nav .caret:hover{color:var(--bone)}
+.nav .item.open .caret{color:var(--bone);transform:rotate(180deg)}
 .nav .sub{
-  position:absolute;top:100%;left:0;margin-top:2px;z-index:30;min-width:150px;
+  position:absolute;top:100%;left:0;margin-top:2px;z-index:30;min-width:160px;
   display:flex;flex-direction:column;gap:2px;padding:6px;border-radius:12px;
   background:var(--ink-2);border:1px solid var(--line);
   opacity:0;visibility:hidden;transform:translateY(-4px);pointer-events:none;
   transition:opacity .15s ease,transform .15s ease,visibility .15s;
 }
-.nav .item:hover .sub,.nav .item:focus-within .sub{
+.nav .item.open .sub{
   opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
 }
+@media (hover:hover) and (pointer:fine){
+  .nav .item:hover .sub{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+}
 .nav .sub a{
-  padding:8px 10px;border-radius:7px;font-size:13px;font-weight:600;
+  display:block;padding:11px 12px;border-radius:7px;font-size:13px;font-weight:600;
   color:var(--muted);text-decoration:none;white-space:nowrap;
 }
 .nav .sub a:hover{background:var(--line);color:var(--bone)}

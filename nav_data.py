@@ -116,35 +116,58 @@ def _esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
+# Toca una vez por pagina, junto con el <nav> que genera. El hover-only de
+# antes nunca andaba en mobile: los navegadores tactiles siguen el link en el
+# primer toque (no hay "hover" que revelar), asi que el submenu jamas se veia
+# a tiempo. Este script agrega un boton "caret" separado del link, que abre y
+# cierra el submenu por tap sin navegar -- el link de al lado sigue navegando
+# directo como siempre. El hover de mouse en desktop se maneja aparte en CSS.
+NAV_SCRIPT = """<script>(function(){
+  function closeAll(except){
+    document.querySelectorAll('.nav .item.open').forEach(function(i){
+      if (i !== except) { i.classList.remove('open'); i.querySelector('.caret').setAttribute('aria-expanded','false'); }
+    });
+  }
+  document.querySelectorAll('.nav .caret').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var item = btn.closest('.item');
+      var willOpen = !item.classList.contains('open');
+      closeAll(null);
+      if (willOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav .item')) closeAll(null);
+  });
+})();</script>"""
+
+
 def nav_html(loc, current):
     L, U = NAV_LABELS[loc], NAV_URLS[loc]
 
     def cur(key):
         return ' aria-current="page"' if key == current else ""
 
+    def dropdown(key, ranking_key, label, sub_id, extra_sub=""):
+        return (
+            '<div class="item">'
+            '<a href="%s"%s>%s</a>'
+            '<button type="button" class="caret" aria-expanded="false" aria-label="%s">▾</button>'
+            '<div class="sub" id="%s">'
+            '<a href="%s"%s>%s</a>%s'
+            '</div></div>' % (
+                U[key], cur(key), _esc(label),
+                _esc(label), sub_id,
+                U[ranking_key], cur(ranking_key), _esc(L["ranking"]), extra_sub,
+            )
+        )
+
     parts = ['<a href="%s"%s>%s</a>' % (U["home"], cur("home"), _esc(L["calculadora"]))]
 
-    parts.append(
-        '<div class="item">'
-        '<a href="%s"%s>%s</a>'
-        '<div class="sub">'
-        '<a href="%s"%s>%s</a>'
-        '<a href="%s"%s>%s</a>'
-        '</div></div>' % (
-            U["duelos"], cur("duelos"), _esc(L["duelos"]),
-            U["duelos_ranking"], cur("duelos_ranking"), _esc(L["ranking"]),
-            U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]),
-        )
-    )
-
-    parts.append(
-        '<div class="item">'
-        '<a href="%s"%s>%s</a>'
-        '<div class="sub">'
-        '<a href="%s"%s>%s</a>'
-        '</div></div>' % (
-            U["historia"], cur("historia"), _esc(L["historia"]),
-            U["historia_ranking"], cur("historia_ranking"), _esc(L["ranking"]),
-        )
-    )
+    historial_link = '<a href="%s"%s>%s</a>' % (
+        U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]))
+    parts.append(dropdown("duelos", "duelos_ranking", L["duelos"], "nav-sub-duelos", historial_link))
+    parts.append(dropdown("historia", "historia_ranking", L["historia"], "nav-sub-historia"))
+    parts.append(NAV_SCRIPT)
     return "".join(parts)
