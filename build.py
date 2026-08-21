@@ -411,6 +411,10 @@ def main():
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
+    for f in (SRC / "static").iterdir():
+        shutil.copy2(f, DIST / f.name)
+    print("  static -> favicon.svg, favicon.ico, apple-touch-icon.png, icon-192.png, "
+          "icon-512.png, site.webmanifest")
     for c in ORDER:
         l = LOC[c]
         appdir = DIST / l["path"].strip("/")
