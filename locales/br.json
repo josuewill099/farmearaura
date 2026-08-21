@@ -7,7 +7,13 @@
  "nameLabel":"Seu nome ou @","fine1":"Sem conta. Sem fotos. Sem guardar nada.","fine2":"Tudo acontece dentro do seu celular.",
  "guideLink":"O que é farmar aura?","guideHref":"/br/o-que-e-farmar-aura/",
  "shareText":"Fiz {score} pontos de aura. Calcule a sua em farmearaura.com",
- "cardTagline":"Calcule a sua em 7 perguntas"
+ "cardTagline":"Calcule a sua em 7 perguntas",
+ "aboutH2":"Sobre o farmearaura.com",
+ "about":[
+  "farmearaura.com é uma calculadora de pontos de aura: sete situações do dia a dia, três modos (Gamer, Escola, Rolê e Crush) e uma pontuação final que vira um card para compartilhar. Não precisa de conta, não sobe nenhuma foto e nada fica salvo: todo o cálculo acontece dentro do seu celular.",
+  "Além do teste, o site tem duelos de aura: você pode votar em quem tem mais aura entre arquétipos do dia a dia ou entre personagens históricos, e ver o ranking montado com os votos de todo mundo."
+ ],
+ "faqH2":"Perguntas frequentes"
 },
 "modes":{
  "gamer":{"ic":"🎮","name":"MODO GAMER","desc":"Ranked, randoms e clutches"},

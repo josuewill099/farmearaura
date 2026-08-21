@@ -15,7 +15,13 @@
     "guideLink": "¿Qué es el aura farming?",
     "guideHref": "/es-us/que-es-farmear-aura/",
     "shareText": "Saqué {score} puntos de aura. Calcula los tuyos en farmearaura.com",
-    "cardTagline": "Calcula el tuyo en 7 preguntas"
+    "cardTagline": "Calcula el tuyo en 7 preguntas",
+    "aboutH2": "Sobre farmearaura.com",
+    "about": [
+      "farmearaura.com es una calculadora de puntos de aura: siete situaciones del día a día, tres modos (Gamer, Escuela y Fiesta) y un puntaje final que se convierte en una tarjeta para compartir. No necesitas cuenta, no subes ninguna foto y no se guarda nada: todo el cálculo pasa en tu teléfono.",
+      "Además del test, el sitio tiene duelos de aura: puedes votar quién tiene más aura entre arquetipos cotidianos o entre personajes históricos, y ver el ranking que arma la gente votando."
+    ],
+    "faqH2": "Preguntas frecuentes"
   },
   "modes": {
     "gamer": {"ic": "🎮", "name": "MODO GAMER", "desc": "Ranked, randoms y clutches"},

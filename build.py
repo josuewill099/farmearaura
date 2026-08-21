@@ -118,6 +118,28 @@ def build_legal(langkey):
     return out
 
 # ----------------------------------------------------------------- calculator
+def app_faq_ld(l):
+    faq = l["guide"]["faq"]
+    ld = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": re.sub("<[^>]+>", "", q),
+             "acceptedAnswer": {"@type": "Answer", "text": re.sub("<[^>]+>", "", a)}}
+            for q, a in faq
+        ],
+    }
+    return '<script type="application/ld+json">%s</script>' % json.dumps(
+        ld, ensure_ascii=False, separators=(",", ":"))
+
+def app_faq_html(l):
+    faq = l["guide"]["faq"]
+    return "\n".join(
+        f'    <details{" open" if i == 0 else ""}><summary>{esc(q)}</summary>'
+        f'<div class="a"><p>{a}</p></div></details>'
+        for i, (q, a) in enumerate(faq)
+    )
+
 def build_app(l):
     h = (SRC / "app.html").read_text("utf-8")
     a = l["app"]
@@ -132,7 +154,8 @@ def build_app(l):
     h = sub1(h, r'<meta name="description" content=".*?">',
              f'<meta name="description" content="{esc(a["desc"])}">')
     head_extra = (f'<link rel="canonical" href="{canonical}">\n' + hreflang("app") +
-                  f'\n<meta property="og:locale" content="{l["lang"].replace("-", "_")}">')
+                  f'\n<meta property="og:locale" content="{l["lang"].replace("-", "_")}">' +
+                  "\n" + app_faq_ld(l))
     h = h.replace("<title>", head_extra + "\n<title>", 1)
 
     # --- JS data blocks ---
@@ -151,8 +174,19 @@ def build_app(l):
         ('href="/que-es-farmear-aura/"', f'href="{a["guideHref"]}"'),
         ("Calcula la tuya en 7 preguntas", a["cardTagline"]),
         ("<!--LEGALLINKS-->", app_legal_links(l)),
+        ("<!--LEGALLINKS2-->", app_legal_links(l)),
         ("Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com",
          a["shareText"].replace("{score}", "${fmt(S.score)}")),
+        ("Sobre farmearaura.com", a["aboutH2"]),
+        ("farmearaura.com es una calculadora de puntos de aura: siete situaciones cotidianas, "
+         "tres modos y un puntaje final que se convierte en una tarjeta para compartir. No hace "
+         "falta cuenta, no se sube ninguna foto y no se guarda nada: todo el cálculo pasa "
+         "adentro de tu celular.", a["about"][0]),
+        ("Además del test, el sitio tiene duelos de aura: podés votar quién tiene más aura entre "
+         "arquetipos cotidianos o entre personajes históricos, y mirar el ranking que arma la "
+         "gente votando.", a["about"][1]),
+        ("Preguntas frecuentes", a["faqH2"]),
+        ("<!--FAQITEMS-->", app_faq_html(l)),
     ]:
         if old not in h:
             sys.exit(f"[{l['code']}] string not found in template: {old[:60]}")

@@ -15,7 +15,13 @@
     "guideLink": "¿Qué es farmear aura?",
     "guideHref": "/pe/que-es-farmear-aura/",
     "shareText": "Saqué {score} puntos de aura, causa. Calcula la tuya en farmearaura.com",
-    "cardTagline": "Calcula la tuya en 7 preguntas"
+    "cardTagline": "Calcula la tuya en 7 preguntas",
+    "aboutH2": "Sobre farmearaura.com",
+    "about": [
+      "farmearaura.com es una calculadora de puntos de aura: siete situaciones cotidianas, tres modos (Gamer, Colegio, Fiesta y Crush) y un puntaje final que se convierte en una tarjeta para compartir. No necesitas cuenta, no subes ninguna foto y no se guarda nada: todo el cálculo pasa dentro de tu celular.",
+      "Además del test, el sitio tiene duelos de aura: puedes votar quién tiene más aura entre arquetipos cotidianos o entre personajes históricos, y ver el ranking que arma la gente votando."
+    ],
+    "faqH2": "Preguntas frecuentes"
   },
   "modes": {
     "gamer": {"ic": "🎮", "name": "MODO GAMER", "desc": "Ranked, randoms y clutches"},
