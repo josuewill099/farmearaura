@@ -61,18 +61,20 @@ body::before{
 .nav .caret:hover{color:var(--bone)}
 .nav .item.open .caret{color:var(--bone);transform:rotate(180deg)}
 .nav .sub{
-  position:absolute;top:100%;left:0;margin-top:2px;z-index:30;min-width:160px;
-  display:flex;flex-direction:column;gap:2px;padding:6px;border-radius:12px;
+  display:none;position:absolute;top:100%;right:0;margin-top:2px;z-index:30;min-width:160px;
+  flex-direction:column;gap:2px;padding:6px;border-radius:12px;
   background:var(--ink-2);border:1px solid var(--line);
-  opacity:0;visibility:hidden;transform:translateY(-4px);pointer-events:none;
-  transition:opacity .15s ease,transform .15s ease,visibility .15s;
 }
-.nav .item.open .sub{
-  opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
-}
+/* display:none (not opacity/visibility) so a CLOSED submenu never counts
+   toward the page's scrollable width -- it used to, and on a narrow
+   viewport the rightmost item's submenu overflowed past the screen edge
+   even while invisible, which some mobile browsers "fix" by silently
+   widening the whole layout viewport instead of just clipping it. */
+.nav .item.open .sub{display:flex;animation:navsub .15s ease both}
 @media (hover:hover) and (pointer:fine){
-  .nav .item:hover .sub{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+  .nav .item:hover .sub{display:flex;animation:navsub .15s ease both}
 }
+@keyframes navsub{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
 .nav .sub a{
   display:block;padding:11px 12px;border-radius:7px;font-size:13px;font-weight:600;
   color:var(--muted);text-decoration:none;white-space:nowrap;
