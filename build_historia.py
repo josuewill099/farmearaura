@@ -17,13 +17,13 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co"]
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us"]
 GA4_ID = "G-XHZ0MM619V"   # "" para no cargar analytics en estas paginas
 
 HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
             "es": ["es-ES"], "br": ["pt-BR"],
-            "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"]}
-OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR",
+            "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"]}
+OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
       "cl": "es_CL", "pe": "es_PE", "co": "es_CO"}
 
 ANALYTICS = (

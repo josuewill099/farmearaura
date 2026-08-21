@@ -1,0 +1,79 @@
+{
+  "locale": "en-US",
+  "lang": "en",
+  "base": "https://farmearaura.com",
+  "brand": "FARMEAR AURA",
+  "aura_inicial": 1000,
+  "k": 32,
+
+  "nav": {
+    "votar": "Vote",
+    "ranking": "Ranking",
+    "historial": "Duels",
+    "calculadora": "Calculator"
+  },
+
+  "votar": {
+    "slug": "us/duels/",
+    "title": "Who Has More Aura? — Aura Duels | Farmear Aura",
+    "description": "Pick who has more aura. The winner steals aura points from the other one. Vote and watch the live ranking.",
+    "h1": "Who has more aura?",
+    "sub": "Pick one. The winner steals aura from the other.",
+    "cta": "Has more aura",
+    "otro": "Another duel",
+    "robo": "stole",
+    "de_aura": "aura from",
+    "seo_h2": "How the aura duel works",
+    "seo_p": "Every character starts with 1,000 aura. When you vote, the winner steals points from the loser: beat someone with more aura and you steal more; beat someone who was already low and you barely take anything. Points update instantly and are the same for everyone who votes, so the ranking gets built entirely by people voting. Yes, you can end up negative.",
+    "seo_link": "Want to know how much aura you actually have? Take the aura test."
+  },
+
+  "ranking": {
+    "slug": "us/duels/ranking/",
+    "title": "Aura Ranking — who has the most aura right now | Farmear Aura",
+    "description": "The live aura ranking, built from everyone's votes. See who's on top and who's deep in negative aura.",
+    "h1": "Aura ranking",
+    "sub": "Updated with every vote.",
+    "col_aura": "aura",
+    "vacio": "No votes yet. Go vote."
+  },
+
+  "historial": {
+    "slug": "us/duels/historial/",
+    "title": "Latest Aura Duels | Farmear Aura",
+    "description": "The most recent votes, one by one. Who stole aura from who in the latest duels.",
+    "h1": "Latest duels",
+    "sub": "The most recent votes, one by one.",
+    "vacio": "No duels yet. Be the first."
+  },
+
+  "offline": "Local mode: votes aren't saved yet.",
+  "footer": "It's a game. The points don't mean anything, and that's exactly why they matter.",
+
+  "candidatos": [
+    { "id": "juke",    "emoji": "🏈", "nombre": "The guy who jukes a defender out of their cleats and just keeps jogging" },
+    { "id": "late",    "emoji": "🚪", "nombre": "The girl who strolls in ten minutes late and doesn't even apologize" },
+    { "id": "laugh",   "emoji": "📱", "nombre": "The guy who laughs out loud at his phone on a dead-silent train" },
+    { "id": "acer",    "emoji": "📚", "nombre": "The guy who swears he didn't study and still pulls an A" },
+    { "id": "quiz",    "emoji": "🙋", "nombre": "The kid who asks 'is this gonna be on the test?' with two minutes left in class" },
+    { "id": "bus",     "emoji": "🚌", "nombre": "The girl who gets to the stop right as the bus is pulling up" },
+    { "id": "metro",   "emoji": "💳", "nombre": "The guy whose card declines at the turnstile while the whole line watches him dig for cash" },
+    { "id": "anthem",  "emoji": "🇺🇸", "nombre": "The guy who belts out the national anthem like he's auditioning for the halftime show" },
+    { "id": "pizza",   "emoji": "🍕", "nombre": "The guy who eats cold pizza straight out of the fridge at 3 AM" },
+    { "id": "bg",      "emoji": "💃", "nombre": "The girl who's fully dancing in the background of someone else's video" },
+    { "id": "aux",     "emoji": "🎧", "nombre": "The guy who takes the aux and skips the song everyone was vibing to" },
+    { "id": "hoodie",  "emoji": "🧥", "nombre": "The guy who lends out his hoodie and freezes for the rest of the night" },
+    { "id": "stage",   "emoji": "🎤", "nombre": "The girl who trips walking across the graduation stage and keeps going like nothing happened" },
+    { "id": "recess",  "emoji": "🧤", "nombre": "The kid who blocks the game-winning shot at recess and never brings it up again" },
+    { "id": "photo",   "emoji": "📸", "nombre": "The girl who looks perfect in the photo without even looking at the camera" },
+    { "id": "cry",     "emoji": "😭", "nombre": "The guy who tears up at the movie and blames it on allergies" },
+    { "id": "td",      "emoji": "📢", "nombre": "The guy who calls the touchdown before it even happens" },
+    { "id": "clutch",  "emoji": "😎", "nombre": "The guy who says something wild out loud and just owns it for the rest of the night" },
+    { "id": "kk",      "emoji": "💬", "nombre": "The guy who replies 'lol' to a whole paragraph text and leaves it there" },
+    { "id": "pie",     "emoji": "🥧", "nombre": "The girl who shows up to Thanksgiving with the pie everyone actually wanted" },
+    { "id": "speaker", "emoji": "🔊", "nombre": "The guy running the speaker for the whole pregame who never misses a beat" },
+    { "id": "dog",     "emoji": "🐶", "nombre": "The guy who talks to the dog in a full baby voice like it understands English" },
+    { "id": "nap",     "emoji": "😴", "nombre": "The girl who fake-sleeps on the bus so nobody sits next to her" },
+    { "id": "pencil",  "emoji": "✏️", "nombre": "The guy who actually gives back the pencil you lent him" }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "code": "en-US",
+  "lang": "en-US",
+  "path": "/us/",
+  "region": "United States",
+  "isDefault": false,
+  "app": {
+    "title": "Aura Points Calculator — farmearaura.com",
+    "desc": "Calculate your aura points in 7 questions and share your card. Gamer Mode, School Mode, and Party Mode.",
+    "tag1": "7 situations. One number.",
+    "tag2": "Your real aura, no filters.",
+    "nameLabel": "Your name or @",
+    "fine1": "No account. No photos. Nothing saved.",
+    "fine2": "It all happens on your phone.",
+    "guideLink": "What is aura farming?",
+    "guideHref": "/us/what-is-aura-farming/",
+    "shareText": "I got {score} aura points. Calculate yours at farmearaura.com",
+    "cardTagline": "Calculate yours in 7 questions"
+  },
+  "modes": {
+    "gamer": {"ic": "🎮", "name": "GAMER MODE", "desc": "Ranked, randoms, and clutches"},
+    "escuela": {"ic": "🎒", "name": "SCHOOL MODE", "desc": "Hallways, exams, and presentations"},
+    "fiesta": {"ic": "🍹", "name": "PARTY & CRUSH MODE", "desc": "2 am texts and other crimes"}
+  },
+  "tiers": [
+    [400000, "S", "SUPREME FARMER", "Your presence walks into the room before you do.", "#FFC53D"],
+    [250000, "A", "UNSTOPPABLE AURA", "People tell stories about you that you don't even remember.", "#FFC53D"],
+    [120000, "B", "STABLE AURA", "Solid. Nobody's making a video about you.", "#00F0FF"],
+    [0, "C", "AURA IN TRAINING", "You're doing fine. Just stop explaining your jokes.", "#B026FF"],
+    [-120000, "D", "AURA IN THE RED", "Recoverable. Start by not double-texting.", "#FF2E5B"],
+    [-9000000000, "F", "AURA BANKRUPTCY", "You urgently need to catch a cup out of the air.", "#FF2E5B"]
+  ],
+  "questions": {
+    "gamer": [
+      {"q": "You're 1v4 in the final round with 12 HP left.", "a": [
+        {"t": "You clutch it and say nothing in voice chat", "v": 90000, "r": "Dead silence. <b>That's pure aura.</b>"},
+        {"t": "You win and type \"ez\"", "v": -10000, "r": "You won the round, lost the respect."},
+        {"t": "You get one-tapped immediately", "v": -30000, "r": "Someone already clipped it."}
+      ]},
+      {"q": "They yell for you to come eat dinner right when ranked starts.", "a": [
+        {"t": "\"One sec\" — and you keep playing for 40 more minutes", "v": -20000, "r": "Cold food docks points too."},
+        {"t": "You pause, go eat, and come back", "v": 30000, "r": "Discipline. Nobody expects that from a gamer."},
+        {"t": "You answer annoyed, then lose the match", "v": -60000, "r": "Instant karma."}
+      ]},
+      {"q": "A random on your team starts insulting you in voice chat.", "a": [
+        {"t": "You mute him and play the best game of your life", "v": 95000, "r": "<b>God mode.</b> Not responding is the response."},
+        {"t": "You send him 20 messages in a row", "v": -25000, "r": "Typing paragraphs never gave anyone aura."},
+        {"t": "You leave the match", "v": -40000, "r": "Rage quitting comes at a price."}
+      ]},
+      {"q": "You're teaching someone who's never touched a controller.", "a": [
+        {"t": "You let them win and act surprised", "v": 55000, "r": "Silent aura. The best kind of lesson."},
+        {"t": "You patiently explain the controls", "v": 35000, "r": "Correct, but nobody's recording it."},
+        {"t": "You crush them 10-0, no mercy", "v": -15000, "r": "You beat someone who didn't know which button was which."}
+      ]},
+      {"q": "The internet goes out in the middle of a big match.", "a": [
+        {"t": "You reset the router and you're back in 40 seconds", "v": 50000, "r": "Street-certified IT technician."},
+        {"t": "You accept the loss in silence", "v": 15000, "r": "Chill. No drama."},
+        {"t": "You blame the internet in the group chat for three days", "v": -25000, "r": "Everyone already knows it was you."}
+      ]},
+      {"q": "Someone in the lobby says your skin is ugly.", "a": [
+        {"t": "\"It's the default, bro\" — and you win the match", "v": 80000, "r": "<b>Winning with the default skin</b> is the highest level there is."},
+        {"t": "You send a screenshot of how much you paid for it", "v": -20000, "r": "Explaining the price dropped your value."},
+        {"t": "You switch skins immediately", "v": -35000, "r": "They edited your personality live."}
+      ]},
+      {"q": "You pull off an impossible play by accident and everyone thinks it was on purpose.", "a": [
+        {"t": "You say nothing and just nod", "v": 100000, "r": "<b>This is where the legend is born.</b>"},
+        {"t": "You admit it was luck", "v": 20000, "r": "Honest. Costly, but honest."},
+        {"t": "You say \"obviously, I practiced that\"", "v": -15000, "r": "Nobody bought it."}
+      ]},
+      {"q": "You've been gaming for 3 hours and remember homework is due tomorrow.", "a": [
+        {"t": "You shut it all down and do the homework", "v": 40000, "r": "Functional-human aura. Rare and valuable."},
+        {"t": "You play \"one more\" until 2 am", "v": -25000, "r": "It was never one more."},
+        {"t": "You beg the group chat for answers at 6 am", "v": -5000, "r": "You survived. No glory though."}
+      ]},
+      {"q": "Your friend wants to play the game you hate.", "a": [
+        {"t": "You play anyway and actually have fun", "v": 45000, "r": "Friendship: +1. Aura: also +1."},
+        {"t": "You complain the entire match", "v": -20000, "r": "Nobody wants that teammate."},
+        {"t": "You claim your internet's down", "v": -30000, "r": "They saw you online. Obviously."}
+      ]}
+    ],
+    "escuela": [
+      {"q": "You trip going up the stairs. The whole hallway turns to look.", "a": [
+        {"t": "You get up and keep walking like nothing happened, no eye contact", "v": 45000, "r": "<b>Not looking back</b> matters more than not falling."},
+        {"t": "You laugh loudly and say \"I'm fine\"", "v": -5000, "r": "Nobody asked."},
+        {"t": "You stay on the floor three seconds too long", "v": -35000, "r": "Those three seconds are already a video."}
+      ]},
+      {"q": "The teacher calls on you and you were completely zoned out.", "a": [
+        {"t": "You answer with total confidence… and somehow nail it", "v": 95000, "r": "<b>Nobody will ever know what really happened.</b>"},
+        {"t": "\"Can you repeat the question?\" in a calm voice", "v": 25000, "r": "Smooth. You just bought yourself 4 seconds."},
+        {"t": "You look at your classmate with a panicked face", "v": -20000, "r": "The teacher saw that too."}
+      ]},
+      {"q": "You wave at someone… who was actually waving at the person behind you.", "a": [
+        {"t": "You turn the wave into a casual arm stretch", "v": 60000, "r": "<b>Professional-level recovery.</b>"},
+        {"t": "You wave anyway and say \"hey\"", "v": 10000, "r": "Brave. Awkward, but brave."},
+        {"t": "You lower your hand slowly while staring at the floor", "v": -50000, "r": "Classic. Painful. Expensive."}
+      ]},
+      {"q": "You're up to present and the slideshow crashes.", "a": [
+        {"t": "You present from memory, no slides needed", "v": 100000, "r": "<b>The whole room respected you after that.</b>"},
+        {"t": "You read off your phone, shaking", "v": -10000, "r": "It showed. But you finished."},
+        {"t": "You ask to reschedule", "v": -25000, "r": "You just postponed the embarrassment."}
+      ]},
+      {"q": "Someone brings up your nickname from last year in front of your new friends.", "a": [
+        {"t": "You say it yourself first and laugh", "v": 50000, "r": "You took the weapon out of their hands in one second."},
+        {"t": "You clap back with their old nickname", "v": 15000, "r": "Tie game. Nobody farmed aura here."},
+        {"t": "You turn red and change the subject", "v": -20000, "r": "Congrats, the nickname's back."}
+      ]},
+      {"q": "It's a test and you finish in 15 minutes.", "a": [
+        {"t": "You turn it in first and walk out slowly", "v": 70000, "r": "<b>The slow walk out is the whole move.</b>"},
+        {"t": "You stay till the end double-checking everything", "v": 15000, "r": "Smart. Invisible."},
+        {"t": "You turn it in first, then come back because you forgot a page", "v": -55000, "r": "The epic exit lasted 11 seconds."}
+      ]},
+      {"q": "You sit down and the chair makes a... very specific noise.", "a": [
+        {"t": "You glare at the chair like it betrayed you", "v": 55000, "r": "<b>You blamed the furniture and it actually worked.</b>"},
+        {"t": "You don't react at all", "v": 20000, "r": "Cold. Effective."},
+        {"t": "You say \"it was the chair\" three times", "v": -40000, "r": "By the third time nobody believed you."}
+      ]},
+      {"q": "First day in a new class. Nobody sits with you.", "a": [
+        {"t": "You talk to someone first", "v": 55000, "r": "That takes more aura than any clutch ever will."},
+        {"t": "You set your stuff down and put your headphones on, unbothered", "v": 35000, "r": "Mysterious aura. It works."},
+        {"t": "You pretend to type something important on your phone", "v": -10000, "r": "You were checking the time. We've all been there."}
+      ]},
+      {"q": "You get your test back and you got the highest score in the class.", "a": [
+        {"t": "You fold the paper and put it away without a word", "v": 85000, "r": "<b>Winning in silence.</b> Max level."},
+        {"t": "You post it to your story", "v": -15000, "r": "You needed witnesses. There goes the aura."},
+        {"t": "You loudly ask \"so what'd YOU get?\"", "v": -30000, "r": "Everyone knew exactly what you were doing."}
+      ]}
+    ],
+    "fiesta": [
+      {"q": "You text your crush. \"typing…\" pops up, then stops. Three times.", "a": [
+        {"t": "You lock your phone and go to sleep", "v": 70000, "r": "<b>Restraint is aura.</b>"},
+        {"t": "You send \"?\"", "v": -35000, "r": "That question mark cost you big."},
+        {"t": "You send three more texts explaining the first one", "v": -70000, "r": "Every text was a withdrawal from your account."}
+      ]},
+      {"q": "You get to the party and you don't know a single soul.", "a": [
+        {"t": "You head straight for the kitchen and talk to whoever's there", "v": 60000, "r": "<b>The kitchen is always the spot.</b>"},
+        {"t": "You leave after 10 minutes without saying bye", "v": 20000, "r": "Leaving without a word has its own aura."},
+        {"t": "You post up in a corner on your phone", "v": -25000, "r": "Nobody saw you. That's the problem."}
+      ]},
+      {"q": "You drop a cup and catch it before it hits the floor.", "a": [
+        {"t": "You catch it and keep talking without even looking", "v": 120000, "r": "<b>+120,000. The most expensive move in the game.</b>"},
+        {"t": "You catch it and yell \"I GOT IT!\"", "v": 25000, "r": "You pulled it off and ruined it in the same breath."},
+        {"t": "You catch it but spill everything on yourself", "v": -30000, "r": "Technically you caught it."}
+      ]},
+      {"q": "Your favorite song comes on and literally nobody knows it.", "a": [
+        {"t": "You sing the whole thing anyway", "v": 50000, "r": "Confidence with no audience. Worth double."},
+        {"t": "You explain what album it's from and what year", "v": -20000, "r": "Nobody asked for the release year."},
+        {"t": "You skip your own song", "v": -15000, "r": "You gave up on your own pick."}
+      ]},
+      {"q": "Someone asks what you're into.", "a": [
+        {"t": "You answer in one sentence and ask them back", "v": 45000, "r": "Conversation: unlocked."},
+        {"t": "You talk for six straight minutes", "v": -25000, "r": "They checked out two minutes in."},
+        {"t": "You say \"nothing really\" and the conversation dies", "v": -35000, "r": "Eight seconds of silence. Legendary, but in the red."}
+      ]},
+      {"q": "You texted your crush at 2 am. It's now morning.", "a": [
+        {"t": "You leave it there. No deleting. No explaining.", "v": 75000, "r": "<b>Sitting with the text is the ultimate move.</b>"},
+        {"t": "You delete it (they already saw it)", "v": -45000, "r": "\"This message was deleted\" says more than the message did."},
+        {"t": "You claim you got hacked", "v": -60000, "r": "Nobody hacks an account just to send that."}
+      ]},
+      {"q": "Someone pulls you up to dance and you can't dance.", "a": [
+        {"t": "You dance terribly but with total confidence", "v": 90000, "r": "<b>Confidence beats technique. Every single time.</b>"},
+        {"t": "You say no and just watch", "v": -20000, "r": "The aura stayed seated with you."},
+        {"t": "You fake a hurt ankle", "v": -30000, "r": "You limped all night for consistency."}
+      ]},
+      {"q": "You spot a classmate at the grocery store with their family.", "a": [
+        {"t": "You say hi like it's nothing", "v": 35000, "r": "Normal is harder than it sounds."},
+        {"t": "You both pretend not to see each other", "v": -5000, "r": "Mutual agreement. Zero aura, zero loss."},
+        {"t": "You hide in the cereal aisle", "v": -40000, "r": "They saw you. They saw you hiding."}
+      ]},
+      {"q": "Group photo. Your eyes are closed and it's the one that gets posted.", "a": [
+        {"t": "You say nothing", "v": 30000, "r": "Letting it ride is a power move."},
+        {"t": "You ask them to delete it", "v": -30000, "r": "Now everyone went and looked."},
+        {"t": "You ask for eight retakes", "v": -50000, "r": "The eighth one came out worse."}
+      ]}
+    ]
+  },
+  "guide": {
+    "slug": "what-is-aura-farming",
+    "headTerm": "aura farming",
+    "title": "What Is Aura Farming: Meaning, Origin, and Rules | farmearaura.com",
+    "desc": "Aura farming means racking up imaginary charisma points without trying. The meaning, where the term comes from, how much each situation is worth, and the rules of aura farming.",
+    "h1": "What Is Aura Farming",
+    "answer": "<strong>Aura farming</strong> means racking up imaginary charisma points by doing things that look effortless: staying calm, never explaining yourself, and never checking for a reaction. The points aren't real and nobody's actually counting, but the social rule behind them is.",
+    "headings": ["Where the Term Comes From", "How Aura Points Work", "The 7 Rules of Aura Farming", "What Costs You Aura", "Glossary", "Frequently Asked Questions"],
+    "origin": [
+      "The phrase pairs two words from different worlds. <strong>Farming</strong> comes from gaming: repeating an action over and over to rack up resources, experience, or loot. <strong>Aura</strong> is used here as a stand-in for presence — whatever someone gives off the second they walk into a room. Aura farming, then, is stacking up presence on purpose.",
+      "The term had already been floating around gaming and anime communities, but it exploded in mid-2025 with one very specific video: an 11-year-old boy from Indonesia named <strong>Rayyan Arkan Dikha</strong>, wearing dark sunglasses and traditional dress, dancing on the bow of a canoe while his team rowed behind him.",
+      "The video wasn't a TikTok stunt. Dikha was doing a real job in the <strong>Pacu Jalur</strong>, a centuries-old traditional boat race held in Indonesia's Riau province. His role is called <em>Togak Luan</em> — the dancer who stands at the bow to hype up the rowers, a position usually held by kids because it demands serious balance. Dikha told the BBC the moves came to him spontaneously, and months later he was named a tourism ambassador for his province.",
+      "That contrast is what defined the term: someone doing something genuinely difficult while looking like it costs them nothing, without ever glancing at the camera. That's the practical definition of aura farming."
+    ],
+    "pointsIntro": "There's no official scale. The convention is to use <strong>round, exaggerated numbers</strong>, because the size of the number is part of the joke — nobody says \"+12 aura,\" they say \"+50,000.\" Points get handed out in comments, group chats, or among friends, always after the fact.",
+    "ledger": [
+      ["Catching a cup before it hits the floor and not breaking conversation", "+50,000", "up"],
+      ["Answering a question correctly without having paid attention at all", "+25,000", "up"],
+      ["Getting the top score and putting the paper away without a word", "+15,000", "up"],
+      ["Waving at someone who was waving at the person behind you", "−10,000", "down"],
+      ["Sending three follow-up texts explaining your first one", "−25,000", "down"],
+      ["Deleting a message the other person already saw", "−45,000", "down"]
+    ],
+    "pointsOutro": "When the total drops below zero, that's <strong>negative aura</strong>, and if it's really low, that's <strong>aura bankruptcy</strong>. It's a joke between friends — nobody's actually keeping score.",
+    "rulesIntro": "As silly as it sounds, the meme encodes some pretty recognizable social rules. These are the ones that show up in almost every video:",
+    "rules": [
+      ["Never explain what you did.", "Explaining a good move cancels it out. If you have to narrate it, it doesn't count."],
+      ["React late.", "Staying calm reads as control. Reacting instantly reads as nerves."],
+      ["Never fish for a reaction.", "Checking to see if anyone noticed erases all the aura the action just earned."],
+      ["Winning quietly beats winning loudly.", "This is the central rule of the whole meme."],
+      ["The recovery matters more than not falling.", "Tripping and walking it off without looking back earns more aura than never tripping at all."],
+      ["Do something for someone with no audience.", "Aura goes up when the move had no witnesses to begin with."],
+      ["Say \"that was aura\" and you lose all your aura.", "Naming it kills it. It's the one absolute rule."]
+    ],
+    "loseIntro": "Negative aura is the fun half of the meme, and it almost always comes down to the same thing: <strong>needing someone else to confirm something for you</strong>. The most common cases:",
+    "lose": ["Repeating a joke nobody heard the first time.", "Explaining why your joke was actually funny.", "Texting \"?\" when someone leaves you on read.", "Announcing how much something cost when nobody asked.", "Asking someone to delete a photo (everyone goes and looks now).", "Making up an excuse nobody asked for."],
+    "glossary": [
+      ["aura farming", "Deliberately racking up charisma through actions that look effortless."],
+      ["aura points", "A made-up unit for scoring a moment. Always round, always exaggerated."],
+      ["negative aura", "A running total that's dropped below zero after an embarrassing moment."],
+      ["aura bankruptcy", "Extreme negative aura. Used when someone stacks up several missteps in a row."],
+      ["aura farming kid", "The internet's nickname for Rayyan Arkan Dikha, the boy from the canoe video."],
+      ["aura edits", "Short clips that set an everyday moment — or an anime scene — to epic music. Characters who barely move, staying eerily calm, are the favorite format; Piccolo is one of the most-used."]
+    ],
+    "faq": [
+      ["What does aura farming mean?", "It means racking up imaginary charisma points by doing things that look effortless: staying calm, skipping the explanations, and never checking for a reaction. It combines <em>farming</em>, the gaming term for grinding out resources by repeating an action, with <em>aura</em>, used here as a stand-in for someone's presence."],
+      ["Where does the term aura farming come from?", "It exploded in mid-2025 after a video of Rayyan Arkan Dikha, an 11-year-old boy from Riau, Indonesia, dancing on the bow of a canoe during the Pacu Jalur boat race. His calm, effortless-looking performance became the template for the term."],
+      ["What does aura mean on TikTok?", "On TikTok, aura doesn't refer to the esoteric energy field — it means someone's charisma or social presence. It's used like a score: a person gains or loses aura depending on how good or bad they looked in a given moment."],
+      ["How do you farm aura in real life?", "Don't explain what you did, react late and stay calm, never fish for a reaction, win quietly, and recover well when something goes wrong. The main rule is that announcing you're farming aura cancels out all the aura you just earned."],
+      ["What are aura points?", "A made-up unit for scoring how charismatic a moment was. There's no official scale — the convention is round, exaggerated numbers, like +1,000 for a good comeback or −50,000 for an embarrassing moment."],
+      ["Can you have negative aura?", "Yes. It's handed out as a joke when someone gets embarrassed or pushes too hard on something. When the total gets low enough, people call it aura bankruptcy. It's humor, not a judgment on the person."],
+      ["Who is the boat kid from the aura farming video?", "Rayyan Arkan Dikha, an 11-year-old boy from the Kuantan Singingi regency in Riau, Indonesia. His role in the Pacu Jalur boat race was Togak Luan — the dancer at the bow who hypes up the rowers. He told the BBC the moves came to him spontaneously, and he was later named a tourism ambassador for his province."],
+      ["Does aura farming have anything to do with aura colors?", "No. They're two different uses of the same word. The esoteric version of aura refers to a supposed energy field with colors and meanings. The TikTok version is a metaphor for charisma and works as a joke score, with no connection to spiritual beliefs."],
+      ["What is the aura points calculator?", "A free seven-question quiz that gives you a total aura score and generates a shareable card. It runs right in your browser, doesn't ask for an account or photos, and doesn't save any data."]
+    ],
+    "promoK": "So how much aura do you actually have?",
+    "promoP": "Seven situations. One number. No account, no photos, nothing saved.",
+    "promoBtn": "CALCULATE MY AURA POINTS",
+    "ctaNav": "CALCULATE MY AURA",
+    "footerNote": "farmearaura.com — humor content. Aura points aren't real."
+  }
+}

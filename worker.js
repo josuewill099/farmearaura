@@ -17,7 +17,7 @@ const MODULOS = {
     candidatos: "candidatos",
     duelos: "duelos",
     votantes: "votantes",
-    locales: ["ar", "mx", "es", "br", "cl", "pe", "co"],
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us"],
     limite: 60,
     poda: 5000
   },
@@ -25,7 +25,7 @@ const MODULOS = {
     candidatos: "h_candidatos",
     duelos: "h_duelos",
     votantes: "h_votantes",
-    locales: ["ar", "mx", "es", "br", "cl", "pe", "co"],
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us"],
     limite: 40,
     poda: 8000
   }

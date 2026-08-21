@@ -1,0 +1,249 @@
+{
+  "loc": "us",
+  "locale": "en-US",
+  "lang": "en",
+  "numfmt": "en-US",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "us/historical-duels/",
+  "slug_ranking": "us/historical-duels/ranking/",
+  "home": "/us/",
+  "nav": {
+    "calculadora": "Calculator",
+    "votar": "Duels",
+    "ranking": "Ranking",
+    "arquetipos": "Legends"
+  },
+  "votar": {
+    "title": "Aura Duels: Who Had More Aura in History? | Farmear Aura",
+    "description": "Einstein vs. Cleopatra, MLK vs. Napoleon. Pick who had more aura and check the live historical ranking.",
+    "h1": "Who Had <em>More Aura</em> in History?",
+    "sub": "Two historical figures. Pick one. The winner steals aura from the loser.",
+    "cta": "Had More Aura",
+    "otro": "Another Duel",
+    "seo_h2": "How Historical Aura Gets Divided Up",
+    "seo_p": "All 28 figures start with 1,000 aura each. In every duel, the winner steals points from the loser: beating someone near the top steals a lot, beating someone already in the gutter barely moves the needle. The ranking shifts with everyone's votes, not just yours, and yes, you can end up in negative aura.",
+    "seo_link": "See the Full Historical Ranking"
+  },
+  "ranking": {
+    "title": "Historical Aura Ranking — Who Has the Most Aura in History | Farmear Aura",
+    "description": "The aura ranking for history's biggest names, built from everyone's votes. See who's on top and who's gone negative.",
+    "h1": "<em>Historical Aura</em> Ranking",
+    "sub": "It moves with every vote.",
+    "feed_titulo": "Latest Duels",
+    "vacio": "No duels yet. Be the first.",
+    "link": "Back to Voting"
+  },
+  "t": {
+    "robo": "stole",
+    "de_aura": "aura from",
+    "de_aura_label": "aura",
+    "tiempo": {
+      "seg": "%s s ago",
+      "min": "%s min ago",
+      "hora": "%s h ago",
+      "dia": "%s d ago"
+    }
+  },
+  "offline": "Local mode: votes aren't saved yet.",
+  "footer": "It's a game. The points don't mean anything, and that's exactly why they matter.",
+  "figuras": [
+    {
+      "id": "cleopatra",
+      "emoji": "👑",
+      "nombre": "Cleopatra",
+      "anios": "69 a.C. — 30 a.C.",
+      "oficio": "Last queen of Egypt"
+    },
+    {
+      "id": "davinci",
+      "emoji": "🎨",
+      "nombre": "Leonardo da Vinci",
+      "anios": "1452 — 1519",
+      "oficio": "Painter and inventor"
+    },
+    {
+      "id": "einstein",
+      "emoji": "🧠",
+      "nombre": "Albert Einstein",
+      "anios": "1879 — 1955",
+      "oficio": "Physicist"
+    },
+    {
+      "id": "tesla",
+      "emoji": "⚡",
+      "nombre": "Nikola Tesla",
+      "anios": "1856 — 1943",
+      "oficio": "Inventor"
+    },
+    {
+      "id": "curie",
+      "emoji": "☢️",
+      "nombre": "Marie Curie",
+      "anios": "1867 — 1934",
+      "oficio": "Two Nobel Prizes"
+    },
+    {
+      "id": "frida",
+      "emoji": "🌺",
+      "nombre": "Frida Kahlo",
+      "anios": "1907 — 1954",
+      "oficio": "Painter"
+    },
+    {
+      "id": "ada",
+      "emoji": "💾",
+      "nombre": "Ada Lovelace",
+      "anios": "1815 — 1852",
+      "oficio": "The first programmer"
+    },
+    {
+      "id": "juana_arco",
+      "emoji": "⚔️",
+      "nombre": "Juana de Arco",
+      "anios": "1412 — 1431",
+      "oficio": "Led an army at 17"
+    },
+    {
+      "id": "napoleon",
+      "emoji": "🎩",
+      "nombre": "Napoleón Bonaparte",
+      "anios": "1769 — 1821",
+      "oficio": "Emperor"
+    },
+    {
+      "id": "alejandro",
+      "emoji": "🗡️",
+      "nombre": "Alejandro Magno",
+      "anios": "356 a.C. — 323 a.C.",
+      "oficio": "Never lost a battle"
+    },
+    {
+      "id": "beethoven",
+      "emoji": "🎼",
+      "nombre": "Ludwig van Beethoven",
+      "anios": "1770 — 1827",
+      "oficio": "Composed while deaf"
+    },
+    {
+      "id": "mozart",
+      "emoji": "🎹",
+      "nombre": "Wolfgang Amadeus Mozart",
+      "anios": "1756 — 1791",
+      "oficio": "Composer"
+    },
+    {
+      "id": "shakespeare",
+      "emoji": "🪶",
+      "nombre": "William Shakespeare",
+      "anios": "1564 — 1616",
+      "oficio": "Playwright"
+    },
+    {
+      "id": "earhart",
+      "emoji": "✈️",
+      "nombre": "Amelia Earhart",
+      "anios": "1897 — 1937",
+      "oficio": "Aviator"
+    },
+    {
+      "id": "socrates",
+      "emoji": "🏛️",
+      "nombre": "Sócrates",
+      "anios": "470 a.C. — 399 a.C.",
+      "oficio": "Philosopher"
+    },
+    {
+      "id": "galileo",
+      "emoji": "🔭",
+      "nombre": "Galileo Galilei",
+      "anios": "1564 — 1642",
+      "oficio": "Astronomer"
+    },
+    {
+      "id": "vangogh",
+      "emoji": "🌻",
+      "nombre": "Vincent van Gogh",
+      "anios": "1853 — 1890",
+      "oficio": "Painter"
+    },
+    {
+      "id": "brucelee",
+      "emoji": "🥋",
+      "nombre": "Bruce Lee",
+      "anios": "1940 — 1973",
+      "oficio": "Martial artist"
+    },
+    {
+      "id": "tutankamon",
+      "emoji": "⚱️",
+      "nombre": "Tutankamón",
+      "anios": "1341 a.C. — 1323 a.C.",
+      "oficio": "Pharaoh at age 9"
+    },
+    {
+      "id": "hipatia",
+      "emoji": "📐",
+      "nombre": "Hipatia de Alejandría",
+      "anios": "355 — 415",
+      "oficio": "Mathematician and astronomer"
+    },
+    {
+      "id": "franklin",
+      "emoji": "🪁",
+      "nombre": "Benjamin Franklin",
+      "anios": "1706 — 1790",
+      "oficio": "Founding Father and inventor"
+    },
+    {
+      "id": "lincoln",
+      "emoji": "🎩",
+      "nombre": "Abraham Lincoln",
+      "anios": "1809 — 1865",
+      "oficio": "Freed a nation"
+    },
+    {
+      "id": "mlk",
+      "emoji": "✊",
+      "nombre": "Martin Luther King Jr.",
+      "anios": "1929 — 1968",
+      "oficio": "Had a dream"
+    },
+    {
+      "id": "edison",
+      "emoji": "💡",
+      "nombre": "Thomas Edison",
+      "anios": "1847 — 1931",
+      "oficio": "Lit up the world"
+    },
+    {
+      "id": "ali",
+      "emoji": "🥊",
+      "nombre": "Muhammad Ali",
+      "anios": "1942 — 2016",
+      "oficio": "The Greatest"
+    },
+    {
+      "id": "parks",
+      "emoji": "🚌",
+      "nombre": "Rosa Parks",
+      "anios": "1913 — 2005",
+      "oficio": "Refused to give up her seat"
+    },
+    {
+      "id": "elvis",
+      "emoji": "🎸",
+      "nombre": "Elvis Presley",
+      "anios": "1935 — 1977",
+      "oficio": "The King of Rock and Roll"
+    },
+    {
+      "id": "twain",
+      "emoji": "🖋️",
+      "nombre": "Mark Twain",
+      "anios": "1835 — 1910",
+      "oficio": "America's greatest storyteller"
+    }
+  ]
+}

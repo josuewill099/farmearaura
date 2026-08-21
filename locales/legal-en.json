@@ -1,0 +1,127 @@
+{
+  "lang": "en",
+  "base": "/us/legal/",
+  "homeLabel": "Home",
+  "updated": "Last updated: August 2026",
+  "navLabel": "Legal",
+  "sourcesH": "Sources",
+  "pages": {
+    "privacy": {
+      "slug": "privacy",
+      "title": "Privacy Policy | farmearaura.com",
+      "desc": "farmearaura.com doesn't collect personal data. The quiz runs entirely in your browser, and nothing you type ever leaves your device.",
+      "h1": "Privacy Policy",
+      "lead": "<strong>This site does not collect personal data.</strong> There are no accounts, no forms, no analytics, and no database where anything could be stored. Everything that happens in the quiz happens inside your browser.",
+      "sections": [
+        ["Who's responsible", [
+          "Site owner: <strong>[YOUR NAME OR BUSINESS NAME]</strong>, [COUNTRY].",
+          "Contact email: <a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a>."
+        ]],
+        ["What data gets processed", [
+          "When you take the quiz, the answers you pick and the name or handle you type in are used only to calculate your score and draw your card. That processing happens entirely on your own device:",
+          {"ul": [
+            "It's never sent to any server.",
+            "It's never saved in cookies or browser storage.",
+            "It disappears the moment you close or reload the page."
+          ]},
+          "The site doesn't support photo uploads. Your card's avatar is an emoji you pick from a list."
+        ]],
+        ["The card you share", [
+          "Your card image is generated on your device and never uploaded anywhere. If you use the share button, your operating system hands that image off to whatever app you pick (TikTok, Instagram, WhatsApp, or another). From that point on, that app's own privacy policy applies, not ours."
+        ]],
+        ["Third parties", [
+          "Even though the site doesn't collect data, loading any web page means your device talks to whoever's serving it. In this case:",
+          {"ul": [
+            "<strong>Cloudflare Pages</strong> hosts and delivers the site. Like any server, it processes your IP address to respond to the request and for security purposes.",
+            "<strong>Google Fonts</strong> delivers the typefaces. That means your IP address reaches Google when the page loads."
+          ]},
+          "We're migrating the fonts to self-hosting specifically to remove that second connection. We'll update this page once that's done."
+        ]],
+        ["Minors", [
+          "A good chunk of the people who visit this site are teenagers. That's exactly why it's built to need no data at all: it doesn't ask for your age, your real name, your email, or photos, and there's no way to sign up.",
+          "If you're a parent or guardian with questions about how the site works, reach out and we'll answer."
+        ]],
+        ["Your rights", [
+          "Data protection law gives you the right to access, correct, or delete your personal data. On this site there's nothing to access, correct, or delete, because nothing is stored. Even so, if you have a question or a request, feel free to write to us and we'll get back to you."
+        ]],
+        ["Changes to this policy", [
+          "If we ever add analytics, advertising, or any feature that involves collecting data, we'll update this page before turning it on and make that clear in the date above."
+        ]]
+      ]
+    },
+    "cookies": {
+      "slug": "cookies",
+      "title": "Cookie Policy | farmearaura.com",
+      "desc": "farmearaura.com doesn't use analytics, advertising, or tracking cookies. Here's what actually loads when you visit the site and how to control it.",
+      "h1": "Cookie Policy",
+      "lead": "<strong>This site doesn't use analytics, advertising, or tracking cookies.</strong> There's no consent banner because there's nothing to consent to.",
+      "sections": [
+        ["What a cookie is", [
+          "A cookie is a small file a site saves in your browser to remember something between visits: that you're logged in, what language you prefer, or, very often, which pages you visited so it can show you ads later."
+        ]],
+        ["What this site uses", [
+          "No cookies of our own. We don't use <em>localStorage</em> or <em>sessionStorage</em> either: your score and name live in the page's memory and vanish the moment you reload it.",
+          "The provider hosting the site may, in certain circumstances, set a strictly necessary security cookie (for example, to tell automated traffic apart from real visitors). That kind of cookie can't be used to profile you or serve ads."
+        ]],
+        ["How to control them anyway", [
+          "Every browser lets you view, block, and delete cookies from its privacy settings. Blocking them entirely won't affect how this site works, since it doesn't depend on them."
+        ]],
+        ["If this changes", [
+          "If we ever add analytics or advertising, a real consent notice — with the option to decline — will appear before anything loads, and this page will be updated to detail every cookie."
+        ]]
+      ]
+    },
+    "about": {
+      "slug": "about",
+      "title": "About Us | farmearaura.com",
+      "desc": "What farmearaura.com is, how the content gets written, and why the quiz doesn't measure anything real.",
+      "h1": "About Us",
+      "lead": "farmearaura.com is an aura points calculator and a reference guide to <em>aura farming</em>, the meme that went from TikTok to half the internet's everyday vocabulary in 2025.",
+      "sections": [
+        ["What we do", [
+          "Two things. First, a seven-scenario quiz that spits out a score and a shareable card. Second, a guide that explains where the term comes from, how the points system works, and what the phrases around it actually mean.",
+          "The quiz exists because it's fun. The guide exists because when someone searches what <em>farming aura</em> means, almost everything they find is articles copied from each other that don't cite where any of it came from."
+        ]],
+        ["How we write the content", [
+          {"ul": [
+            "We verify the meme's origin against primary sources and reputable outlets, and cite them at the end of the guide.",
+            "We separate what's documented from what's just internet convention. If there's no official point scale, we say so instead of making one up.",
+            "We correct mistakes. If you spot an error, write to us and we'll fix it."
+          ]}
+        ]],
+        ["What this isn't", [
+          "It's not a personality test, not a psychological tool, and it has nothing to do with esoteric auras or color readings. Aura points aren't real: they're an internet joke, and this site treats them as one.",
+          "A low score doesn't say anything about you. It's a joke with a big number next to it."
+        ]],
+        ["Who's behind it", [
+          "The site is run by <strong>[YOUR NAME OR BUSINESS NAME]</strong> out of [COUNTRY]. It's not a media company project and there's no editorial staff: it's a small site, built and maintained by one person.",
+          "Got a scenario that should be in the quiz? Send it to <a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a>."
+        ]]
+      ]
+    },
+    "contact": {
+      "slug": "contact",
+      "title": "Contact | farmearaura.com",
+      "desc": "How to get in touch with farmearaura.com: corrections, press, scenario suggestions, and privacy questions.",
+      "h1": "Contact",
+      "lead": "Write to us at <strong><a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a></strong>. It's the only way to reach us, and a real person reads it.",
+      "sections": [
+        ["What to write about", [
+          {"ul": [
+            "<strong>Corrections.</strong> If something in the guide is wrong or outdated, tell us what and why.",
+            "<strong>Scenario suggestions.</strong> The best ones in the quiz come from people who actually lived them.",
+            "<strong>Press and collaborations.</strong>",
+            "<strong>Privacy.</strong> Any question about how the site works, including from parents or guardians.",
+            "<strong>Content removal.</strong> If something published affects you, tell us about it."
+          ]}
+        ]],
+        ["Why there's no form", [
+          "A contact form means a server that receives and stores what you type. Since the rest of the site collects zero data, adding one just for this would be contradictory. A direct email does the same job and leaves the message in your Sent folder, where you can see it."
+        ]],
+        ["Response time", [
+          "Usually within a few days. It's a small project, not a 24/7 support team."
+        ]]
+      ]
+    }
+  }
+}

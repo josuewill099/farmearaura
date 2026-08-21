@@ -18,17 +18,17 @@ ROOT   = pathlib.Path(__file__).parent
 SRC    = ROOT / "src"
 DIST   = ROOT / "dist"
 DOMAIN = "https://farmearaura.com"
-ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co"]    # ar first = default
-GENERIC = {"es": "ar", "pt": "br"}   # bare language code -> owning locale
+ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us"]    # ar first = default
+GENERIC = {"es": "ar", "pt": "br", "en": "us"}   # bare language code -> owning locale
 
 def load(code):
     return json.loads((ROOT / "locales" / f"{code}.json").read_text("utf-8"))
 
 LOC = {c: load(c) for c in ORDER}
 LEGAL = {k: json.loads((ROOT / "locales" / f"legal-{k}.json").read_text("utf-8"))
-         for k in ("es", "pt")}
+         for k in ("es", "pt", "en")}
 LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
-            "cl": "es", "pe": "es", "co": "es"}   # locale -> legal language
+            "cl": "es", "pe": "es", "co": "es", "us": "en"}   # locale -> legal language
 for _c, _l in LOC.items():
     _l["_code"] = _c
 DEFAULT = next(l for l in LOC.values() if l["isDefault"])
@@ -56,17 +56,20 @@ def legal_url(langkey, pagekey):
     L = LEGAL[langkey]
     return f'{DOMAIN}{L["base"]}{L["pages"][pagekey]["slug"]}/'
 
-# es <-> pt equivalents, so each legal page has a 2-locale hreflang cluster
-LEGAL_PAIRS = [("privacidad", "privacidade"), ("cookies", "cookies"),
-               ("sobre-nosotros", "sobre"), ("contacto", "contato")]
+# es <-> pt <-> en equivalents, so each legal page has a full hreflang cluster
+LEGAL_PAIRS = [
+    {"es": "privacidad", "pt": "privacidade", "en": "privacy"},
+    {"es": "cookies", "pt": "cookies", "en": "cookies"},
+    {"es": "sobre-nosotros", "pt": "sobre", "en": "about"},
+    {"es": "contacto", "pt": "contato", "en": "contact"},
+]
 
 def legal_hreflang(pagekey, langkey):
-    pair = next(p for p in LEGAL_PAIRS if p[0 if langkey == "es" else 1] == pagekey)
-    es_u, pt_u = legal_url("es", pair[0]), legal_url("pt", pair[1])
-    return "\n".join([
-        f'<link rel="alternate" hreflang="es" href="{es_u}">',
-        f'<link rel="alternate" hreflang="pt" href="{pt_u}">',
-        f'<link rel="alternate" hreflang="x-default" href="{es_u}">'])
+    pair = next(p for p in LEGAL_PAIRS if p[langkey] == pagekey)
+    out = [f'<link rel="alternate" hreflang="{lk}" href="{legal_url(lk, slug)}">'
+           for lk, slug in pair.items()]
+    out.append(f'<link rel="alternate" hreflang="x-default" href="{legal_url("es", pair["es"])}">')
+    return "\n".join(out)
 
 def legal_links(langkey, home):
     L = LEGAL[langkey]
@@ -318,11 +321,12 @@ def build_sitemap():
                         f'    <lastmod>2026-08-14</lastmod>\n'
                         f'    <priority>{"1.0" if kind == "app" else "0.8"}</priority>\n  </url>')
     for pair in LEGAL_PAIRS:
-        es_u, pt_u = legal_url("es", pair[0]), legal_url("pt", pair[1])
-        alt = (f'    <xhtml:link rel="alternate" hreflang="es" href="{es_u}"/>\n'
-               f'    <xhtml:link rel="alternate" hreflang="pt" href="{pt_u}"/>\n'
-               f'    <xhtml:link rel="alternate" hreflang="x-default" href="{es_u}"/>')
-        for u in (es_u, pt_u):
+        legal_urls = {lk: legal_url(lk, slug) for lk, slug in pair.items()}
+        alt = "\n".join(
+            f'    <xhtml:link rel="alternate" hreflang="{lk}" href="{u}"/>'
+            for lk, u in legal_urls.items())
+        alt += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{legal_urls["es"]}"/>'
+        for u in legal_urls.values():
             urls.append(f'  <url>\n    <loc>{u}</loc>\n{alt}\n'
                         f'    <lastmod>2026-08-14</lastmod>\n'
                         f'    <priority>0.3</priority>\n  </url>')
@@ -359,7 +363,7 @@ def build_llms():
     U = nav_data.NAV_URLS
     REGIONES = [("ar", "Argentina"), ("mx", "México"), ("es", "España"),
                 ("br", "Brasil (português)"), ("cl", "Chile"), ("pe", "Perú"),
-                ("co", "Colombia")]
+                ("co", "Colombia"), ("us", "United States (English)")]
     calculadora = "\n".join(
         f"- {label}{' (predeterminada)' if c == 'ar' else ''}: {U[c]['home']} · "
         f"guía: {DOMAIN}{LOC[c]['path']}{LOC[c]['guide']['slug']}/"
@@ -424,7 +428,7 @@ def main():
         gdir.mkdir(parents=True, exist_ok=True)
         (gdir / "index.html").write_text(build_guide(l), "utf-8")
         print(f"  {l['code']:6} -> {l['path']} + {l['path']}{l['guide']['slug']}/")
-    for langkey in ("es", "pt"):
+    for langkey in ("es", "pt", "en"):
         for key, html in build_legal(langkey).items():
             slug = LEGAL[langkey]["pages"][key]["slug"]
             d = DIST / (LEGAL[langkey]["base"].strip("/")) / slug
