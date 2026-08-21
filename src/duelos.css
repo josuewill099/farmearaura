@@ -225,7 +225,9 @@ h1 em{font-style:normal;color:var(--aura)}
 .seo p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 12px;max-width:62ch}
 .seo a{color:var(--cyan)}
 .vacio{color:var(--muted);font-size:14px;padding:26px 0}
-footer{margin-top:40px;color:var(--muted);font-size:12px;line-height:1.5}
+footer{margin-top:40px;color:var(--muted);font-size:12px;line-height:1.7}
+footer a{color:var(--muted);text-underline-offset:2px}
+footer a:hover{color:var(--bone)}
 .skeleton{opacity:.35}
 
 @media(prefers-reduced-motion:reduce){

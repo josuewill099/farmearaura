@@ -12,7 +12,40 @@ esta el visitante, para marcar aria-current en el item (y sub-item) correcto:
 
     "home", "duelos", "duelos_ranking", "duelos_historial",
     "historia", "historia_ranking"
+
+legal_links_html(loc, home) arma la linea "farmearaura.com · Privacidad ·
+Cookies · ..." que build.py ya usaba en las paginas de guia/legal, pero que
+las paginas de duelos/historia nunca tuvieron -- build_duelos.py y
+build_historia.py son scripts aparte, sin acceso al LEGAL/LEGAL_OF de
+build.py. Duplica esa tabla (es chica y cambia poco) en vez de importar
+build.py entero solo para esto.
 """
+
+import json
+from pathlib import Path
+
+_ROOT = Path(__file__).parent
+
+LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
+            "cl": "es", "pe": "es", "co": "es", "us": "en", "esus": "es"}
+_legal_cache = {}
+
+
+def _legal(langkey):
+    if langkey not in _legal_cache:
+        _legal_cache[langkey] = json.loads(
+            (_ROOT / "locales" / ("legal-%s.json" % langkey)).read_text(encoding="utf-8"))
+    return _legal_cache[langkey]
+
+
+def legal_links_html(loc, home):
+    L = _legal(LEGAL_OF[loc])
+    items = " &middot; ".join(
+        '<a href="%s%s/">%s</a>' % (L["base"], pg["slug"], _esc(pg["h1"]))
+        for pg in L["pages"].values()
+    )
+    return '<a href="%s">farmearaura.com</a> &middot; %s' % (home, items)
+
 
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",

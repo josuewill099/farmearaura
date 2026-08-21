@@ -208,6 +208,7 @@ def build():
                 ("JSONLD", jsonld(L, page, canonical)),
                 ("HOME", home),
                 ("NAV", nav_html(loc, key)),
+                ("LEGALLINKS", nav_data.legal_links_html(loc, home)),
                 ("H1", esc(page["h1"])),
                 ("SUB", esc(page["sub"])),
                 ("OFFLINE", esc(L["offline"])),
