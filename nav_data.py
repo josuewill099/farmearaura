@@ -47,6 +47,28 @@ def legal_links_html(loc, home):
     return '<a href="%s">farmearaura.com</a> &middot; %s' % (home, items)
 
 
+# URL + link text for each locale's guide article. Vive aca (no en cada
+# locale.json) para que el resto del sitio (home, guia, duelos, historia)
+# pueda linkear la guia entre si sin duplicar la ruta en cada lado.
+GUIDE_URLS = {
+    "ar": "https://farmearaura.com/que-es-farmear-aura/",
+    "mx": "https://farmearaura.com/mx/que-es-farmear-aura/",
+    "es": "https://farmearaura.com/es/aura-farming/",
+    "br": "https://farmearaura.com/br/o-que-e-farmar-aura/",
+    "cl": "https://farmearaura.com/cl/que-es-farmear-aura/",
+    "pe": "https://farmearaura.com/pe/que-es-farmear-aura/",
+    "co": "https://farmearaura.com/co/que-es-farmear-aura/",
+    "us": "https://farmearaura.com/us/what-is-aura-farming/",
+    "esus": "https://farmearaura.com/es-us/que-es-farmear-aura/",
+}
+GUIDE_LABELS = {
+    "ar": "¿Qué es farmear aura?", "mx": "¿Qué es farmear aura?",
+    "es": "¿Qué es el aura farming?", "br": "O que é farmar aura?",
+    "cl": "¿Qué es farmear aura?", "pe": "¿Qué es farmear aura?",
+    "co": "¿Qué es farmear aura?", "us": "What is aura farming?",
+    "esus": "¿Qué es el aura farming?",
+}
+
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
            "ranking": "Ranking", "historial": "Historial"},

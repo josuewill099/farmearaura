@@ -100,6 +100,14 @@ details[open] summary::after{{content:'−'}}
 details .a{{padding:0 0 18px;color:#D6CBE4}}
 details .a p:last-child{{margin-bottom:0}}
 
+.related{{display:flex;flex-wrap:wrap;gap:10px;margin:44px 0 0}}
+.related a{{display:inline-flex;align-items:center;gap:8px;flex:1;min-width:180px;
+  border:1px solid #2A1A3E;border-radius:10px;padding:14px 16px;
+  font-family:var(--body);font-weight:700;font-size:14.5px;color:var(--bone);
+  text-decoration:none;background:rgba(21,11,34,.5)}}
+.related a:hover{{border-color:var(--aura)}}
+.related a::after{{content:'→';margin-left:auto;color:var(--aura)}}
+
 .promo{{border:2px solid var(--aura);padding:26px 22px;margin:56px 0 0;text-align:center;
   background:linear-gradient(160deg,rgba(176,38,255,.14),transparent)}}
 .promo .k{{font-family:var(--display);font-size:22px;line-height:1.15;margin-bottom:8px}}
@@ -141,6 +149,10 @@ footer a{{color:var(--mid)}}
   </div>
 
 {sections}
+
+  <div class="related">
+{related}
+  </div>
 
   <div class="promo">
     <div class="k">{promoK}</div>

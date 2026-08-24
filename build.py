@@ -132,6 +132,28 @@ def app_faq_ld(l):
     return '<script type="application/ld+json">%s</script>' % json.dumps(
         ld, ensure_ascii=False, separators=(",", ":"))
 
+# Enlaces internos: la seccion "about" de cada home menciona los duelos en
+# texto plano; esto envuelve esas dos frases con un link a duelos/historia
+# de esa MISMA locale (nunca cruza a otro pais). Las frases exactas varian
+# por idioma, no por locale -- se repiten iguales en las 6-7 locales de cada
+# grupo, verificado al escribirlas.
+ABOUT_LINK_PHRASES = {
+    "es": ("duelos de aura", "personajes históricos"),
+    "pt": ("duelos de aura", "personagens históricos"),
+    "en": ("aura duels", "historical figures"),
+}
+
+def app_about_linked(l):
+    code = l["_code"]
+    group = "pt" if l["lang"].startswith("pt") else ("en" if l["lang"].startswith("en") else "es")
+    duelos_phrase, historia_phrase = ABOUT_LINK_PHRASES[group]
+    text = l["app"]["about"][1]
+    for phrase, key in ((duelos_phrase, "duelos"), (historia_phrase, "historia")):
+        if phrase not in text:
+            sys.exit(f"[{code}] about-link phrase not found: {phrase}")
+        text = text.replace(phrase, f'<a href="{nav_data.NAV_URLS[code][key]}">{phrase}</a>', 1)
+    return text
+
 def app_faq_html(l):
     faq = l["guide"]["faq"]
     return "\n".join(
@@ -185,7 +207,7 @@ def build_app(l):
          "adentro de tu celular.", a["about"][0]),
         ("Además del test, el sitio tiene duelos de aura: podés votar quién tiene más aura entre "
          "arquetipos cotidianos o entre personajes históricos, y mirar el ranking que arma la "
-         "gente votando.", a["about"][1]),
+         "gente votando.", app_about_linked(l)),
         ("Preguntas frecuentes", a["faqH2"]),
         ("<!--FAQITEMS-->", app_faq_html(l)),
     ]:
@@ -266,6 +288,13 @@ def build_guide(l):
     sections = "\n\n".join(
         f'  <h2 id="s{i+1}">{esc(h)}</h2>\n{body}' for i, (h, body) in enumerate(blocks))
 
+    code = l["_code"]
+    NL, NU = nav_data.NAV_LABELS[code], nav_data.NAV_URLS[code]
+    related = "\n".join([
+        f'    <a href="{NU["duelos"]}">{esc(NL["duelos"])}</a>',
+        f'    <a href="{NU["historia"]}">{esc(NL["historia"])}</a>',
+    ])
+
     srcs = g.get("sources", [
         "BBC &mdash; entrevista con Rayyan Arkan Dikha sobre el origen del baile.",
         'Wikipedia &mdash; <a href="https://en.wikipedia.org/wiki/Aura_farming" '
@@ -280,7 +309,7 @@ def build_guide(l):
         meta=g.get("meta", "Actualizado: agosto de 2026 &middot; Lectura: 5 min"),
         homeLabel=esc(g.get("homeLabel", "Inicio")),
         tocLabel=esc(g.get("tocLabel", "EN ESTA P&Aacute;GINA")).replace("&amp;", "&"),
-        toc=toc, sections=sections,
+        toc=toc, sections=sections, related=related,
         sourcesH=esc(g.get("sourcesH", "Fuentes")),
         sources="\n".join(f"    <li>{x}</li>" for x in srcs),
         promoK=esc(g["promoK"]), promoP=esc(g["promoP"]), promoBtn=esc(g["promoBtn"]),

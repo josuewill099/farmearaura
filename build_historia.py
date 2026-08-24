@@ -46,7 +46,7 @@ MAIN_VOTAR = """
     <section class="seo">
       <h2>{{SEO_H2}}</h2>
       <p>{{SEO_P}}</p>
-      <p><a href="{{RANKING_URL}}">{{SEO_LINK}}</a></p>
+      <p><a href="{{RANKING_URL}}">{{SEO_LINK}}</a> &middot; <a href="{{GUIDE_URL}}">{{GUIDE_LABEL}}</a></p>
     </section>
 """
 
@@ -147,7 +147,9 @@ def build():
              {"SEO_H2": esc(L["votar"]["seo_h2"]),
               "SEO_P": esc(L["votar"]["seo_p"]),
               "SEO_LINK": esc(L["votar"]["seo_link"]),
-              "RANKING_URL": u_rank},
+              "RANKING_URL": u_rank,
+              "GUIDE_URL": nav_data.GUIDE_URLS[loc],
+              "GUIDE_LABEL": esc(nav_data.GUIDE_LABELS[loc])},
              L["figuras"]),
             ("ranking", L["ranking"], L["slug_ranking"], MAIN_RANKING,
              {"FEED_TITULO": esc(L["ranking"]["feed_titulo"]),

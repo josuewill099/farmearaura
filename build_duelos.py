@@ -96,7 +96,7 @@ MAIN_VOTAR = """
     <section class="seo">
       <h2>{{SEO_H2}}</h2>
       <p>{{SEO_P}}</p>
-      <p><a href="{{HOME}}">{{SEO_LINK}}</a></p>
+      <p><a href="{{HOME}}">{{SEO_LINK}}</a> &middot; <a href="{{GUIDE_URL}}">{{GUIDE_LABEL}}</a></p>
     </section>
 """
 
@@ -170,6 +170,8 @@ def build():
                 "SEO_P": esc(L["votar"]["seo_p"]),
                 "SEO_LINK": esc(L["votar"]["seo_link"]),
                 "HOME": home,
+                "GUIDE_URL": nav_data.GUIDE_URLS[loc],
+                "GUIDE_LABEL": esc(nav_data.GUIDE_LABELS[loc]),
             }, {"cta": L["votar"]["cta"], "robo": L["votar"]["robo"],
                 "de_aura": L["votar"]["de_aura"]}),
             ("ranking", L["ranking"], MAIN_RANKING,
