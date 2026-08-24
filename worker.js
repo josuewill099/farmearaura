@@ -28,6 +28,14 @@ const MODULOS = {
     locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus"],
     limite: 40,
     poda: 8000
+  },
+  famosos: {
+    candidatos: "f_candidatos",
+    duelos: "f_duelos",
+    votantes: "f_votantes",
+    locales: ["ar"],
+    limite: 40,
+    poda: 8000
   }
 };
 

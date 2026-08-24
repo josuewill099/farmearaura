@@ -1,0 +1,75 @@
+{
+  "loc": "ar",
+  "locale": "es-AR",
+  "lang": "es",
+  "numfmt": "es-AR",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "duelos/famosos/",
+  "slug_ranking": "duelos/famosos/ranking/",
+  "home": "/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Messi contra Tinelli, Lali contra Francella. Elegí quién tiene más aura entre los famosos argentinos y mirá el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos argentinos. Elegí uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que está arriba roba mucho, ganarle a uno que ya está abajo roba poco. El ranking se arma con los votos de todos los que entran, no solo los tuyos, y se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos argentinos | Farmear Aura",
+    "description": "El ranking de aura de los famosos argentinos, armado con los votos de todos. Mirá quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrenalo vos.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+  "figuras": [
+    { "id": "messi", "emoji": "⚽", "nombre": "Lionel Messi", "anios": "Fútbol", "oficio": "Campeón del mundo" },
+    { "id": "scaloni", "emoji": "🏆", "nombre": "Lionel Scaloni", "anios": "Fútbol", "oficio": "DT campeón del mundo 2022" },
+    { "id": "dimaria", "emoji": "🎯", "nombre": "Ángel Di María", "anios": "Fútbol", "oficio": "El Fideo" },
+    { "id": "dibumartinez", "emoji": "🧤", "nombre": "Emiliano Martínez", "anios": "Fútbol", "oficio": "Héroe de Qatar 2022" },
+    { "id": "ginobili", "emoji": "🏀", "nombre": "Manu Ginóbili", "anios": "Básquet", "oficio": "Leyenda, campeón NBA" },
+    { "id": "delpotro", "emoji": "🎾", "nombre": "Juan Martín del Potro", "anios": "Tenis", "oficio": "Ídolo popular" },
+    { "id": "francella", "emoji": "🎬", "nombre": "Guillermo Francella", "anios": "Actuación", "oficio": "Actor y comediante" },
+    { "id": "darin", "emoji": "🎥", "nombre": "Ricardo Darín", "anios": "Actuación", "oficio": "Ícono del cine" },
+    { "id": "peretti", "emoji": "😂", "nombre": "Diego Peretti", "anios": "Actuación", "oficio": "Actor y comediante" },
+    { "id": "tinelli", "emoji": "📺", "nombre": "Marcelo Tinelli", "anios": "TV", "oficio": "Conductor" },
+    { "id": "susana", "emoji": "💎", "nombre": "Susana Giménez", "anios": "TV", "oficio": "Diva de la televisión" },
+    { "id": "mirtha", "emoji": "🍽️", "nombre": "Mirtha Legrand", "anios": "TV", "oficio": "Ícono histórico de la TV" },
+    { "id": "lali", "emoji": "🎤", "nombre": "Lali Espósito", "anios": "Música", "oficio": "Cantante y actriz" },
+    { "id": "tini", "emoji": "🎶", "nombre": "Tini Stoessel", "anios": "Música", "oficio": "Cantante pop" },
+    { "id": "mariabecerra", "emoji": "🎵", "nombre": "María Becerra", "anios": "Música", "oficio": "Cantante urbana" },
+    { "id": "duki", "emoji": "🎧", "nombre": "Duki", "anios": "Música", "oficio": "Referente del trap" },
+    { "id": "wos", "emoji": "🎙️", "nombre": "Wos", "anios": "Música", "oficio": "Rapero y freestyler" },
+    { "id": "maratea", "emoji": "💻", "nombre": "Santiago Maratea", "anios": "Streaming", "oficio": "Influencer y streamer" },
+    { "id": "fitopaez", "emoji": "🎸", "nombre": "Fito Páez", "anios": "Música", "oficio": "Ícono del rock nacional" },
+    { "id": "miguegranados", "emoji": "🎙️", "nombre": "Migue Granados", "anios": "Streaming", "oficio": "Conductor y streamer" },
+    { "id": "nicoocchiato", "emoji": "📻", "nombre": "Nico Occhiato", "anios": "Streaming", "oficio": "Conductor y streamer" },
+    { "id": "coscu", "emoji": "🎮", "nombre": "Coscu", "anios": "Streaming", "oficio": "Streamer" },
+    { "id": "joaqui", "emoji": "🎤", "nombre": "La Joaqui", "anios": "Música", "oficio": "Cantante urbana" },
+    { "id": "pampita", "emoji": "👗", "nombre": "Pampita", "anios": "TV", "oficio": "Modelo y conductora" }
+  ]
+}

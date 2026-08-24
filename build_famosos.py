@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """
-Duelos de aura entre personajes historicos, en las cuatro locales.
+Duelos de aura entre famosos (celebridades contemporaneas), por ahora solo
+Argentina -- LOCS es una lista para que sumar paises despues sea directo
+(agregar el locale a LOCS + HREFLANG + OG + locales/famosos-{loc}.json,
+igual que ya funciona para build_historia.py).
 
-    python3 build.py && python3 build_duelos.py && python3 build_historia.py
+    python3 build.py && python3 build_duelos.py && python3 build_historia.py && python3 build_famosos.py
 
-Genera dos paginas por locale (votar + ranking), con hreflang reciproco entre
-las cuatro, y seed-historia.sql para cargar las figuras en D1.
+Genera dos paginas por locale (votar + ranking) y seed-famosos.sql para
+cargar los famosos en D1.
 """
 
 import json
@@ -17,15 +20,11 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus"]
+LOCS = ["ar"]
 GA4_ID = "G-XHZ0MM619V"   # "" para no cargar analytics en estas paginas
 
-HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
-            "es": ["es-ES"], "br": ["pt-BR"],
-            "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"],
-            "esus": ["es-US"]}
-OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
-      "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US"}
+HREFLANG = {"ar": ["es-AR", "es", "x-default"]}
+OG = {"ar": "es_AR"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
@@ -46,7 +45,9 @@ MAIN_VOTAR = """
     <section class="seo">
       <h2>{{SEO_H2}}</h2>
       <p>{{SEO_P}}</p>
-      <p><a href="{{RANKING_URL}}">{{SEO_LINK}}</a> &middot; <a href="{{GUIDE_URL}}">{{GUIDE_LABEL}}</a>{{FAMOSOS_LINK}}</p>
+      <p><a href="{{RANKING_URL}}">{{SEO_LINK}}</a> &middot; <a href="{{GUIDE_URL}}">{{GUIDE_LABEL}}</a>
+      &middot; <a href="{{DUELOS_URL}}">{{DUELOS_LABEL}}</a>
+      &middot; <a href="{{HISTORIA_URL}}">{{HISTORIA_LABEL}}</a></p>
     </section>
 """
 
@@ -71,7 +72,7 @@ def sin_tags(s):
 
 def cargar():
     return {
-        loc: json.loads((ROOT / "locales" / ("historia-%s.json" % loc))
+        loc: json.loads((ROOT / "locales" / ("famosos-%s.json" % loc))
                         .read_text(encoding="utf-8"))
         for loc in LOCS
     }
@@ -88,22 +89,14 @@ def alternates(datos, tipo):
     return "\n".join(out)
 
 
-# El menu (calculadora / duelos / duelos historicos) vive en nav_data.py,
-# compartido con build.py y build_duelos.py. "votar"/"ranking" son las claves
-# de pagina de este builder; nav_data usa sus propias claves ("historia",
-# "historia_ranking") para marcar aria-current.
-NAV_CURRENT = {"votar": "historia", "ranking": "historia_ranking"}
-
-# Famosos todavia es AR-only (build_famosos.py), asi que el link solo se
-# agrega en esa locale -- cuando se sume otro pais a famosos, agregar su
-# entrada aca en vez de generalizar antes de tiempo.
-FAMOSOS_LINK = {
-    "ar": ' &middot; <a href="https://farmearaura.com/duelos/famosos/">Duelos entre famosos</a>',
-}
-
-
-def nav_html(loc, actual):
-    return nav_data.nav_html(loc, NAV_CURRENT[actual])
+# El menu (calculadora / duelos / duelos historicos) no incluye "famosos"
+# todavia -- es AR-only por ahora, y nav_data.nav_html() se comparte con
+# TODAS las locales, asi que un tercer item ahi tendria que resolver que
+# hacer en los otros 8. Se linkea desde el home (about) y desde duelos /
+# historia (contenido relacionado) en vez de vivir en el nav global, asi que
+# ningun item del nav queda marcado aria-current en estas paginas.
+def nav_html(loc):
+    return nav_data.nav_html(loc, None)
 
 
 def jsonld(L, page, canonical, figuras):
@@ -135,10 +128,10 @@ def jsonld(L, page, canonical, figuras):
 
 def build():
     datos = cargar()
-    tpl = (SRC / "historia.tpl.html").read_text(encoding="utf-8")
+    tpl = (SRC / "famosos.tpl.html").read_text(encoding="utf-8")
     css = ((SRC / "duelos.css").read_text(encoding="utf-8") + "\n"
-           + (SRC / "historia.css").read_text(encoding="utf-8"))
-    js = (SRC / "historia.js").read_text(encoding="utf-8")
+           + (SRC / "famosos.css").read_text(encoding="utf-8"))
+    js = (SRC / "famosos.js").read_text(encoding="utf-8")
 
     alt = {"votar": alternates(datos, "votar"), "ranking": alternates(datos, "ranking")}
     urls = []
@@ -157,7 +150,10 @@ def build():
               "RANKING_URL": u_rank,
               "GUIDE_URL": nav_data.GUIDE_URLS[loc],
               "GUIDE_LABEL": esc(nav_data.GUIDE_LABELS[loc]),
-              "FAMOSOS_LINK": FAMOSOS_LINK.get(loc, "")},
+              "DUELOS_URL": nav_data.NAV_URLS[loc]["duelos"],
+              "DUELOS_LABEL": esc(nav_data.NAV_LABELS[loc]["duelos"]),
+              "HISTORIA_URL": nav_data.NAV_URLS[loc]["historia"],
+              "HISTORIA_LABEL": esc(nav_data.NAV_LABELS[loc]["historia"])},
              L["figuras"]),
             ("ranking", L["ranking"], L["slug_ranking"], MAIN_RANKING,
              {"FEED_TITULO": esc(L["ranking"]["feed_titulo"]),
@@ -189,7 +185,7 @@ def build():
                 ("CSS", css),
                 ("JSONLD", jsonld(L, page, canonical, figuras)),
                 ("HOME", base + L["home"]),
-                ("NAV", nav_html(loc, key)),
+                ("NAV", nav_html(loc)),
                 ("LEGALLINKS", nav_data.legal_links_html(loc, base + L["home"])),
                 ("H1", page["h1"]),
                 ("SUB", esc(page["sub"])),
@@ -216,11 +212,11 @@ def build():
         for f in datos[loc]["figuras"]:
             filas.append("  ('%s', '%s', %d)" % (loc, f["id"].replace("'", "''"),
                                                  datos[loc]["aura_inicial"]))
-    (ROOT / "seed-historia.sql").write_text(
-        "-- generado por build_historia.py\n"
-        "INSERT OR IGNORE INTO h_candidatos (loc, id, aura) VALUES\n%s;\n"
+    (ROOT / "seed-famosos.sql").write_text(
+        "-- generado por build_famosos.py\n"
+        "INSERT OR IGNORE INTO f_candidatos (loc, id, aura) VALUES\n%s;\n"
         % ",\n".join(filas), encoding="utf-8")
-    print("  -> seed-historia.sql (%d filas)" % len(filas))
+    print("  -> seed-famosos.sql (%d filas)" % len(filas))
 
     # sitemap
     sm = DIST / "sitemap.xml"
@@ -237,6 +233,6 @@ def build():
 
 
 if __name__ == "__main__":
-    print("Construyendo duelos historicos...")
+    print("Construyendo duelos de famosos...")
     build()
     print("Listo.")

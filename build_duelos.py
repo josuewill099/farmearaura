@@ -96,7 +96,7 @@ MAIN_VOTAR = """
     <section class="seo">
       <h2>{{SEO_H2}}</h2>
       <p>{{SEO_P}}</p>
-      <p><a href="{{HOME}}">{{SEO_LINK}}</a> &middot; <a href="{{GUIDE_URL}}">{{GUIDE_LABEL}}</a></p>
+      <p><a href="{{HOME}}">{{SEO_LINK}}</a> &middot; <a href="{{GUIDE_URL}}">{{GUIDE_LABEL}}</a>{{FAMOSOS_LINK}}</p>
     </section>
 """
 
@@ -128,6 +128,13 @@ HISTORIAL_CTA = {
     "ar": "Sumá tu duelo.", "mx": "Suma tu duelo.", "es": "Suma tu duelo.",
     "br": "Some o seu duelo.", "cl": "Suma tu duelo.", "pe": "Suma tu duelo.",
     "co": "Suma tu duelo.", "us": "Add your duel.", "esus": "Suma tu duelo.",
+}
+
+# Famosos todavia es AR-only (build_famosos.py), asi que el link solo se
+# agrega en esa locale -- cuando se sume otro pais a famosos, agregar su
+# entrada aca en vez de generalizar antes de tiempo.
+FAMOSOS_LINK = {
+    "ar": ' &middot; <a href="https://farmearaura.com/duelos/famosos/">Duelos entre famosos</a>',
 }
 
 
@@ -172,6 +179,7 @@ def build():
                 "HOME": home,
                 "GUIDE_URL": nav_data.GUIDE_URLS[loc],
                 "GUIDE_LABEL": esc(nav_data.GUIDE_LABELS[loc]),
+                "FAMOSOS_LINK": FAMOSOS_LINK.get(loc, ""),
             }, {"cta": L["votar"]["cta"], "robo": L["votar"]["robo"],
                 "de_aura": L["votar"]["de_aura"]}),
             ("ranking", L["ranking"], MAIN_RANKING,
