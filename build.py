@@ -250,8 +250,19 @@ def build_guide(l):
         return '  <ul class="plain">\n' + "\n".join(
             f'    <li>{x}</li>' for x in items) + "\n  </ul>"
 
+    # Secciones opcionales, locale-especificas, insertables en 3 puntos del
+    # pipeline fijo (antes de origin / entre origin y ledger / despues de
+    # lose). Cada entrada es [heading, [parrafos]]. Todas las locales sin
+    # estas claves en su guide.json se comportan exactamente igual que antes
+    # -- esto reemplaza el viejo mecanismo de un unico extraIntro/extraBody.
+    def extra_blocks(key):
+        return [(heading, "\n".join(f"  <p>{p}</p>" for p in paras))
+                for heading, paras in g.get(key, [])]
+
     blocks = []                                   # (heading, html)
-    blocks.append((hd[0], "\n".join(f"  <p>{p}</p>" for p in g["origin"])))
+    blocks += extra_blocks("extras_pre")
+    blocks.append((hd[len(blocks)], "\n".join(f"  <p>{p}</p>" for p in g["origin"])))
+    blocks += extra_blocks("extras_mid")
 
     lh = g.get("ledgerHead", ["SITUACI&Oacute;N", "AURA"])
     ledger = ('  <p>%s</p>\n  <div class="ledger">\n'
@@ -261,14 +272,13 @@ def build_guide(l):
         f'    <div class="row {d}"><span>{esc(t)}</span><span class="v">{v}</span></div>'
         for t, v, d in g["ledger"])
     ledger += f'\n  </div>\n  <p>{g["pointsOutro"]}</p>'
-    blocks.append((hd[1], ledger))
+    blocks.append((hd[len(blocks)], ledger))
 
-    blocks.append((hd[2], f'  <p>{g["rulesIntro"]}</p>\n' +
+    blocks.append((hd[len(blocks)], f'  <p>{g["rulesIntro"]}</p>\n' +
                    ul(f'<strong>{esc(b)}</strong> {t}' for b, t in g["rules"])))
-    blocks.append((hd[3], f'  <p>{g["loseIntro"]}</p>\n' + ul(esc(x) for x in g["lose"])))
+    blocks.append((hd[len(blocks)], f'  <p>{g["loseIntro"]}</p>\n' + ul(esc(x) for x in g["lose"])))
 
-    if "extraIntro" in g:                          # optional locale-specific section
-        blocks.append((hd[4], f'  <p>{g["extraIntro"]}</p>\n  <p>{g["extraBody"]}</p>'))
+    blocks += extra_blocks("extras_post")
 
     blocks.append((hd[-2], '  <dl class="glo">\n' + "\n".join(
         f'    <dt>{esc(t)}</dt><dd>{d}</dd>' for t, d in g["glossary"]) + "\n  </dl>"))
@@ -290,10 +300,15 @@ def build_guide(l):
 
     code = l["_code"]
     NL, NU = nav_data.NAV_LABELS[code], nav_data.NAV_URLS[code]
-    related = "\n".join([
+    related_links = [
         f'    <a href="{NU["duelos"]}">{esc(NL["duelos"])}</a>',
         f'    <a href="{NU["historia"]}">{esc(NL["historia"])}</a>',
-    ])
+    ]
+    if "famosos" in NU:
+        related_links.append(f'    <a href="{NU["famosos"]}">{esc(NL["famosos"])}</a>')
+    for label, url in g.get("related_extra", []):
+        related_links.append(f'    <a href="{url}">{esc(label)}</a>')
+    related = "\n".join(related_links)
 
     srcs = g.get("sources", [
         "BBC &mdash; entrevista con Rayyan Arkan Dikha sobre el origen del baile.",
