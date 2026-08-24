@@ -94,12 +94,21 @@ def alternates(datos, tipo):
 # "historia_ranking") para marcar aria-current.
 NAV_CURRENT = {"votar": "historia", "ranking": "historia_ranking"}
 
-# Famosos todavia es AR-only (build_famosos.py), asi que el link solo se
-# agrega en esa locale -- cuando se sume otro pais a famosos, agregar su
-# entrada aca en vez de generalizar antes de tiempo.
-FAMOSOS_LINK = {
-    "ar": ' &middot; <a href="https://farmearaura.com/duelos/famosos/">Duelos entre famosos</a>',
+# Link contextual a famosos (celebridades del propio pais) desde la seccion
+# SEO de la pagina de votar. nav_data.NAV_URLS ya tiene la URL correcta por
+# locale -- se usa esa en vez de duplicarla aca.
+FAMOSOS_LABEL = {
+    "ar": "Duelos entre famosos", "mx": "Duelos entre famosos",
+    "es": "Duelos entre famosos", "br": "Batalhas entre famosos",
+    "cl": "Duelos entre famosos", "pe": "Duelos entre famosos",
+    "co": "Duelos entre famosos", "us": "Celebrity duels",
+    "esus": "Duelos entre famosos",
 }
+
+
+def famosos_link(loc):
+    return ' &middot; <a href="%s">%s</a>' % (
+        nav_data.NAV_URLS[loc]["famosos"], esc(FAMOSOS_LABEL[loc]))
 
 
 def nav_html(loc, actual):
@@ -157,7 +166,7 @@ def build():
               "RANKING_URL": u_rank,
               "GUIDE_URL": nav_data.GUIDE_URLS[loc],
               "GUIDE_LABEL": esc(nav_data.GUIDE_LABELS[loc]),
-              "FAMOSOS_LINK": FAMOSOS_LINK.get(loc, "")},
+              "FAMOSOS_LINK": famosos_link(loc)},
              L["figuras"]),
             ("ranking", L["ranking"], L["slug_ranking"], MAIN_RANKING,
              {"FEED_TITULO": esc(L["ranking"]["feed_titulo"]),

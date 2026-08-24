@@ -1,0 +1,191 @@
+{
+  "loc": "es",
+  "locale": "es-ES",
+  "lang": "es",
+  "numfmt": "es-ES",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "es/duelos/famosos/",
+  "slug_ranking": "es/duelos/famosos/ranking/",
+  "home": "/es/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Rafa Nadal contra Rosalía, Ibai contra Sergio Ramos. Elige quién tiene más aura entre los famosos españoles y mira el ranking en directo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos españoles. Elige uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganar a alguien que está arriba roba mucho, ganar a alguien que ya está abajo roba poco. El ranking se arma con los votos de toda la gente que entra, no solo los tuyos, y se puede acabar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos españoles | Farmear Aura",
+    "description": "El ranking de aura de los famosos españoles, hecho con los votos de todos. Mira quién manda y quién ha acabado en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+  "figuras": [
+    {
+      "id": "nadal",
+      "emoji": "🎾",
+      "nombre": "Rafa Nadal",
+      "anios": "Tenis",
+      "oficio": "Leyenda del tenis"
+    },
+    {
+      "id": "alcaraz",
+      "emoji": "🏆",
+      "nombre": "Carlos Alcaraz",
+      "anios": "Tenis",
+      "oficio": "Número uno del mundo"
+    },
+    {
+      "id": "sergioramos",
+      "emoji": "⚽",
+      "nombre": "Sergio Ramos",
+      "anios": "Fútbol",
+      "oficio": "Capitán histórico"
+    },
+    {
+      "id": "casillas",
+      "emoji": "🧤",
+      "nombre": "Iker Casillas",
+      "anios": "Fútbol",
+      "oficio": "Leyenda del fútbol"
+    },
+    {
+      "id": "alonso",
+      "emoji": "🏎️",
+      "nombre": "Fernando Alonso",
+      "anios": "Automovilismo",
+      "oficio": "Piloto de F1"
+    },
+    {
+      "id": "gasol",
+      "emoji": "🏀",
+      "nombre": "Pau Gasol",
+      "anios": "Baloncesto",
+      "oficio": "Leyenda del baloncesto"
+    },
+    {
+      "id": "rosalia",
+      "emoji": "🎤",
+      "nombre": "Rosalía",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "alejandrosanz",
+      "emoji": "🎸",
+      "nombre": "Alejandro Sanz",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "aitana",
+      "emoji": "🎵",
+      "nombre": "Aitana",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "alboran",
+      "emoji": "🎶",
+      "nombre": "Pablo Alborán",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "bisbal",
+      "emoji": "🎼",
+      "nombre": "David Bisbal",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "penelopecruz",
+      "emoji": "🎬",
+      "nombre": "Penélope Cruz",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    },
+    {
+      "id": "banderas",
+      "emoji": "🎥",
+      "nombre": "Antonio Banderas",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "bardem",
+      "emoji": "🎭",
+      "nombre": "Javier Bardem",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "ibai",
+      "emoji": "🎮",
+      "nombre": "Ibai Llanos",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "auronplay",
+      "emoji": "🖥️",
+      "nombre": "AuronPlay",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "thegrefg",
+      "emoji": "🕹️",
+      "nombre": "TheGrefg",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "broncano",
+      "emoji": "📺",
+      "nombre": "David Broncano",
+      "anios": "TV",
+      "oficio": "Presentador"
+    },
+    {
+      "id": "pablomotos",
+      "emoji": "📻",
+      "nombre": "Pablo Motos",
+      "anios": "TV",
+      "oficio": "Presentador"
+    },
+    {
+      "id": "amaia",
+      "emoji": "🎧",
+      "nombre": "Amaia Romero",
+      "anios": "Música",
+      "oficio": "Cantante"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "loc": "mx",
+  "locale": "es-MX",
+  "lang": "es",
+  "numfmt": "es-MX",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "mx/duelos/famosos/",
+  "slug_ranking": "mx/duelos/famosos/ranking/",
+  "home": "/mx/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Checo Pérez contra Luis Miguel, Yalitza contra Peso Pluma. Elige quién tiene más aura entre los famosos mexicanos y mira el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos mexicanos. Elige uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que va arriba roba mucho, ganarle a uno que ya anda abajo roba poquito. El ranking se arma con los votos de toda la banda que entra, no nada más los tuyos, y sí se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos mexicanos | Farmear Aura",
+    "description": "El ranking de aura de los famosos mexicanos, armado con los votos de todos. Checa quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+  "figuras": [
+    {
+      "id": "checo",
+      "emoji": "🏎️",
+      "nombre": "Checo Pérez",
+      "anios": "Automovilismo",
+      "oficio": "Piloto de F1"
+    },
+    {
+      "id": "canelo",
+      "emoji": "🥊",
+      "nombre": "Canelo Álvarez",
+      "anios": "Boxeo",
+      "oficio": "Campeón mundial"
+    },
+    {
+      "id": "hugosanchez",
+      "emoji": "⚽",
+      "nombre": "Hugo Sánchez",
+      "anios": "Fútbol",
+      "oficio": "Leyenda del fútbol"
+    },
+    {
+      "id": "yalitza",
+      "emoji": "🎬",
+      "nombre": "Yalitza Aparicio",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    },
+    {
+      "id": "gael",
+      "emoji": "🎥",
+      "nombre": "Gael García Bernal",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "derbez",
+      "emoji": "😂",
+      "nombre": "Eugenio Derbez",
+      "anios": "Actuación",
+      "oficio": "Actor y comediante"
+    },
+    {
+      "id": "luismiguel",
+      "emoji": "🎤",
+      "nombre": "Luis Miguel",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "thalia",
+      "emoji": "🎵",
+      "nombre": "Thalía",
+      "anios": "Música",
+      "oficio": "Cantante y actriz"
+    },
+    {
+      "id": "belinda",
+      "emoji": "🎶",
+      "nombre": "Belinda",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "dannapaola",
+      "emoji": "🎼",
+      "nombre": "Danna Paola",
+      "anios": "Música",
+      "oficio": "Cantante y actriz"
+    },
+    {
+      "id": "pesopluma",
+      "emoji": "🎧",
+      "nombre": "Peso Pluma",
+      "anios": "Música",
+      "oficio": "Corridos tumbados"
+    },
+    {
+      "id": "nodal",
+      "emoji": "🤠",
+      "nombre": "Christian Nodal",
+      "anios": "Música",
+      "oficio": "Música regional"
+    },
+    {
+      "id": "angelaaguilar",
+      "emoji": "🎺",
+      "nombre": "Ángela Aguilar",
+      "anios": "Música",
+      "oficio": "Música regional"
+    },
+    {
+      "id": "katedelcastillo",
+      "emoji": "🎭",
+      "nombre": "Kate del Castillo",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    },
+    {
+      "id": "adalramones",
+      "emoji": "📺",
+      "nombre": "Adal Ramones",
+      "anios": "TV",
+      "oficio": "Conductor"
+    },
+    {
+      "id": "werevertumorro",
+      "emoji": "💻",
+      "nombre": "Werevertumorro",
+      "anios": "Streaming",
+      "oficio": "Youtuber"
+    },
+    {
+      "id": "luisitocomunica",
+      "emoji": "🌎",
+      "nombre": "Luisito Comunica",
+      "anios": "Streaming",
+      "oficio": "Youtuber"
+    },
+    {
+      "id": "kimberlyloaiza",
+      "emoji": "📱",
+      "nombre": "Kimberly Loaiza",
+      "anios": "Streaming",
+      "oficio": "Influencer"
+    },
+    {
+      "id": "karolsevilla",
+      "emoji": "🌟",
+      "nombre": "Karol Sevilla",
+      "anios": "Actuación",
+      "oficio": "Actriz y cantante"
+    },
+    {
+      "id": "alejandrofernandez",
+      "emoji": "🎸",
+      "nombre": "Alejandro Fernández",
+      "anios": "Música",
+      "oficio": "Cantante"
+    }
+  ]
+}

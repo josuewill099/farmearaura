@@ -1,0 +1,191 @@
+{
+  "loc": "esus",
+  "locale": "es-US",
+  "lang": "es",
+  "numfmt": "es-US",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "es-us/duelos/famosos/",
+  "slug_ranking": "es-us/duelos/famosos/ranking/",
+  "home": "/es-us/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de Aura entre Famosos: ¿Quién Tiene Más Aura? | Farmear Aura",
+    "description": "Taylor Swift vs. LeBron James, MrBeast vs. Zendaya. Elige quién tiene más aura entre las estrellas de hoy y consulta el ranking en vivo.",
+    "h1": "¿Quién Tiene <em>Más Aura</em> Entre las Estrellas?",
+    "sub": "Dos celebridades. Elige una. El ganador le roba aura al perdedor.",
+    "cta": "Tiene Más Aura",
+    "seo_h2": "Cómo Se Reparte el Aura Entre los Famosos",
+    "seo_p": "Los famosos empiezan con 1,000 de aura cada uno. En cada duelo, el ganador le roba puntos al perdedor: ganarle a alguien que anda arriba te roba mucho; ganarle a alguien que ya andaba por el suelo casi no mueve la aguja. El ranking cambia con los votos de todos, no solo los tuyos, y sí, puedes terminar en aura negativa.",
+    "seo_link": "Ver el Ranking Completo de Famosos"
+  },
+  "ranking": {
+    "title": "Ranking de Aura Entre Famosos — Quién Tiene Más Aura Ahora | Farmear Aura",
+    "description": "El ranking de aura de las estrellas más grandes de hoy, construido con los votos de todos. Mira quién va arriba y quién ya se fue a negativo.",
+    "h1": "Ranking de <em>Aura</em> Entre Famosos",
+    "sub": "Cambia con cada voto.",
+    "feed_titulo": "Últimos Duelos",
+    "vacio": "Todavía no hay duelos. Sé el primero.",
+    "link": "Volver a Votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada, y por eso mismo importan.",
+  "figuras": [
+    {
+      "id": "taylorswift",
+      "emoji": "🎤",
+      "nombre": "Taylor Swift",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "lebron",
+      "emoji": "🏀",
+      "nombre": "LeBron James",
+      "anios": "Baloncesto",
+      "oficio": "Leyenda del baloncesto"
+    },
+    {
+      "id": "serena",
+      "emoji": "🎾",
+      "nombre": "Serena Williams",
+      "anios": "Tenis",
+      "oficio": "Leyenda del tenis"
+    },
+    {
+      "id": "therock",
+      "emoji": "💪",
+      "nombre": "Dwayne \"The Rock\" Johnson",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "brady",
+      "emoji": "🏈",
+      "nombre": "Tom Brady",
+      "anios": "Fútbol americano",
+      "oficio": "Leyenda del fútbol americano"
+    },
+    {
+      "id": "beyonce",
+      "emoji": "🎵",
+      "nombre": "Beyoncé",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "mrbeast",
+      "emoji": "🎬",
+      "nombre": "MrBeast",
+      "anios": "Streaming",
+      "oficio": "Youtuber"
+    },
+    {
+      "id": "kevinhart",
+      "emoji": "😂",
+      "nombre": "Kevin Hart",
+      "anios": "Comedia",
+      "oficio": "Comediante"
+    },
+    {
+      "id": "zendaya",
+      "emoji": "🌟",
+      "nombre": "Zendaya",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    },
+    {
+      "id": "ryanreynolds",
+      "emoji": "🎥",
+      "nombre": "Ryan Reynolds",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "simonebiles",
+      "emoji": "🤸",
+      "nombre": "Simone Biles",
+      "anios": "Gimnasia",
+      "oficio": "Campeona olímpica"
+    },
+    {
+      "id": "curry",
+      "emoji": "🏀",
+      "nombre": "Stephen Curry",
+      "anios": "Baloncesto",
+      "oficio": "Estrella del baloncesto"
+    },
+    {
+      "id": "arianagrande",
+      "emoji": "🎶",
+      "nombre": "Ariana Grande",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "oliviarodrigo",
+      "emoji": "🎧",
+      "nombre": "Olivia Rodrigo",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "timothee",
+      "emoji": "🎭",
+      "nombre": "Timothée Chalamet",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "ninja",
+      "emoji": "🎮",
+      "nombre": "Ninja",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "ishowspeed",
+      "emoji": "🕹️",
+      "nombre": "IShowSpeed",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "snoopdogg",
+      "emoji": "🎤",
+      "nombre": "Snoop Dogg",
+      "anios": "Música",
+      "oficio": "Rapero"
+    },
+    {
+      "id": "postmalone",
+      "emoji": "🎸",
+      "nombre": "Post Malone",
+      "anios": "Música",
+      "oficio": "Músico"
+    },
+    {
+      "id": "kimk",
+      "emoji": "💼",
+      "nombre": "Kim Kardashian",
+      "anios": "Medios",
+      "oficio": "Personalidad mediática"
+    }
+  ]
+}

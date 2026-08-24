@@ -1,0 +1,184 @@
+{
+  "loc": "co",
+  "locale": "es-CO",
+  "lang": "es",
+  "numfmt": "es-CO",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "co/duelos/famosos/",
+  "slug_ranking": "co/duelos/famosos/ranking/",
+  "home": "/co/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "James Rodríguez contra Shakira, Karol G contra Egan Bernal. Escoge quién tiene más aura entre los famosos colombianos y mira el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos colombianos. Escoge uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos empiezan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que va arriba roba bastante, ganarle a uno hundido roba poquito. El ranking se mueve con los votos de toda la gente que entra, no solo con los tuyos, y sí se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos colombianos | Farmear Aura",
+    "description": "El ranking de aura de los famosos colombianos, hecho con los votos de todos. Mira quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+  "figuras": [
+    {
+      "id": "jamesrodriguez",
+      "emoji": "⚽",
+      "nombre": "James Rodríguez",
+      "anios": "Fútbol",
+      "oficio": "Bota de Oro del Mundial"
+    },
+    {
+      "id": "falcao",
+      "emoji": "🎯",
+      "nombre": "Falcao García",
+      "anios": "Fútbol",
+      "oficio": "Máximo goleador histórico"
+    },
+    {
+      "id": "eganbernal",
+      "emoji": "🚴",
+      "nombre": "Egan Bernal",
+      "anios": "Ciclismo",
+      "oficio": "Campeón del Tour de Francia"
+    },
+    {
+      "id": "nairoquintana",
+      "emoji": "🚵",
+      "nombre": "Nairo Quintana",
+      "anios": "Ciclismo",
+      "oficio": "Ciclista de élite"
+    },
+    {
+      "id": "marianapajon",
+      "emoji": "🥇",
+      "nombre": "Mariana Pajón",
+      "anios": "BMX",
+      "oficio": "Campeona olímpica"
+    },
+    {
+      "id": "shakira",
+      "emoji": "🎤",
+      "nombre": "Shakira",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "maluma",
+      "emoji": "🎵",
+      "nombre": "Maluma",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "karolg",
+      "emoji": "🎶",
+      "nombre": "Karol G",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "juanes",
+      "emoji": "🎸",
+      "nombre": "Juanes",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "jbalvin",
+      "emoji": "🎧",
+      "nombre": "J Balvin",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "sofiavergara",
+      "emoji": "🎬",
+      "nombre": "Sofía Vergara",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    },
+    {
+      "id": "carlosvives",
+      "emoji": "🎼",
+      "nombre": "Carlos Vives",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "westcol",
+      "emoji": "🎮",
+      "nombre": "Westcol",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "luisafernandaw",
+      "emoji": "📱",
+      "nombre": "Luisa Fernanda W",
+      "anios": "Streaming",
+      "oficio": "Influencer y cantante"
+    },
+    {
+      "id": "andrescepeda",
+      "emoji": "🎹",
+      "nombre": "Andrés Cepeda",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "greeicy",
+      "emoji": "🌟",
+      "nombre": "Greeicy",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "jessiuribe",
+      "emoji": "🤠",
+      "nombre": "Jessi Uribe",
+      "anios": "Música",
+      "oficio": "Cantante popular"
+    },
+    {
+      "id": "carolinacruz",
+      "emoji": "📺",
+      "nombre": "Carolina Cruz",
+      "anios": "TV",
+      "oficio": "Presentadora"
+    },
+    {
+      "id": "ivanlalinde",
+      "emoji": "🎙️",
+      "nombre": "Iván Lalinde",
+      "anios": "TV",
+      "oficio": "Presentador"
+    }
+  ]
+}

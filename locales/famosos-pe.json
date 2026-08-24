@@ -1,0 +1,163 @@
+{
+  "loc": "pe",
+  "locale": "es-PE",
+  "lang": "es",
+  "numfmt": "es-PE",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "pe/duelos/famosos/",
+  "slug_ranking": "pe/duelos/famosos/ranking/",
+  "home": "/pe/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Paolo Guerrero contra Gian Marco, Gastón Acurio contra Eva Ayllón. Escoge quién tiene más aura entre los famosos peruanos y mira el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos peruanos. Escoge uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos empiezan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que va arriba roba harto, ganarle a uno hundido roba poquito. El ranking se mueve con los votos de toda la gente que entra, no solo con los tuyos, y sí se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos peruanos | Farmear Aura",
+    "description": "El ranking de aura de los famosos peruanos, hecho con los votos de todos. Mira quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+  "figuras": [
+    {
+      "id": "paologuerrero",
+      "emoji": "⚽",
+      "nombre": "Paolo Guerrero",
+      "anios": "Fútbol",
+      "oficio": "Capitán histórico"
+    },
+    {
+      "id": "pizarro",
+      "emoji": "🏆",
+      "nombre": "Claudio Pizarro",
+      "anios": "Fútbol",
+      "oficio": "Leyenda del fútbol"
+    },
+    {
+      "id": "acurio",
+      "emoji": "🍽️",
+      "nombre": "Gastón Acurio",
+      "anios": "Gastronomía",
+      "oficio": "Embajador de la cocina peruana"
+    },
+    {
+      "id": "gianmarco",
+      "emoji": "🎤",
+      "nombre": "Gian Marco",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "evaayllon",
+      "emoji": "🎵",
+      "nombre": "Eva Ayllón",
+      "anios": "Música",
+      "oficio": "Leyenda de la música criolla"
+    },
+    {
+      "id": "renataflores",
+      "emoji": "🎧",
+      "nombre": "Renata Flores",
+      "anios": "Música",
+      "oficio": "Canta en quechua"
+    },
+    {
+      "id": "susanochoa",
+      "emoji": "🎶",
+      "nombre": "Susan Ochoa",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "jazminpinedo",
+      "emoji": "📺",
+      "nombre": "Jazmín Pinedo",
+      "anios": "TV",
+      "oficio": "Conductora"
+    },
+    {
+      "id": "tilsalozano",
+      "emoji": "🎬",
+      "nombre": "Tilsa Lozano",
+      "anios": "TV",
+      "oficio": "Conductora"
+    },
+    {
+      "id": "carlosalcantara",
+      "emoji": "🎥",
+      "nombre": "Carlos Alcántara",
+      "anios": "Actuación",
+      "oficio": "Actor y comediante"
+    },
+    {
+      "id": "melcochita",
+      "emoji": "🃏",
+      "nombre": "Melcochita",
+      "anios": "Comedia",
+      "oficio": "Comediante, ícono popular"
+    },
+    {
+      "id": "gianpierodiaz",
+      "emoji": "🎙️",
+      "nombre": "Gian Piero Díaz",
+      "anios": "TV",
+      "oficio": "Conductor"
+    },
+    {
+      "id": "mariohart",
+      "emoji": "🏎️",
+      "nombre": "Mario Hart",
+      "anios": "TV",
+      "oficio": "Piloto y conductor"
+    },
+    {
+      "id": "sheylarojas",
+      "emoji": "📱",
+      "nombre": "Sheyla Rojas",
+      "anios": "TV",
+      "oficio": "Conductora"
+    },
+    {
+      "id": "cocomarusix",
+      "emoji": "😂",
+      "nombre": "Coco Marusix",
+      "anios": "Comedia",
+      "oficio": "Comediante"
+    },
+    {
+      "id": "sofiafranco",
+      "emoji": "🎭",
+      "nombre": "Sofía Franco",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    }
+  ]
+}

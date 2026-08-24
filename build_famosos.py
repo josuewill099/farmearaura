@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Duelos de aura entre famosos (celebridades contemporaneas), por ahora solo
-Argentina -- LOCS es una lista para que sumar paises despues sea directo
-(agregar el locale a LOCS + HREFLANG + OG + locales/famosos-{loc}.json,
-igual que ya funciona para build_historia.py).
+Duelos de aura entre famosos (celebridades contemporaneas), en las nueve
+locales -- cada una con su propia lista de figuras relevantes para ese pais
+(a diferencia de historia, que reusa un set mayormente universal).
 
     python3 build.py && python3 build_duelos.py && python3 build_historia.py && python3 build_famosos.py
 
@@ -20,11 +19,15 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-LOCS = ["ar"]
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus"]
 GA4_ID = "G-XHZ0MM619V"   # "" para no cargar analytics en estas paginas
 
-HREFLANG = {"ar": ["es-AR", "es", "x-default"]}
-OG = {"ar": "es_AR"}
+HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
+            "es": ["es-ES"], "br": ["pt-BR"],
+            "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"],
+            "esus": ["es-US"]}
+OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
+      "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
@@ -89,10 +92,9 @@ def alternates(datos, tipo):
     return "\n".join(out)
 
 
-# nav_data.nav_html() cuelga el link "famosos" del sub de "duelos" para las
-# locales que lo tienen en NAV_URLS (por ahora solo ar) -- ver nav_data.py.
-# No hay sub-item de ranking propio, asi que votar y ranking marcan el mismo
-# link como aria-current.
+# nav_data.nav_html() cuelga el link "famosos" del sub de "duelos" -- ver
+# nav_data.py. No hay sub-item de ranking propio, asi que votar y ranking
+# marcan el mismo link como aria-current.
 NAV_CURRENT = {"votar": "famosos", "ranking": "famosos"}
 
 

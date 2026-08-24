@@ -33,7 +33,7 @@ const MODULOS = {
     candidatos: "f_candidatos",
     duelos: "f_duelos",
     votantes: "f_votantes",
-    locales: ["ar"],
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus"],
     limite: 40,
     poda: 8000
   }

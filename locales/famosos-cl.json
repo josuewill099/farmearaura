@@ -1,0 +1,177 @@
+{
+  "loc": "cl",
+  "locale": "es-CL",
+  "lang": "es",
+  "numfmt": "es-CL",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "cl/duelos/famosos/",
+  "slug_ranking": "cl/duelos/famosos/ranking/",
+  "home": "/cl/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Alexis Sánchez contra Mon Laferte, Fabrizio Copano contra Marcelo Ríos. Elige quién tiene más aura entre los famosos chilenos y revisa el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos chilenos. Elige uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos parten con 1.000 de aura cada uno. En cada duelo el que gana le roba puntos al que pierde: ganarle a uno que va arriba te robas hartos puntos, ganarle a uno hundido casi no suma. El ranking se mueve con los votos de toda la gente que entra, no solo con los tuyos, y sí se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos chilenos | Farmear Aura",
+    "description": "El ranking de aura de los famosos chilenos, hecho con los votos de todos. Revisa quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+  "figuras": [
+    {
+      "id": "alexissanchez",
+      "emoji": "⚽",
+      "nombre": "Alexis Sánchez",
+      "anios": "Fútbol",
+      "oficio": "Máximo goleador histórico"
+    },
+    {
+      "id": "vidal",
+      "emoji": "🔥",
+      "nombre": "Arturo Vidal",
+      "anios": "Fútbol",
+      "oficio": "Campeón de América"
+    },
+    {
+      "id": "chino",
+      "emoji": "🎾",
+      "nombre": "Marcelo Ríos",
+      "anios": "Tenis",
+      "oficio": "Ex número uno del mundo"
+    },
+    {
+      "id": "massu",
+      "emoji": "🥇",
+      "nombre": "Nicolás Massú",
+      "anios": "Tenis",
+      "oficio": "Campeón olímpico"
+    },
+    {
+      "id": "monlaferte",
+      "emoji": "🎤",
+      "nombre": "Mon Laferte",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "myriamhernandez",
+      "emoji": "🎵",
+      "nombre": "Myriam Hernández",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "denise",
+      "emoji": "🎶",
+      "nombre": "Denise Rosenthal",
+      "anios": "Música",
+      "oficio": "Cantante"
+    },
+    {
+      "id": "kudai",
+      "emoji": "🎸",
+      "nombre": "Kudai",
+      "anios": "Música",
+      "oficio": "Banda de pop"
+    },
+    {
+      "id": "copano",
+      "emoji": "🎭",
+      "nombre": "Fabrizio Copano",
+      "anios": "Comedia",
+      "oficio": "Comediante"
+    },
+    {
+      "id": "karollucero",
+      "emoji": "😂",
+      "nombre": "Karol Lucero",
+      "anios": "Streaming",
+      "oficio": "Comediante y streamer"
+    },
+    {
+      "id": "pangal",
+      "emoji": "🎮",
+      "nombre": "Pangal Andrade",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "franundurraga",
+      "emoji": "😄",
+      "nombre": "Fran Undurraga",
+      "anios": "Comedia",
+      "oficio": "Comediante"
+    },
+    {
+      "id": "dianabolocco",
+      "emoji": "📺",
+      "nombre": "Diana Bolocco",
+      "anios": "TV",
+      "oficio": "Conductora"
+    },
+    {
+      "id": "juliocesar",
+      "emoji": "🎙️",
+      "nombre": "Julio César Rodríguez",
+      "anios": "TV",
+      "oficio": "Conductor"
+    },
+    {
+      "id": "vicuna",
+      "emoji": "🎬",
+      "nombre": "Benjamín Vicuña",
+      "anios": "Actuación",
+      "oficio": "Actor"
+    },
+    {
+      "id": "leonorvarela",
+      "emoji": "🎥",
+      "nombre": "Leonor Varela",
+      "anios": "Actuación",
+      "oficio": "Actriz"
+    },
+    {
+      "id": "garymedel",
+      "emoji": "🛡️",
+      "nombre": "Gary Medel",
+      "anios": "Fútbol",
+      "oficio": "El Pitbull"
+    },
+    {
+      "id": "zamorano",
+      "emoji": "🏆",
+      "nombre": "Iván Zamorano",
+      "anios": "Fútbol",
+      "oficio": "Leyenda del fútbol"
+    }
+  ]
+}

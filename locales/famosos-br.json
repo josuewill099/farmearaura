@@ -1,0 +1,191 @@
+{
+  "loc": "br",
+  "locale": "pt-BR",
+  "lang": "pt",
+  "numfmt": "pt-BR",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "br/duelos/famosos/",
+  "slug_ranking": "br/duelos/famosos/ranking/",
+  "home": "/br/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Batalha de aura entre famosos: quem tem mais aura? | Farmear Aura",
+    "description": "Neymar contra Anitta, Marta contra Ronaldinho. Escolha quem tem mais aura entre os famosos brasileiros e veja o ranking ao vivo.",
+    "h1": "Quem tem <em>mais aura</em> entre os famosos?",
+    "sub": "Duas figuras famosas do Brasil. Escolha uma. Quem ganha rouba aura da outra.",
+    "cta": "Tem mais aura",
+    "seo_h2": "Como a aura é dividida entre os famosos",
+    "seo_p": "Os famosos começam com 1.000 de aura cada um. Em cada batalha quem ganha rouba pontos de quem perde: vencer alguém que está no topo rouba muito, vencer alguém que já está por baixo rouba pouco. O ranking se move com os votos de todo mundo que entra, não só com os seus, e dá pra terminar com aura negativa.",
+    "seo_link": "Ver o ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos brasileiros | Farmear Aura",
+    "description": "O ranking de aura dos famosos brasileiros, feito com os votos de todo mundo. Veja quem manda e quem ficou no negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Muda a cada voto.",
+    "feed_titulo": "Últimas batalhas",
+    "vacio": "Ainda não tem batalha nenhuma. Estreia você.",
+    "link": "Voltar a votar"
+  },
+  "t": {
+    "robo": "roubou",
+    "de_aura": "de aura de",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "há %s s",
+      "min": "há %s min",
+      "hora": "há %s h",
+      "dia": "há %s d"
+    }
+  },
+  "offline": "Modo local: os votos ainda não são salvos.",
+  "footer": "É um jogo. Os pontos não significam nada e é por isso que importam.",
+  "figuras": [
+    {
+      "id": "neymar",
+      "emoji": "⚽",
+      "nombre": "Neymar",
+      "anios": "Futebol",
+      "oficio": "Craque da seleção"
+    },
+    {
+      "id": "marta",
+      "emoji": "🏆",
+      "nombre": "Marta",
+      "anios": "Futebol",
+      "oficio": "Lenda do futebol feminino"
+    },
+    {
+      "id": "ronaldinho",
+      "emoji": "🎩",
+      "nombre": "Ronaldinho Gaúcho",
+      "anios": "Futebol",
+      "oficio": "Lenda do futebol"
+    },
+    {
+      "id": "rebecaandrade",
+      "emoji": "🤸",
+      "nombre": "Rebeca Andrade",
+      "anios": "Ginástica",
+      "oficio": "Campeã olímpica"
+    },
+    {
+      "id": "gabrielmedina",
+      "emoji": "🏄",
+      "nombre": "Gabriel Medina",
+      "anios": "Surfe",
+      "oficio": "Campeão mundial"
+    },
+    {
+      "id": "anitta",
+      "emoji": "🎤",
+      "nombre": "Anitta",
+      "anios": "Música",
+      "oficio": "Cantora"
+    },
+    {
+      "id": "ivetesangalo",
+      "emoji": "🎵",
+      "nombre": "Ivete Sangalo",
+      "anios": "Música",
+      "oficio": "Cantora"
+    },
+    {
+      "id": "ludmilla",
+      "emoji": "🎶",
+      "nombre": "Ludmilla",
+      "anios": "Música",
+      "oficio": "Cantora"
+    },
+    {
+      "id": "gusttavolima",
+      "emoji": "🤠",
+      "nombre": "Gusttavo Lima",
+      "anios": "Música",
+      "oficio": "Sertanejo"
+    },
+    {
+      "id": "wesleysafadao",
+      "emoji": "🎸",
+      "nombre": "Wesley Safadão",
+      "anios": "Música",
+      "oficio": "Cantor"
+    },
+    {
+      "id": "fernandatorres",
+      "emoji": "🎬",
+      "nombre": "Fernanda Torres",
+      "anios": "Atuação",
+      "oficio": "Atriz"
+    },
+    {
+      "id": "wagnermoura",
+      "emoji": "🎥",
+      "nombre": "Wagner Moura",
+      "anios": "Atuação",
+      "oficio": "Ator"
+    },
+    {
+      "id": "xuxa",
+      "emoji": "📺",
+      "nombre": "Xuxa",
+      "anios": "TV",
+      "oficio": "Apresentadora"
+    },
+    {
+      "id": "sabrinasato",
+      "emoji": "✨",
+      "nombre": "Sabrina Sato",
+      "anios": "TV",
+      "oficio": "Apresentadora"
+    },
+    {
+      "id": "galvaobueno",
+      "emoji": "🎙️",
+      "nombre": "Galvão Bueno",
+      "anios": "TV",
+      "oficio": "Narrador esportivo"
+    },
+    {
+      "id": "casimiro",
+      "emoji": "🎮",
+      "nombre": "Casimiro",
+      "anios": "Streaming",
+      "oficio": "Streamer"
+    },
+    {
+      "id": "whinderssonnunes",
+      "emoji": "😂",
+      "nombre": "Whindersson Nunes",
+      "anios": "Streaming",
+      "oficio": "Comediante"
+    },
+    {
+      "id": "luvadepedreiro",
+      "emoji": "📱",
+      "nombre": "Luva de Pedreiro",
+      "anios": "Streaming",
+      "oficio": "Fenômeno das redes"
+    },
+    {
+      "id": "tirullipa",
+      "emoji": "🃏",
+      "nombre": "Tirullipa",
+      "anios": "Comédia",
+      "oficio": "Comediante"
+    },
+    {
+      "id": "kaka",
+      "emoji": "⚽",
+      "nombre": "Kaká",
+      "anios": "Futebol",
+      "oficio": "Lenda do futebol"
+    }
+  ]
+}

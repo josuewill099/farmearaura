@@ -130,12 +130,21 @@ HISTORIAL_CTA = {
     "co": "Suma tu duelo.", "us": "Add your duel.", "esus": "Suma tu duelo.",
 }
 
-# Famosos todavia es AR-only (build_famosos.py), asi que el link solo se
-# agrega en esa locale -- cuando se sume otro pais a famosos, agregar su
-# entrada aca en vez de generalizar antes de tiempo.
-FAMOSOS_LINK = {
-    "ar": ' &middot; <a href="https://farmearaura.com/duelos/famosos/">Duelos entre famosos</a>',
+# Link contextual a famosos (celebridades del propio pais) desde la seccion
+# SEO de la pagina de votar. nav_data.NAV_URLS ya tiene la URL correcta por
+# locale -- se usa esa en vez de duplicarla aca.
+FAMOSOS_LABEL = {
+    "ar": "Duelos entre famosos", "mx": "Duelos entre famosos",
+    "es": "Duelos entre famosos", "br": "Batalhas entre famosos",
+    "cl": "Duelos entre famosos", "pe": "Duelos entre famosos",
+    "co": "Duelos entre famosos", "us": "Celebrity duels",
+    "esus": "Duelos entre famosos",
 }
+
+
+def famosos_link(loc):
+    return ' &middot; <a href="%s">%s</a>' % (
+        nav_data.NAV_URLS[loc]["famosos"], esc(FAMOSOS_LABEL[loc]))
 
 
 def cargar():
@@ -179,7 +188,7 @@ def build():
                 "HOME": home,
                 "GUIDE_URL": nav_data.GUIDE_URLS[loc],
                 "GUIDE_LABEL": esc(nav_data.GUIDE_LABELS[loc]),
-                "FAMOSOS_LINK": FAMOSOS_LINK.get(loc, ""),
+                "FAMOSOS_LINK": famosos_link(loc),
             }, {"cta": L["votar"]["cta"], "robo": L["votar"]["robo"],
                 "de_aura": L["votar"]["de_aura"]}),
             ("ranking", L["ranking"], MAIN_RANKING,

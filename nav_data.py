@@ -69,29 +69,28 @@ GUIDE_LABELS = {
     "esus": "¿Qué es el aura farming?",
 }
 
-# "famosos" solo existe en NAV_LABELS/NAV_URLS de las locales que ya tienen
-# ese modulo (por ahora solo ar) -- nav_html() lo detecta con `"famosos" in U`
-# y agrega el link dentro del sub de "duelos". Al sumar otro pais a famosos,
-# agregar la misma clave "famosos" a su entrada alcanza.
+# "famosos" existe en las nueve locales (cada una con sus propias figuras --
+# ver locales/famosos-{loc}.json). nav_html() lo detecta con `"famosos" in U`
+# y agrega el link dentro del sub de "duelos".
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-           "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-           "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "br": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
-           "ranking": "Ranking", "historial": "Histórico"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico"},
     "cl": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-           "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "pe": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-           "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "co": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-           "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "us": {"calculadora": "Calculator", "duelos": "Duels", "historia": "Historical Duels",
-           "ranking": "Ranking", "historial": "Recent"},
+           "famosos": "Celebrities", "ranking": "Ranking", "historial": "Recent"},
     "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-             "ranking": "Ranking", "historial": "Historial"},
+             "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
 }
 
 NAV_URLS = {
@@ -111,6 +110,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/mx/duelos/historial/",
         "historia": "https://farmearaura.com/mx/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/mx/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/mx/duelos/famosos/",
     },
     "es": {
         "home": "https://farmearaura.com/es/",
@@ -119,6 +119,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/es/duelos/historial/",
         "historia": "https://farmearaura.com/es/duelos-de-aura/",
         "historia_ranking": "https://farmearaura.com/es/duelos-de-aura/ranking/",
+        "famosos": "https://farmearaura.com/es/duelos/famosos/",
     },
     "br": {
         "home": "https://farmearaura.com/br/",
@@ -127,6 +128,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/br/duelos/historial/",
         "historia": "https://farmearaura.com/br/batalha-de-aura/",
         "historia_ranking": "https://farmearaura.com/br/batalha-de-aura/ranking/",
+        "famosos": "https://farmearaura.com/br/duelos/famosos/",
     },
     "cl": {
         "home": "https://farmearaura.com/cl/",
@@ -135,6 +137,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/cl/duelos/historial/",
         "historia": "https://farmearaura.com/cl/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/cl/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/cl/duelos/famosos/",
     },
     "pe": {
         "home": "https://farmearaura.com/pe/",
@@ -143,6 +146,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/pe/duelos/historial/",
         "historia": "https://farmearaura.com/pe/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/pe/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/pe/duelos/famosos/",
     },
     "co": {
         "home": "https://farmearaura.com/co/",
@@ -151,6 +155,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/co/duelos/historial/",
         "historia": "https://farmearaura.com/co/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/co/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/co/duelos/famosos/",
     },
     "us": {
         "home": "https://farmearaura.com/us/",
@@ -159,6 +164,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/us/duels/historial/",
         "historia": "https://farmearaura.com/us/historical-duels/",
         "historia_ranking": "https://farmearaura.com/us/historical-duels/ranking/",
+        "famosos": "https://farmearaura.com/us/duels/celebrities/",
     },
     "esus": {
         "home": "https://farmearaura.com/es-us/",
@@ -167,6 +173,7 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/es-us/duelos/historial/",
         "historia": "https://farmearaura.com/es-us/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/es-us/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/es-us/duelos/famosos/",
     },
 }
 
