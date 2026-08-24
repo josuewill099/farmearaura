@@ -23,8 +23,13 @@ body::before{
   color:var(--muted);text-transform:uppercase;margin-bottom:10px;
 }
 .card .emoji{font-size:40px;margin-bottom:10px}
+/* min-height de .nombre (definido en duelos.css) reserva 2 lineas para
+   nombres largos; en una carta de una sola linea eso deja un hueco vacio
+   antes del oficio ademas del margin-top. Se acorta aca para que el hueco
+   real sea chico sin perder el espacio para nombres que si wrappean. */
+.card .nombre{min-height:1.1em}
 .card .oficio{
-  display:block;margin-top:8px;font-size:13px;color:var(--muted);line-height:1.35;
+  display:block;margin-top:2px;font-size:13px;color:var(--muted);line-height:1.35;
 }
 .card::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
