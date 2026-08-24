@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 """
 Paginas de contenido standalone (no interactivas) para clusters de keywords
-que no encajan en la guia principal de cada locale (que ya cubre "que es
-farmar aura"). Por ahora solo br: como-farmar-aura, campeonato-de-farmar-aura
-y farmar-aura-meme -- todas cuelgan de /br/ y se interlinkean entre si, con
-la guia (o-que-e-farmar-aura), la calculadora y los duelos/historia/famosos.
+que no encajan en las paginas principales de cada locale:
+
+  br   -- como-farmar-aura, campeonato-de-farmar-aura, farmar-aura-meme
+  ar/mx/es -- el cluster "color de aura" (lectura de aura, publico distinto
+              al de "farmar aura"): pillar color-de-aura/ + una pagina por
+              color. ar/mx suman ademas aura-farming/ (el termino en ingles
+              se busca mas que "farmar aura" en esos dos mercados).
+  us   -- aura-test, aura-color-test, piccolo-aura-farming (hub que cubre
+           tambien Gojo/Sung Jin Woo/Agamemnon), how-to-aura-farm.
 
     python3 build.py && python3 build_articles.py
 
 Reusa el mismo guide.tpl.html (misma identidad visual que la guia), pero con
 "sections" de forma libre -- parrafo o lista, igual que las paginas legales
 de build_legal() -- en vez del esquema fijo ledger/reglas/lose de la guia.
+
+Los slugs compartidos entre locales (los colores y aura-farming, presentes
+en mas de una entrada de LOCS) se tratan como la MISMA pagina apuntada a
+mercados distintos y llevan hreflang reciproco entre si, igual que
+build_duelos.py/build_historia.py/build_famosos.py hacen entre locales.
 """
 
 import json
@@ -26,9 +36,25 @@ DOMAIN = "https://farmearaura.com"
 
 GUIDE_TPL = (SRC / "guide.tpl.html").read_text(encoding="utf-8")
 
-# locale -> archivo de articulos. Solo br por ahora; sumar otra locale es
-# agregar su entrada aca + locales/articles-{loc}.json con el mismo esquema.
-LOCS = {"br": "locales/articles-br.json"}
+# locale -> archivo de articulos. Sumar otra locale es agregar su entrada
+# aca + locales/articles-{loc}.json con el mismo esquema.
+LOCS = {
+    "br": "locales/articles-br.json",
+    "us": "locales/articles-us.json",
+    "ar": "locales/articles-ar.json",
+    "mx": "locales/articles-mx.json",
+    "es": "locales/articles-es.json",
+}
+
+# Defaults por locale para los textos de chrome (breadcrumb "home", label del
+# TOC, encabezado de fuentes) -- cada articulo puede pisarlos con su propia
+# clave si hace falta, pero la mayoria no necesita repetirlos.
+HOME_LABEL = {"br": "Início", "us": "Home", "ar": "Inicio", "mx": "Inicio", "es": "Inicio"}
+TOC_LABEL = {"br": "NESTA PÁGINA", "us": "ON THIS PAGE", "ar": "EN ESTA PÁGINA",
+             "mx": "EN ESTA PÁGINA", "es": "EN ESTA PÁGINA"}
+SOURCES_H = {"br": "Fontes", "us": "Sources", "ar": "Fuentes", "mx": "Fuentes", "es": "Fuentes"}
+FAQ_HEADING = {"br": "Perguntas frequentes", "us": "FAQ", "ar": "Preguntas frecuentes",
+               "mx": "Preguntas frecuentes", "es": "Preguntas frecuentes"}
 
 
 def esc(s):
@@ -50,12 +76,26 @@ def render_sections(sections):
 
 
 def build():
-    urls = []
+    data = {}   # loc -> {"L": articles-list, "lang":, "home":, "base":}
     for loc, path in LOCS.items():
         L = json.loads((ROOT / path).read_text(encoding="utf-8"))
         home_json = json.loads((ROOT / "locales" / f"{loc}.json").read_text(encoding="utf-8"))
         lang, home = home_json["lang"], home_json["path"]
-        base = DOMAIN + home.rstrip("/")
+        data[loc] = {"L": L, "lang": lang, "home": home, "base": DOMAIN + home.rstrip("/")}
+
+    # Paginas con el mismo slug en mas de una locale (los colores y el meme,
+    # compartidos entre ar/mx/es) son la MISMA pagina apuntada a mercados
+    # distintos, asi que cada una debe listar a sus hermanas en hreflang --
+    # el mismo patron reciproco que build_duelos.py usa entre locales.
+    siblings = {}   # slug -> [(hreflang_code, url), ...]
+    for loc, d in data.items():
+        for art in d["L"]["articles"]:
+            siblings.setdefault(art["slug"], []).append(
+                (d["lang"], f"{d['base']}/{art['slug']}/"))
+
+    urls = []
+    for loc, d in data.items():
+        L, lang, home, base = d["L"], d["lang"], d["home"], d["base"]
 
         for art in L["articles"]:
             canonical = f"{base}/{art['slug']}/"
@@ -66,7 +106,7 @@ def build():
                     f'  <details{" open" if i == 0 else ""}><summary>{esc(q)}</summary>'
                     f'<div class="a"><p>{a}</p></div></details>'
                     for i, (q, a) in enumerate(art["faq"]))
-                blocks.append((art.get("faqHeading", "Perguntas frequentes"), faq_html))
+                blocks.append((art.get("faqHeading", FAQ_HEADING[loc]), faq_html))
 
             toc = '    <ol>\n' + "\n".join(
                 f'      <li><a href="#s{i+1}">{esc(h)}</a></li>' for i, (h, _) in enumerate(blocks)
@@ -77,12 +117,13 @@ def build():
             related = "\n".join(
                 f'    <a href="{url}">{esc(label)}</a>' for label, url in art["related"])
 
+            home_label = art.get("homeLabel", HOME_LABEL[loc])
             graph = [
                 {"@type": "WebPage", "@id": canonical, "url": canonical, "name": art["h1"],
                  "description": art["desc"], "inLanguage": lang,
                  "isPartOf": {"@id": f"{DOMAIN}/#website"}},
                 {"@type": "BreadcrumbList", "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Início", "item": base + "/"},
+                    {"@type": "ListItem", "position": 1, "name": home_label, "item": base + "/"},
                     {"@type": "ListItem", "position": 2, "name": art["h1"], "item": canonical}]},
                 {"@type": "Article", "@id": canonical + "#article", "headline": art["h1"],
                  "description": art["desc"], "inLanguage": lang,
@@ -100,8 +141,13 @@ def build():
             ld = json.dumps({"@context": "https://schema.org", "@graph": graph},
                              ensure_ascii=False, indent=2)
 
-            hreflang_tags = (f'<link rel="alternate" hreflang="{lang}" href="{canonical}">\n'
-                              f'<link rel="alternate" hreflang="x-default" href="{canonical}">')
+            group = siblings[art["slug"]]
+            hreflang_tags = "\n".join(
+                f'<link rel="alternate" hreflang="{hl}" href="{u}">' for hl, u in group)
+            # x-default apunta a la version del locale por defecto (ar) si
+            # esta presente en el grupo; si no, a la primera version.
+            default_url = next((u for hl, u in group if hl == "es-AR"), group[0][1])
+            hreflang_tags += f'\n<link rel="alternate" hreflang="x-default" href="{default_url}">'
 
             html = GUIDE_TPL.format(
                 lang=lang, title=esc(art["title"]), desc=esc(art["desc"]),
@@ -109,18 +155,22 @@ def build():
                 oglocale=lang.replace("-", "_"), home=home,
                 h1=esc(art["h1"]), answer=art["answer"],
                 meta=esc(art.get("meta", "")),
-                homeLabel=esc(art.get("homeLabel", "Início")),
-                tocLabel=esc(art.get("tocLabel", "NESTA PÁGINA")),
+                homeLabel=esc(home_label),
+                tocLabel=esc(art.get("tocLabel", TOC_LABEL[loc])),
                 toc=toc, sections=sections, related=related,
-                sourcesH=esc(art.get("sourcesH", "Fontes")),
+                sourcesH=esc(art.get("sourcesH", SOURCES_H[loc])),
                 sources="\n".join(f"    <li>{x}</li>" for x in art.get("sources", [])),
                 promoK=esc(art["promoK"]), promoP=esc(art["promoP"]), promoBtn=esc(art["promoBtn"]),
+                promoUrl=art.get("promoUrl", home),
                 ctaNav=esc(art["ctaNav"]), guideLink=esc(art.get("guideLink", art["h1"])),
                 footerNote=esc(art["footerNote"]), ld=ld,
                 legalLinks=nav_data.legal_links_html(loc, home),
             )
 
-            out = DIST / loc / art["slug"] / "index.html"
+            # home.strip("/") es "" para ar (locale por defecto, vive en /);
+            # pathlib ignora los componentes vacios al unir paths, asi que
+            # el resultado cae directo en dist/, no en dist/ar/.
+            out = DIST / home.strip("/") / art["slug"] / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(html, encoding="utf-8")
             urls.append(canonical)

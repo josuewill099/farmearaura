@@ -328,6 +328,7 @@ def build_guide(l):
         sourcesH=esc(g.get("sourcesH", "Fuentes")),
         sources="\n".join(f"    <li>{x}</li>" for x in srcs),
         promoK=esc(g["promoK"]), promoP=esc(g["promoP"]), promoBtn=esc(g["promoBtn"]),
+        promoUrl=l["path"],
         ctaNav=esc(g["ctaNav"]), guideLink=esc(a["guideLink"]),
         footerNote=esc(g["footerNote"]), ld=json.dumps(schema(l), ensure_ascii=False, indent=2),
         legalLinks=legal_links(LEGAL_OF[l["_code"]], l["path"]),
