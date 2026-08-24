@@ -89,14 +89,13 @@ def alternates(datos, tipo):
     return "\n".join(out)
 
 
-# El menu (calculadora / duelos / duelos historicos) no incluye "famosos"
-# todavia -- es AR-only por ahora, y nav_data.nav_html() se comparte con
-# TODAS las locales, asi que un tercer item ahi tendria que resolver que
-# hacer en los otros 8. Se linkea desde el home (about) y desde duelos /
-# historia (contenido relacionado) en vez de vivir en el nav global, asi que
-# ningun item del nav queda marcado aria-current en estas paginas.
-def nav_html(loc):
-    return nav_data.nav_html(loc, None)
+# nav_data.nav_html() solo agrega el dropdown "famosos" para las locales que
+# tienen esas claves en NAV_URLS (por ahora solo ar) -- ver nav_data.py.
+NAV_CURRENT = {"votar": "famosos", "ranking": "famosos_ranking"}
+
+
+def nav_html(loc, actual):
+    return nav_data.nav_html(loc, NAV_CURRENT[actual])
 
 
 def jsonld(L, page, canonical, figuras):
@@ -185,7 +184,7 @@ def build():
                 ("CSS", css),
                 ("JSONLD", jsonld(L, page, canonical, figuras)),
                 ("HOME", base + L["home"]),
-                ("NAV", nav_html(loc)),
+                ("NAV", nav_html(loc, key)),
                 ("LEGALLINKS", nav_data.legal_links_html(loc, base + L["home"])),
                 ("H1", page["h1"]),
                 ("SUB", esc(page["sub"])),

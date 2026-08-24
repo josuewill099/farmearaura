@@ -69,9 +69,13 @@ GUIDE_LABELS = {
     "esus": "¿Qué es el aura farming?",
 }
 
+# "famosos" solo existe en NAV_LABELS/NAV_URLS de las locales que ya tienen
+# ese modulo (por ahora solo ar) -- nav_html() lo detecta con `"famosos" in U`
+# y agrega el tercer dropdown solo ahi. Al sumar otro pais a famosos, agregar
+# las mismas claves ("famosos", "famosos_ranking") a su entrada alcanza.
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
-           "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
            "ranking": "Ranking", "historial": "Historial"},
     "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
@@ -98,6 +102,8 @@ NAV_URLS = {
         "duelos_historial": "https://farmearaura.com/duelos/historial/",
         "historia": "https://farmearaura.com/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/duelos/famosos/ranking/",
     },
     "mx": {
         "home": "https://farmearaura.com/mx/",
@@ -224,5 +230,7 @@ def nav_html(loc, current):
         U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]))
     parts.append(dropdown("duelos", "duelos_ranking", L["duelos"], "nav-sub-duelos", historial_link))
     parts.append(dropdown("historia", "historia_ranking", L["historia"], "nav-sub-historia"))
+    if "famosos" in U:
+        parts.append(dropdown("famosos", "famosos_ranking", L["famosos"], "nav-sub-famosos"))
     parts.append(NAV_SCRIPT)
     return "".join(parts)
