@@ -89,9 +89,11 @@ def alternates(datos, tipo):
     return "\n".join(out)
 
 
-# nav_data.nav_html() solo agrega el dropdown "famosos" para las locales que
-# tienen esas claves en NAV_URLS (por ahora solo ar) -- ver nav_data.py.
-NAV_CURRENT = {"votar": "famosos", "ranking": "famosos_ranking"}
+# nav_data.nav_html() cuelga el link "famosos" del sub de "duelos" para las
+# locales que lo tienen en NAV_URLS (por ahora solo ar) -- ver nav_data.py.
+# No hay sub-item de ranking propio, asi que votar y ranking marcan el mismo
+# link como aria-current.
+NAV_CURRENT = {"votar": "famosos", "ranking": "famosos"}
 
 
 def nav_html(loc, actual):

@@ -71,8 +71,8 @@ GUIDE_LABELS = {
 
 # "famosos" solo existe en NAV_LABELS/NAV_URLS de las locales que ya tienen
 # ese modulo (por ahora solo ar) -- nav_html() lo detecta con `"famosos" in U`
-# y agrega el tercer dropdown solo ahi. Al sumar otro pais a famosos, agregar
-# las mismas claves ("famosos", "famosos_ranking") a su entrada alcanza.
+# y agrega el link dentro del sub de "duelos". Al sumar otro pais a famosos,
+# agregar la misma clave "famosos" a su entrada alcanza.
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
@@ -103,7 +103,6 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/duelos/famosos/",
-        "famosos_ranking": "https://farmearaura.com/duelos/famosos/ranking/",
     },
     "mx": {
         "home": "https://farmearaura.com/mx/",
@@ -228,9 +227,16 @@ def nav_html(loc, current):
 
     historial_link = '<a href="%s"%s>%s</a>' % (
         U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]))
-    parts.append(dropdown("duelos", "duelos_ranking", L["duelos"], "nav-sub-duelos", historial_link))
-    parts.append(dropdown("historia", "historia_ranking", L["historia"], "nav-sub-historia"))
+    # "famosos" cuelga del sub de "duelos" en vez de ser su propio item de
+    # nivel superior: un cuarto item con caret desbordaba la fila en mobile
+    # (measured: innerWidth se ensanchaba a 476px en un viewport de 375px,
+    # el mismo sintoma que el bug de submenu que se arreglo antes). Colgarlo
+    # del sub existente cuesta cero ancho en la fila principal.
+    extra_sub = historial_link
     if "famosos" in U:
-        parts.append(dropdown("famosos", "famosos_ranking", L["famosos"], "nav-sub-famosos"))
+        extra_sub += '<a href="%s"%s>%s</a>' % (
+            U["famosos"], cur("famosos"), _esc(L["famosos"]))
+    parts.append(dropdown("duelos", "duelos_ranking", L["duelos"], "nav-sub-duelos", extra_sub))
+    parts.append(dropdown("historia", "historia_ranking", L["historia"], "nav-sub-historia"))
     parts.append(NAV_SCRIPT)
     return "".join(parts)
