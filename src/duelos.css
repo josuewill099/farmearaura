@@ -92,8 +92,8 @@ h1 em{font-style:normal;color:var(--aura)}
 .sub{color:var(--muted);font-size:15px;margin:0 0 22px;letter-spacing:.01em}
 
 /* ---------- duel ---------- */
-.arena{display:grid;gap:12px}
-@media(min-width:720px){.arena{grid-template-columns:1fr 1fr;gap:16px}}
+.arena{display:grid;gap:6px}
+@media(min-width:720px){.arena{grid-template-columns:1fr 1fr;gap:12px}}
 
 .card{
   position:relative;
@@ -127,14 +127,12 @@ h1 em{font-style:normal;color:var(--aura)}
 }
 .card .meta b{color:var(--bone);font-size:17px;font-weight:600}
 .card .pick{
-  margin-top:14px;display:inline-block;
-  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--aura);
+  display:none;
 }
 
 .vs{
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.3em;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  color:var(--muted);font-family:var(--display);font-size:26px;letter-spacing:.18em;
 }
 .vs::before,.vs::after{content:"";height:1px;flex:1;background:var(--line)}
 @media(min-width:720px){
