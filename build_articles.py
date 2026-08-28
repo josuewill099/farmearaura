@@ -97,10 +97,21 @@ def build():
     # distintos, asi que cada una debe listar a sus hermanas en hreflang --
     # el mismo patron reciproco que build_duelos.py usa entre locales.
     siblings = {}   # slug -> [(hreflang_code, url), ...]
+    # ar/br/us son los "dueños" del codigo de idioma pelado (es/pt/en) en
+    # todo el sitio -- ver GENERIC en build.py. Un hispanohablante sin
+    # region que matchee (uy, ve, ec, gt, cr, pr, hn, py, ...) cae en "es"
+    # y por default.py eso siempre apunta a ar. Antes de este cambio esas
+    # paginas no tenian ese tag y GSC mostraba el trafico de esos paises
+    # repartido sin criterio entre las variantes.
+    GENERIC = {"ar": "es", "br": "pt", "us": "en"}
+    generic_fallback = {}   # slug -> {bare_lang: url}
     for loc, d in data.items():
         for art in d["L"]["articles"]:
             siblings.setdefault(art["slug"], []).append(
                 (d["lang"], f"{d['base']}/{art['slug']}/"))
+            if loc in GENERIC:
+                generic_fallback.setdefault(art["slug"], {})[GENERIC[loc]] = (
+                    f"{d['base']}/{art['slug']}/")
 
     urls = []
     for loc, d in data.items():
@@ -151,12 +162,15 @@ def build():
                              ensure_ascii=False, indent=2)
 
             group = siblings[art["slug"]]
-            hreflang_tags = "\n".join(
-                f'<link rel="alternate" hreflang="{hl}" href="{u}">' for hl, u in group)
-            # x-default apunta a la version del locale por defecto (ar) si
-            # esta presente en el grupo; si no, a la primera version.
-            default_url = next((u for hl, u in group if hl == "es-AR"), group[0][1])
-            hreflang_tags += f'\n<link rel="alternate" hreflang="x-default" href="{default_url}">'
+            fallbacks = generic_fallback.get(art["slug"], {})
+            tags = [f'<link rel="alternate" hreflang="{hl}" href="{u}">' for hl, u in group]
+            tags += [f'<link rel="alternate" hreflang="{bl}" href="{u}">'
+                     for bl, u in fallbacks.items()]
+            # x-default prefiere el dueño del idioma pelado (es/pt/en) si
+            # esta presente en el grupo; si no, la primera version.
+            default_url = fallbacks.get("es") or fallbacks.get("pt") or fallbacks.get("en") or group[0][1]
+            tags.append(f'<link rel="alternate" hreflang="x-default" href="{default_url}">')
+            hreflang_tags = "\n".join(tags)
 
             html = GUIDE_TPL.format(
                 lang=lang, title=esc(art["title"]), desc=esc(art["desc"]),
