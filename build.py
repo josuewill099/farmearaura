@@ -415,19 +415,33 @@ def build_sitemap():
             f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" {X}>\n'
             + "\n".join(urls) + "\n</urlset>\n")
 
+# /api/* son los endpoints de voto/estado que duelos.js/historia.js/famosos.js
+# piden por fetch() en cada pagina interactiva -- puro JSON de puntajes en
+# vivo, sin contenido indexable (eso ya esta en el HTML estatico servido
+# sin JS). Bloquearlo no le saca nada a la indexacion, pero le devuelve al
+# crawler presupuesto de rastreo que antes se iba en JSON: Googlebot
+# renderiza cada pagina de duelo con Chrome headless para su "segunda ola"
+# de indexacion, lo que dispara esos fetch() y contaba como rastreo de
+# JSON en vez de HTML.
 ROBOTS = f"""User-agent: *
 Allow: /
+Disallow: /api/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
 User-agent: ClaudeBot
 Allow: /
+Disallow: /api/
 User-agent: Google-Extended
 Allow: /
+Disallow: /api/
 
 Sitemap: {DOMAIN}/sitemap.xml
 """

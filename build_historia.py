@@ -238,7 +238,7 @@ def build():
         nuevas = [u for u in urls if "<loc>%s</loc>" % u not in xml]
         if nuevas:
             bloque = "".join(
-                "<url><loc>%s</loc><changefreq>hourly</changefreq>"
+                "<url><loc>%s</loc><changefreq>daily</changefreq>"
                 "<priority>0.8</priority></url>\n" % u for u in nuevas)
             xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
             sm.write_text(xml, encoding="utf-8")
