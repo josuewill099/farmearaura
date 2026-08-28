@@ -14,7 +14,7 @@
       "lead": "<strong>This site does not collect personal data.</strong> There are no accounts, no forms, no analytics, and no database where anything could be stored. Everything that happens in the quiz happens inside your browser.",
       "sections": [
         ["Who's responsible", [
-          "Site owner: <strong>[YOUR NAME OR BUSINESS NAME]</strong>, [COUNTRY].",
+          "Site owner: <strong>Farmear Aura SRL</strong>, Argentina.",
           "Contact email: <a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a>."
         ]],
         ["What data gets processed", [
@@ -94,7 +94,7 @@
           "A low score doesn't say anything about you. It's a joke with a big number next to it."
         ]],
         ["Who's behind it", [
-          "The site is run by <strong>[YOUR NAME OR BUSINESS NAME]</strong> out of [COUNTRY]. It's not a media company project and there's no editorial staff: it's a small site, built and maintained by one person.",
+          "The site is run by <strong>Farmear Aura SRL</strong> out of Argentina. It's not a media company project and there's no editorial staff: it's a small site, built and maintained by one person.",
           "Got a scenario that should be in the quiz? Send it to <a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a>."
         ]]
       ]
