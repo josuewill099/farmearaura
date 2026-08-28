@@ -70,6 +70,157 @@ def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+# --------------------------------------------------------------- aura quiz
+# P1 del audit de GSC: /us/aura-color-test/ y /us/aura-test/ rankeaban en
+# posicion ~90 para queries de intencion clarisima de quiz ("what is my
+# aura color", "how to find out my aura color") porque la pagina era una
+# lista estatica de descripciones, no un quiz real. Este widget cliente
+# (sin backend, nada se guarda, mismo espiritu que la calculadora de
+# puntos) resuelve eso. 6 preguntas x 4 opciones, cada color aparece en
+# exactamente 3 preguntas. Solo se arma para locales con los 8 colores
+# (es tiene nomas 4, se deja con la version estatica por ahora).
+QUIZ_QUESTIONS_ES = [
+    {"q": "Alguien te dice algo injusto sin querer lastimarte. ¿Cómo reaccionás/reaccionas?", "opts": [
+        {"t": "Me tomo un segundo, respiro y respondo con calma.", "c": "azul"},
+        {"t": "Le resto importancia con una broma y sigo con mi día.", "c": "amarilla"},
+        {"t": "Le digo lo que pienso ahí mismo, sin filtro.", "c": "roja"},
+        {"t": "Me lo guardo y lo pienso a solas más tarde.", "c": "negra"},
+    ]},
+    {"q": "¿Qué te hace sentir más en paz?", "opts": [
+        {"t": "Un rato en la naturaleza, sin nadie alrededor.", "c": "verde"},
+        {"t": "Empezar algo nuevo después de cerrar una etapa.", "c": "blanca"},
+        {"t": "Una conversación profunda sobre algo que me haga pensar.", "c": "morada"},
+        {"t": "Pasar tiempo con la gente que quiero.", "c": "rosa"},
+    ]},
+    {"q": "En un grupo de amigos, tu rol natural es...", "opts": [
+        {"t": "El o la que escucha y da un consejo cuando hace falta.", "c": "azul"},
+        {"t": "El o la que calma las cosas cuando hay tensión.", "c": "verde"},
+        {"t": "El o la que toma la iniciativa y arma el plan.", "c": "roja"},
+        {"t": "El o la que nota cosas que los demás no ven.", "c": "morada"},
+    ]},
+    {"q": "Te ofrecen un cambio grande (mudanza, trabajo nuevo). ¿Qué pensás/piensas primero?", "opts": [
+        {"t": "Qué emocionante, ¡nuevas posibilidades!", "c": "amarilla"},
+        {"t": "Es el momento justo para empezar de nuevo.", "c": "blanca"},
+        {"t": "Necesito tiempo a solas para pensarlo bien.", "c": "negra"},
+        {"t": "¿Cómo afecta esto a la gente que quiero?", "c": "rosa"},
+    ]},
+    {"q": "¿Cómo te recuperás/recuperas después de un mal día?", "opts": [
+        {"t": "Hablando con alguien de confianza, con calma.", "c": "azul"},
+        {"t": "Dejando esa etapa atrás y mirando para adelante.", "c": "blanca"},
+        {"t": "Reflexionando a solas hasta entender qué pasó.", "c": "morada"},
+        {"t": "Buscando a alguien que me haga sentir mejor.", "c": "rosa"},
+    ]},
+    {"q": "Te dan una tarea sin instrucciones claras. ¿Qué hacés/haces?", "opts": [
+        {"t": "Improviso algo creativo sobre la marcha.", "c": "amarilla"},
+        {"t": "Pregunto con calma hasta que quede claro.", "c": "verde"},
+        {"t": "Empiezo ya, después ajusto lo que haga falta.", "c": "roja"},
+        {"t": "Lo pienso bien antes de dar el primer paso.", "c": "negra"},
+    ]},
+]
+
+QUIZ_QUESTIONS_EN = [
+    {"q": "Someone says something unfair without meaning to hurt you. How do you react?", "opts": [
+        {"t": "I take a breath and respond calmly.", "c": "azul"},
+        {"t": "I brush it off with a joke and move on.", "c": "amarilla"},
+        {"t": "I say what I think right then, no filter.", "c": "roja"},
+        {"t": "I keep it to myself and think it over later.", "c": "negra"},
+    ]},
+    {"q": "What makes you feel most at peace?", "opts": [
+        {"t": "Time in nature, away from everyone.", "c": "verde"},
+        {"t": "Starting something new after closing a chapter.", "c": "blanca"},
+        {"t": "A deep conversation that makes me think.", "c": "morada"},
+        {"t": "Spending time with people I love.", "c": "rosa"},
+    ]},
+    {"q": "In a friend group, your natural role is...", "opts": [
+        {"t": "The one who listens and gives advice when needed.", "c": "azul"},
+        {"t": "The one who calms things down when there's tension.", "c": "verde"},
+        {"t": "The one who takes charge and makes the plan.", "c": "roja"},
+        {"t": "The one who notices things others miss.", "c": "morada"},
+    ]},
+    {"q": "You're offered a big change (move, new job). What's your first thought?", "opts": [
+        {"t": "How exciting, new possibilities!", "c": "amarilla"},
+        {"t": "This is the right time for a fresh start.", "c": "blanca"},
+        {"t": "I need time alone to think it through.", "c": "negra"},
+        {"t": "How does this affect the people I love?", "c": "rosa"},
+    ]},
+    {"q": "How do you recover after a bad day?", "opts": [
+        {"t": "Talking it out calmly with someone I trust.", "c": "azul"},
+        {"t": "Leaving that chapter behind and looking forward.", "c": "blanca"},
+        {"t": "Reflecting alone until I understand what happened.", "c": "morada"},
+        {"t": "Finding someone who makes me feel better.", "c": "rosa"},
+    ]},
+    {"q": "You're given a task with no clear instructions. What do you do?", "opts": [
+        {"t": "I improvise something creative on the spot.", "c": "amarilla"},
+        {"t": "I calmly ask questions until it's clear.", "c": "verde"},
+        {"t": "I start right away and adjust as I go.", "c": "roja"},
+        {"t": "I think it through carefully before the first step.", "c": "negra"},
+    ]},
+]
+
+QUIZ_STRINGS = {
+    "es": {"resultLabel": "Tu aura es", "seeMore": "Ver el significado completo", "retry": "Volver a hacer el test"},
+    "en": {"resultLabel": "Your aura is", "seeMore": "See the full meaning", "retry": "Retake the quiz"},
+}
+
+QUIZ_JS = (SRC / "aura-quiz.js").read_text(encoding="utf-8")
+# Fija sin/con voseo -- reutiliza las mismas marcas "X/Y" que ya usa el
+# cluster de colores, resueltas segun si la locale es voseante.
+_VOSEO_PAIRS = [("reaccionás/reaccionas", "reaccionás", "reaccionas"),
+                ("pensás/piensas", "pensás", "piensas"),
+                ("recuperás/recuperas", "recuperás", "recuperas"),
+                ("hacés/haces", "hacés", "haces")]
+
+
+def fix_voseo(s, voseo):
+    for marker, si, no in _VOSEO_PAIRS:
+        s = s.replace(marker, si if voseo else no)
+    return s
+
+
+COLOR_EMOJI = {"azul": "🔵", "amarilla": "🟡", "verde": "🟢", "blanca": "⚪",
+               "roja": "🔴", "negra": "⚫", "morada": "🟣", "rosa": "🩷"}
+
+# us no tiene paginas /us/aura-{color}/ dedicadas (esas solo existen para
+# los mercados hispanos) -- el resultado del quiz en ingles muestra nombre
+# + blurb sin link "ver mas" en vez de inventar un cluster de paginas nuevo
+# solo para esto.
+ENGLISH_COLOR_INFO = {
+    "azul": ("Blue", "Blue auras are associated with calm, communication, and intuition. People with this energy tend to be good listeners who think before they speak and bring a sense of calm wherever they go."),
+    "amarilla": ("Yellow", "Yellow auras are associated with optimism, creativity, and mental energy. It's the color most linked to joy and a constant drive to learn new things."),
+    "verde": ("Green", "Green auras are associated with balance, healing, and a connection to nature. It shows up most in people who look for harmony between what they feel and what they do."),
+    "blanca": ("White", "White auras are associated with purity, elevated spirituality, and new beginnings. It tends to show up in people going through (or seeking) a major change or a period of unusual inner clarity."),
+    "roja": ("Red", "Red auras are associated with passion, physical energy, and willpower. It's the color most linked to leadership and action -- people with this energy don't wait for things to happen."),
+    "negra": ("Black", "Black auras are often misread. It doesn't mean \"bad energy\" -- it's associated with protection, deep introspection, and sometimes a period of exhaustion that calls for rest."),
+    "morada": ("Purple", "Purple (or violet) auras are associated with spirituality, intuition, and wisdom. It's one of the rarer aura colors, and tends to show up in people who are unusually sensitive to what's happening around them."),
+    "rosa": ("Pink", "Pink auras are associated with love, tenderness, and emotional sensitivity. It's the color that shows up most in people for whom relationships and caring for others are at the center of everything."),
+}
+
+
+def build_quiz_widget(loc, lang, base, articles_by_slug, voseo):
+    color_ids = ["azul", "amarilla", "verde", "blanca", "roja", "negra", "morada", "rosa"]
+    colors = {}
+
+    if lang.startswith("es"):
+        questions, strings = QUIZ_QUESTIONS_ES, QUIZ_STRINGS["es"]
+        for cid in color_ids:
+            art = articles_by_slug.get(f"aura-{cid}")
+            if not art:
+                return ""   # la locale no tiene los 8 colores -- se salta el quiz
+            colors[cid] = {"nombre": cid, "emoji": COLOR_EMOJI[cid],
+                           "blurb": art["answer"], "url": f"{base}/aura-{cid}/"}
+    else:
+        questions, strings = QUIZ_QUESTIONS_EN, QUIZ_STRINGS["en"]
+        for cid in color_ids:
+            name, blurb = ENGLISH_COLOR_INFO[cid]
+            colors[cid] = {"nombre": name, "emoji": COLOR_EMOJI[cid], "blurb": blurb, "url": ""}
+
+    qs = [{"q": fix_voseo(q["q"], voseo), "opts": q["opts"]} for q in questions]
+    cfg = {"questions": qs, "colors": colors, **strings}
+    return ('  <div class="quiz" id="aura-quiz"></div>\n'
+            f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
+            f'  <script>{QUIZ_JS}</script>')
+
+
 def render_sections(sections):
     out = []
     for h, blocks in sections:
@@ -113,12 +264,21 @@ def build():
                 generic_fallback.setdefault(art["slug"], {})[GENERIC[loc]] = (
                     f"{d['base']}/{art['slug']}/")
 
+    # Paginas donde va el quiz interactivo en vez de (o ademas de) contenido
+    # estatico -- ver build_quiz_widget(). "es" se queda con la version
+    # estatica por ahora porque solo tiene 4 de los 8 colores.
+    QUIZ_SLUGS = {"color-de-aura", "aura-test", "aura-color-test"}
+
     urls = []
     for loc, d in data.items():
         L, lang, home, base = d["L"], d["lang"], d["home"], d["base"]
+        articles_by_slug = {a["slug"]: a for a in L["articles"]}
 
         for art in L["articles"]:
             canonical = f"{base}/{art['slug']}/"
+
+            quiz_widget = (build_quiz_widget(loc, lang, base, articles_by_slug, loc == "ar")
+                           if art["slug"] in QUIZ_SLUGS else "")
 
             blocks = render_sections(art["sections"])
             if art.get("faq"):
@@ -180,6 +340,7 @@ def build():
                 meta=esc(art.get("meta", "")),
                 homeLabel=esc(home_label),
                 tocLabel=esc(art.get("tocLabel", TOC_LABEL[loc])),
+                quizWidget=quiz_widget,
                 toc=toc, sections=sections, related=related,
                 sourcesH=esc(art.get("sourcesH", SOURCES_H[loc])),
                 sources="\n".join(f"    <li>{x}</li>" for x in art.get("sources", [])),

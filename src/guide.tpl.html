@@ -116,6 +116,26 @@ details .a p:last-child{{margin-bottom:0}}
   font-size:14px;padding:15px 26px;text-decoration:none;border-radius:3px;
   box-shadow:0 0 34px rgba(255,197,61,.3)}}
 
+.quiz{{border:2px solid var(--aura);border-radius:4px;padding:24px 22px;margin:0 0 34px;
+  background:linear-gradient(160deg,rgba(176,38,255,.14),transparent)}}
+.q-bar{{height:4px;background:#2A1A3E;border-radius:2px;overflow:hidden;margin-bottom:10px}}
+.q-fill{{height:100%;background:var(--gold);transition:width .3s ease}}
+.q-count{{font-family:var(--data);font-size:12px;color:var(--dim);margin-bottom:14px}}
+.q-text{{font-family:var(--display);font-size:clamp(18px,4vw,24px);line-height:1.2;margin:0 0 18px}}
+.q-opts{{display:flex;flex-direction:column;gap:10px}}
+.q-opt{{display:block;width:100%;text-align:left;border:1px solid #2A1A3E;background:rgba(21,11,34,.6);
+  color:var(--bone);font-family:var(--body);font-size:15px;padding:14px 16px;border-radius:3px;
+  cursor:pointer;transition:border-color .15s ease,background .15s ease}}
+.q-opt:hover{{border-color:var(--aura);background:rgba(176,38,255,.12)}}
+.q-result{{text-align:center}}
+.q-emoji{{font-size:52px;display:block;margin-bottom:10px}}
+.q-result h3{{font-family:var(--display);font-size:clamp(20px,5vw,28px);margin:0 0 10px}}
+.q-result p{{color:var(--mid);margin:0 0 20px}}
+.q-cta{{display:inline-block;background:var(--gold);color:#150B22;font-family:var(--display);
+  font-size:13px;padding:13px 22px;text-decoration:none;border-radius:3px;margin:0 8px 10px 0}}
+.q-retry{{display:inline-block;background:none;border:1px solid var(--mid);color:var(--mid);
+  font-family:var(--body);font-size:13px;padding:12px 20px;border-radius:3px;cursor:pointer}}
+
 .sources{{font-size:14px;color:var(--dim);margin-top:14px}}
 .sources li{{margin:6px 0}}
 footer{{border-top:1px solid #2A1A3E;margin-top:56px;padding:26px 0 40px;
@@ -143,6 +163,7 @@ footer a{{color:var(--mid)}}
 
   <div class="answer"><p>{answer}</p></div>
 
+{quizWidget}
   <div class="toc">
     <div class="label">{tocLabel}</div>
 {toc}

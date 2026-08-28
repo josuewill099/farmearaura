@@ -324,7 +324,7 @@ def build_guide(l):
         meta=g.get("meta", "Actualizado: agosto de 2026 &middot; Lectura: 5 min"),
         homeLabel=esc(g.get("homeLabel", "Inicio")),
         tocLabel=esc(g.get("tocLabel", "EN ESTA P&Aacute;GINA")).replace("&amp;", "&"),
-        toc=toc, sections=sections, related=related,
+        quizWidget="", toc=toc, sections=sections, related=related,
         sourcesH=esc(g.get("sourcesH", "Fuentes")),
         sources="\n".join(f"    <li>{x}</li>" for x in srcs),
         promoK=esc(g["promoK"]), promoP=esc(g["promoP"]), promoBtn=esc(g["promoBtn"]),
