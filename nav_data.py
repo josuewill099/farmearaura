@@ -161,7 +161,7 @@ NAV_URLS = {
         "home": "https://farmearaura.com/us/",
         "duelos": "https://farmearaura.com/us/duels/",
         "duelos_ranking": "https://farmearaura.com/us/duels/ranking/",
-        "duelos_historial": "https://farmearaura.com/us/duels/historial/",
+        "duelos_historial": "https://farmearaura.com/us/duels/recent/",
         "historia": "https://farmearaura.com/us/historical-duels/",
         "historia_ranking": "https://farmearaura.com/us/historical-duels/ranking/",
         "famosos": "https://farmearaura.com/us/duels/celebrities/",
