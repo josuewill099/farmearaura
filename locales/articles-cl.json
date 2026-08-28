@@ -647,6 +647,79 @@
       "ctaNav": "COLOR DE AURA",
       "guideLink": "Aura rosa",
       "footerNote": "farmearaura.com &mdash; contenido informativo sobre creencias populares. No sustituye asesoramiento profesional."
+    },
+    {
+      "slug": "reglas-de-farmear-aura",
+      "title": "Reglas de farmear aura: la lista completa | farmearaura.com",
+      "desc": "Cuáles son las reglas de farmear aura, explicadas una por una: qué hacer, qué evitar y por qué anunciarlo te hace perder toda la aura.",
+      "h1": "Reglas de farmear aura",
+      "meta": "Actualizado: agosto de 2026 &middot; Lectura: 3 min",
+      "answer": "No hay una autoridad oficial que las haya escrito, pero el meme de farmear aura sigue un código bastante consistente en todos los videos: reaccionar con calma, no explicar lo que hiciste y no buscar la reacción de nadie. Rompe cualquiera de esas tres y pierdes la aura al instante.",
+      "sections": [
+        [
+          "Las reglas",
+          [
+            "Aunque suene a talla, el meme codifica reglas sociales bien reconocibles. Estas son las que se repiten en casi todos los videos:",
+            {
+              "ul": [
+                "<strong>No expliques lo que hiciste.</strong> Explicar una buena acción la anula. Si la tenís que contar, ya no cuenta.",
+                "<strong>Reacciona tarde.</strong> La calma se lee como control. Responder al tiro se lee como nervio.",
+                "<strong>Nunca pidas la reacción.</strong> Voltear a ver si alguien te pescó cancela todo el aura de la jugada.",
+                "<strong>Ganar en silencio vale más que ganar anunciándolo.</strong> Esta es la regla central del meme.",
+                "<strong>La recuperación vale más que no caerse.</strong> Tropezarte y seguir caminando sin mirar a nadie da más aura que no haberte tropezado nunca.",
+                "<strong>Hacer algo por alguien sin testigos.</strong> El aura sube cuando la acción no tenía público.",
+                "<strong>Si decís \"eso fue aura\", perdiste el aura.</strong> Nombrarlo lo destruye. Es la única regla absoluta."
+              ]
+            }
+          ]
+        ],
+        [
+          "Qué te hace perder aura",
+          [
+            "El aura negativa es la mitad entretenida del meme, y casi siempre se reduce a lo mismo: <strong>necesitar que los demás te confirmen algo</strong>. Los casos más citados:",
+            {
+              "ul": [
+                "Repetir un chiste que nadie pescó.",
+                "Explicar por qué tu chiste era bueno.",
+                "Escribir \"?\" cuando no te contestan.",
+                "Decir cuánto te costó algo sin que te pregunten.",
+                "Pedir que borren una foto (todos la van a ir a ver igual).",
+                "Poner una excusa que nadie te pidió."
+              ]
+            }
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Cuáles son las reglas de farmear aura?",
+          "Las principales: no expliques lo que hiciste, reacciona tarde, nunca pidas la reacción de nadie, gana en silencio y recupérate rápido cuando algo sale mal. La regla absoluta es que decir \"esto fue aura\" anula toda la aura ganada."
+        ],
+        [
+          "¿Hay una regla más importante que las demás?",
+          "Sí: nombrarlo lo destruye. Puedes seguir las otras seis reglas a la perfección, pero si dices en voz alta que estás farmeando aura, la pierdes toda en el acto."
+        ]
+      ],
+      "related": [
+        [
+          "Qué es farmear aura",
+          "https://farmearaura.com/cl/que-es-farmear-aura/"
+        ],
+        [
+          "Duelos de aura",
+          "https://farmearaura.com/cl/duelos/"
+        ]
+      ],
+      "sources": [
+        "farmearaura.com &mdash; <a href=\"https://farmearaura.com/cl/que-es-farmear-aura/\">qué es farmear aura, guía completa</a>."
+      ],
+      "promoK": "¿Cuánta aura tienes?",
+      "promoP": "Siete situaciones. Un número. Sin cuenta, sin fotos, sin guardar nada.",
+      "promoBtn": "CALCULAR MI AURA",
+      "promoUrl": "https://farmearaura.com/cl/",
+      "ctaNav": "REGLAS DE FARMEAR AURA",
+      "guideLink": "Reglas de farmear aura",
+      "footerNote": "farmearaura.com — contenido de humor. Los puntos de aura no existen."
     }
   ]
 }
