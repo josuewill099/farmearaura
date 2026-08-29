@@ -33,11 +33,18 @@
     numEl.classList.add("bump");
   }
 
+  var presetsHtml = (C.presets || [])
+    .map(function (p) {
+      return '<button type="button" class="c-preset" data-pts="' + p + '">+' + fmt(p) + "</button>";
+    })
+    .join("");
+
   root.innerHTML =
     '<div class="c-label">' + esc(C.label) + "</div>" +
     '<div class="c-num" id="c-num">0</div>' +
     '<div class="c-msg" id="c-msg">' + esc(C.intro) + "</div>" +
     '<button type="button" class="c-btn" id="c-btn">' + esc(C.cta) + "</button>" +
+    '<div class="c-presets" id="c-presets">' + presetsHtml + "</div>" +
     '<button type="button" class="c-reset" id="c-reset">' + esc(C.reset) + "</button>";
 
   root.querySelector("#c-num").textContent = fmt(total);
@@ -47,6 +54,15 @@
     total += ev.pts;
     save();
     render((ev.pts > 0 ? "+" : "") + fmt(ev.pts) + " — " + ev.t);
+  });
+
+  root.querySelector("#c-presets").addEventListener("click", function (e) {
+    var btn = e.target.closest(".c-preset");
+    if (!btn) return;
+    var pts = parseInt(btn.dataset.pts, 10);
+    total += pts;
+    save();
+    render("+" + fmt(pts) + " — lo sumaste vos.");
   });
 
   root.querySelector("#c-reset").addEventListener("click", function () {

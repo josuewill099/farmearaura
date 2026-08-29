@@ -264,6 +264,7 @@ def build_counter_widget(loc):
         "cta": "FARMEAR AURA",
         "reset": "Reiniciar contador",
         "events": COUNTER_EVENTS_AR,
+        "presets": [50, 100, 200, 300, 500, 1000],
     }
     return ('  <div class="counter" id="aura-counter"></div>\n'
             f'  <script>window.AURA_COUNTER={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
