@@ -224,6 +224,52 @@ def build_quiz_widget(loc, lang, base, articles_by_slug, voseo):
             f'  <script>{QUIZ_JS}</script>')
 
 
+# --------------------------------------------------------------- aura counter
+# "contador de aura"/"contador de farmear aura": trafico real (GSC) sin
+# volumen en Ahrefs todavia (el termino es demasiado nuevo), pero sin
+# competencia dedicada -- distinto de la calculadora (7 preguntas, un
+# resultado): esto es un boton que se puede tocar cuantas veces se quiera,
+# suma o resta un monto random con su motivo, y persiste en localStorage.
+# Solo AR por ahora -- se activa solo con que exista el slug en su
+# articles-{loc}.json, sin gating explicito de locale aca.
+COUNTER_JS = (SRC / "aura-counter.js").read_text(encoding="utf-8")
+
+COUNTER_EVENTS_AR = [
+    {"pts": 250, "t": "Contestaste tarde y quedó mejor."},
+    {"pts": 180, "t": "No mandaste el mensaje que habías escrito con bronca."},
+    {"pts": 900, "t": "Te fuiste de la previa sin avisar y quedó como un mood."},
+    {"pts": 120, "t": "Le bajaste el volumen a tu propia queja."},
+    {"pts": 2000, "t": "Ganaste una discusión sin levantar la voz."},
+    {"pts": 75, "t": "Caminaste como si supieras a dónde ibas, aunque no tenías idea."},
+    {"pts": 300, "t": "No le diste bola a un comentario que buscaba pelea."},
+    {"pts": 50, "t": "Te reíste último y en voz baja."},
+    {"pts": 5000, "t": "Alguien te copió el look sin avisar."},
+    {"pts": 150, "t": "Dijiste \"no pasa nada\" y de verdad no te importó."},
+    {"pts": 400, "t": "Saliste del grupo sin dar explicaciones."},
+    {"pts": 999, "t": "Bostezaste en un momento tenso y quedó como total indiferencia."},
+    {"pts": -300, "t": "Explicaste un chiste que no funcionó."},
+    {"pts": -150, "t": "Le pusiste \"visto\" a alguien y después contestaste igual."},
+    {"pts": -1000, "t": "Te reíste de tu propio chiste antes que los demás."},
+    {"pts": -50, "t": "Preguntaste \"posta?\" tres veces seguidas."},
+    {"pts": -700, "t": "Pediste que te den bola en el grupo."},
+    {"pts": -200, "t": "Se te cortó la voz pidiendo algo obvio."},
+]
+
+
+def build_counter_widget(loc):
+    cfg = {
+        "key": loc,
+        "label": "TU AURA",
+        "intro": "Tocá el botón y sumá o restá aura al toque.",
+        "cta": "FARMEAR AURA",
+        "reset": "Reiniciar contador",
+        "events": COUNTER_EVENTS_AR,
+    }
+    return ('  <div class="counter" id="aura-counter"></div>\n'
+            f'  <script>window.AURA_COUNTER={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
+            f'  <script>{COUNTER_JS}</script>')
+
+
 def render_sections(sections):
     out = []
     for h, blocks in sections:
@@ -271,6 +317,7 @@ def build():
     # estatico -- ver build_quiz_widget(). "es" se queda con la version
     # estatica por ahora porque solo tiene 4 de los 8 colores.
     QUIZ_SLUGS = {"color-de-aura", "aura-test", "aura-color-test"}
+    COUNTER_SLUGS = {"contador-de-aura"}
     # Locales voseantes -- afecta la conjugacion de las preguntas del quiz
     # (ver fix_voseo). Antes solo estaba "ar" hardcodeado aca, lo que le
     # daba tuteo por error a uy cuando se sumo (uy tambien es voseante).
@@ -284,8 +331,12 @@ def build():
         for art in L["articles"]:
             canonical = f"{base}/{art['slug']}/"
 
-            quiz_widget = (build_quiz_widget(loc, lang, base, articles_by_slug, loc in VOSEO_LOCS)
-                           if art["slug"] in QUIZ_SLUGS else "")
+            if art["slug"] in QUIZ_SLUGS:
+                quiz_widget = build_quiz_widget(loc, lang, base, articles_by_slug, loc in VOSEO_LOCS)
+            elif art["slug"] in COUNTER_SLUGS:
+                quiz_widget = build_counter_widget(loc)
+            else:
+                quiz_widget = ""
 
             blocks = render_sections(art["sections"])
             if art.get("faq"):

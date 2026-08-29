@@ -75,7 +75,8 @@ GUIDE_LABELS = {
 # y agrega el link dentro del sub de "duelos".
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
     "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
@@ -106,6 +107,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/contador-de-aura/",
     },
     "mx": {
         "home": "https://farmearaura.com/mx/",
@@ -253,6 +255,11 @@ def nav_html(loc, current):
         )
 
     parts = ['<a href="%s"%s>%s</a>' % (U["home"], cur("home"), _esc(L["calculadora"]))]
+    # "contador" (herramienta nueva, solo AR por ahora) va justo al lado de
+    # la calculadora -- se activa solo si la locale tiene la key en NAV_URLS,
+    # sin gating explicito de locale aca (mismo patron que "famosos").
+    if "contador" in U:
+        parts.append('<a href="%s"%s>%s</a>' % (U["contador"], cur("contador"), _esc(L["contador"])))
 
     historial_link = '<a href="%s"%s>%s</a>' % (
         U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]))
