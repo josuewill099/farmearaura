@@ -48,22 +48,25 @@ LOCS = {
     "pe": "locales/articles-pe.json",
     "co": "locales/articles-co.json",
     "esus": "locales/articles-esus.json",
+    "uy": "locales/articles-uy.json",
 }
 
 # Defaults por locale para los textos de chrome (breadcrumb "home", label del
 # TOC, encabezado de fuentes) -- cada articulo puede pisarlos con su propia
 # clave si hace falta, pero la mayoria no necesita repetirlos.
 HOME_LABEL = {"br": "Início", "us": "Home", "ar": "Inicio", "mx": "Inicio", "es": "Inicio",
-              "cl": "Inicio", "pe": "Inicio", "co": "Inicio", "esus": "Inicio"}
+              "cl": "Inicio", "pe": "Inicio", "co": "Inicio", "esus": "Inicio", "uy": "Inicio"}
 TOC_LABEL = {"br": "NESTA PÁGINA", "us": "ON THIS PAGE", "ar": "EN ESTA PÁGINA",
              "mx": "EN ESTA PÁGINA", "es": "EN ESTA PÁGINA", "cl": "EN ESTA PÁGINA",
-             "pe": "EN ESTA PÁGINA", "co": "EN ESTA PÁGINA", "esus": "EN ESTA PÁGINA"}
+             "pe": "EN ESTA PÁGINA", "co": "EN ESTA PÁGINA", "esus": "EN ESTA PÁGINA",
+             "uy": "EN ESTA PÁGINA"}
 SOURCES_H = {"br": "Fontes", "us": "Sources", "ar": "Fuentes", "mx": "Fuentes", "es": "Fuentes",
-             "cl": "Fuentes", "pe": "Fuentes", "co": "Fuentes", "esus": "Fuentes"}
+             "cl": "Fuentes", "pe": "Fuentes", "co": "Fuentes", "esus": "Fuentes", "uy": "Fuentes"}
 FAQ_HEADING = {"br": "Perguntas frequentes", "us": "FAQ", "ar": "Preguntas frecuentes",
                "mx": "Preguntas frecuentes", "es": "Preguntas frecuentes",
                "cl": "Preguntas frecuentes", "pe": "Preguntas frecuentes",
-               "co": "Preguntas frecuentes", "esus": "Preguntas frecuentes"}
+               "co": "Preguntas frecuentes", "esus": "Preguntas frecuentes",
+               "uy": "Preguntas frecuentes"}
 
 
 def esc(s):

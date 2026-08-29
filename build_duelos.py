@@ -19,18 +19,19 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus"]
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy"]
 GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
 
 # ar vive en la raiz (nunca tuvo prefijo de pais); el resto cuelga de /{cc}/.
 HOME = {"ar": "/", "mx": "/mx/", "es": "/es/", "br": "/br/",
-        "cl": "/cl/", "pe": "/pe/", "co": "/co/", "us": "/us/", "esus": "/es-us/"}
+        "cl": "/cl/", "pe": "/pe/", "co": "/co/", "us": "/us/", "esus": "/es-us/",
+        "uy": "/uy/"}
 HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
             "es": ["es-ES"], "br": ["pt-BR"],
             "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"],
-            "esus": ["es-US"]}
+            "esus": ["es-US"], "uy": ["es-UY"]}
 OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
-      "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US"}
+      "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US", "uy": "es_UY"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
@@ -122,12 +123,13 @@ RANKING_CTA = {
     "ar": "Votá vos y movelo.", "mx": "Vota tú y muévelo.", "es": "Vota tú y muévelo.",
     "br": "Vote e mexa o ranking.", "cl": "Vota tú y muévelo.", "pe": "Vota tú y muévelo.",
     "co": "Vota tú y muévelo.", "us": "Cast your vote and move the needle.",
-    "esus": "Vota tú y muévelo.",
+    "esus": "Vota tú y muévelo.", "uy": "Votá vos y movelo.",
 }
 HISTORIAL_CTA = {
     "ar": "Sumá tu duelo.", "mx": "Suma tu duelo.", "es": "Suma tu duelo.",
     "br": "Some o seu duelo.", "cl": "Suma tu duelo.", "pe": "Suma tu duelo.",
     "co": "Suma tu duelo.", "us": "Add your duel.", "esus": "Suma tu duelo.",
+    "uy": "Sumá tu duelo.",
 }
 
 # Link contextual a famosos (celebridades del propio pais) desde la seccion
@@ -138,7 +140,7 @@ FAMOSOS_LABEL = {
     "es": "Duelos entre famosos", "br": "Batalhas entre famosos",
     "cl": "Duelos entre famosos", "pe": "Duelos entre famosos",
     "co": "Duelos entre famosos", "us": "Celebrity duels",
-    "esus": "Duelos entre famosos",
+    "esus": "Duelos entre famosos", "uy": "Duelos entre famosos",
 }
 
 

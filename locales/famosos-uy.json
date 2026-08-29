@@ -1,0 +1,69 @@
+{
+  "loc": "uy",
+  "locale": "es-UY",
+  "lang": "es",
+  "numfmt": "es-UY",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "uy/duelos/famosos/",
+  "slug_ranking": "uy/duelos/famosos/ranking/",
+  "home": "/uy/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Suárez contra Drexler, Valverde contra Natalia Oreiro. Elegí quién tiene más aura entre los famosos uruguayos y mirá el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos famosos uruguayos. Elegí uno. El que gana le roba aura al otro.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre famosos",
+    "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que está arriba roba mucho, ganarle a uno que ya está abajo roba poco. El ranking se arma con los votos de todos los que entran, no solo los tuyos, y se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos uruguayos | Farmear Aura",
+    "description": "El ranking de aura de los famosos uruguayos, armado con los votos de todos. Mirá quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrenalo vos.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+  "figuras": [
+    { "id": "suarez", "emoji": "⚽", "nombre": "Luis Suárez", "anios": "Fútbol", "oficio": "Delantero histórico" },
+    { "id": "valverde", "emoji": "🎽", "nombre": "Federico Valverde", "anios": "Fútbol", "oficio": "Capitán de la selección" },
+    { "id": "nunez", "emoji": "🎯", "nombre": "Darwin Núñez", "anios": "Fútbol", "oficio": "Delantero de la nueva generación" },
+    { "id": "araujo", "emoji": "🛡️", "nombre": "Ronald Araujo", "anios": "Fútbol", "oficio": "Defensor, Barcelona" },
+    { "id": "cavani", "emoji": "🥅", "nombre": "Edinson Cavani", "anios": "Fútbol", "oficio": "Delantero histórico" },
+    { "id": "muslera", "emoji": "🧤", "nombre": "Fernando Muslera", "anios": "Fútbol", "oficio": "Arquero histórico" },
+    { "id": "godin", "emoji": "🔒", "nombre": "Diego Godín", "anios": "Fútbol", "oficio": "Defensor y excapitán histórico" },
+    { "id": "arrascaeta", "emoji": "🎩", "nombre": "Giorgian De Arrascaeta", "anios": "Fútbol", "oficio": "Mediocampista creativo" },
+    { "id": "forlan", "emoji": "🏆", "nombre": "Diego Forlán", "anios": "Fútbol", "oficio": "Balón de Oro del Mundial 2010" },
+    { "id": "cuevas", "emoji": "🎾", "nombre": "Pablo Cuevas", "anios": "Tenis", "oficio": "Especialista en dobles" },
+    { "id": "drexler", "emoji": "🎸", "nombre": "Jorge Drexler", "anios": "Música", "oficio": "Cantautor, ganador del Oscar" },
+    { "id": "rada", "emoji": "🥁", "nombre": "Rubén Rada", "anios": "Música", "oficio": "Ícono del candombe" },
+    { "id": "ntvg", "emoji": "🎤", "nombre": "No Te Va Gustar", "anios": "Música", "oficio": "Banda de rock y ska" },
+    { "id": "velapuerca", "emoji": "🎶", "nombre": "La Vela Puerca", "anios": "Música", "oficio": "Banda de rock y ska" },
+    { "id": "cabrera", "emoji": "🎼", "nombre": "Fernando Cabrera", "anios": "Música", "oficio": "Cantautor" },
+    { "id": "roos", "emoji": "🎹", "nombre": "Jaime Roos", "anios": "Música", "oficio": "Cantautor, ícono del candombe" },
+    { "id": "oreiro", "emoji": "🌟", "nombre": "Natalia Oreiro", "anios": "Actuación", "oficio": "Actriz y cantante" },
+    { "id": "yosoycactus", "emoji": "🎮", "nombre": "YoSoyCactus", "anios": "Streaming", "oficio": "El canal de YouTube más grande de Uruguay" }
+  ]
+}

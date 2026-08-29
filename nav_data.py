@@ -27,7 +27,7 @@ from pathlib import Path
 _ROOT = Path(__file__).parent
 
 LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
-            "cl": "es", "pe": "es", "co": "es", "us": "en", "esus": "es"}
+            "cl": "es", "pe": "es", "co": "es", "us": "en", "esus": "es", "uy": "es"}
 _legal_cache = {}
 
 
@@ -60,13 +60,14 @@ GUIDE_URLS = {
     "co": "https://farmearaura.com/co/que-es-farmear-aura/",
     "us": "https://farmearaura.com/us/what-is-aura-farming/",
     "esus": "https://farmearaura.com/es-us/que-es-farmear-aura/",
+    "uy": "https://farmearaura.com/uy/que-es-farmear-aura/",
 }
 GUIDE_LABELS = {
     "ar": "¿Qué es farmear aura?", "mx": "¿Qué es farmear aura?",
     "es": "¿Qué es el aura farming?", "br": "O que é farmar aura?",
     "cl": "¿Qué es farmear aura?", "pe": "¿Qué es farmear aura?",
     "co": "¿Qué es farmear aura?", "us": "What is aura farming?",
-    "esus": "¿Qué es el aura farming?",
+    "esus": "¿Qué es el aura farming?", "uy": "¿Qué es farmear aura?",
 }
 
 # "famosos" existe en las nueve locales (cada una con sus propias figuras --
@@ -91,6 +92,8 @@ NAV_LABELS = {
            "famosos": "Celebrities", "ranking": "Ranking", "historial": "Recent"},
     "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
              "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+    "uy": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
 }
 
 NAV_URLS = {
@@ -174,6 +177,15 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/es-us/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/es-us/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/es-us/duelos/famosos/",
+    },
+    "uy": {
+        "home": "https://farmearaura.com/uy/",
+        "duelos": "https://farmearaura.com/uy/duelos/",
+        "duelos_ranking": "https://farmearaura.com/uy/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/uy/duelos/historial/",
+        "historia": "https://farmearaura.com/uy/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/uy/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/uy/duelos/famosos/",
     },
 }
 
