@@ -74,25 +74,25 @@ GUIDE_LABELS = {
 # ver locales/famosos-{loc}.json). nav_html() lo detecta con `"famosos" in U`
 # y agrega el link dentro del sub de "duelos".
 NAV_LABELS = {
-    "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
-    "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
-    "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "br": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico"},
-    "cl": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "cl": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
-    "pe": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "pe": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
-    "co": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "co": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
     "us": {"calculadora": "Calculator", "duelos": "Duels", "historia": "Historical Duels",
            "famosos": "Celebrities", "ranking": "Ranking", "historial": "Recent"},
-    "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
              "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
-    "uy": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Históricos",
+    "uy": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
 }
 
