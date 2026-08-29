@@ -271,6 +271,10 @@ def build():
     # estatico -- ver build_quiz_widget(). "es" se queda con la version
     # estatica por ahora porque solo tiene 4 de los 8 colores.
     QUIZ_SLUGS = {"color-de-aura", "aura-test", "aura-color-test"}
+    # Locales voseantes -- afecta la conjugacion de las preguntas del quiz
+    # (ver fix_voseo). Antes solo estaba "ar" hardcodeado aca, lo que le
+    # daba tuteo por error a uy cuando se sumo (uy tambien es voseante).
+    VOSEO_LOCS = {"ar", "uy"}
 
     urls = []
     for loc, d in data.items():
@@ -280,7 +284,7 @@ def build():
         for art in L["articles"]:
             canonical = f"{base}/{art['slug']}/"
 
-            quiz_widget = (build_quiz_widget(loc, lang, base, articles_by_slug, loc == "ar")
+            quiz_widget = (build_quiz_widget(loc, lang, base, articles_by_slug, loc in VOSEO_LOCS)
                            if art["slug"] in QUIZ_SLUGS else "")
 
             blocks = render_sections(art["sections"])
