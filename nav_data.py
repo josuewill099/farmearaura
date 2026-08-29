@@ -78,23 +78,32 @@ NAV_LABELS = {
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador"},
     "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
     "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
     "br": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico",
+           "contador": "Contador"},
     "cl": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
     "pe": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
     "co": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
     "us": {"calculadora": "Calculator", "duelos": "Duels", "historia": "Historical Duels",
-           "famosos": "Celebrities", "ranking": "Ranking", "historial": "Recent"},
+           "famosos": "Celebrities", "ranking": "Ranking", "historial": "Recent",
+           "contador": "Counter"},
     "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-             "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+             "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+             "contador": "Contador"},
     "uy": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
-           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial"},
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador"},
 }
 
 NAV_URLS = {
@@ -118,6 +127,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/mx/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/mx/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/mx/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/mx/contador-de-aura/",
     },
     "es": {
         "home": "https://farmearaura.com/es/",
@@ -128,6 +138,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/es/duelos-de-aura/ranking/",
         "famosos": "https://farmearaura.com/es/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/es/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/es/contador-de-aura/",
     },
     "br": {
         "home": "https://farmearaura.com/br/",
@@ -138,6 +149,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/br/batalha-de-aura/ranking/",
         "famosos": "https://farmearaura.com/br/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/br/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/br/contador-de-farmar-aura/",
     },
     "cl": {
         "home": "https://farmearaura.com/cl/",
@@ -148,6 +160,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/cl/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/cl/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/cl/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/cl/contador-de-aura/",
     },
     "pe": {
         "home": "https://farmearaura.com/pe/",
@@ -158,6 +171,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/pe/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/pe/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/pe/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/pe/contador-de-aura/",
     },
     "co": {
         "home": "https://farmearaura.com/co/",
@@ -168,6 +182,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/co/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/co/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/co/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/co/contador-de-aura/",
     },
     "us": {
         "home": "https://farmearaura.com/us/",
@@ -178,6 +193,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/us/historical-duels/ranking/",
         "famosos": "https://farmearaura.com/us/duels/celebrities/",
         "famosos_ranking": "https://farmearaura.com/us/duels/celebrities/ranking/",
+        "contador": "https://farmearaura.com/us/aura-counter/",
     },
     "esus": {
         "home": "https://farmearaura.com/es-us/",
@@ -188,6 +204,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/es-us/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/es-us/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/es-us/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/es-us/contador-de-aura/",
     },
     "uy": {
         "home": "https://farmearaura.com/uy/",
@@ -198,6 +215,7 @@ NAV_URLS = {
         "historia_ranking": "https://farmearaura.com/uy/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/uy/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/uy/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/uy/contador-de-aura/",
     },
 }
 
@@ -255,9 +273,7 @@ def nav_html(loc, current):
         )
 
     parts = ['<a href="%s"%s>%s</a>' % (U["home"], cur("home"), _esc(L["calculadora"]))]
-    # "contador" (herramienta nueva, solo AR por ahora) va justo al lado de
-    # la calculadora -- se activa solo si la locale tiene la key en NAV_URLS,
-    # sin gating explicito de locale aca (mismo patron que "famosos").
+    # "contador" va justo al lado de la calculadora, en las diez locales.
     if "contador" in U:
         parts.append('<a href="%s"%s>%s</a>' % (U["contador"], cur("contador"), _esc(L["contador"])))
 

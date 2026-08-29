@@ -158,6 +158,64 @@
       "ctaNav": "CALCULAR MINHA AURA",
       "guideLink": "O meme farmar aura",
       "footerNote": "farmearaura.com — conteúdo de humor. Pontos de aura não existem."
+    },
+    {
+      "slug": "contador-de-farmar-aura",
+      "title": "Contador de Farmar Aura: some e tire seus pontos ao vivo | farmearaura.com",
+      "desc": "O contador de farmar aura que você procurava: toque no botão e some ou tire pontos na hora, cada um com seu motivo. Fica salvo no seu navegador.",
+      "h1": "Contador de farmar aura",
+      "meta": "Atualizado: agosto de 2026 &middot; Leitura: 2 min",
+      "answer": "Este é um contador de aura: cada toque some ou tira uma quantidade aleatória de pontos, com seu próprio motivo, do jeito que a aura é distribuída no meme. Seu total fica salvo neste navegador até você apertar reiniciar.",
+      "sections": [
+        [
+          "Como funciona o contador",
+          [
+            "Toda vez que você toca no botão &quot;Farmar aura&quot;, o contador sorteia um motivo (bom ou ruim) e soma ou tira pontos, do jeito que a aura é distribuída no meme: sem tabela oficial, com números redondos e exagerados. Se preferir uma quantidade fixa, os botões abaixo (+50, +100, +200, +300, +500, +1.000) somam exatamente esse número, sem surpresas.",
+            "O total fica salvo neste mesmo navegador, então se você voltar depois continua de onde parou. O botão &quot;Reiniciar contador&quot; zera tudo quando quiser começar de novo."
+          ]
+        ],
+        [
+          "Contador de aura vs. calculadora de aura",
+          [
+            "São duas ferramentas diferentes para a mesma brincadeira: a <a href=\"https://farmearaura.com/br/\">calculadora de pontos de aura</a> faz sete perguntas e dá um resultado final, como um teste. Este contador não tem perguntas: é um botão (ou números fixos) que você pode tocar quantas vezes quiser, para ir contando sua aura situação por situação."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "O que é um contador de aura?",
+          "É uma ferramenta para contar seus pontos de aura ao vivo: cada toque soma ou tira uma quantidade aleatória (ou uma quantidade fixa, usando os botões de +50 a +1.000), e o total fica salvo no seu navegador."
+        ],
+        [
+          "É a mesma coisa que a calculadora de pontos de aura?",
+          "Não. A calculadora faz sete perguntas fixas e dá um resultado único. O contador não tem perguntas: você pode tocar quantas vezes quiser para ir somando ou tirando aura."
+        ],
+        [
+          "Minha pontuação fica salva?",
+          "Sim, mas só neste navegador e neste aparelho. Não é enviada a nenhum servidor nem compartilhada com ninguém."
+        ],
+        [
+          "Posso ficar com aura negativa?",
+          "Sim. Alguns motivos tiram pontos em vez de somar, então o total pode terminar negativo, como em qualquer ranking de aura."
+        ]
+      ],
+      "related": [
+        [
+          "O que é farmar aura",
+          "https://farmearaura.com/br/o-que-e-farmar-aura/"
+        ],
+        [
+          "Duelos de aura",
+          "https://farmearaura.com/br/duelos/"
+        ]
+      ],
+      "promoK": "Prefere competir contra alguém?",
+      "promoP": "Nos duelos de aura você vota quem tem mais entre dois arquétipos, cara a cara.",
+      "promoBtn": "IR PARA OS DUELOS DE AURA",
+      "promoUrl": "https://farmearaura.com/br/duelos/",
+      "ctaNav": "CONTADOR DE AURA",
+      "guideLink": "Contador de farmar aura",
+      "footerNote": "farmearaura.com — conteúdo de humor. Os pontos de aura não existem."
     }
   ]
 }

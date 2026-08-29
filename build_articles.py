@@ -230,11 +230,16 @@ def build_quiz_widget(loc, lang, base, articles_by_slug, voseo):
 # competencia dedicada -- distinto de la calculadora (7 preguntas, un
 # resultado): esto es un boton que se puede tocar cuantas veces se quiera,
 # suma o resta un monto random con su motivo, y persiste en localStorage.
-# Solo AR por ahora -- se activa solo con que exista el slug en su
+# Arranco en AR y lo fui sumando al resto de las locales -- se activa solo
+# con que exista alguno de los slugs de COUNTER_SLUGS en su propio
 # articles-{loc}.json, sin gating explicito de locale aca.
 COUNTER_JS = (SRC / "aura-counter.js").read_text(encoding="utf-8")
 
-COUNTER_EVENTS_AR = [
+# Los eventos ya estaban escritos en preterito ("contestaste", "ganaste"),
+# que en español es identico entre voseo y tuteo -- por eso una sola lista
+# sirve para las 8 locales hispanas, salvo "posta?" (modismo AR/UY) que se
+# cambia a "en serio?" para el resto.
+COUNTER_EVENTS_ES_VOSEO = [
     {"pts": 250, "t": "Contestaste tarde y quedó mejor."},
     {"pts": 180, "t": "No mandaste el mensaje que habías escrito con bronca."},
     {"pts": 900, "t": "Te fuiste de la previa sin avisar y quedó como un mood."},
@@ -254,17 +259,87 @@ COUNTER_EVENTS_AR = [
     {"pts": -700, "t": "Pediste que te den bola en el grupo."},
     {"pts": -200, "t": "Se te cortó la voz pidiendo algo obvio."},
 ]
+COUNTER_EVENTS_ES_TUTEO = [
+    dict(e, t=e["t"].replace("posta?", "en serio?")) for e in COUNTER_EVENTS_ES_VOSEO
+]
+
+COUNTER_EVENTS_PT = [
+    {"pts": 250, "t": "Respondeu atrasado e ficou melhor assim."},
+    {"pts": 180, "t": "Não mandou aquela mensagem de raiva que tinha escrito."},
+    {"pts": 900, "t": "Saiu da festa sem avisar e ficou parecendo estiloso."},
+    {"pts": 120, "t": "Baixou o tom da própria reclamação."},
+    {"pts": 2000, "t": "Ganhou uma discussão sem levantar a voz."},
+    {"pts": 75, "t": "Andou como se soubesse pra onde estava indo, mesmo sem saber."},
+    {"pts": 300, "t": "Ignorou um comentário que só queria brigar."},
+    {"pts": 50, "t": "Riu por último e bem baixinho."},
+    {"pts": 5000, "t": "Alguém copiou o seu visual sem avisar."},
+    {"pts": 150, "t": "Disse \"não tem problema\" e realmente não ligou."},
+    {"pts": 400, "t": "Saiu do grupo sem dar satisfação."},
+    {"pts": 999, "t": "Bocejou num momento tenso e pareceu indiferença total."},
+    {"pts": -300, "t": "Explicou uma piada que não funcionou."},
+    {"pts": -150, "t": "Deixou no \"visto\" e depois respondeu do mesmo jeito."},
+    {"pts": -1000, "t": "Riu da própria piada antes de todo mundo."},
+    {"pts": -50, "t": "Perguntou \"sério?\" três vezes seguidas."},
+    {"pts": -700, "t": "Pediu atenção no grupo."},
+    {"pts": -200, "t": "A voz falhou pedindo algo óbvio."},
+]
+
+COUNTER_EVENTS_EN = [
+    {"pts": 250, "t": "You replied late and it landed better."},
+    {"pts": 180, "t": "You didn't send the message you typed out of anger."},
+    {"pts": 900, "t": "You left the party without saying bye and it read as a whole mood."},
+    {"pts": 120, "t": "You turned down the volume on your own complaint."},
+    {"pts": 2000, "t": "You won an argument without raising your voice."},
+    {"pts": 75, "t": "You walked like you knew where you were going, even though you had no idea."},
+    {"pts": 300, "t": "You ignored a comment that was fishing for a fight."},
+    {"pts": 50, "t": "You laughed last, and quietly."},
+    {"pts": 5000, "t": "Someone copied your fit without telling you."},
+    {"pts": 150, "t": "You said \"it's fine\" and actually meant it."},
+    {"pts": 400, "t": "You left the group chat without an explanation."},
+    {"pts": 999, "t": "You yawned in a tense moment and it read as total indifference."},
+    {"pts": -300, "t": "You explained a joke that didn't land."},
+    {"pts": -150, "t": "You left someone on read and then replied anyway."},
+    {"pts": -1000, "t": "You laughed at your own joke before anyone else did."},
+    {"pts": -50, "t": "You asked \"wait, really?\" three times in a row."},
+    {"pts": -700, "t": "You asked to be noticed in the group chat."},
+    {"pts": -200, "t": "Your voice cracked asking for something obvious."},
+]
+
+COUNTER_NUMFMT = {"ar": "es-AR", "mx": "es-MX", "es": "es-ES", "br": "pt-BR",
+                   "cl": "es-CL", "pe": "es-PE", "co": "es-CO", "us": "en-US",
+                   "esus": "es-US", "uy": "es-UY"}
+COUNTER_VOSEO_LOCS = {"ar", "uy"}
 
 
 def build_counter_widget(loc):
+    if loc == "us":
+        strings = {"label": "YOUR AURA", "intro": "Tap the button to add or lose aura on the spot.",
+                   "cta": "FARM AURA", "reset": "Reset counter",
+                   "presetNote": "you added that one yourself"}
+        events = COUNTER_EVENTS_EN
+    elif loc == "br":
+        strings = {"label": "SUA AURA", "intro": "Toque no botão e some ou tire aura na hora.",
+                   "cta": "FARMAR AURA", "reset": "Reiniciar contador",
+                   "presetNote": "você somou na mão"}
+        events = COUNTER_EVENTS_PT
+    else:
+        voseo = loc in COUNTER_VOSEO_LOCS
+        strings = {
+            "label": "TU AURA",
+            "intro": ("Tocá el botón y sumá o restá aura al toque." if voseo
+                      else "Toca el botón y suma o resta aura al toque."),
+            "cta": "FARMEAR AURA",
+            "reset": "Reiniciar contador",
+            "presetNote": "lo sumaste vos" if voseo else "lo sumaste tú",
+        }
+        events = COUNTER_EVENTS_ES_VOSEO if voseo else COUNTER_EVENTS_ES_TUTEO
+
     cfg = {
         "key": loc,
-        "label": "TU AURA",
-        "intro": "Tocá el botón y sumá o restá aura al toque.",
-        "cta": "FARMEAR AURA",
-        "reset": "Reiniciar contador",
-        "events": COUNTER_EVENTS_AR,
+        "numfmt": COUNTER_NUMFMT[loc],
+        "events": events,
         "presets": [50, 100, 200, 300, 500, 1000],
+        **strings,
     }
     return ('  <div class="counter" id="aura-counter"></div>\n'
             f'  <script>window.AURA_COUNTER={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
@@ -318,7 +393,7 @@ def build():
     # estatico -- ver build_quiz_widget(). "es" se queda con la version
     # estatica por ahora porque solo tiene 4 de los 8 colores.
     QUIZ_SLUGS = {"color-de-aura", "aura-test", "aura-color-test"}
-    COUNTER_SLUGS = {"contador-de-aura"}
+    COUNTER_SLUGS = {"contador-de-aura", "contador-de-farmar-aura", "aura-counter"}
     # Locales voseantes -- afecta la conjugacion de las preguntas del quiz
     # (ver fix_voseo). Antes solo estaba "ar" hardcodeado aca, lo que le
     # daba tuteo por error a uy cuando se sumo (uy tambien es voseante).

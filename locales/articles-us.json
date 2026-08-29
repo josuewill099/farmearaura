@@ -184,6 +184,64 @@
       "ctaNav": "HOW TO AURA FARM",
       "guideLink": "How to Aura Farm",
       "footerNote": "farmearaura.com &mdash; humor content. Aura points aren't real."
+    },
+    {
+      "slug": "aura-counter",
+      "title": "Aura Counter: Add and Subtract Your Points Live | farmearaura.com",
+      "desc": "The aura counter you were looking for: tap the button to add or subtract points instantly, each with its own reason. Saved right in your browser.",
+      "h1": "Aura counter",
+      "meta": "Updated: August 2026 &middot; 2 min read",
+      "answer": "This is an aura counter: each tap adds or subtracts a random amount of points, with its own reason, exactly how aura gets handed out in the meme. Your total is saved in this browser until you hit reset.",
+      "sections": [
+        [
+          "How the counter works",
+          [
+            "Every time you tap the &quot;Farm Aura&quot; button, the counter picks a reason at random (good or bad) and adds or subtracts points, exactly how aura gets divvied up in the meme: no official chart, just big, round, exaggerated numbers. If you'd rather add a fixed amount, the buttons below (+50, +100, +200, +300, +500, +1,000) add exactly that number, no surprises.",
+            "Your total is saved right in this browser, so if you come back later you pick up where you left off. The &quot;Reset counter&quot; button zeroes it out whenever you want a fresh start."
+          ]
+        ],
+        [
+          "Aura counter vs. the aura calculator",
+          [
+            "These are two different tools for the same joke: the <a href=\"https://farmearaura.com/us/\">aura points calculator</a> asks you seven questions and gives you one final score, like a quiz. This counter has no questions — it's a button (or fixed numbers) you can tap as many times as you want, to track your aura situation by situation."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "What is an aura counter?",
+          "It's a tool for tracking your aura points live: each tap adds or subtracts a random amount (or a fixed amount, using the +50 to +1,000 buttons), and the total is saved in your browser."
+        ],
+        [
+          "Is it the same as the aura points calculator?",
+          "No. The calculator asks seven fixed questions and gives you one final result. The counter has no questions — you can tap it as many times as you want to keep adding or subtracting aura."
+        ],
+        [
+          "Is my score saved?",
+          "Yes, but only in this browser and this device. Nothing is sent to a server or shared with anyone."
+        ],
+        [
+          "Can I end up with negative aura?",
+          "Yes. Some reasons subtract points instead of adding them, so your total can end up negative, just like any aura ranking."
+        ]
+      ],
+      "related": [
+        [
+          "What is aura farming",
+          "https://farmearaura.com/us/what-is-aura-farming/"
+        ],
+        [
+          "Aura duels",
+          "https://farmearaura.com/us/duels/"
+        ]
+      ],
+      "promoK": "Would rather compete against someone?",
+      "promoP": "In the aura duels, you vote on who has more between two everyday archetypes, head to head.",
+      "promoBtn": "GO TO THE AURA DUELS",
+      "promoUrl": "https://farmearaura.com/us/duels/",
+      "ctaNav": "AURA COUNTER",
+      "guideLink": "Aura counter",
+      "footerNote": "farmearaura.com — humor content. Aura points aren't real."
     }
   ]
 }

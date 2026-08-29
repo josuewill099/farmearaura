@@ -15,7 +15,7 @@
   }
 
   function fmt(n) {
-    return n.toLocaleString("es-AR");
+    return n.toLocaleString(C.numfmt || "es-AR");
   }
 
   function save() {
@@ -62,7 +62,7 @@
     var pts = parseInt(btn.dataset.pts, 10);
     total += pts;
     save();
-    render("+" + fmt(pts) + " — lo sumaste vos.");
+    render("+" + fmt(pts) + " — " + C.presetNote + ".");
   });
 
   root.querySelector("#c-reset").addEventListener("click", function () {
