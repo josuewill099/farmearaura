@@ -92,10 +92,9 @@ def alternates(datos, tipo):
     return "\n".join(out)
 
 
-# nav_data.nav_html() cuelga el link "famosos" del sub de "duelos" -- ver
-# nav_data.py. No hay sub-item de ranking propio, asi que votar y ranking
-# marcan el mismo link como aria-current.
-NAV_CURRENT = {"votar": "famosos", "ranking": "famosos"}
+# "famosos" es su propio item de nivel superior en nav_data.nav_html(), con
+# su propio sub-item de ranking -- ver nav_data.py.
+NAV_CURRENT = {"votar": "famosos", "ranking": "famosos_ranking"}
 
 
 def nav_html(loc, actual):

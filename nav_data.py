@@ -105,6 +105,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/duelos/famosos/ranking/",
     },
     "mx": {
         "home": "https://farmearaura.com/mx/",
@@ -114,6 +115,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/mx/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/mx/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/mx/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/mx/duelos/famosos/ranking/",
     },
     "es": {
         "home": "https://farmearaura.com/es/",
@@ -123,6 +125,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/es/duelos-de-aura/",
         "historia_ranking": "https://farmearaura.com/es/duelos-de-aura/ranking/",
         "famosos": "https://farmearaura.com/es/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/es/duelos/famosos/ranking/",
     },
     "br": {
         "home": "https://farmearaura.com/br/",
@@ -132,6 +135,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/br/batalha-de-aura/",
         "historia_ranking": "https://farmearaura.com/br/batalha-de-aura/ranking/",
         "famosos": "https://farmearaura.com/br/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/br/duelos/famosos/ranking/",
     },
     "cl": {
         "home": "https://farmearaura.com/cl/",
@@ -141,6 +145,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/cl/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/cl/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/cl/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/cl/duelos/famosos/ranking/",
     },
     "pe": {
         "home": "https://farmearaura.com/pe/",
@@ -150,6 +155,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/pe/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/pe/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/pe/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/pe/duelos/famosos/ranking/",
     },
     "co": {
         "home": "https://farmearaura.com/co/",
@@ -159,6 +165,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/co/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/co/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/co/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/co/duelos/famosos/ranking/",
     },
     "us": {
         "home": "https://farmearaura.com/us/",
@@ -168,6 +175,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/us/historical-duels/",
         "historia_ranking": "https://farmearaura.com/us/historical-duels/ranking/",
         "famosos": "https://farmearaura.com/us/duels/celebrities/",
+        "famosos_ranking": "https://farmearaura.com/us/duels/celebrities/ranking/",
     },
     "esus": {
         "home": "https://farmearaura.com/es-us/",
@@ -177,6 +185,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/es-us/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/es-us/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/es-us/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/es-us/duelos/famosos/ranking/",
     },
     "uy": {
         "home": "https://farmearaura.com/uy/",
@@ -186,6 +195,7 @@ NAV_URLS = {
         "historia": "https://farmearaura.com/uy/duelos/historia/",
         "historia_ranking": "https://farmearaura.com/uy/duelos/historia/ranking/",
         "famosos": "https://farmearaura.com/uy/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/uy/duelos/famosos/ranking/",
     },
 }
 
@@ -246,16 +256,15 @@ def nav_html(loc, current):
 
     historial_link = '<a href="%s"%s>%s</a>' % (
         U["duelos_historial"], cur("duelos_historial"), _esc(L["historial"]))
-    # "famosos" cuelga del sub de "duelos" en vez de ser su propio item de
-    # nivel superior: un cuarto item con caret desbordaba la fila en mobile
-    # (measured: innerWidth se ensanchaba a 476px en un viewport de 375px,
-    # el mismo sintoma que el bug de submenu que se arreglo antes). Colgarlo
-    # del sub existente cuesta cero ancho en la fila principal.
-    extra_sub = historial_link
-    if "famosos" in U:
-        extra_sub += '<a href="%s"%s>%s</a>' % (
-            U["famosos"], cur("famosos"), _esc(L["famosos"]))
-    parts.append(dropdown("duelos", "duelos_ranking", L["duelos"], "nav-sub-duelos", extra_sub))
+    parts.append(dropdown("duelos", "duelos_ranking", L["duelos"], "nav-sub-duelos", historial_link))
     parts.append(dropdown("historia", "historia_ranking", L["historia"], "nav-sub-historia"))
+    # "famosos" es su propio item de nivel superior (con su propio ranking en
+    # el sub), no un link colgado del sub de "duelos" -- un intento anterior
+    # de meterlo como 4to item de nivel superior desbordaba la fila en mobile
+    # (innerWidth se ensanchaba a 476px en un viewport de 375px), asi que se
+    # colgo temporalmente del sub de "duelos". Ver el CSS de .nav (mobile
+    # media query) para el ajuste que permite que quepan los 4 ahora.
+    if "famosos" in U:
+        parts.append(dropdown("famosos", "famosos_ranking", L["famosos"], "nav-sub-famosos"))
     parts.append(NAV_SCRIPT)
     return "".join(parts)
