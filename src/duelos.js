@@ -107,6 +107,16 @@
     pendiente = setTimeout(nuevoDuelo, ESPERA);
   }
 
+  function trackMilestones() {
+    try {
+      var n = (parseInt(localStorage.getItem("aura_battles_duelos"), 10) || 0) + 1;
+      localStorage.setItem("aura_battles_duelos", String(n));
+      if (!window.gtag) return;
+      if (n === 5) gtag("event", "duelos_5_battles", { loc: C.loc, count: 5 });
+      if (n === 10) gtag("event", "duelos_10_battles", { loc: C.loc, count: 10 });
+    } catch (e) { }
+  }
+
   function votar(i) {
     if (bloqueado) return;
     bloqueado = true;
@@ -127,6 +137,7 @@
       ' <span class="pts">' + pts + "</span> " + esc(C.t.de_aura) +
       " <b>" + p.emoji + "</b>";
     programarSiguiente();
+    trackMilestones();
 
     if (!offline) {
       fetch(API + "voto", {
