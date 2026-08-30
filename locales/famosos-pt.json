@@ -1,0 +1,70 @@
+{
+  "loc": "pt",
+  "locale": "pt-PT",
+  "lang": "pt",
+  "numfmt": "pt-PT",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "pt/duelos/famosos/",
+  "slug_ranking": "pt/duelos/famosos/ranking/",
+  "home": "/pt/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelo de aura entre famosos: quem tem mais aura? | Farmear Aura",
+    "description": "Cristiano Ronaldo contra Mariza, Cristina Ferreira contra Rui Unas. Escolhe quem tem mais aura entre os famosos portugueses e vê o ranking ao vivo.",
+    "h1": "Quem tem <em>mais aura</em> entre os famosos?",
+    "sub": "Duas figuras famosas de Portugal. Escolhe uma. Quem ganha rouba aura à outra.",
+    "cta": "Tem mais aura",
+    "seo_h2": "Como se divide a aura entre os famosos",
+    "seo_p": "Os famosos começam com 1.000 de aura cada um. Em cada duelo quem ganha rouba pontos a quem perde: vencer alguém que está no topo rouba muito, vencer alguém já por baixo rouba pouco. O ranking move-se com os votos de toda a gente que entra, não só com os teus, e dá para terminar com aura negativa.",
+    "seo_link": "Ver o ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos portugueses | Farmear Aura",
+    "description": "O ranking de aura dos famosos portugueses, feito com os votos de toda a gente. Vê quem manda e quem ficou no negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Muda a cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Ainda não há nenhum duelo. Estreia-te tu.",
+    "link": "Voltar a votar"
+  },
+  "t": {
+    "robo": "roubou",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "há %s s",
+      "min": "há %s min",
+      "hora": "há %s h",
+      "dia": "há %s d"
+    }
+  },
+  "offline": "Modo local: os votos ainda não são guardados.",
+  "footer": "É um jogo. Os pontos não significam nada e é por isso que importam.",
+  "figuras": [
+    { "id": "cristianoronaldo", "emoji": "⚽", "nombre": "Cristiano Ronaldo", "anios": "Futebol", "oficio": "Capitão da seleção" },
+    { "id": "bernardosilva", "emoji": "🏆", "nombre": "Bernardo Silva", "anios": "Futebol", "oficio": "Médio do Manchester City" },
+    { "id": "brunofernandes", "emoji": "🎯", "nombre": "Bruno Fernandes", "anios": "Futebol", "oficio": "Capitão do Manchester United" },
+    { "id": "rafaelleao", "emoji": "🚀", "nombre": "Rafael Leão", "anios": "Futebol", "oficio": "Extremo do Milan" },
+    { "id": "rubendias", "emoji": "🛡️", "nombre": "Rúben Dias", "anios": "Futebol", "oficio": "Central do Manchester City" },
+    { "id": "rosamota", "emoji": "🏅", "nombre": "Rosa Mota", "anios": "Atletismo", "oficio": "Campeã olímpica de maratona" },
+    { "id": "mariza", "emoji": "🎤", "nombre": "Mariza", "anios": "Música", "oficio": "Voz do fado" },
+    { "id": "anamalhoa", "emoji": "🎵", "nombre": "Ana Malhoa", "anios": "Música", "oficio": "Cantora popular" },
+    { "id": "salvadorsobral", "emoji": "🎼", "nombre": "Salvador Sobral", "anios": "Música", "oficio": "Vencedor da Eurovisão" },
+    { "id": "dulcepontes", "emoji": "🎶", "nombre": "Dulce Pontes", "anios": "Música", "oficio": "Cantora" },
+    { "id": "tonycarreira", "emoji": "🎸", "nombre": "Tony Carreira", "anios": "Música", "oficio": "Cantor popular" },
+    { "id": "diogomorgado", "emoji": "🎬", "nombre": "Diogo Morgado", "anios": "Representação", "oficio": "Ator" },
+    { "id": "mariajoaobastos", "emoji": "🎥", "nombre": "Maria João Bastos", "anios": "Representação", "oficio": "Atriz" },
+    { "id": "cristinaferreira", "emoji": "📺", "nombre": "Cristina Ferreira", "anios": "TV", "oficio": "Apresentadora" },
+    { "id": "hermanjose", "emoji": "🎭", "nombre": "Herman José", "anios": "TV", "oficio": "Humorista lendário" },
+    { "id": "fernandomendes", "emoji": "🎙️", "nombre": "Fernando Mendes", "anios": "TV", "oficio": "Apresentador" },
+    { "id": "movemind", "emoji": "🎮", "nombre": "Move_Mind", "anios": "Streaming", "oficio": "Streamer" },
+    { "id": "wuant", "emoji": "📱", "nombre": "wuant", "anios": "Streaming", "oficio": "Youtuber" },
+    { "id": "ruiunas", "emoji": "🃏", "nombre": "Rui Unas", "anios": "Comédia", "oficio": "Comediante" }
+  ]
+}

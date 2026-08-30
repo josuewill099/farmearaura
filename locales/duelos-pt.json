@@ -1,0 +1,79 @@
+{
+  "locale": "pt-PT",
+  "lang": "pt",
+  "base": "https://farmearaura.com",
+  "brand": "FARMEAR AURA",
+  "aura_inicial": 1000,
+  "k": 32,
+
+  "nav": {
+    "votar": "Votar",
+    "ranking": "Ranking",
+    "historial": "Duelos",
+    "calculadora": "Calculadora"
+  },
+
+  "votar": {
+    "slug": "pt/duelos/",
+    "title": "Quem tem mais aura? — Duelos de aura | Farmear Aura",
+    "description": "Escolhe quem tem mais aura. Quem ganha rouba pontos de aura ao outro. Vota e vê o ranking ao vivo.",
+    "h1": "Quem tem mais aura?",
+    "sub": "Escolhe um. Quem ganha rouba aura ao outro.",
+    "cta": "Tem mais aura",
+    "otro": "Outro duelo",
+    "robo": "roubou",
+    "de_aura": "de aura a",
+    "seo_h2": "Como funciona o duelo de aura",
+    "seo_p": "Cada personagem começa com 1.000 de aura. Quando votas, quem ganha rouba pontos a quem perde: se vence alguém com mais aura, rouba mais; se vence alguém que já estava por baixo, rouba pouco. Os pontos atualizam-se na hora e são os mesmos para toda a gente que entra, por isso é a malta a votar que constrói o ranking. Dá para ficar no negativo, claro.",
+    "seo_link": "Queres saber quanta aura tens? Faz o teste de aura."
+  },
+
+  "ranking": {
+    "slug": "pt/duelos/ranking/",
+    "title": "Ranking de aura — quem tem mais aura agora | Farmear Aura",
+    "description": "O ranking de aura ao vivo, feito com os votos de toda a gente. Vê quem está em primeiro e quem ficou no negativo.",
+    "h1": "Ranking de aura",
+    "sub": "Atualizado a cada voto.",
+    "col_aura": "aura",
+    "vacio": "Ainda não há nenhum voto. Vai lá votar."
+  },
+
+  "historial": {
+    "slug": "pt/duelos/historial/",
+    "title": "Últimos duelos de aura | Farmear Aura",
+    "description": "Os votos mais recentes, um por um. Quem roubou aura a quem nos últimos duelos.",
+    "h1": "Últimos duelos",
+    "sub": "Os votos mais recentes, um por um.",
+    "vacio": "Ainda não há nenhum duelo. Estreia-te tu."
+  },
+
+  "offline": "Modo local: os votos ainda não são guardados.",
+  "footer": "É um jogo. Os pontos não significam nada e é por isso que importam.",
+
+  "candidatos": [
+    { "id": "chapeu",     "emoji": "⚽", "nombre": "O que faz um chapéu a jogar à bola e sai a andar sem sequer festejar" },
+    { "id": "atraso",     "emoji": "🚪", "nombre": "A que chega atrasada à festa e entra à mesma, na maior lata" },
+    { "id": "zap",        "emoji": "📱", "nombre": "O que fica a rir sozinho a ver o telemóvel no autocarro" },
+    { "id": "nota",       "emoji": "📚", "nombre": "O que jura que não estudou nada e tira vinte" },
+    { "id": "prova",      "emoji": "🐀", "nombre": "O que pergunta se sai no teste mesmo quando o professor está a explicar a matéria" },
+    { "id": "onibus",     "emoji": "🚌", "nombre": "A que chega à paragem no exato segundo em que o autocarro está a parar" },
+    { "id": "bilhete",    "emoji": "💳", "nombre": "O que se esqueceu de carregar o passe" },
+    { "id": "hino",       "emoji": "🇵🇹", "nombre": "O que canta o hino inteiro aos gritos sem saber metade da letra" },
+    { "id": "marmita",    "emoji": "🥖", "nombre": "O que come uma bifana fria às 3 da manhã depois da festa" },
+    { "id": "fundo",      "emoji": "💃", "nombre": "A que dança ao fundo do vídeo dos outros e rouba a cena sem sequer perceber" },
+    { "id": "churras",    "emoji": "🍖", "nombre": "O que fica com o último espetinho do churrasco sem perguntar a ninguém" },
+    { "id": "casaco",     "emoji": "🧥", "nombre": "O que empresta o casaco e passa o resto da noite a morrer de frio" },
+    { "id": "palco",      "emoji": "🎤", "nombre": "O que tropeça no palco da apresentação e continua como se nada tivesse acontecido" },
+    { "id": "penalti",    "emoji": "🧤", "nombre": "O que defendeu o penálti no intervalo e ouviu o pátio inteiro a gritar 'bolas!'" },
+    { "id": "foto",       "emoji": "📸", "nombre": "A que sai perfeita na foto de surpresa, sem sequer olhar para a câmara" },
+    { "id": "choro",      "emoji": "😭", "nombre": "O que chora com o filme e jura a toda a gente que é alergia" },
+    { "id": "golaco",     "emoji": "📢", "nombre": "O que grita 'GOLOOO' antes até de a bola entrar" },
+    { "id": "banca",      "emoji": "😎", "nombre": "O que solta a brincadeira mais arriscada da roda e aguenta até ao fim" },
+    { "id": "kkk",        "emoji": "💬", "nombre": "O que responde só 'ahah pá' e desaparece da conversa" },
+    { "id": "brigadeiro", "emoji": "🍮", "nombre": "A que chega ao churrasco só com os pastéis de nata e mesmo assim é a rainha da festa" },
+    { "id": "som",        "emoji": "🔊", "nombre": "O que assume o controlo da música na pré-festa e ninguém questiona" },
+    { "id": "cachorro",   "emoji": "🐶", "nombre": "O que fala com o cão em vozinha de bebé e não está de brincadeira" },
+    { "id": "cochilo",    "emoji": "😴", "nombre": "O que finge que está a dormir no autocarro para não ter de puxar conversa com ninguém" },
+    { "id": "lapis",      "emoji": "✏️", "nombre": "O que devolve o lápis emprestado ainda mais afiado do que estava" }
+  ]
+}

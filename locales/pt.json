@@ -1,0 +1,256 @@
+{
+"code":"pt-PT","lang":"pt-PT","path":"/pt/","region":"Portugal","isDefault":false,
+"app":{
+ "title":"Calculadora de Pontos de Aura — farmearaura.com",
+ "desc":"Calcula os teus pontos de aura em 7 perguntas e partilha o teu cartão. Modo Gamer, Escola e Saída.",
+ "tag1":"7 situações. Um número.","tag2":"A tua aura real, sem filtro.",
+ "nameLabel":"O teu nome ou @","fine1":"Sem conta. Sem fotos. Sem guardar nada.","fine2":"Tudo acontece dentro do teu telemóvel.",
+ "guideLink":"O que é farmar aura?","guideHref":"/pt/o-que-e-farmar-aura/",
+ "shareText":"Fiz {score} pontos de aura. Calcula a tua em farmearaura.com",
+ "cardTagline":"Calcula a tua em 7 perguntas",
+ "wordmark":["Calculadora","de Aura"],
+ "aboutH2":"Sobre o farmearaura.com",
+ "about":[
+  "farmearaura.com é uma calculadora de pontos de aura: sete situações do dia a dia, três modos (Gamer, Escola, Saída e Crush) e uma pontuação final que se transforma num cartão para partilhar. Não é preciso conta, não se carrega nenhuma foto e nada fica guardado: todo o cálculo acontece dentro do teu telemóvel.",
+  "Além do teste, o site tem duelos de aura: podes votar em quem tem mais aura entre arquétipos do dia a dia ou entre personagens históricas, e ver o ranking construído com os votos de toda a gente."
+ ],
+ "faqH2":"Perguntas frequentes"
+},
+"modes":{
+ "gamer":{"ic":"🎮","name":"MODO GAMER","desc":"Ranked, randoms e clutches"},
+ "escuela":{"ic":"🎒","name":"MODO ESCOLA","desc":"Corredor, teste e apresentação"},
+ "fiesta":{"ic":"🍹","name":"MODO SAÍDA E CRUSH","desc":"Mensagem às 2 da manhã e outros crimes"}
+},
+"tiers":[
+ [400000,"S","AGRICULTOR SUPREMO","A tua presença entra na sala antes de ti.","#FFC53D"],
+ [250000,"A","AURA IMPARÁVEL","As pessoas contam histórias tuas de que nem te lembras.","#FFC53D"],
+ [120000,"B","AURA ESTÁVEL","Sólido. Ninguém vai fazer um vídeo teu.","#00F0FF"],
+ [0,"C","AURA EM TREINO","Vai indo. Só evita explicar as tuas piadas.","#B026FF"],
+ [-120000,"D","AURA NO VERMELHO","Recuperável. Começa por parar de mandar mensagem a dobrar.","#FF2E5B"],
+ [-9000000000,"F","FALÊNCIA DE AURA","Precisas de apanhar um copo no ar com urgência.","#FF2E5B"]
+],
+"questions":{
+"gamer":[
+{"q":"Ficas em 1v4 na última ronda com 12 de vida.","a":[
+ {"t":"Ganha o clutch e não diz nada no chat de voz","v":90000,"r":"Silêncio total. <b>Isso é aura pura.</b>"},
+ {"t":"Ganha e escreve \"ez\"","v":-10000,"r":"Ganhou a ronda, perdeu o respeito."},
+ {"t":"Morre ao primeiro tiro","v":-30000,"r":"Já há alguém a postar o clipe."}]},
+{"q":"Chamam-te para jantar mesmo na hora em que começa a ranked.","a":[
+ {"t":"\"Já vou\" e continua a jogar mais 40 minutos","v":-20000,"r":"Comida fria também tira aura."},
+ {"t":"Faz pausa, vai jantar e volta","v":30000,"r":"Disciplina. Ninguém espera isto de um gamer."},
+ {"t":"Responde mal e depois perde a partida","v":-60000,"r":"Karma instantâneo."}]},
+{"q":"Um random da tua equipa insulta-te no chat de voz.","a":[
+ {"t":"Silencia-o e faz a melhor partida da tua vida","v":95000,"r":"<b>Modo deus.</b> Não responder é a resposta."},
+ {"t":"Responde 20 mensagens seguidas","v":-25000,"r":"Escrever um romance nunca deu aura."},
+ {"t":"Sai da partida","v":-40000,"r":"Desistir sai caro."}]},
+{"q":"Ensinas a jogar a alguém que nunca pegou num comando.","a":[
+ {"t":"Deixa a pessoa ganhar e finge surpresa","v":55000,"r":"Aura silenciosa. A melhor aula."},
+ {"t":"Explica os comandos com paciência","v":35000,"r":"Correto, mas ninguém vai gravar."},
+ {"t":"Ganha de 10 a 0 sem dó","v":-15000,"r":"Ganhaste a alguém que não sabia qual era o botão."}]},
+{"q":"A internet cai a meio de uma partida importante.","a":[
+ {"t":"Reinicia o router e volta em 40 segundos","v":50000,"r":"Técnico formado na prática."},
+ {"t":"Aceita a derrota calado","v":15000,"r":"Tranquilo. Sem drama."},
+ {"t":"Culpa a internet no grupo durante três dias","v":-25000,"r":"Já toda a gente sabe que foste tu."}]},
+{"q":"Alguém no lobby diz que a tua skin é feia.","a":[
+ {"t":"\"É a padrão, pá\" e ganha a partida","v":80000,"r":"<b>Ganhar com a padrão</b> é o nível mais alto."},
+ {"t":"Manda print de quanto custou","v":-20000,"r":"Explicar o preço baixou o teu preço."},
+ {"t":"Troca de skin na hora","v":-35000,"r":"Editaram a tua personalidade em direto."}]},
+{"q":"Fazes uma jogada impossível sem querer e toda a gente acha que foi de propósito.","a":[
+ {"t":"Não diz nada e acena com a cabeça","v":100000,"r":"<b>É aqui que nasce a lenda.</b>"},
+ {"t":"Confessa que foi sorte","v":20000,"r":"Honesto. Caro, mas honesto."},
+ {"t":"Diz \"óbvio, treinei isto\"","v":-15000,"r":"Ninguém acreditou."}]},
+{"q":"Estás há 3 horas a jogar e lembras-te de que o trabalho é para amanhã.","a":[
+ {"t":"Fecha tudo e faz o trabalho","v":40000,"r":"Aura de pessoa funcional. Rara e valiosa."},
+ {"t":"Joga \"mais uma\" até às 2 da manhã","v":-25000,"r":"Nunca foi só mais uma."},
+ {"t":"Pede as respostas no grupo às 6 da manhã","v":-5000,"r":"Sobreviveu. Sem glória."}]},
+{"q":"O teu amigo quer jogar o jogo que odeias.","a":[
+ {"t":"Joga na mesma e até gosta","v":45000,"r":"Amizade: +1. Aura: também."},
+ {"t":"Queixa-se a partida inteira","v":-20000,"r":"Ninguém quer este parceiro."},
+ {"t":"Inventa que está sem internet","v":-30000,"r":"Viram-te online. Óbvio."}]}
+],
+"escuela":[
+{"q":"Tropeças a subir as escadas. O corredor inteiro olha.","a":[
+ {"t":"Levanta-se e segue como se nada fosse, sem olhar para ninguém","v":45000,"r":"<b>Não olhar para trás</b> vale mais do que não cair."},
+ {"t":"Ri-se alto e diz \"'tou bem\"","v":-5000,"r":"Ninguém perguntou."},
+ {"t":"Fica no chão mais três segundos","v":-35000,"r":"Esses três segundos já viraram vídeo."}]},
+{"q":"O professor pergunta-te algo e estavas a pensar noutra coisa.","a":[
+ {"t":"Responde qualquer coisa com toda a confiança… e acerta","v":95000,"r":"<b>Ninguém vai saber o que aconteceu.</b>"},
+ {"t":"\"Pode repetir a pergunta?\" com voz calma","v":25000,"r":"Elegante. Ganhaste 4 segundos."},
+ {"t":"Olha para o colega com cara de socorro","v":-20000,"r":"O professor também olhou."}]},
+{"q":"Acenas a alguém… que estava a acenar à pessoa atrás de ti.","a":[
+ {"t":"Transforma o aceno em alongamento de braço","v":60000,"r":"<b>Recuperação de nível profissional.</b>"},
+ {"t":"Acena na mesma e diz \"olá\"","v":10000,"r":"Corajoso. Embaraçoso, mas corajoso."},
+ {"t":"Baixa a mão devagar a olhar para o chão","v":-50000,"r":"Clássico. Doloroso. Caro."}]},
+{"q":"Chegou a tua vez de apresentar e o slide não abre.","a":[
+ {"t":"Apresenta de cabeça, sem slide","v":100000,"r":"<b>A turma toda te respeitou.</b>"},
+ {"t":"Lê do telemóvel a tremer","v":-10000,"r":"Notou-se. Mas terminaste."},
+ {"t":"Pede para apresentar noutro dia","v":-25000,"r":"Só adiou a vergonha."}]},
+{"q":"Alguém diz a tua alcunha do ano passado à frente dos teus amigos novos.","a":[
+ {"t":"Repete-a primeiro e ri-se","v":50000,"r":"Tirou-lhe a arma da mão num segundo."},
+ {"t":"Responde com a alcunha da pessoa","v":15000,"r":"Empate. Ninguém ganhou aura aqui."},
+ {"t":"Fica vermelho e muda de assunto","v":-20000,"r":"A alcunha voltou oficialmente."}]},
+{"q":"É o teste e acabas em 15 minutos.","a":[
+ {"t":"Entrega primeiro e sai a andar devagar","v":70000,"r":"<b>A saída lenta é a parte importante.</b>"},
+ {"t":"Fica até ao fim a rever","v":15000,"r":"Inteligente. Invisível."},
+ {"t":"Entrega primeiro e volta porque faltava uma folha","v":-55000,"r":"A saída épica durou 11 segundos."}]},
+{"q":"Sentas-te e a cadeira faz um barulho… bem específico.","a":[
+ {"t":"Olha para a cadeira com cara de deceção","v":55000,"r":"<b>Pôs a culpa na cadeira e resultou.</b>"},
+ {"t":"Não reage a nada","v":20000,"r":"Frio. Eficiente."},
+ {"t":"Diz \"foi a cadeira\" três vezes","v":-40000,"r":"À terceira já ninguém acreditava."}]},
+{"q":"Primeiro dia numa turma nova. Ninguém se senta ao teu lado.","a":[
+ {"t":"Puxa conversa com alguém primeiro","v":55000,"r":"Isto exige mais aura do que qualquer clutch."},
+ {"t":"Põe as coisas e mete os auscultadores, tranquilo","v":35000,"r":"Aura de mistério. Resulta."},
+ {"t":"Finge que está a escrever algo importante no telemóvel","v":-10000,"r":"Estavas a ver as horas. Acontece."}]},
+{"q":"Devolvem o teste e tiraste a nota mais alta da turma.","a":[
+ {"t":"Dobra a folha e guarda-a sem dizer nada","v":85000,"r":"<b>Ganhar em silêncio.</b> Nível máximo."},
+ {"t":"Publica a foto no estado","v":-15000,"r":"Precisaste de testemunha. Foi aí que perdeste."},
+ {"t":"Pergunta alto \"e tu, quanto tiraste?\"","v":-30000,"r":"Toda a gente percebeu exatamente o que estavas a fazer."}]}
+],
+"fiesta":[
+{"q":"Mandas mensagem ao crush. Aparece \"a escrever…\" e para. Três vezes.","a":[
+ {"t":"Bloqueia o telemóvel e vai dormir","v":70000,"r":"<b>Aguentares-te é aura.</b>"},
+ {"t":"Manda \"?\"","v":-35000,"r":"Esse pontinho saiu caro."},
+ {"t":"Manda mais três mensagens a explicar a primeira","v":-70000,"r":"Cada mensagem foi um levantamento da tua conta."}]},
+{"q":"Chegas à festa e não conheces absolutamente ninguém.","a":[
+ {"t":"Vai direto à cozinha e puxa conversa com quem lá estiver","v":60000,"r":"<b>A cozinha sempre foi o sítio certo.</b>"},
+ {"t":"Vai-se embora em 10 minutos sem se despedir","v":20000,"r":"Sair sem avisar tem a sua própria aura."},
+ {"t":"Fica num canto no telemóvel","v":-25000,"r":"Ninguém te viu. É esse o problema."}]},
+{"q":"Um copo cai e apanhas-o antes de bater no chão.","a":[
+ {"t":"Apanha-o e continua a conversa sem olhar","v":120000,"r":"<b>+120.000. A jogada mais cara do jogo.</b>"},
+ {"t":"Apanha-o e grita \"apanhei!\"","v":25000,"r":"Conseguiste e estragaste tudo ao mesmo tempo."},
+ {"t":"Apanha-o mas entorna tudo em cima de ti","v":-30000,"r":"Tecnicamente, apanhaste-o."}]},
+{"q":"Toca a tua música preferida e ninguém a conhece.","a":[
+ {"t":"Canta-a inteira na mesma","v":50000,"r":"Confiança sem plateia. Vale a dobrar."},
+ {"t":"Explica de que álbum é e de que ano","v":-20000,"r":"Ninguém perguntou o ano."},
+ {"t":"Troca a música tu mesmo","v":-15000,"r":"Desististe da tua própria música."}]},
+{"q":"Alguém pergunta-te do que gostas de fazer.","a":[
+ {"t":"Responde numa frase e devolve a pergunta","v":45000,"r":"Conversa desbloqueada."},
+ {"t":"Fala seis minutos sem parar","v":-25000,"r":"Já não te ouvia desde o minuto dois."},
+ {"t":"Diz \"nada\" e a conversa morre","v":-35000,"r":"Oito segundos de silêncio. Lendário, mas no vermelho."}]},
+{"q":"Mandaste mensagem ao crush às 2 da manhã. Já amanheceu.","a":[
+ {"t":"Deixa estar. Sem apagar. Sem explicar.","v":75000,"r":"<b>Assumir a mensagem é o nível máximo.</b>"},
+ {"t":"Apaga a mensagem (a pessoa já a tinha visto)","v":-45000,"r":"\"Esta mensagem foi apagada\" diz mais do que a mensagem em si."},
+ {"t":"Diz que lhe piratearam o telemóvel","v":-60000,"r":"Ninguém pirateia um telemóvel para escrever isso."}]},
+{"q":"Chamam-te para dançar e não sabes dançar.","a":[
+ {"t":"Dança mal, mas com toda a confiança do mundo","v":90000,"r":"<b>A confiança ganha sempre à técnica.</b>"},
+ {"t":"Diz que não e fica a olhar","v":-20000,"r":"A aura ficou sentada contigo."},
+ {"t":"Inventa uma dor no pé","v":-30000,"r":"Coxeou a noite inteira por coerência."}]},
+{"q":"Vês alguém da tua turma no supermercado, com a família.","a":[
+ {"t":"Cumprimenta normalmente","v":35000,"r":"Normal é mais difícil do que parece."},
+ {"t":"Os dois fingem que não se viram","v":-5000,"r":"Acordo mútuo. Zero aura, zero perda."},
+ {"t":"Esconde-se no corredor dos cereais","v":-40000,"r":"Viu-te. Viu-te a esconderes-te."}]},
+{"q":"Foto de grupo. Sais de olhos fechados e é essa que publicam.","a":[
+ {"t":"Não diz nada","v":30000,"r":"Deixar ficar é um ato de poder."},
+ {"t":"Pede para apagarem","v":-30000,"r":"Agora toda a gente foi ver."},
+ {"t":"Pede para repetir oito vezes","v":-50000,"r":"A oitava saiu pior."}]}
+]},
+"guide":{
+ "slug":"o-que-e-farmar-aura",
+ "headTerm":"farmar aura",
+ "title":"O que é farmar aura: significado, origem e regras | farmearaura.com",
+ "desc":"Farmar aura significa acumular pontos imaginários de carisma sem esforço. O significado, a origem, a gíria entre os jovens e o campeonato de farmar aura.",
+ "h1":"O que é farmar aura",
+ "homeLabel":"Início","tocLabel":"NESTA PÁGINA","meta":"Atualizado: agosto de 2026 &middot; Leitura: 6 min",
+ "ledgerHead":["SITUAÇÃO","AURA"],"sourcesH":"Fontes",
+ "sources":[
+  "BBC &mdash; entrevista com Rayyan Arkan Dikha sobre a origem da dança.",
+  "Wikipedia &mdash; <a href=\"https://en.wikipedia.org/wiki/Aura_farming\" rel=\"nofollow noopener\" target=\"_blank\">Aura farming</a>.",
+  "Observador e SIC Notícias &mdash; cobertura em português do Pacu Jalur e do fenómeno viral."
+ ],
+ "answer":"<strong>Farmar aura</strong> significa acumular pontos imaginários de carisma fazendo coisas que ficam bem sem esforço: manter a calma, não dar explicações e não procurar a reação de ninguém. Os pontos não existem e ninguém os conta a sério, mas a regra social por trás é real.",
+ "headings":["Significado","De onde vem o termo","Na linguagem dos jovens","Exemplos de uso","Farmar ou formar?","Como funcionam os pontos de aura","As 7 regras para farmar aura","O que tira a tua aura","Como saber se estás a farmar aura","O campeonato de farmar aura","Glossário","Perguntas frequentes"],
+ "extras_pre":[
+  ["Significado",[
+   "<strong>Farmar aura</strong> quer dizer acumular pontos imaginários de carisma fazendo algo que fica bem sem parecer esforço: manter a calma, não explicar o que fizeste e não procurar a reação de ninguém. Em inglês o termo é <em>aura farming</em>; farmar aura é a versão que pegou em português.",
+   "É comum ver a expressão escrita de forma errada &mdash; <strong>formar aura</strong>, <strong>forma aura</strong> ou até <strong>farma aura</strong> &mdash; porque \"farmar\" soa parecido com \"formar\" e é uma palavra emprestada do inglês (<em>to farm</em>) que ainda não tem escrita fixa em português. O significado é o mesmo nas quatro formas; a escrita correta, seguindo a lógica dos verbos em -ar dos jogos, é <strong>farmar aura</strong>."
+  ]]
+ ],
+ "extras_mid":[
+  ["Na linguagem dos jovens",[
+   "Entre adolescentes, \"farmar aura\" tornou-se uma pontuação de brincadeira que vale para qualquer situação do dia a dia, não só para os vídeos virais. Alguém que sai bem de uma situação embaraçosa, que responde com uma piada rápida ou que simplesmente fica calado quando podia dar explicações \"está a farmar aura\".",
+   "O oposto também se tornou gíria: quem insiste demasiado numa desculpa, manda mensagem atrás de mensagem ou festeja demais uma vitória pequena \"está a perder aura\" ou \"está com aura negativa\". A palavra tornou-se uma forma rápida de elogiar &mdash; ou de gozar com &mdash; o comportamento de alguém sem precisar de uma frase inteira."
+  ]],
+  ["Exemplos de uso",[
+   "&ldquo;Deixou cair o copo, apanhou-o no ar e nem olhou para trás. Que aura.&rdquo;",
+   "&ldquo;Errou a resposta à frente da turma e ainda fez piada. Está com aura negativa.&rdquo;",
+   "&ldquo;Vou fingir que não vi a notificação só para farmar aura.&rdquo;",
+   "&ldquo;Explicou a piada? Perdeu logo toda a aura.&rdquo;",
+   "Repara no padrão: farmar aura é sempre sobre a reação (ou a falta dela) depois do momento, nunca sobre planear a ação com antecedência. O passo a passo completo, com os erros mais comuns, está em <a href=\"https://farmearaura.com/pt/como-farmar-aura/\">como farmar aura</a>."
+  ]],
+  ["Farmar ou formar?",[
+   "A forma correta é <strong>farmar aura</strong>. \"Farmar\" vem do inglês <em>to farm</em> (cultivar, acumular repetindo uma ação), o mesmo verbo usado nos jogos para farmar experiência ou itens.",
+   "\"Formar aura\" é um erro de escrita bastante comum &mdash; e grande: só este grupo de variações (formar aura, forma aura, farma aura) soma dezenas de milhares de pesquisas por mês. Se chegaste até aqui à procura de \"o que é formar aura\" ou \"forma aura\", é o mesmo assunto: farmar aura."
+  ]]
+ ],
+ "origin":[
+  "A expressão junta duas palavras de mundos diferentes. <strong>Farmar</strong> vem dos jogos: repetir uma ação várias vezes para acumular recursos, experiência ou itens. <strong>Aura</strong> aparece aqui como sinónimo de presença, daquilo que a pessoa transmite quando entra num sítio. Farmar aura é, então, acumular presença de propósito.",
+  "O termo já circulava em comunidades de jogos e anime, mas explodiu em meados de 2025 com um vídeo bem específico: um menino indonésio de 11 anos chamado <strong>Rayyan Arkan Dikha</strong>, de óculos escuros e traje tradicional, a dançar na proa de uma canoa enquanto a sua equipa remava.",
+  "O vídeo não era um desafio do TikTok. O Dikha estava a cumprir um papel real dentro do <strong>Pacu Jalur</strong>, uma regata tradicional da província de Riau que acontece há séculos. A função chama-se <em>Togak Luan</em>: o dançarino que fica na proa para animar os remadores, um lugar normalmente ocupado por crianças porque exige um equilíbrio enorme. O Dikha contou à BBC que os movimentos surgiram de forma espontânea, e meses depois foi nomeado embaixador turístico da província.",
+  "Esse contraste é o que definiu o termo: alguém a fazer algo difícil com ar de que não custa nada, sem olhar para a câmara. Essa é a definição prática de farmar aura. O guia completo sobre o vídeo original e as variações que gerou está em <a href=\"https://farmearaura.com/pt/farmar-aura-meme/\">o meme farmar aura</a>."
+ ],
+ "pointsIntro":"Não existe escala oficial. A convenção é usar <strong>números redondos e exagerados</strong>, porque o tamanho do número faz parte da piada: ninguém diz \"+12 de aura\", diz \"+50.000\". Os pontos são distribuídos em comentários, em grupos de WhatsApp ou entre amigos, sempre depois do momento.",
+ "ledger":[
+  ["Apanhar um copo antes de bater no chão e continuar a conversa","+50.000","up"],
+  ["Responder certo sem estar a prestar atenção","+25.000","up"],
+  ["Tirar a nota mais alta e guardar o teste sem dizer nada","+15.000","up"],
+  ["Acenar a alguém que acenava à pessoa atrás de ti","−10.000","down"],
+  ["Mandar três mensagens seguidas a explicar a primeira","−25.000","down"],
+  ["Apagar uma mensagem que a pessoa já tinha visto","−45.000","down"]
+ ],
+ "pointsOutro":"Quando o total fica abaixo de zero, fala-se em <strong>aura negativa</strong>, e se for muito baixo, em <strong>falência de aura</strong>. É humor entre amigos: ninguém faz a conta a sério.",
+ "rulesIntro":"Mesmo parecendo brincadeira, o meme codifica regras sociais bastante reconhecíveis. Estas são as que se repetem em quase todos os vídeos:",
+ "rules":[
+  ["Não expliques o que fizeste.","Explicar uma boa ação anula-a. Se precisas de a contar, já não conta."],
+  ["Reage com atraso.","A calma é lida como controlo. Responder na hora é lido como nervosismo."],
+  ["Nunca peças a reação.","Olhar para trás para ver se alguém viu cancela toda a aura da ação."],
+  ["Ganhar calado vale mais do que ganhar a anunciar.","Esta é a regra central do meme."],
+  ["A recuperação vale mais do que não cair.","Tropeçar e continuar a andar sem olhar para trás dá mais aura do que não ter tropeçado."],
+  ["Fazer algo por alguém sem testemunhas.","A aura sobe quando a ação não tinha plateia."],
+  ["Se disseres \"isto foi aura\", perdeste a aura.","Nomear destrói. É a única regra absoluta."]
+ ],
+ "loseIntro":"A aura negativa é a metade divertida do meme, e quase sempre resume-se à mesma coisa: <strong>precisar que os outros confirmem alguma coisa</strong>. Os casos mais citados:",
+ "lose":["Repetir uma piada que ninguém ouviu.","Explicar porque é que a tua piada era boa.","Mandar \"?\" quando não te respondem.","Dizer quanto custou algo sem ninguém perguntar.","Pedir para apagarem uma foto tua (agora toda a gente vai ver).","Dar uma desculpa que ninguém pediu."],
+ "extras_post":[
+  ["Como saber se estás a farmar aura",[
+   "Resumindo as regras acima: se reagiste com calma, não explicaste o que fizeste e ninguém te viu à espera que alguém reparasse, farmaste aura. Se festejaste alto, mandaste uma segunda mensagem a explicar a primeira ou pediste para apagarem uma foto tua, a aura foi-se embora.",
+   "Não dá para calcular isto a sério &mdash; é humor entre amigos &mdash; mas dá para simular: a <a href=\"/pt/\">calculadora de aura</a> da farmearaura.com transforma sete situações do teu dia num único número, só para rir."
+  ]],
+  ["O campeonato de farmar aura",[
+   "Uma das pesquisas mais comuns não é sobre o significado, mas sim sobre o <strong>campeonato de farmar aura</strong>. Não existe torneio oficial nem organização por trás: o formato nasceu nas escolas e nas ruas como brincadeira e espalhou-se pelo TikTok em 2025. Duas ou mais pessoas revezam-se a fazer poses, entradas ou movimentos com a maior seriedade possível, normalmente com uma música épica de fundo, e quem estiver a assistir decide quem ficou com mais aura.",
+   "O guia completo &mdash; incluindo uma forma de fazer o desafio com votação a sério, sem precisar de reunir a malta no pátio &mdash; está em <a href=\"https://farmearaura.com/pt/campeonato-de-farmar-aura/\">campeonato de farmar aura</a>."
+  ]]
+ ],
+ "glossary":[
+  ["farmar aura / aura farming","Acumular carisma de propósito com ações que parecem não custar esforço."],
+  ["pontos de aura / aura points","Unidade fictícia para medir uma ação. Sempre em números redondos e exagerados."],
+  ["aura negativa","Total acumulado abaixo de zero depois de um momento embaraçoso."],
+  ["falência de aura","Aura negativa extrema. Usa-se quando a pessoa encadeia vários erros seguidos."],
+  ["campeonato de farmar aura","Disputa informal de poses e entradas, sem organização oficial, popularizada em escolas e no TikTok."],
+  ["aura farming kid","Alcunha pela qual a internet conhece o Rayyan Arkan Dikha, o menino da canoa."],
+  ["edits de aura","Vídeos curtos que colocam música épica sobre um momento comum ou uma cena de anime. Personagens que se mexem pouco e com calma &mdash; o Piccolo é dos mais pesquisados &mdash; são o formato preferido do género."]
+ ],
+ "faq":[
+  ["O que significa farmar aura?","Significa acumular pontos imaginários de carisma fazendo coisas que ficam bem sem esforço: manter a calma, não dar explicações e não procurar a reação de ninguém. Junta <em>farmar</em>, que nos jogos é acumular recursos repetindo uma ação, com <em>aura</em>, entendida como a presença de uma pessoa."],
+  ["O que é farmar aura na linguagem dos jovens?","É elogiar alguém que fez algo com estilo sem parecer que se esforçou. Entre adolescentes funciona como pontuação de brincadeira: a pessoa ganha ou perde aura consoante se sai bem ou passa vergonha numa situação."],
+  ["O que é o campeonato de farmar aura?","É uma disputa informal em que as pessoas se revezam a fazer poses ou entradas com a maior seriedade possível, normalmente com música épica, e a plateia decide quem tem mais aura. Não existe torneio oficial: o formato nasceu em escolas e espalhou-se pelo TikTok."],
+  ["Como farmar aura na vida real?","Não expliques o que fizeste, reage com calma, não peças a reação de ninguém, ganha calado e recupera bem quando algo corre mal. A regra principal é que anunciar que estás a farmar aura tira-te toda a aura."],
+  ["O que são pontos de aura?","Uma unidade fictícia para medir o carisma de uma ação. Não existe escala oficial: a convenção é usar números redondos e exagerados, como +1.000 por uma boa resposta ou −50.000 por um momento embaraçoso."],
+  ["É possível ter aura negativa?","Sim. Atribui-se de brincadeira quando alguém passa vergonha ou insiste demasiado nalguma coisa. Quando o total é muito baixo, fala-se em falência de aura. É humor, não um julgamento sobre a pessoa."],
+  ["Quem é o menino do barco do aura farming?","Rayyan Arkan Dikha, um menino indonésio de 11 anos da regência de Kuantan Singingi, em Riau. O papel dele na regata Pacu Jalur era o de Togak Luan: o dançarino da proa que anima os remadores. Contou à BBC que inventou os movimentos de forma espontânea e mais tarde foi nomeado embaixador turístico da província."],
+  ["Farmar aura tem a ver com o \"67\" ou \"six seven\"?","Não. São memes diferentes que circularam na mesma época e acabaram por aparecer juntos nos mesmos vídeos. Farmar aura é sobre carisma; o \"6 7\" vem de uma música e tornou-se um bordão sem significado fixo."],
+  ["Farmar aura tem a ver com as cores da aura?","Não. São dois usos diferentes da mesma palavra. A aura do esoterismo é um suposto campo energético com cores e significados. A aura do TikTok é uma metáfora do carisma e funciona como pontuação de brincadeira, sem relação com crenças espirituais."],
+  ["Farmar aura também se pode escrever como formar aura?","Sim &mdash; é um erro de escrita bastante comum, porque \"farmar\" soa parecido com \"formar\". O significado é o mesmo: acumular pontos imaginários de carisma. A forma correta, seguindo a origem do termo nos jogos, é <strong>farmar aura</strong>."],
+  ["Farmar aura, o que é isto afinal?","É uma brincadeira de internet: ganhas (ou perdes) pontos imaginários de carisma conforme reages às situações do dia a dia. Ganha quem fica calado e não explica o que fez; perde quem insiste, se justifica ou pede a reação de alguém."]
+ ],
+ "related_extra":[
+  ["Como farmar aura","https://farmearaura.com/pt/como-farmar-aura/"],
+  ["Campeonato de farmar aura","https://farmearaura.com/pt/campeonato-de-farmar-aura/"],
+  ["O meme farmar aura","https://farmearaura.com/pt/farmar-aura-meme/"]
+ ],
+ "promoK":"E tu, quanta aura tens?",
+ "promoP":"Sete situações. Um número. Sem conta, sem fotos, sem guardar nada.",
+ "promoBtn":"CALCULAR OS MEUS PONTOS DE AURA",
+ "ctaNav":"CALCULAR A MINHA AURA",
+ "footerNote":"farmearaura.com — conteúdo de humor. Os pontos de aura não existem."
+}
+}
