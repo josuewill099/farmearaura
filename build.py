@@ -463,7 +463,6 @@ Sitemap: {DOMAIN}/sitemap.xml
 REDIRECTS = """/ar/                     /                         301
 /ar/que-es-farmear-aura/ /que-es-farmear-aura/     301
 /es/que-es-farmear-aura/ /es/aura-farming/         301
-/pt/*                    /br/:splat                301
 /br/aura-farming/        /br/o-que-e-farmar-aura/  301
 /us/duels/historial/     /us/duels/recent/         301
 """
