@@ -21,6 +21,18 @@ DOMAIN = "https://farmearaura.com"
 ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy"]    # ar first = default
 GENERIC = {"es": "ar", "pt": "br", "en": "us"}   # bare language code -> owning locale
 
+# Mismo tag que build_duelos.py/build_historia.py/build_famosos.py -- antes
+# solo esos tres builders lo cargaban; la calculadora, la guia y las
+# paginas legales quedaban fuera de Analytics por completo.
+GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
+ANALYTICS = (
+    '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
+    "<script>window.dataLayer=window.dataLayer||[];"
+    "function gtag(){dataLayer.push(arguments);}"
+    'gtag("js",new Date());gtag("config","%s");</script>'
+)
+analytics_tag = (ANALYTICS % (GA4_ID, GA4_ID)) if GA4_ID else ""
+
 def load(code):
     return json.loads((ROOT / "locales" / f"{code}.json").read_text("utf-8"))
 
@@ -114,6 +126,7 @@ def build_legal(langkey):
             sections="\n\n".join(body),
             legalLinks=legal_links(langkey, home),
             footerNote=esc(owner["guide"]["footerNote"]),
+            analytics=analytics_tag,
             ld=json.dumps(ld, ensure_ascii=False, indent=2))
     return out
 
@@ -213,6 +226,7 @@ def build_app(l):
         if old not in h:
             sys.exit(f"[{l['code']}] string not found in template: {old[:60]}")
         h = h.replace(old, new)
+    h = h.replace("<!--ANALYTICS-->", analytics_tag)
     return h
 
 def app_legal_links(l):
@@ -323,7 +337,7 @@ def build_guide(l):
         meta=g.get("meta", "Actualizado: agosto de 2026 &middot; Lectura: 5 min"),
         homeLabel=esc(g.get("homeLabel", "Inicio")),
         tocLabel=esc(g.get("tocLabel", "EN ESTA P&Aacute;GINA")).replace("&amp;", "&"),
-        quizWidget="", toc=toc, sections=sections, related=related,
+        quizWidget="", analytics=analytics_tag, toc=toc, sections=sections, related=related,
         sourcesH=esc(g.get("sourcesH", "Fuentes")),
         sources="\n".join(f"    <li>{x}</li>" for x in srcs),
         promoK=esc(g["promoK"]), promoP=esc(g["promoP"]), promoBtn=esc(g["promoBtn"]),

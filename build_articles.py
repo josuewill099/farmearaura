@@ -36,6 +36,16 @@ DOMAIN = "https://farmearaura.com"
 
 GUIDE_TPL = (SRC / "guide.tpl.html").read_text(encoding="utf-8")
 
+# Mismo tag que build.py/build_duelos.py/build_historia.py/build_famosos.py.
+GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
+ANALYTICS = (
+    '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
+    "<script>window.dataLayer=window.dataLayer||[];"
+    "function gtag(){dataLayer.push(arguments);}"
+    'gtag("js",new Date());gtag("config","%s");</script>'
+)
+ANALYTICS_TAG = (ANALYTICS % (GA4_ID, GA4_ID)) if GA4_ID else ""
+
 # locale -> archivo de articulos. Sumar otra locale es agregar su entrada
 # aca + locales/articles-{loc}.json con el mismo esquema.
 LOCS = {
@@ -474,7 +484,7 @@ def build():
                 meta=esc(art.get("meta", "")),
                 homeLabel=esc(home_label),
                 tocLabel=esc(art.get("tocLabel", TOC_LABEL[loc])),
-                quizWidget=quiz_widget,
+                quizWidget=quiz_widget, analytics=ANALYTICS_TAG,
                 toc=toc, sections=sections, related=related,
                 sourcesH=esc(art.get("sourcesH", SOURCES_H[loc])),
                 sources="\n".join(f"    <li>{x}</li>" for x in art.get("sources", [])),
