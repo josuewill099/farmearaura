@@ -242,6 +242,114 @@
       "ctaNav": "AURA COUNTER",
       "guideLink": "Aura counter",
       "footerNote": "farmearaura.com — humor content. Aura points aren't real."
+    },
+    {
+      "slug": "aura-battles",
+      "title": "Aura Battles: What They Are, Where They Happen, How to Win | farmearaura.com",
+      "desc": "What an aura battle (or aura farming competition) actually is, where they've happened in real life, the unwritten rules, and how to actually win one.",
+      "h1": "Aura battles",
+      "meta": "Updated: August 2026 &middot; 5 min read",
+      "answer": "An <strong>aura battle</strong> (also called an aura farming competition) is an informal face-off where two or more people take turns posing, making an entrance, or pulling off a move with total seriousness, and whoever's watching decides on the spot who has more aura. It started as something filmed for TikTok and ended up spilling into real life — actual aura battles have already happened in shopping malls, plazas, and schoolyards in multiple countries.",
+      "sections": [
+        [
+          "What an aura battle actually is",
+          [
+            "It's the group, in-person version of the meme: instead of one person calmly reacting to an everyday situation, two or more people take turns doing poses, entrances, or choreographed moves, almost always with epic music playing. There's no real scoring or judge — whoever's watching decides on the spot, out loud, who walked away with more aura.",
+            "There's no organization behind it. The format started in schools and spread to the street as a game, then went viral on TikTok in 2025: someone posts a flyer with a time and place, people show up, and the round happens right there."
+          ]
+        ],
+        [
+          "Where aura battles actually happen",
+          [
+            "Real aura battles have already been covered by news outlets in several cities. In Valencia, Spain, a group of teens organized one in a shopping mall and ended up moving to a nearby park after security broke it up; similar gatherings were reported in A Coruña. In Mexico, early videos showed friends putting together spontaneous battles of their own.",
+            "The pattern repeats everywhere: someone posts a TikTok flyer with a location and time, word spreads, and the actual event ends up smaller — and more improvised — than the final video suggests."
+          ]
+        ],
+        [
+          "The unwritten rules",
+          [
+            "Nobody wrote these down anywhere, but almost every aura battle ends up following the same ones:",
+            {
+              "ul": [
+                "Whoever laughs first during their own entrance loses automatically.",
+                "Explaining the pose afterward — \"no wait, I was doing this because...\" — is also an instant loss.",
+                "Epic background music isn't required, but it helps a lot.",
+                "The crowd votes out loud, by acclaim. Whoever shouts loudest wins the tiebreak.",
+                "Going in without any seriousness (clowning around on purpose) disqualifies you — the joke only works if you commit to it."
+              ]
+            }
+          ]
+        ],
+        [
+          "How to win an aura battle",
+          [
+            "Winning has less to do with how elaborate your pose is and more to do with how little you seem to care about the outcome. A few things that show up in the battles that go well:",
+            {
+              "ul": [
+                "Go in with something simple and commit to it completely. A complex pose that falls apart loses to a simple one held with total confidence.",
+                "Don't look for the crowd's reaction while you're posing. Checking whether people are filming or laughing costs you points instantly.",
+                "Hold something back for last. If everyone's doing the same thing, whoever closes with a variation wins the tiebreak.",
+                "If it goes wrong, don't fix it on the spot. Playing off a mistake like it was intentional gives you more aura than not messing up at all."
+              ]
+            },
+            "The underlying rule is the same one from the original meme: whoever explains themselves, loses."
+          ]
+        ],
+        [
+          "The online version: aura duels",
+          [
+            "Getting people together in person isn't always possible — that's where the site's <a href=\"https://farmearaura.com/us/duels/\">aura duels</a> come in as the online version of the exact same idea: instead of a crowd gathered in a park, anyone can jump in and vote on who has more aura, with the ranking updating live as votes come in.",
+            "There are three versions: <a href=\"https://farmearaura.com/us/duels/\">everyday archetypes</a> (who has more aura, the person who's always late or the one who replies way too fast?), <a href=\"https://farmearaura.com/us/historical-duels/\">historical figures</a> (Cleopatra vs. Einstein), and <a href=\"https://farmearaura.com/us/duels/celebrities/\">celebrities</a>. In all three, the winner of each duel steals points from the loser, exactly like a real battle — except the scoreboard actually sticks around."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "What is an aura battle?",
+          "It's an informal face-off where two or more people take turns posing or making an entrance with total seriousness, and the crowd watching decides on the spot who has more aura. There's no official organization or real scoring."
+        ],
+        [
+          "Where do aura battles happen?",
+          "They started as TikTok videos, but real ones have already happened in public — shopping malls, plazas, schoolyards. They're organized by posting a flyer with a time and place and letting people show up."
+        ],
+        [
+          "How do you win an aura battle?",
+          "By going in with something simple but fully committing to it, not looking for the crowd's reaction while you pose, and never explaining yourself if something goes wrong. Whoever laughs first or justifies themselves loses automatically."
+        ],
+        [
+          "Is there an official aura battle organization?",
+          "No. It's an informal format that started in schools and went viral on TikTok in 2025. Every group makes up its own rules on the spot."
+        ],
+        [
+          "Can you do an aura battle online?",
+          "Yes. The site's aura duels work just like an in-person battle, but with real votes from anyone who joins in: you pick which of two options has more aura, and the ranking moves live with every vote."
+        ]
+      ],
+      "related": [
+        [
+          "What is aura farming",
+          "https://farmearaura.com/us/what-is-aura-farming/"
+        ],
+        [
+          "Aura duels",
+          "https://farmearaura.com/us/duels/"
+        ],
+        [
+          "Historical duels",
+          "https://farmearaura.com/us/historical-duels/"
+        ],
+        [
+          "Celebrity duels",
+          "https://farmearaura.com/us/duels/celebrities/"
+        ]
+      ],
+      "promoK": "How much aura do you have?",
+      "promoP": "Seven situations. One number. No account, no photos, nothing saved.",
+      "promoBtn": "CALCULATE MY AURA",
+      "promoUrl": "https://farmearaura.com/us/",
+      "ctaNav": "AURA BATTLES",
+      "guideLink": "Aura battles",
+      "footerNote": "farmearaura.com — humor content. Aura points aren't real."
     }
   ]
 }
