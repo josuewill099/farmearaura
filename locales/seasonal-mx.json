@@ -2,11 +2,11 @@
   "events": [
     {
       "name": "Halloween / Día de Muertos",
-      "url": "https://farmearaura.com/mx/duelos/historia/",
+      "url": "https://farmearaura.com/mx/duelo-de-dia-de-muertos/",
       "event_date": "2026-10-31",
       "publish_date": "2026-10-03",
-      "status": "planned",
-      "notes": "Late Oct through Nov 2 is effectively one continuous window. Historic figures fit Día de Muertos almost too well -- reuse the existing historia roster/engine with a themed promo push rather than a new page; consider a seasonal shareable card. Second priority after AR Dia del Estudiante."
+      "status": "live",
+      "notes": "Published early (2026-08-30, ~9 weeks ahead) per explicit request rather than waiting for the 30-day window. No Ahrefs volume for the exact cross-over query yet (too new to be tracked) -- built on the same speculative-but-low-cost logic as contador-de-aura: reuses the existing historia-mx roster/engine (Frida Kahlo, Sor Juana, Zapata, Pancho Villa, etc. already fit Día de Muertos), adds a themed landing article rather than a new duel roster, and folds in Halloween as the same continuous window. Seasonal shareable card idea not built -- the site has no image-generation capability yet, would be a separate feature."
     },
     {
       "name": "San Valentín",
