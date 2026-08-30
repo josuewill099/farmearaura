@@ -237,6 +237,78 @@ def build_quiz_widget(loc, lang, base, articles_by_slug, voseo):
             f'  <script>{QUIZ_JS}</script>')
 
 
+# ------------------------------------------------------------ student quiz
+# "aura de estudiante" -- seasonal content para el Dia del Estudiante (AR,
+# 21 de septiembre). Mismo motor cliente que el quiz de colores
+# (aura-quiz.js no le importa si las categorias son colores o arquetipos de
+# estudiante), asi que el costo de un evento estacional nuevo es un set de
+# preguntas + un articulo, no un modulo nuevo. URL evergreen (sin anio):
+# se actualiza la copia y las fechas cada temporada en vez de crear
+# "aura-de-estudiante-2026", "...-2027", etc.
+QUIZ_QUESTIONS_ESTUDIANTE_AR = [
+    {"q": "Es la noche antes del examen. ¿Qué hacés?", "opts": [
+        {"t": "Repaso todo de nuevo aunque ya me lo sé", "c": "prep"},
+        {"t": "Armo un resumen de último momento y confío en mi instinto", "c": "impro"},
+        {"t": "Le mando un mensaje a alguien que sí estudió", "c": "copia"},
+        {"t": "Miro una serie. Ya vi esto mil veces, tranqui", "c": "veterano"},
+    ]},
+    {"q": "El profesor reparte el examen. ¿Cuál es tu primer movimiento?", "opts": [
+        {"t": "Leo todo el examen antes de empezar a responder", "c": "prep"},
+        {"t": "Empiezo por la primera pregunta que me suena", "c": "impro"},
+        {"t": "Miro de reojo cómo va el de al lado", "c": "copia"},
+        {"t": "Respiro hondo. Ya pasé por esto, no es para tanto", "c": "veterano"},
+    ]},
+    {"q": "Te preguntan algo en clase y no tenés ni idea.", "opts": [
+        {"t": "No pasa nada, ya lo tenía anotado para repasar después", "c": "prep"},
+        {"t": "Invento una respuesta con total seguridad", "c": "impro"},
+        {"t": "Le hago upa con la mirada a un compañero", "c": "copia"},
+        {"t": "Digo \"buena pregunta\" y gano tiempo con total calma", "c": "veterano"},
+    ]},
+    {"q": "¿Cómo es tu cartuchera el día del examen?", "opts": [
+        {"t": "Todo ordenado, con birome de repuesto y todo marcado con fibra", "c": "prep"},
+        {"t": "Una birome que encontré en el fondo de la mochila", "c": "impro"},
+        {"t": "Un acordeón que nunca voy a usar pero por las dudas", "c": "copia"},
+        {"t": "Lo mínimo. Ya sé lo que necesito", "c": "veterano"},
+    ]},
+    {"q": "Terminaste el examen. ¿Qué hacés?", "opts": [
+        {"t": "Reviso todo dos veces antes de entregar", "c": "prep"},
+        {"t": "Entrego y me voy, ya fue", "c": "impro"},
+        {"t": "Comparo respuestas con todo el curso en la puerta", "c": "copia"},
+        {"t": "Salgo tranqui, como si nada", "c": "veterano"},
+    ]},
+    {"q": "¿Qué se dice de vos en el grupo del curso?", "opts": [
+        {"t": "El o la que manda el resumen tres días antes", "c": "prep"},
+        {"t": "El o la que salva la fecha justo a tiempo", "c": "impro"},
+        {"t": "El o la que siempre pregunta \"che, qué hay que estudiar\"", "c": "copia"},
+        {"t": "El o la que ya rindió esta materia dos veces en la vida real", "c": "veterano"},
+    ]},
+]
+
+ESTUDIANTE_INFO = {
+    "prep": {"emoji": "📚", "nombre": "Full Prep",
+             "blurb": "Llegás con todo estudiado y una birome de repuesto. Tu aura se nota antes de que abras la boca: estás listo para cualquier cosa que te pregunten."},
+    "impro": {"emoji": "🎲", "nombre": "Improvisador",
+              "blurb": "No estudiaste todo, pero lo que decís suena tan seguro que nadie lo duda. Tu aura se farmea en tiempo real, arriba del escenario."},
+    "copia": {"emoji": "😏", "nombre": "Que Copia con Estilo",
+              "blurb": "No tenés toda la info, pero sabés exactamente dónde conseguirla. La verdadera habilidad no es saber, es saber a quién preguntarle."},
+    "veterano": {"emoji": "😌", "nombre": "Veterano",
+                 "blurb": "Ya pasaste por esto tantas veces que nada te agarra desprevenido. Tu superpoder es la calma: nada es tan grave como parece la primera vez."},
+}
+
+
+def build_student_quiz_widget():
+    categories = {
+        cid: {"nombre": info["nombre"], "emoji": info["emoji"], "blurb": info["blurb"], "url": ""}
+        for cid, info in ESTUDIANTE_INFO.items()
+    }
+    strings = {"resultLabel": "Tu aura de estudiante es",
+               "seeMore": "Ver el significado completo", "retry": "Volver a hacer el test"}
+    cfg = {"questions": QUIZ_QUESTIONS_ESTUDIANTE_AR, "colors": categories, **strings}
+    return ('  <div class="quiz" id="aura-quiz"></div>\n'
+            f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
+            f'  <script>{QUIZ_JS}</script>')
+
+
 # --------------------------------------------------------------- aura counter
 # "contador de aura"/"contador de farmear aura": trafico real (GSC) sin
 # volumen en Ahrefs todavia (el termino es demasiado nuevo), pero sin
@@ -412,6 +484,7 @@ def build():
     # estatica por ahora porque solo tiene 4 de los 8 colores.
     QUIZ_SLUGS = {"color-de-aura", "aura-test", "aura-color-test"}
     COUNTER_SLUGS = {"contador-de-aura", "contador-de-farmar-aura", "aura-counter"}
+    STUDENT_QUIZ_SLUGS = {"aura-de-estudiante"}
     # Locales voseantes -- afecta la conjugacion de las preguntas del quiz
     # (ver fix_voseo). Antes solo estaba "ar" hardcodeado aca, lo que le
     # daba tuteo por error a uy cuando se sumo (uy tambien es voseante).
@@ -429,6 +502,8 @@ def build():
                 quiz_widget = build_quiz_widget(loc, lang, base, articles_by_slug, loc in VOSEO_LOCS)
             elif art["slug"] in COUNTER_SLUGS:
                 quiz_widget = build_counter_widget(loc)
+            elif art["slug"] in STUDENT_QUIZ_SLUGS:
+                quiz_widget = build_student_quiz_widget()
             else:
                 quiz_widget = ""
 

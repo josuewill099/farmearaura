@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "name": "Día del Estudiante",
+      "url": "https://farmearaura.com/aura-de-estudiante/",
+      "event_date": "2026-09-21",
+      "publish_date": "2026-08-24",
+      "status": "live",
+      "notes": "Single best AR opportunity per seasonal-content analysis (2026-08-30). Quiz format, evergreen URL, reuses aura-quiz.js."
+    },
+    {
+      "name": "Vuelta al cole",
+      "url": "https://farmearaura.com/duelos/vuelta-al-cole/",
+      "event_date": "2027-03-02",
+      "publish_date": "2027-02-02",
+      "status": "planned",
+      "notes": "Classes start early March. First year on this event -> 4-week lead."
+    },
+    {
+      "name": "Día del Amigo",
+      "url": "https://farmearaura.com/duelos/dia-del-amigo/",
+      "event_date": "2027-07-20",
+      "publish_date": "2027-06-22",
+      "status": "planned",
+      "notes": "Huge, entirely social-media-driven. Good duel fit. First year -> 4-week lead."
+    }
+  ]
+}

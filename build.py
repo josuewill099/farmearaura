@@ -11,6 +11,7 @@ Writes : dist/  — ready to push to Cloudflare Pages
 Argentina is the default locale and lives at the root.
 """
 import json, re, pathlib, shutil, sys
+from datetime import date
 
 import nav_data
 
@@ -396,6 +397,28 @@ def schema(l):
 
 GUIDE_TPL = (SRC / "guide.tpl.html").read_text("utf-8") if (SRC / "guide.tpl.html").exists() else ""
 
+# ------------------------------------------------------------------ seasonal
+# locales/seasonal-{loc}.json: calendario de eventos estacionales por mercado
+# (ver el analisis de contenido estacional, agosto 2026 -- back-to-school,
+# Carnaval, Enem, Dia de Muertos, etc. son eventos DISTINTOS por mercado, no
+# una sola pagina traducida). Cada build imprime lo que vence en los proximos
+# 30 dias para no perder una ventana por estar metido en otra cosa.
+def check_seasonal():
+    today = date.today()
+    for f in sorted(ROOT.glob("locales/seasonal-*.json")):
+        loc = f.stem.replace("seasonal-", "")
+        events = json.loads(f.read_text("utf-8"))["events"]
+        for ev in events:
+            pub = date.fromisoformat(ev["publish_date"])
+            happens = date.fromisoformat(ev["event_date"])
+            if happens < today or ev.get("status") == "done":
+                continue
+            days_to_pub = (pub - today).days
+            if days_to_pub <= 30:
+                flag = "OVERDUE" if days_to_pub < 0 else "DUE"
+                print(f"  [seasonal:{flag}] {loc} '{ev['name']}' -- publish by {ev['publish_date']} "
+                      f"(event {ev['event_date']}, status={ev.get('status', '?')}) -> {ev['url']}")
+
 # ----------------------------------------------------------------- crawl files
 def build_sitemap():
     X = 'xmlns:xhtml="http://www.w3.org/1999/xhtml"'
@@ -549,6 +572,7 @@ def main():
     (DIST / "robots.txt").write_text(ROBOTS, "utf-8")
     (DIST / "_redirects").write_text(REDIRECTS, "utf-8")
     (DIST / "llms.txt").write_text(build_llms(), "utf-8")
+    check_seasonal()
     print("build ok ->", DIST)
 
 if __name__ == "__main__":

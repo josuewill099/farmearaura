@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "name": "Halloween / Día de Muertos",
+      "url": "https://farmearaura.com/mx/duelos/historia/",
+      "event_date": "2026-10-31",
+      "publish_date": "2026-10-03",
+      "status": "planned",
+      "notes": "Late Oct through Nov 2 is effectively one continuous window. Historic figures fit Día de Muertos almost too well -- reuse the existing historia roster/engine with a themed promo push rather than a new page; consider a seasonal shareable card. Second priority after AR Dia del Estudiante."
+    },
+    {
+      "name": "San Valentín",
+      "url": "https://farmearaura.com/mx/duelos/san-valentin/",
+      "event_date": "2027-02-14",
+      "publish_date": "2027-01-17",
+      "status": "planned",
+      "notes": "Same date as ES; content can likely be shared/adapted between the two, unlike BR's Dia dos Namorados (June 12)."
+    },
+    {
+      "name": "Regreso a clases",
+      "url": "https://farmearaura.com/mx/duelos/regreso-a-clases/",
+      "event_date": "2027-08-24",
+      "publish_date": "2027-07-27",
+      "status": "planned",
+      "notes": "Searches build from mid-July."
+    },
+    {
+      "name": "Graduaciones",
+      "url": "https://farmearaura.com/mx/aura-de-graduacion/",
+      "event_date": "2027-06-15",
+      "publish_date": "2027-05-18",
+      "status": "planned",
+      "notes": ""
+    }
+  ]
+}

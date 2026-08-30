@@ -1,0 +1,44 @@
+{
+  "events": [
+    {
+      "name": "Enem",
+      "url": "https://farmearaura.com/br/aura-de-vestibulando/",
+      "event_date": "2026-11-08",
+      "publish_date": "2026-10-11",
+      "status": "planned",
+      "notes": "Enormous youth search event, high anxiety, high engagement. Verify exact ENEM date annually. Next priority after AR Dia do Estudante."
+    },
+    {
+      "name": "Carnaval",
+      "url": "https://farmearaura.com/br/aura-carnaval/",
+      "event_date": "2027-02-06",
+      "publish_date": "2027-01-09",
+      "status": "planned",
+      "notes": "Moves with Easter -- verify date annually. Peak search window is the two weeks before. First year -> 4-week lead. Evergreen URL, never year-stamp."
+    },
+    {
+      "name": "Volta às aulas",
+      "url": "https://farmearaura.com/br/duelos/volta-as-aulas/",
+      "event_date": "2027-02-01",
+      "publish_date": "2027-01-04",
+      "status": "planned",
+      "notes": "Searches build late January, school starts late Jan/early Feb."
+    },
+    {
+      "name": "Dia dos Namorados",
+      "url": "https://farmearaura.com/br/duelos/dia-dos-namorados/",
+      "event_date": "2027-06-12",
+      "publish_date": "2027-05-15",
+      "status": "planned",
+      "notes": "BR's Valentine's-equivalent falls on a different date than ES/MX -- do not reuse a shared San Valentín page/date for BR."
+    },
+    {
+      "name": "Festa Junina",
+      "url": "https://farmearaura.com/br/aura-festa-junina/",
+      "event_date": "2027-06-15",
+      "publish_date": "2027-05-18",
+      "status": "planned",
+      "notes": "Underused and very visual -- good fit for seasonal shareable cards."
+    }
+  ]
+}

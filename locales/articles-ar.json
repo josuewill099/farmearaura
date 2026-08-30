@@ -1210,6 +1210,68 @@
       "ctaNav": "BATALLA DE FARMEAR AURA",
       "guideLink": "Batalla de farmear aura",
       "footerNote": "farmearaura.com — contenido de humor. Los puntos de aura no existen."
+    },
+    {
+      "slug": "aura-de-estudiante",
+      "title": "¿Cuál es tu Aura de Estudiante? Test para el Día del Estudiante | farmearaura.com",
+      "desc": "Hacé el test y descubrí tu aura de estudiante: ¿sos el que estudia todo, el que improvisa, el que copia con estilo o el veterano que ya vivió esto? Para el Día del Estudiante.",
+      "h1": "¿Cuál es tu aura de estudiante?",
+      "meta": "Actualizado: agosto de 2026 &middot; Lectura: 2 min",
+      "answer": "Cada 21 de septiembre, Argentina festeja el <strong>Día del Estudiante</strong> (y de paso, la primavera). Este test de seis preguntas te dice qué aura de estudiante farmeás: ¿estudiaste todo, improvisás con estilo, sobrevivís copiando o ya viviste esto tantas veces que nada te agarra desprevenido?",
+      "sections": [
+        [
+          "Por qué el 21 de septiembre",
+          [
+            "El Día del Estudiante se celebra en Argentina el 21 de septiembre desde 1902, en homenaje a Domingo Faustino Sarmiento. Coincide con la llegada de la primavera, así que gran parte del país lo festeja al aire libre, con picnics y salidas grupales en vez de clases.",
+            "Es también uno de los días con más actividad en redes de todo el calendario escolar: memes, historias y rankings de \"qué tipo de estudiante sos\" se multiplican todos los años. Este test es la versión con resultado real."
+          ]
+        ],
+        [
+          "Cómo se reparte cada aura",
+          [
+            "Las cuatro auras posibles no tienen que ver con las notas, sino con el estilo: hay quien construye su aura estudiando de más, quien la farmea improvisando en el momento, quien sobrevive con una red de contactos bien armada, y quien ya tiene tanta calle que nada lo altera. Ningún resultado es mejor que otro &mdash; cada uno gana (o pierde) aura a su manera."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Por qué se festeja el Día del Estudiante el 21 de septiembre?",
+          "Porque coincide con la fecha de fallecimiento de Domingo Faustino Sarmiento, y también con la llegada de la primavera en el hemisferio sur. Se celebra en Argentina desde 1902."
+        ],
+        [
+          "¿Cómo funciona el test de aura de estudiante?",
+          "Son seis preguntas sobre cómo actuás antes, durante y después de un examen. Cada respuesta suma a una de cuatro auras posibles, y al final te muestra con cuál te quedaste."
+        ],
+        [
+          "¿Se guarda el resultado del test?",
+          "No. Es un test para hacer y compartir en el momento, sin cuenta, sin fotos y sin guardar nada, igual que la calculadora de aura del sitio."
+        ]
+      ],
+      "related": [
+        [
+          "Duelos de aura",
+          "https://farmearaura.com/duelos/"
+        ],
+        [
+          "Duelos históricos",
+          "https://farmearaura.com/duelos/historia/"
+        ],
+        [
+          "Calculadora de aura",
+          "https://farmearaura.com/"
+        ],
+        [
+          "Qué es farmear aura",
+          "https://farmearaura.com/que-es-farmear-aura/"
+        ]
+      ],
+      "promoK": "¿Y tu aura real, cuánto vale?",
+      "promoP": "Siete situaciones. Un número. Sin cuenta, sin fotos, sin guardar nada.",
+      "promoBtn": "CALCULAR MI AURA",
+      "promoUrl": "https://farmearaura.com/",
+      "ctaNav": "AURA DE ESTUDIANTE",
+      "guideLink": "Aura de estudiante",
+      "footerNote": "farmearaura.com — contenido de humor. Los puntos de aura no existen."
     }
   ]
 }

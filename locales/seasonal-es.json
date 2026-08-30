@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "name": "Halloween",
+      "url": "https://farmearaura.com/es/duelos/halloween/",
+      "event_date": "2026-10-31",
+      "publish_date": "2026-10-03",
+      "status": "planned",
+      "notes": "Growing fast among young Spaniards. Could reuse the Mexico Día de Muertos build window since both land the same week."
+    },
+    {
+      "name": "San Valentín",
+      "url": "https://farmearaura.com/es/duelos/san-valentin/",
+      "event_date": "2027-02-14",
+      "publish_date": "2027-01-17",
+      "status": "planned",
+      "notes": "Same date as MX; content can likely be shared/adapted between the two."
+    },
+    {
+      "name": "EBAU / Selectividad",
+      "url": "https://farmearaura.com/es/aura-de-selectividad/",
+      "event_date": "2027-06-05",
+      "publish_date": "2027-05-08",
+      "status": "planned",
+      "notes": "High-anxiety exam event, similar shape to BR's Enem."
+    },
+    {
+      "name": "Vuelta al cole",
+      "url": "https://farmearaura.com/es/duelos/vuelta-al-cole/",
+      "event_date": "2027-09-08",
+      "publish_date": "2027-08-11",
+      "status": "planned",
+      "notes": ""
+    }
+  ]
+}
