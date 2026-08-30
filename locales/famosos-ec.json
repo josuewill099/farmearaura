@@ -1,0 +1,66 @@
+{
+  "loc": "ec",
+  "locale": "es-EC",
+  "lang": "es",
+  "numfmt": "es-EC",
+  "base": "https://farmearaura.com",
+  "aura_inicial": 1000,
+  "k": 32,
+  "slug_votar": "ec/duelos/famosos/",
+  "slug_ranking": "ec/duelos/famosos/ranking/",
+  "home": "/ec/",
+  "nav": {
+    "calculadora": "Calculadora",
+    "votar": "Duelos",
+    "ranking": "Ranking"
+  },
+  "votar": {
+    "title": "Duelo de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+    "description": "Moisés Caicedo contra Mirella Cesa, Enner Valencia contra Jefferson Pérez. Elige quién tiene más aura entre los famosos ecuatorianos y mira el ranking en vivo.",
+    "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+    "sub": "Dos figuras famosas de Ecuador. Elige una. La que gana le roba aura a la otra.",
+    "cta": "Tiene más aura",
+    "seo_h2": "Cómo se reparte la aura entre los famosos",
+    "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el que gana le roba puntos al que pierde: ganarle a uno que está arriba roba mucho, ganarle a uno que ya está abajo roba poco. El ranking se mueve con los votos de todos los que entran, no solo con los tuyos, y se puede terminar en aura negativa.",
+    "seo_link": "Ver el ranking completo de famosos"
+  },
+  "ranking": {
+    "title": "Ranking de aura entre famosos ecuatorianos | Farmear Aura",
+    "description": "El ranking de aura de los famosos ecuatorianos, armado con los votos de todos. Mira quién manda y quién quedó en negativo.",
+    "h1": "Ranking de <em>aura</em> entre famosos",
+    "sub": "Se mueve con cada voto.",
+    "feed_titulo": "Últimos duelos",
+    "vacio": "Todavía no hay duelos. Estrénalo tú.",
+    "link": "Volver a votar"
+  },
+  "t": {
+    "robo": "le robó",
+    "de_aura": "de aura a",
+    "de_aura_label": "de aura",
+    "tiempo": {
+      "seg": "hace %s s",
+      "min": "hace %s min",
+      "hora": "hace %s h",
+      "dia": "hace %s d"
+    }
+  },
+  "offline": "Modo local: los votos todavía no se guardan.",
+  "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+  "figuras": [
+    { "id": "caicedo", "emoji": "⚽", "nombre": "Moisés Caicedo", "anios": "Fútbol", "oficio": "Fichaje más caro de la historia ecuatoriana" },
+    { "id": "ennervalencia", "emoji": "🥅", "nombre": "Enner Valencia", "anios": "Fútbol", "oficio": "Capitán de la selección" },
+    { "id": "kendrypaez", "emoji": "🌟", "nombre": "Kendry Páez", "anios": "Fútbol", "oficio": "Promesa de la selección" },
+    { "id": "hincapie", "emoji": "🛡️", "nombre": "Piero Hincapié", "anios": "Fútbol", "oficio": "Defensa de la selección" },
+    { "id": "antoniovalencia", "emoji": "🎖️", "nombre": "Antonio Valencia", "anios": "Fútbol", "oficio": "Leyenda y excapitán" },
+    { "id": "jeffersonperez", "emoji": "🏅", "nombre": "Jefferson Pérez", "anios": "Atletismo", "oficio": "Campeón olímpico de marcha" },
+    { "id": "gerardomoran", "emoji": "🎤", "nombre": "Gerardo Morán", "anios": "Música", "oficio": "Cantante de tecnocumbia" },
+    { "id": "mirellacesa", "emoji": "🎵", "nombre": "Mirella Cesa", "anios": "Música", "oficio": "Cantante" },
+    { "id": "marrendon", "emoji": "🎶", "nombre": "Mar Rendón", "anios": "Música", "oficio": "Cantante pop" },
+    { "id": "davidreinoso", "emoji": "🎬", "nombre": "David Reinoso", "anios": "Actuación", "oficio": "Actor y comediante" },
+    { "id": "victorarauz", "emoji": "🃏", "nombre": "Víctor Aráuz", "anios": "Comedia", "oficio": "Comediante" },
+    { "id": "andrescrespo", "emoji": "🎥", "nombre": "Andrés Crespo", "anios": "Actuación", "oficio": "Actor y director" },
+    { "id": "fernandovillarroel", "emoji": "😂", "nombre": "Fernando Villarroel", "anios": "Comedia", "oficio": "Actor viral" },
+    { "id": "anthonyswag", "emoji": "📱", "nombre": "Anthony Swag", "anios": "Streaming", "oficio": "Creador de contenido" },
+    { "id": "raptorgamer", "emoji": "🎮", "nombre": "RaptorGamer", "anios": "Streaming", "oficio": "Youtuber" }
+  ]
+}

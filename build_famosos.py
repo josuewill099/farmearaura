@@ -19,16 +19,16 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt"]
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"]
 GA4_ID = "G-XHZ0MM619V"   # "" para no cargar analytics en estas paginas
 
 HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
             "es": ["es-ES"], "br": ["pt-BR"],
             "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"],
-            "esus": ["es-US"], "uy": ["es-UY"], "pt": ["pt-PT"]}
+            "esus": ["es-US"], "uy": ["es-UY"], "pt": ["pt-PT"], "ec": ["es-EC"]}
 OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
       "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US", "uy": "es_UY",
-      "pt": "pt_PT"}
+      "pt": "pt_PT", "ec": "es_EC"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'

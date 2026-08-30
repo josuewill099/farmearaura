@@ -19,20 +19,20 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
-LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt"]
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"]
 GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
 
 # ar vive en la raiz (nunca tuvo prefijo de pais); el resto cuelga de /{cc}/.
 HOME = {"ar": "/", "mx": "/mx/", "es": "/es/", "br": "/br/",
         "cl": "/cl/", "pe": "/pe/", "co": "/co/", "us": "/us/", "esus": "/es-us/",
-        "uy": "/uy/", "pt": "/pt/"}
+        "uy": "/uy/", "pt": "/pt/", "ec": "/ec/"}
 HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
             "es": ["es-ES"], "br": ["pt-BR"],
             "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"],
-            "esus": ["es-US"], "uy": ["es-UY"], "pt": ["pt-PT"]}
+            "esus": ["es-US"], "uy": ["es-UY"], "pt": ["pt-PT"], "ec": ["es-EC"]}
 OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
       "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US", "uy": "es_UY",
-      "pt": "pt_PT"}
+      "pt": "pt_PT", "ec": "es_EC"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
@@ -125,13 +125,13 @@ RANKING_CTA = {
     "br": "Vote e mexa o ranking.", "cl": "Vota tú y muévelo.", "pe": "Vota tú y muévelo.",
     "co": "Vota tú y muévelo.", "us": "Cast your vote and move the needle.",
     "esus": "Vota tú y muévelo.", "uy": "Votá vos y movelo.",
-    "pt": "Vota e mexe no ranking.",
+    "pt": "Vota e mexe no ranking.", "ec": "Vota tú y muévelo.",
 }
 HISTORIAL_CTA = {
     "ar": "Sumá tu duelo.", "mx": "Suma tu duelo.", "es": "Suma tu duelo.",
     "br": "Some o seu duelo.", "cl": "Suma tu duelo.", "pe": "Suma tu duelo.",
     "co": "Suma tu duelo.", "us": "Add your duel.", "esus": "Suma tu duelo.",
-    "uy": "Sumá tu duelo.", "pt": "Soma o teu duelo.",
+    "uy": "Sumá tu duelo.", "pt": "Soma o teu duelo.", "ec": "Suma tu duelo.",
 }
 
 # Link contextual a famosos (celebridades del propio pais) desde la seccion
@@ -143,7 +143,7 @@ FAMOSOS_LABEL = {
     "cl": "Duelos entre famosos", "pe": "Duelos entre famosos",
     "co": "Duelos entre famosos", "us": "Celebrity duels",
     "esus": "Duelos entre famosos", "uy": "Duelos entre famosos",
-    "pt": "Duelos entre famosos",
+    "pt": "Duelos entre famosos", "ec": "Duelos entre famosos",
 }
 
 

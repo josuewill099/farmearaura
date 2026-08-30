@@ -17,7 +17,7 @@ const MODULOS = {
     candidatos: "candidatos",
     duelos: "duelos",
     votantes: "votantes",
-    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt"],
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"],
     limite: 60,
     poda: 5000
   },
@@ -25,7 +25,7 @@ const MODULOS = {
     candidatos: "h_candidatos",
     duelos: "h_duelos",
     votantes: "h_votantes",
-    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt"],
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"],
     limite: 40,
     poda: 8000
   },
@@ -33,7 +33,7 @@ const MODULOS = {
     candidatos: "f_candidatos",
     duelos: "f_duelos",
     votantes: "f_votantes",
-    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt"],
+    locales: ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"],
     limite: 40,
     poda: 8000
   }
