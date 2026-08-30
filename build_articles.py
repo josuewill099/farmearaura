@@ -320,7 +320,7 @@ COUNTER_EVENTS_EN = [
 
 COUNTER_NUMFMT = {"ar": "es-AR", "mx": "es-MX", "es": "es-ES", "br": "pt-BR",
                    "cl": "es-CL", "pe": "es-PE", "co": "es-CO", "us": "en-US",
-                   "esus": "es-US", "uy": "es-UY", "pt": "pt-PT"}
+                   "esus": "es-US", "uy": "es-UY", "pt": "pt"}
 COUNTER_VOSEO_LOCS = {"ar", "uy"}
 
 
