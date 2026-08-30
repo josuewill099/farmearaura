@@ -212,7 +212,7 @@ ENGLISH_COLOR_INFO = {
 }
 
 
-def build_quiz_widget(loc, lang, base, articles_by_slug, voseo):
+def build_quiz_widget(loc, lang, base, articles_by_slug, voseo, quiz_id):
     color_ids = ["azul", "amarilla", "verde", "blanca", "roja", "negra", "morada", "rosa"]
     colors = {}
 
@@ -231,7 +231,7 @@ def build_quiz_widget(loc, lang, base, articles_by_slug, voseo):
             colors[cid] = {"nombre": name, "emoji": COLOR_EMOJI[cid], "blurb": blurb, "url": ""}
 
     qs = [{"q": fix_voseo(q["q"], voseo), "opts": q["opts"]} for q in questions]
-    cfg = {"questions": qs, "colors": colors, **strings}
+    cfg = {"questions": qs, "colors": colors, "quizId": quiz_id, "loc": loc, **strings}
     return ('  <div class="quiz" id="aura-quiz"></div>\n'
             f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
             f'  <script>{QUIZ_JS}</script>')
@@ -296,14 +296,15 @@ ESTUDIANTE_INFO = {
 }
 
 
-def build_student_quiz_widget():
+def build_student_quiz_widget(loc, quiz_id):
     categories = {
         cid: {"nombre": info["nombre"], "emoji": info["emoji"], "blurb": info["blurb"], "url": ""}
         for cid, info in ESTUDIANTE_INFO.items()
     }
     strings = {"resultLabel": "Tu aura de estudiante es",
                "seeMore": "Ver el significado completo", "retry": "Volver a hacer el test"}
-    cfg = {"questions": QUIZ_QUESTIONS_ESTUDIANTE_AR, "colors": categories, **strings}
+    cfg = {"questions": QUIZ_QUESTIONS_ESTUDIANTE_AR, "colors": categories,
+           "quizId": quiz_id, "loc": loc, **strings}
     return ('  <div class="quiz" id="aura-quiz"></div>\n'
             f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
             f'  <script>{QUIZ_JS}</script>')
@@ -499,11 +500,11 @@ def build():
             canonical = f"{base}/{art['slug']}/"
 
             if art["slug"] in QUIZ_SLUGS:
-                quiz_widget = build_quiz_widget(loc, lang, base, articles_by_slug, loc in VOSEO_LOCS)
+                quiz_widget = build_quiz_widget(loc, lang, base, articles_by_slug, loc in VOSEO_LOCS, art["slug"])
             elif art["slug"] in COUNTER_SLUGS:
                 quiz_widget = build_counter_widget(loc)
             elif art["slug"] in STUDENT_QUIZ_SLUGS:
-                quiz_widget = build_student_quiz_widget()
+                quiz_widget = build_student_quiz_widget(loc, art["slug"])
             else:
                 quiz_widget = ""
 

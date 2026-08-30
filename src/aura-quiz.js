@@ -58,6 +58,7 @@
       '<button type="button" class="q-retry">' + esc(C.retry) + "</button>" +
       "</div>";
     root.querySelector(".q-retry").addEventListener("click", start);
+    if (window.gtag) gtag("event", "quiz_complete", { quiz: C.quizId, loc: C.loc, result: winner });
   }
 
   start();
