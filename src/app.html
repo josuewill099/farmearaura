@@ -545,6 +545,11 @@ async function finish(){
   await ensureFonts();
   drawCard();
   $('#cardImg').src = $('#cv').toDataURL('image/png');
+  track('aura_quiz_complete', {mode: S.mode, score: S.score, tier: tierOf(S.score).rank});
+}
+
+function track(name, params){
+  if (window.gtag) gtag('event', name, params);
 }
 
 async function ensureFonts(){
@@ -667,18 +672,24 @@ $('#shareBtn').onclick = async () => {
   const file = new File([blob],'mi-aura.png',{type:'image/png'});
   const text = `Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com`;
   if(navigator.canShare && navigator.canShare({files:[file]})){
-    try{ await navigator.share({files:[file], text}); return; }catch(e){ if(e.name==='AbortError') return; }
+    try{
+      await navigator.share({files:[file], text});
+      track('share', {method:'native', content_type:'aura_card', mode:S.mode, score:S.score});
+      return;
+    }catch(e){ if(e.name==='AbortError') return; }
   }
-  download(blob);
+  download(blob, 'share_fallback');
   $('#hint').textContent = 'Imagen guardada. Súbela a tu historia o a TikTok.';
 };
-$('#dlBtn').onclick = async () => { download(await cardBlob()); };
-function download(blob){
+$('#dlBtn').onclick = async () => { download(await cardBlob(), 'button'); };
+function download(blob, source){
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = 'mi-aura-farmearaura.png';
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+  track('file_download', {source, content_type:'aura_card', mode:S.mode, score:S.score,
+    file_name:'mi-aura-farmearaura.png', file_extension:'png'});
 }
 $('#againBtn').onclick = () => { show('s-intro'); };
 
