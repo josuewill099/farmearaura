@@ -113,6 +113,9 @@ async function ultimos(request, env, modulo) {
 }
 
 async function voto(request, env, modulo) {
+  const largo = Number(request.headers.get("content-length") || 0);
+  if (largo > 2048) return json({ error: "cuerpo_muy_grande" }, 413);
+
   let cuerpo;
   try {
     cuerpo = await request.json();

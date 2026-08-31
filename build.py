@@ -508,6 +508,12 @@ Disallow: /api/
 Sitemap: {DOMAIN}/sitemap.xml
 """
 
+SECURITY_TXT = """Contact: mailto:hola@farmearaura.com
+Expires: 2027-08-31T23:59:59.000Z
+Preferred-Languages: es, pt, en
+Canonical: https://farmearaura.com/.well-known/security.txt
+"""
+
 # /ar/ is not a real page — Argentina is the root. 301 anyone who links it.
 REDIRECTS = """/ar/                     /                         301
 /ar/que-es-farmear-aura/ /que-es-farmear-aura/     301
@@ -618,6 +624,8 @@ def main():
     (DIST / "robots.txt").write_text(ROBOTS, "utf-8")
     (DIST / "_redirects").write_text(REDIRECTS, "utf-8")
     (DIST / "_headers").write_text(HEADERS, "utf-8")
+    (DIST / ".well-known").mkdir(exist_ok=True)
+    (DIST / ".well-known" / "security.txt").write_text(SECURITY_TXT, "utf-8")
     (DIST / "llms.txt").write_text(build_llms(), "utf-8")
     check_seasonal()
     print("build ok ->", DIST)
