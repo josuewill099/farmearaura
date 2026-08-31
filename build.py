@@ -212,6 +212,12 @@ def build_app(l):
                   f'\n<meta name="twitter:image" content="{og_image}">'
                   "\n" + app_faq_ld(l))
     h = h.replace("<title>", head_extra + "\n<title>", 1)
+    duelos_url = nav_data.NAV_URLS[l["_code"]]["duelos"]
+    spec_rules = ('<script type="speculationrules">' +
+                  json.dumps({"prefetch": [{"source": "list", "urls": [duelos_url],
+                                             "eagerness": "moderate"}]}) +
+                  "</script>")
+    h = h.replace("</head>", spec_rules + "\n</head>", 1)
 
     # --- JS data blocks ---
     h = sub1(h, r"const MODES = \{.*?\n\};", "const MODES = " + jsobj(modes_js(l)) + ";")
