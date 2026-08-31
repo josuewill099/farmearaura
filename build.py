@@ -498,6 +498,20 @@ REDIRECTS = """/ar/                     /                         301
 /us/duels/historial/     /us/duels/recent/         301
 """
 
+# Todo el JS/CSS del sitio va inline en el HTML (no hay /assets/ ni /fonts/
+# propios todavia -- las tipografias siguen siendo Google Fonts), asi que
+# script-src/style-src necesitan 'unsafe-inline' por ahora. Report-Only:
+# no bloquea nada, solo deja ver violaciones en la consola del navegador.
+HEADERS = """/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+"""
+
 def build_llms():
     U = nav_data.NAV_URLS
     REGIONES = [("ar", "Argentina"), ("mx", "México"), ("es", "España"),
@@ -579,6 +593,7 @@ def main():
     (DIST / "sitemap.xml").write_text(build_sitemap(), "utf-8")
     (DIST / "robots.txt").write_text(ROBOTS, "utf-8")
     (DIST / "_redirects").write_text(REDIRECTS, "utf-8")
+    (DIST / "_headers").write_text(HEADERS, "utf-8")
     (DIST / "llms.txt").write_text(build_llms(), "utf-8")
     check_seasonal()
     print("build ok ->", DIST)
