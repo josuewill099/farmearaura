@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS f_candidatos (
   perdidos  INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (loc, id)
 );
+CREATE INDEX IF NOT EXISTS idx_f_candidatos_loc_aura ON f_candidatos (loc, aura DESC);
 
 CREATE TABLE IF NOT EXISTS f_duelos (
   id        INTEGER PRIMARY KEY AUTOINCREMENT,

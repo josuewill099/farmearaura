@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS candidatos (
   perdidos  INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (loc, id)
 );
+CREATE INDEX IF NOT EXISTS idx_candidatos_loc_aura ON candidatos (loc, aura DESC);
 
 CREATE TABLE IF NOT EXISTS duelos (
   id        INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,6 +21,9 @@ CREATE TABLE IF NOT EXISTS duelos (
   ts        INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_duelos_loc_ts ON duelos (loc, ts DESC);
+-- worker.js ordena por id DESC (no ts), asi que este es el indice que
+-- realmente usa el SEARCH; el de arriba quedo desalineado con la query.
+CREATE INDEX IF NOT EXISTS idx_duelos_loc_id ON duelos (loc, id DESC);
 
 CREATE TABLE IF NOT EXISTS votantes (
   ip      TEXT PRIMARY KEY,
