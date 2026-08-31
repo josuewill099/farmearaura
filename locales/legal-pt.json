@@ -37,10 +37,9 @@
    "Mesmo sem coletar dados, carregar qualquer página faz o seu aparelho se comunicar com quem a entrega. Neste caso:",
    {"ul":[
     "<strong>Cloudflare</strong> hospeda o site e o servidor dos duelos. Como qualquer servidor, processa o seu endereço IP para responder à requisição e por segurança.",
-    "<strong>Google Analytics (GA4)</strong> nos mostra estatísticas de tráfego: quais páginas são visitadas, de que tipo de aparelho e país aproximado, além de eventos como completar o teste ou votar em um duelo. O Google trata seu endereço IP de forma abreviada para estimar sua localização e pode usar cookies (veja a Política de Cookies) para distinguir visitas. Essa informação também segue a política de privacidade do Google.",
-    "<strong>Google Fonts</strong> entrega as fontes tipográficas. Isso faz com que o seu endereço IP chegue ao Google ao carregar a página."
+    "<strong>Google Analytics (GA4)</strong> nos mostra estatísticas de tráfego: quais páginas são visitadas, de que tipo de aparelho e país aproximado, além de eventos como completar o teste ou votar em um duelo. O Google trata seu endereço IP de forma abreviada para estimar sua localização e pode usar cookies (veja a Política de Cookies) para distinguir visitas. Essa informação também segue a política de privacidade do Google."
    ]},
-   "Estamos migrando as fontes para hospedagem própria justamente para eliminar essa segunda conexão. Quando terminar, esta página será atualizada."
+   "As fontes tipográficas do site ficam hospedadas no nosso próprio servidor, não no Google Fonts, então não geram nenhuma conexão adicional com terceiros."
   ]],
   ["Crianças e adolescentes",[
    "Boa parte de quem visita este site é adolescente. Por isso o site foi feito para não precisar de dado nenhum: não pede idade, nem nome real, nem e-mail, nem foto, e não há como se cadastrar.",

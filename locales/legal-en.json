@@ -41,10 +41,9 @@
           "Even though the site doesn't collect data, loading any web page means your device talks to whoever's serving it. In this case:",
           {"ul": [
             "<strong>Cloudflare</strong> hosts the site and the duels server. Like any server, it processes your IP address to respond to requests and for security purposes.",
-            "<strong>Google Analytics (GA4)</strong> gives us traffic stats: which pages get visited, from what kind of device and approximate country, plus events like finishing the quiz or voting in a duel. Google processes your IP address in truncated form to estimate your location and may use cookies (see the Cookie Policy) to distinguish visits. That data is also governed by Google's own privacy policy.",
-            "<strong>Google Fonts</strong> delivers the typefaces. That means your IP address reaches Google when the page loads."
+            "<strong>Google Analytics (GA4)</strong> gives us traffic stats: which pages get visited, from what kind of device and approximate country, plus events like finishing the quiz or voting in a duel. Google processes your IP address in truncated form to estimate your location and may use cookies (see the Cookie Policy) to distinguish visits. That data is also governed by Google's own privacy policy."
           ]},
-          "We're migrating the fonts to self-hosting specifically to remove that second connection. We'll update this page once that's done."
+          "The site's typefaces are hosted on our own server, not on Google Fonts, so they don't create any extra third-party connection."
         ]],
         ["Minors", [
           "A good chunk of the people who visit this site are teenagers. That's exactly why it's built to need no data at all: it doesn't ask for your age, your real name, your email, or photos, and there's no way to sign up.",

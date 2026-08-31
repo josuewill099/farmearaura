@@ -510,9 +510,10 @@ REDIRECTS = """/ar/                     /                         301
 /us/duels/historial/     /us/duels/recent/         301
 """
 
-# Todo el JS/CSS del sitio va inline en el HTML (no hay /assets/ ni /fonts/
-# propios todavia -- las tipografias siguen siendo Google Fonts), asi que
-# script-src/style-src necesitan 'unsafe-inline' por ahora. Report-Only:
+# Todo el JS/CSS del sitio va inline en el HTML (no hay /assets/ propio
+# todavia), asi que script-src/style-src necesitan 'unsafe-inline' por
+# ahora. Las tipografias ya son autohospedadas (/fonts/), asi que
+# fonts.googleapis.com/fonts.gstatic.com salieron de la CSP. Report-Only:
 # no bloquea nada, solo deja ver violaciones en la consola del navegador.
 HEADERS = """/*
   Strict-Transport-Security: max-age=31536000; includeSubDomains
@@ -521,7 +522,13 @@ HEADERS = """/*
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   Cross-Origin-Opener-Policy: same-origin
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og-*.jpg
+  Cache-Control: public, max-age=604800
 """
 
 def build_llms():
@@ -582,10 +589,9 @@ def main():
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir()
-    for f in (SRC / "static").iterdir():
-        shutil.copy2(f, DIST / f.name)
+    shutil.copytree(SRC / "static", DIST, dirs_exist_ok=True)
     print("  static -> favicon.svg, favicon.ico, apple-touch-icon.png, icon-192.png, "
-          "icon-512.png, site.webmanifest")
+          "icon-512.png, site.webmanifest, og-*.jpg, fonts/*.woff2")
     for c in ORDER:
         l = LOC[c]
         appdir = DIST / l["path"].strip("/")
