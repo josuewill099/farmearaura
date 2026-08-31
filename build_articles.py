@@ -565,6 +565,7 @@ def build():
                 lang=lang, title=esc(art["title"]), desc=esc(art["desc"]),
                 canonical=canonical, hreflang=hreflang_tags,
                 oglocale=lang.replace("-", "_"), home=home,
+                ogimage=f"{DOMAIN}/og-{loc}.jpg",
                 h1=esc(art["h1"]), answer=art["answer"],
                 meta=esc(art.get("meta", "")),
                 homeLabel=esc(home_label),

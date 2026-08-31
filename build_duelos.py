@@ -184,6 +184,7 @@ def build():
         base = L["base"].rstrip("/")
         home = base + HOME[loc]
         votar_url = base + "/" + L["votar"]["slug"]
+        og_image = f"{base}/og-{loc}.jpg"
 
         paginas = [
             ("votar", L["votar"], MAIN_VOTAR, {
@@ -228,6 +229,7 @@ def build():
                 ("CANONICAL", canonical),
                 ("ALTERNATES", alt[key]),
                 ("OGLOCALE", OG[loc]),
+                ("OGIMAGE", og_image),
                 ("CSS", css),
                 ("JSONLD", jsonld(L, page, canonical)),
                 ("HOME", home),

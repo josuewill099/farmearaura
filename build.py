@@ -197,8 +197,19 @@ def build_app(l):
     h = sub1(h, r"<title>.*?</title>", f'<title>{esc(a["title"])}</title>')
     h = sub1(h, r'<meta name="description" content=".*?">',
              f'<meta name="description" content="{esc(a["desc"])}">')
+    og_image = f'{DOMAIN}/og-{l["_code"]}.jpg'
+    h = h.replace('<meta property="og:title" content="Calculadora de Puntos de Aura">',
+                  f'<meta property="og:title" content="{esc(a["title"])}">', 1)
+    h = h.replace('<meta property="og:description" content="7 preguntas. Un número. Tu aura real.">',
+                  f'<meta property="og:description" content="{esc(a["desc"])}">', 1)
     head_extra = (f'<link rel="canonical" href="{canonical}">\n' + hreflang("app") +
-                  f'\n<meta property="og:locale" content="{l["lang"].replace("-", "_")}">' +
+                  f'\n<meta property="og:locale" content="{l["lang"].replace("-", "_")}">'
+                  f'\n<meta property="og:url" content="{canonical}">'
+                  f'\n<meta property="og:image" content="{og_image}">'
+                  '\n<meta property="og:image:width" content="1200">'
+                  '\n<meta property="og:image:height" content="630">'
+                  '\n<meta name="twitter:card" content="summary_large_image">'
+                  f'\n<meta name="twitter:image" content="{og_image}">'
                   "\n" + app_faq_ld(l))
     h = h.replace("<title>", head_extra + "\n<title>", 1)
 
@@ -342,6 +353,7 @@ def build_guide(l):
         lang=l["lang"], title=esc(g["title"]), desc=esc(g["desc"]),
         canonical=canonical, hreflang=hreflang("guide"),
         oglocale=l["lang"].replace("-", "_"), home=l["path"],
+        ogimage=f'{DOMAIN}/og-{l["_code"]}.jpg',
         h1=esc(g["h1"]), answer=g["answer"],
         meta=g.get("meta", "Actualizado: agosto de 2026 &middot; Lectura: 5 min"),
         homeLabel=esc(g.get("homeLabel", "Inicio")),
