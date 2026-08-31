@@ -8,7 +8,7 @@
   "pages": {
     "privacy": {
       "slug": "privacy",
-      "title": "Privacy Policy | farmearaura.com",
+      "title": "Privacy Policy | Farmear Aura",
       "desc": "farmearaura.com doesn't collect personal data. The quiz runs entirely in your browser, and nothing you type ever leaves your device.",
       "h1": "Privacy Policy",
       "lead": "<strong>This site does not collect personal data.</strong> There are no accounts, no forms, no analytics, and no database where anything could be stored. Everything that happens in the quiz happens inside your browser.",
@@ -51,7 +51,7 @@
     },
     "cookies": {
       "slug": "cookies",
-      "title": "Cookie Policy | farmearaura.com",
+      "title": "Cookie Policy | Farmear Aura",
       "desc": "farmearaura.com doesn't use analytics, advertising, or tracking cookies. Here's what actually loads when you visit the site and how to control it.",
       "h1": "Cookie Policy",
       "lead": "<strong>This site doesn't use analytics, advertising, or tracking cookies.</strong> There's no consent banner because there's nothing to consent to.",
@@ -73,7 +73,7 @@
     },
     "about": {
       "slug": "about",
-      "title": "About Us | farmearaura.com",
+      "title": "About Us | Farmear Aura",
       "desc": "What farmearaura.com is, how the content gets written, and why the quiz doesn't measure anything real.",
       "h1": "About Us",
       "lead": "farmearaura.com is an aura points calculator and a reference guide to <em>aura farming</em>, the meme that went from TikTok to half the internet's everyday vocabulary in 2025.",
@@ -101,7 +101,7 @@
     },
     "contact": {
       "slug": "contact",
-      "title": "Contact | farmearaura.com",
+      "title": "Contact | Farmear Aura",
       "desc": "How to get in touch with farmearaura.com: corrections, press, scenario suggestions, and privacy questions.",
       "h1": "Contact",
       "lead": "Write to us at <strong><a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a></strong>. It's the only way to reach us, and a real person reads it.",

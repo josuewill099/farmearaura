@@ -4,7 +4,7 @@
 "pages":{
 "privacidad":{
  "slug":"privacidad",
- "title":"Política de Privacidad | farmearaura.com",
+ "title":"Política de Privacidad | Farmear Aura",
  "desc":"farmearaura.com no recopila datos personales. El test funciona íntegramente en tu navegador y nada de lo que escribes sale de tu dispositivo.",
  "h1":"Política de Privacidad",
  "lead":"<strong>Este sitio no recopila datos personales.</strong> No hay cuentas, no hay formularios, no hay analítica y no existe una base de datos donde guardar nada. Todo lo que ocurre en el test ocurre dentro de tu navegador.",
@@ -46,7 +46,7 @@
  ]},
 "cookies":{
  "slug":"cookies",
- "title":"Política de Cookies | farmearaura.com",
+ "title":"Política de Cookies | Farmear Aura",
  "desc":"farmearaura.com no utiliza cookies de análisis, publicidad ni seguimiento. Explicamos qué se carga al visitar el sitio y cómo controlarlo.",
  "h1":"Política de Cookies",
  "lead":"<strong>Este sitio no utiliza cookies de análisis, de publicidad ni de seguimiento.</strong> No hay banner de consentimiento porque no hay nada que consentir.",
@@ -67,7 +67,7 @@
  ]},
 "sobre-nosotros":{
  "slug":"sobre-nosotros",
- "title":"Sobre nosotros | farmearaura.com",
+ "title":"Sobre nosotros | Farmear Aura",
  "desc":"Qué es farmearaura.com, cómo se escribe el contenido y por qué el test no mide absolutamente nada real.",
  "h1":"Sobre nosotros",
  "lead":"farmearaura.com es una calculadora de puntos de aura y una guía de referencia sobre el <em>aura farming</em>, el meme que en 2025 pasó de TikTok al lenguaje cotidiano de media internet.",
@@ -94,7 +94,7 @@
  ]},
 "contacto":{
  "slug":"contacto",
- "title":"Contacto | farmearaura.com",
+ "title":"Contacto | Farmear Aura",
  "desc":"Cómo contactar con farmearaura.com: correcciones, prensa, sugerencias de situaciones y consultas de privacidad.",
  "h1":"Contacto",
  "lead":"Escríbenos a <strong><a href=\"mailto:hola@farmearaura.com\">hola@farmearaura.com</a></strong>. Es la única vía de contacto y la lee una persona.",
