@@ -108,6 +108,7 @@ h1 em{font-style:normal;color:var(--aura)}
   background:linear-gradient(160deg,var(--ink-2),#0E0620);
   border-radius:20px;
   padding:22px 18px 18px;
+  min-height:180px;
   text-align:center;
   width:100%;
   color:inherit;
@@ -195,6 +196,7 @@ h1 em{font-style:normal;color:var(--aura)}
 
 /* ---------- ranking ---------- */
 .tabla{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.tabla.skeleton,.feed.skeleton{min-height:320px}
 .fila{
   display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;
   padding:13px 4px;border-bottom:1px solid var(--line);

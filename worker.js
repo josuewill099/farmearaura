@@ -97,7 +97,7 @@ async function estado(request, env, modulo) {
 
   // las dos claves apuntan al mismo array: duelos.js lee "candidatos",
   // historia.js lee "figuras"
-  return json({ loc: l.loc, candidatos: filas, figuras: filas }, 200, "public, max-age=10");
+  return json({ loc: l.loc, candidatos: filas, figuras: filas }, 200, "public, max-age=10, stale-while-revalidate=30");
 }
 
 async function ultimos(request, env, modulo) {
@@ -109,7 +109,7 @@ async function ultimos(request, env, modulo) {
     (l.loc ? " WHERE loc = ?" : "") + " ORDER BY id DESC LIMIT " + modulo.limite;
   const q = env.AURA_DB.prepare(sql);
   const { results } = await (l.loc ? q.bind(l.loc) : q).all();
-  return json({ loc: l.loc, duelos: results || [] }, 200, "public, max-age=10");
+  return json({ loc: l.loc, duelos: results || [] }, 200, "public, max-age=10, stale-while-revalidate=30");
 }
 
 async function voto(request, env, modulo) {
