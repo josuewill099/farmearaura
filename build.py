@@ -94,12 +94,20 @@ def legal_links(langkey, home):
 
 PAGE_TPL = (SRC / "page.tpl.html").read_text("utf-8")
 
+# Privacidad y cookies van noindex -- son paginas de compliance, no
+# contenido que deba competir por rankear. Sobre nosotros/contacto se
+# quedan indexables. Las claves varian por idioma (privacidad/privacy/
+# privacidade) pero "cookies" es igual en las tres.
+NOINDEX_LEGAL = {"privacidad", "privacy", "privacidade", "cookies"}
+
+
 def build_legal(langkey):
     L = LEGAL[langkey]
     owner = next(LOC[c] for c in ORDER if LEGAL_OF[c] == langkey)
     home = owner["path"]
     out = {}
     for key, pg in L["pages"].items():
+        robots = "noindex,follow" if key in NOINDEX_LEGAL else "index,follow"
         body = []
         for h, blocks in pg["sections"]:
             inner = []
@@ -127,7 +135,7 @@ def build_legal(langkey):
             sections="\n\n".join(body),
             legalLinks=legal_links(langkey, home),
             footerNote=esc(owner["guide"]["footerNote"]),
-            analytics=analytics_tag,
+            analytics=analytics_tag, robots=robots,
             ld=json.dumps(ld, ensure_ascii=False, indent=2))
     return out
 
