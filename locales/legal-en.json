@@ -2,16 +2,16 @@
   "lang": "en",
   "base": "/us/legal/",
   "homeLabel": "Home",
-  "updated": "Last updated: August 2026",
+  "updated": "Last updated: August 31, 2026",
   "navLabel": "Legal",
   "sourcesH": "Sources",
   "pages": {
     "privacy": {
       "slug": "privacy",
       "title": "Privacy Policy | Farmear Aura",
-      "desc": "farmearaura.com doesn't collect personal data. The quiz runs entirely in your browser, and nothing you type ever leaves your device.",
+      "desc": "farmearaura.com: the aura quiz runs in your browser and never leaves your device. The vote duels do use a server, and the site uses Google Analytics. Here's exactly what's processed.",
       "h1": "Privacy Policy",
-      "lead": "<strong>This site does not collect personal data.</strong> There are no accounts, no forms, no analytics, and no database where anything could be stored. Everything that happens in the quiz happens inside your browser.",
+      "lead": "<strong>This site doesn't require an account, a password, or any personal data to use.</strong> The aura quiz runs entirely in your browser. The vote duels do connect to a server to build the live ranking, and we use Google Analytics to understand traffic. Below we detail exactly what's processed in each case.",
       "sections": [
         ["Who's responsible", [
           "Site owner: <strong>Farmear Aura SRL</strong>, Argentina.",
@@ -29,10 +29,19 @@
         ["The card you share", [
           "Your card image is generated on your device and never uploaded anywhere. If you use the share button, your operating system hands that image off to whatever app you pick (TikTok, Instagram, WhatsApp, or another). From that point on, that app's own privacy policy applies, not ours."
         ]],
+        ["The vote duels", [
+          "The aura duels (the pages where you vote on which character or celebrity wins) work differently from the quiz: your vote is sent to our server and stored in a database, because that's how the live ranking everyone sees gets built.",
+          {"ul": [
+            "What gets stored per vote: which option won, which lost, and when. We don't store your name, your handle, or anything you typed into the quiz.",
+            "We also process a version of your IP address run through a one-way cryptographic hash, never the IP itself. We use it only to stop someone from voting hundreds of times a minute and skewing the ranking. That hash can't be reversed to figure out who you are, and it's never linked to any name or account."
+          ]},
+          "The counter of how many duels you've voted in (so we can flag when you hit 5 or 10) lives only in your own browser (localStorage) and is never sent to us."
+        ]],
         ["Third parties", [
           "Even though the site doesn't collect data, loading any web page means your device talks to whoever's serving it. In this case:",
           {"ul": [
-            "<strong>Cloudflare Pages</strong> hosts and delivers the site. Like any server, it processes your IP address to respond to the request and for security purposes.",
+            "<strong>Cloudflare</strong> hosts the site and the duels server. Like any server, it processes your IP address to respond to requests and for security purposes.",
+            "<strong>Google Analytics (GA4)</strong> gives us traffic stats: which pages get visited, from what kind of device and approximate country, plus events like finishing the quiz or voting in a duel. Google processes your IP address in truncated form to estimate your location and may use cookies (see the Cookie Policy) to distinguish visits. That data is also governed by Google's own privacy policy.",
             "<strong>Google Fonts</strong> delivers the typefaces. That means your IP address reaches Google when the page loads."
           ]},
           "We're migrating the fonts to self-hosting specifically to remove that second connection. We'll update this page once that's done."
@@ -42,32 +51,36 @@
           "If you're a parent or guardian with questions about how the site works, reach out and we'll answer."
         ]],
         ["Your rights", [
-          "Data protection law gives you the right to access, correct, or delete your personal data. On this site there's nothing to access, correct, or delete, because nothing is stored. Even so, if you have a question or a request, feel free to write to us and we'll get back to you."
+          "Data protection law gives you the right to access, correct, or delete your personal data. The aura quiz doesn't store anything of yours, so there's nothing to manage there. The duels store your vote along with a hash of your IP that we can't tie back to your identity, so we can't locate or delete an individual record on request, but you can simply stop voting in duels at any time without it affecting the rest of the site. For data processed by Google Analytics, you can manage your activity through your Google account or block analytics cookies (see the Cookie Policy). Any question or request, write to us and we'll get back to you."
         ]],
         ["Changes to this policy", [
-          "If we ever add analytics, advertising, or any feature that involves collecting data, we'll update this page before turning it on and make that clear in the date above."
+          "This page was updated on August 31, 2026 to reflect the addition of Google Analytics and the database-backed duels system, neither of which existed when the earlier version of this text was written. If we ever add advertising or any other data use, we'll update this page before turning it on."
         ]]
       ]
     },
     "cookies": {
       "slug": "cookies",
       "title": "Cookie Policy | Farmear Aura",
-      "desc": "farmearaura.com doesn't use analytics, advertising, or tracking cookies. Here's what actually loads when you visit the site and how to control it.",
+      "desc": "farmearaura.com uses Google Analytics cookies to measure traffic. It doesn't use advertising or cross-site tracking cookies. Here's exactly what loads and how to block it.",
       "h1": "Cookie Policy",
-      "lead": "<strong>This site doesn't use analytics, advertising, or tracking cookies.</strong> There's no consent banner because there's nothing to consent to.",
+      "lead": "<strong>This site uses analytics cookies (Google Analytics) and no advertising or cross-site tracking cookies.</strong> You can block them without the site breaking — here's how.",
       "sections": [
         ["What a cookie is", [
           "A cookie is a small file a site saves in your browser to remember something between visits: that you're logged in, what language you prefer, or, very often, which pages you visited so it can show you ads later."
         ]],
         ["What this site uses", [
-          "No cookies of our own. We don't use <em>localStorage</em> or <em>sessionStorage</em> either: your score and name live in the page's memory and vanish the moment you reload it.",
+          "The aura quiz doesn't use any cookie of its own: your score and name live in the page's memory and vanish the moment you reload it.",
+          {"ul": [
+            "<strong>Google Analytics cookies</strong> (like <code>_ga</code> and <code>_ga_&lt;ID&gt;</code>): let Google tell visits apart to measure traffic and which pages or features get used, like finishing the quiz or voting in a duel. Google controls how long these last, typically up to two years, under its own policy.",
+            "<strong>localStorage on the duels pages</strong>: we store, only in your browser, how many times you've voted, so we can show you a milestone message at 5 or 10 votes. It never leaves your device."
+          ]},
           "The provider hosting the site may, in certain circumstances, set a strictly necessary security cookie (for example, to tell automated traffic apart from real visitors). That kind of cookie can't be used to profile you or serve ads."
         ]],
         ["How to control them anyway", [
-          "Every browser lets you view, block, and delete cookies from its privacy settings. Blocking them entirely won't affect how this site works, since it doesn't depend on them."
+          "Every browser lets you view, block, and delete cookies from its privacy settings. You can also install Google's Analytics opt-out browser add-on so no site can measure you with that tool. Blocking analytics cookies won't break this site: the quiz and duels keep working exactly the same, we just stop seeing that visit in the stats."
         ]],
         ["If this changes", [
-          "If we ever add analytics or advertising, a real consent notice — with the option to decline — will appear before anything loads, and this page will be updated to detail every cookie."
+          "This page was updated on August 31, 2026 to reflect the addition of Google Analytics cookies. If we ever add advertising cookies, a real consent notice — with the option to decline — will appear before anything loads."
         ]]
       ]
     },

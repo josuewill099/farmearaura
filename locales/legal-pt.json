@@ -1,13 +1,13 @@
 {
-"lang":"pt","base":"/br/legal/","homeLabel":"Início","updated":"Última atualização: agosto de 2026",
+"lang":"pt","base":"/br/legal/","homeLabel":"Início","updated":"Última atualização: 31 de agosto de 2026",
 "navLabel":"Legal","sourcesH":"Fontes",
 "pages":{
 "privacidade":{
  "slug":"privacidade",
  "title":"Política de Privacidade | Farmear Aura",
- "desc":"farmearaura.com não coleta dados pessoais. O teste funciona inteiramente no seu navegador e nada do que você digita sai do seu aparelho.",
+ "desc":"farmearaura.com: o teste de aura funciona no seu navegador e não sai do seu aparelho. Os duelos de votação usam um servidor, e o site usa Google Analytics. Aqui explicamos exatamente o que é tratado.",
  "h1":"Política de Privacidade",
- "lead":"<strong>Este site não coleta dados pessoais.</strong> Não tem conta, não tem formulário, não tem analytics e não existe banco de dados onde guardar nada. Tudo o que acontece no teste acontece dentro do seu navegador.",
+ "lead":"<strong>Este site não pede conta, senha nem dados pessoais para ser usado.</strong> O teste de aura funciona inteiramente no seu navegador. Os duelos de votação se conectam a um servidor para montar o ranking ao vivo, e usamos Google Analytics para entender o tráfego. Abaixo detalhamos exatamente o que é tratado em cada caso.",
  "sections":[
   ["Quem é o responsável",[
    "Responsável pelo site: <strong>Farmear Aura SRL</strong>, Argentina.",
@@ -25,10 +25,19 @@
   ["O card que você compartilha",[
    "A imagem do seu card é gerada no seu aparelho e não sobe para lugar nenhum. Se você usar o botão de compartilhar, o seu sistema operacional entrega essa imagem para o aplicativo que você escolher (TikTok, Instagram, WhatsApp ou outro). A partir daí vale a política de privacidade daquele aplicativo, não a nossa."
   ]],
+  ["Os duelos de votação",[
+   "Os duelos de aura (as páginas onde você vota em quem ganha entre dois personagens ou famosos) funcionam diferente do teste: seu voto é enviado para o nosso servidor e fica guardado em um banco de dados, porque é assim que se monta o ranking ao vivo que todo mundo vê.",
+   {"ul":[
+    "O que fica guardado de cada voto: qual opção ganhou, qual perdeu e quando. Não guardamos seu nome, seu @ nem nada que você tenha digitado no teste.",
+    "Também tratamos uma versão do seu endereço IP passada por uma função criptográfica de mão única (hash), nunca o IP em si. Usamos isso só para impedir que alguém vote centenas de vezes por minuto e distorça o ranking. Esse hash não pode ser revertido para descobrir quem você é nem é ligado a nenhum nome ou conta."
+   ]},
+   "O contador de quantos duelos você votou (para avisar quando chega a 5 ou 10) fica só no seu próprio navegador (localStorage) e nunca é enviado para nós."
+  ]],
   ["Terceiros",[
    "Mesmo sem coletar dados, carregar qualquer página faz o seu aparelho se comunicar com quem a entrega. Neste caso:",
    {"ul":[
-    "<strong>Cloudflare Pages</strong> hospeda e entrega o site. Como qualquer servidor, processa o seu endereço IP para conseguir responder à requisição e por segurança.",
+    "<strong>Cloudflare</strong> hospeda o site e o servidor dos duelos. Como qualquer servidor, processa o seu endereço IP para responder à requisição e por segurança.",
+    "<strong>Google Analytics (GA4)</strong> nos mostra estatísticas de tráfego: quais páginas são visitadas, de que tipo de aparelho e país aproximado, além de eventos como completar o teste ou votar em um duelo. O Google trata seu endereço IP de forma abreviada para estimar sua localização e pode usar cookies (veja a Política de Cookies) para distinguir visitas. Essa informação também segue a política de privacidade do Google.",
     "<strong>Google Fonts</strong> entrega as fontes tipográficas. Isso faz com que o seu endereço IP chegue ao Google ao carregar a página."
    ]},
    "Estamos migrando as fontes para hospedagem própria justamente para eliminar essa segunda conexão. Quando terminar, esta página será atualizada."
@@ -38,31 +47,35 @@
    "Se você é mãe, pai ou responsável e tem qualquer dúvida sobre como o site funciona, escreva que a gente responde."
   ]],
   ["Seus direitos",[
-   "A LGPD garante o direito de acessar, corrigir e excluir seus dados pessoais. Aqui não há o que acessar, corrigir ou excluir, porque nada é armazenado. Ainda assim, se você tiver alguma dúvida ou pedido, pode escrever que respondemos."
+   "A LGPD garante o direito de acessar, corrigir e excluir seus dados pessoais. O teste de aura não guarda nada seu, então aí não há o que gerenciar. Os duelos guardam seu voto junto com um hash do seu IP que não conseguimos associar à sua identidade — por isso não conseguimos localizar nem apagar um registro individual sob pedido, mas você pode parar de votar nos duelos a qualquer momento sem afetar o resto do site. Para os dados tratados pelo Google Analytics, você pode gerenciar sua atividade pela sua conta Google ou bloquear os cookies de analytics (veja a Política de Cookies). Qualquer dúvida ou pedido, escreva que respondemos."
   ]],
   ["Mudanças nesta política",[
-   "Se no futuro adicionarmos analytics, publicidade ou qualquer função que envolva coleta de dados, esta página será atualizada antes de a função entrar no ar, e a data no topo vai deixar isso claro."
+   "Esta página foi atualizada em 31 de agosto de 2026 para refletir a adoção do Google Analytics e do sistema de duelos com banco de dados, que não existiam quando a versão anterior deste texto foi escrita. Se no futuro adicionarmos publicidade ou qualquer outro uso de dados, esta página será atualizada antes de a função entrar no ar."
   ]]
  ]},
 "cookies":{
  "slug":"cookies",
  "title":"Política de Cookies | Farmear Aura",
- "desc":"farmearaura.com não usa cookies de análise, publicidade ou rastreamento. Explicamos o que é carregado ao visitar o site e como controlar isso.",
+ "desc":"farmearaura.com usa cookies do Google Analytics para medir tráfego. Não usa cookies de publicidade nem de rastreamento entre sites. Explicamos quais são carregados e como bloqueá-los.",
  "h1":"Política de Cookies",
- "lead":"<strong>Este site não usa cookies de análise, de publicidade nem de rastreamento.</strong> Não existe banner de consentimento porque não há o que consentir.",
+ "lead":"<strong>Este site usa cookies de analytics (Google Analytics) e nenhum cookie de publicidade ou de rastreamento entre sites.</strong> Você pode bloqueá-los sem que o site pare de funcionar — explicamos como abaixo.",
  "sections":[
   ["O que é um cookie",[
    "Cookie é um arquivinho que um site guarda no seu navegador para lembrar de alguma coisa entre visitas: que você fez login, qual idioma prefere ou, muito frequentemente, quais páginas você visitou para te mostrar anúncio depois."
   ]],
   ["O que este site usa",[
-   "Nenhum cookie próprio. Também não usamos <em>localStorage</em> nem <em>sessionStorage</em>: sua pontuação e seu nome ficam na memória da página e somem quando você recarrega.",
+   "O teste de aura não usa nenhum cookie próprio: sua pontuação e seu nome ficam na memória da página e somem quando você recarrega.",
+   {"ul":[
+    "<strong>Cookies do Google Analytics</strong> (como <code>_ga</code> e <code>_ga_&lt;ID&gt;</code>): permitem distinguir visitas para medir tráfego e quais páginas ou funções são usadas, como completar o teste ou votar em um duelo. O Google define a duração, normalmente até dois anos, segundo sua própria política.",
+    "<strong><em>localStorage</em> nas páginas de duelos</strong>: guardamos aí, só no seu navegador, quantas vezes você votou, para poder mostrar um aviso ao chegar em 5 ou 10 votos. Isso nunca sai do seu aparelho."
+   ]},
    "O provedor que hospeda o site pode, em certas situações, definir um cookie estritamente necessário por segurança (por exemplo, para distinguir tráfego automatizado). Esse tipo de cookie não serve para traçar perfil nem para publicidade."
   ]],
   ["Como controlar mesmo assim",[
-   "Todo navegador permite ver, bloquear e apagar cookies nas configurações de privacidade. Bloquear tudo não atrapalha o funcionamento deste site, porque ele não depende disso."
+   "Todo navegador permite ver, bloquear e apagar cookies nas configurações de privacidade. Você também pode instalar o complemento de desativação do Google Analytics para não ser medido por essa ferramenta em nenhum site. Bloquear os cookies de analytics não atrapalha o funcionamento deste site: o teste e os duelos continuam funcionando normalmente, só deixamos de ver essa visita nas estatísticas."
   ]],
   ["Se isso mudar",[
-   "Se um dia adicionarmos analytics ou publicidade, vai aparecer um aviso de consentimento de verdade — com opção de recusar — antes de qualquer coisa carregar, e esta página será atualizada detalhando cada cookie."
+   "Esta página foi atualizada em 31 de agosto de 2026 para refletir a adoção dos cookies do Google Analytics. Se um dia adicionarmos cookies de publicidade, vai aparecer um aviso de consentimento de verdade — com opção de recusar — antes de qualquer coisa carregar."
   ]]
  ]},
 "sobre":{
