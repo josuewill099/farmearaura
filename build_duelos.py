@@ -106,6 +106,8 @@ MAIN_RANKING = """
     <ol class="tabla skeleton" id="tabla"></ol>
     <section class="seo">
       <p><a href="{{VOTAR_URL}}">{{RANKING_CTA}}</a></p>
+      <h2>{{RANKING_SEO_H2}}</h2>
+      <p>{{RANKING_SEO_P}}</p>
     </section>
 """
 
@@ -132,6 +134,72 @@ HISTORIAL_CTA = {
     "br": "Some o seu duelo.", "cl": "Suma tu duelo.", "pe": "Suma tu duelo.",
     "co": "Suma tu duelo.", "us": "Add your duel.", "esus": "Suma tu duelo.",
     "uy": "Sumá tu duelo.", "pt": "Soma o teu duelo.", "ec": "Suma tu duelo.",
+}
+
+# Texto adicional debajo del link de la pagina de ranking -- explica como
+# se arma el ranking (distinto del "como funciona un duelo" que ya cubre
+# seo_p en votar, para no duplicar contenido entre las dos paginas).
+# Mismo split voseo/tuteo que RANKING_CTA de arriba.
+_RANKING_SEO_ES_VOSEO = (
+    "Este ranking no lo arma nadie desde un escritorio: se arma solo, voto a voto. "
+    "Todos los arquetipos empiezan en 1.000 de aura, y cada duelo mueve la aguja según "
+    "a quién le ganás — vencer a uno que tenía más aura que vos suma más que vencer a "
+    "uno que ya estaba abajo. Por eso el primer puesto cambia seguido: alcanza con que "
+    "un arquetipo pegue una racha de duelos ganados para trepar varios lugares de una. "
+    "Lo mismo pasa abajo: quedar en aura negativa es fácil si se te juntan varias "
+    "derrotas, y de ahí también se sale votando."
+)
+_RANKING_SEO_ES_TUTEO = (
+    "Este ranking no lo arma nadie desde un escritorio: se arma solo, voto a voto. "
+    "Todos los arquetipos empiezan en 1.000 de aura, y cada duelo mueve la aguja según "
+    "a quién le ganes — vencer a uno que tenía más aura que tú suma más que vencer a "
+    "uno que ya estaba abajo. Por eso el primer puesto cambia seguido: alcanza con que "
+    "un arquetipo pegue una racha de duelos ganados para trepar varios lugares de una. "
+    "Lo mismo pasa abajo: quedar en aura negativa es fácil si se te juntan varias "
+    "derrotas, y de ahí también se sale votando."
+)
+RANKING_SEO_H2 = {
+    "ar": "Cómo se arma este ranking", "mx": "Cómo se arma este ranking",
+    "es": "Cómo se arma este ranking", "br": "Como esse ranking é montado",
+    "cl": "Cómo se arma este ranking", "pe": "Cómo se arma este ranking",
+    "co": "Cómo se arma este ranking", "us": "How this ranking gets built",
+    "esus": "Cómo se arma este ranking", "uy": "Cómo se arma este ranking",
+    "pt": "Como este ranking é construído", "ec": "Cómo se arma este ranking",
+}
+RANKING_SEO_P = {
+    "ar": _RANKING_SEO_ES_VOSEO, "uy": _RANKING_SEO_ES_VOSEO,
+    "mx": _RANKING_SEO_ES_TUTEO, "es": _RANKING_SEO_ES_TUTEO,
+    "cl": _RANKING_SEO_ES_TUTEO, "pe": _RANKING_SEO_ES_TUTEO,
+    "co": _RANKING_SEO_ES_TUTEO, "esus": _RANKING_SEO_ES_TUTEO,
+    "ec": _RANKING_SEO_ES_TUTEO,
+    "br": (
+        "Esse ranking não é decidido por ninguém: ele se monta sozinho, voto a voto. "
+        "Todos os arquétipos começam com 1.000 de aura, e cada duelo mexe no placar de "
+        "acordo com quem você derrota — vencer alguém com mais aura do que você soma "
+        "mais do que vencer alguém que já estava por baixo. Por isso o primeiro lugar "
+        "muda direto: basta um arquétipo emplacar uma sequência de vitórias pra subir "
+        "vários lugares de uma vez. O mesmo vale lá embaixo: cair pra aura negativa é "
+        "fácil se você acumula algumas derrotas seguidas, e dá pra sair de lá votando "
+        "também."
+    ),
+    "pt": (
+        "Este ranking não é decidido por ninguém: constrói-se sozinho, voto a voto. "
+        "Todos os arquétipos começam com 1.000 de aura, e cada duelo mexe no placar "
+        "consoante quem derrotas — vencer alguém com mais aura do que tu soma mais do "
+        "que vencer alguém que já estava por baixo. Por isso o primeiro lugar muda com "
+        "frequência: basta um arquétipo emplacar uma sequência de vitórias para subir "
+        "vários lugares de uma vez. O mesmo vale lá em baixo: cair para aura negativa é "
+        "fácil se acumulares algumas derrotas seguidas, e também se sai de lá a votar."
+    ),
+    "us": (
+        "Nobody sets this ranking from a desk — it builds itself, one vote at a time. "
+        "Every archetype starts at 1,000 aura, and each duel moves the needle based on "
+        "who you beat: beating something with more aura than you earns more than "
+        "beating something that was already down. That's why first place changes "
+        "often — one winning streak is enough for an archetype to climb several spots "
+        "at once. The same goes for the bottom: falling into negative aura is easy "
+        "after a few losses in a row, and voting your way back out works just as well."
+    ),
 }
 
 # Link contextual a famosos (celebridades del propio pais) desde la seccion
@@ -198,7 +266,8 @@ def build():
             }, {"cta": L["votar"]["cta"], "robo": L["votar"]["robo"],
                 "de_aura": L["votar"]["de_aura"]}),
             ("ranking", L["ranking"], MAIN_RANKING,
-             {"VOTAR_URL": votar_url, "RANKING_CTA": esc(RANKING_CTA[loc])},
+             {"VOTAR_URL": votar_url, "RANKING_CTA": esc(RANKING_CTA[loc]),
+              "RANKING_SEO_H2": esc(RANKING_SEO_H2[loc]), "RANKING_SEO_P": esc(RANKING_SEO_P[loc])},
              {"vacio": L["ranking"]["vacio"]}),
             ("historial", L["historial"], MAIN_HISTORIAL,
              {"VOTAR_URL": votar_url, "HISTORIAL_CTA": esc(HISTORIAL_CTA[loc])},
