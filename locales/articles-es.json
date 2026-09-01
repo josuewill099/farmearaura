@@ -2,8 +2,8 @@
   "articles": [
     {
       "slug": "color-de-aura",
-      "title": "¿De qué color es tu aura? | Farmear Aura",
-      "desc": "Cómo saber de qué color es tu aura: el significado de cada color, azul, amarilla, verde y blanca.",
+      "title": "¿De qué color es tu aura? Su significado | Farmear Aura",
+      "desc": "Cómo saber de qué color es tu aura: el significado de cada uno, azul, amarilla, verde, blanca, roja, negra, morada y rosa.",
       "h1": "¿De qué color es tu aura?",
       "meta": "Actualizado: agosto de 2026 · Lectura: 4 min",
       "answer": "El color de tu aura es una forma simbólica de describir tu energía y tu forma de ser, según la tradición esotérica. No existe una prueba científica ni un aparato que lo mida: se trata de identificar qué color describe mejor tu personalidad y tu momento actual.",
@@ -11,7 +11,7 @@
         [
           "Cómo saber el color de tu aura",
           [
-            "No hace falta un aparato ni una foto especial: la forma más común de saber el color de tu aura es leer las descripciones de cada color y ver cuál se parece más a cómo eres y cómo reaccionas en el día a día.",
+            "La forma más rápida es responder el test de arriba: seis preguntas sobre cómo actúas en el día a día que arman tu color al final, sin aparato ni foto especial.",
             "Mucha gente combina dos colores, y eso también es normal — el aura no es una categoría cerrada. Abajo está el significado completo de cada uno. Elige el que más te representa y entra para ver el detalle."
           ]
         ],
@@ -37,6 +37,30 @@
           "Aura blanca ⚪",
           [
             "El aura blanca se asocia con la pureza, la espiritualidad elevada y los comienzos nuevos. Suele aparecer en personas que están atravesando un cambio grande o una etapa de mucha claridad interior. <a href=\"https://farmearaura.com/es/aura-blanca/\">Ver el significado completo del aura blanca</a>."
+          ]
+        ],
+        [
+          "Aura roja 🔴",
+          [
+            "El aura roja se asocia con la pasión, la energía física y la fuerza de voluntad. Es el color más ligado al liderazgo y a la acción: quien la tiene no se queda esperando que las cosas pasen. <a href=\"https://farmearaura.com/es/aura-roja/\">Ver el significado completo del aura roja</a>."
+          ]
+        ],
+        [
+          "Aura negra ⚫",
+          [
+            "El aura negra suele malinterpretarse. No significa \"mala energía\": se asocia con la protección, la introspección profunda y, a veces, con un momento de agotamiento que pide descanso. <a href=\"https://farmearaura.com/es/aura-negra/\">Ver el significado completo del aura negra</a>."
+          ]
+        ],
+        [
+          "Aura morada 🟣",
+          [
+            "El aura morada (o violeta) se asocia con la espiritualidad, la intuición y la sabiduría. Es de los colores menos comunes, y suele aparecer en personas muy sensibles a lo que pasa a su alrededor. <a href=\"https://farmearaura.com/es/aura-morada/\">Ver el significado completo del aura morada</a>."
+          ]
+        ],
+        [
+          "Aura rosa 🩷",
+          [
+            "El aura rosa se asocia con el amor, la ternura y la sensibilidad emocional. Es el color que más aparece en personas para quienes los vínculos y el cuidado del otro son el centro de todo. <a href=\"https://farmearaura.com/es/aura-rosa/\">Ver el significado completo del aura rosa</a>."
           ]
         ]
       ],
@@ -265,8 +289,8 @@
           "https://farmearaura.com/es/aura-blanca/"
         ],
         [
-          "Aura azul",
-          "https://farmearaura.com/es/aura-azul/"
+          "Aura roja",
+          "https://farmearaura.com/es/aura-roja/"
         ]
       ],
       "sources": [
@@ -361,12 +385,12 @@
           "https://farmearaura.com/es/aura-blanca/"
         ],
         [
-          "Aura azul",
-          "https://farmearaura.com/es/aura-azul/"
+          "Aura roja",
+          "https://farmearaura.com/es/aura-roja/"
         ],
         [
-          "Aura amarilla",
-          "https://farmearaura.com/es/aura-amarilla/"
+          "Aura negra",
+          "https://farmearaura.com/es/aura-negra/"
         ]
       ],
       "sources": [
@@ -457,16 +481,16 @@
           "https://farmearaura.com/es/color-de-aura/"
         ],
         [
-          "Aura azul",
-          "https://farmearaura.com/es/aura-azul/"
+          "Aura roja",
+          "https://farmearaura.com/es/aura-roja/"
         ],
         [
-          "Aura amarilla",
-          "https://farmearaura.com/es/aura-amarilla/"
+          "Aura negra",
+          "https://farmearaura.com/es/aura-negra/"
         ],
         [
-          "Aura verde",
-          "https://farmearaura.com/es/aura-verde/"
+          "Aura morada",
+          "https://farmearaura.com/es/aura-morada/"
         ]
       ],
       "sources": [
@@ -937,6 +961,416 @@
       "ctaNav": "LÉXICO DE AURA",
       "guideLink": "Léxico de Farmear Aura",
       "footerNote": "farmearaura.com — contenido de humor. Los puntos de aura no existen."
+    },
+    {
+      "slug": "aura-roja",
+      "title": "Aura roja: su significado | Farmear Aura",
+      "desc": "Qué significa tener el aura roja: características, rasgos y qué hacer si es tu color.",
+      "h1": "Aura roja 🔴: significado",
+      "meta": "Actualizado: agosto de 2026 · Lectura: 4 min",
+      "answer": "El aura roja se asocia con la pasión, la energía física y la fuerza de voluntad. Es el color más ligado al liderazgo y a la acción: quien la tiene no se queda esperando que las cosas pasen.",
+      "sections": [
+        [
+          "Origen del significado del aura roja",
+          [
+            "Se vincula al chakra raíz (Muladhara), el más \"terrenal\" de los siete y el asociado a la supervivencia, la fuerza física y el instinto. Por tradición, es el color de la acción antes que el de la reflexión: mueve primero, piensa después."
+          ]
+        ],
+        [
+          "Características de las personas con aura roja",
+          [
+            {
+              "ul": [
+                "Toma decisiones rápido, sin darle mil vueltas.",
+                "Tiene mucha energía física y le cuesta estar quieto/a.",
+                "Se apasiona con facilidad por lo que hace.",
+                "Prefiere liderar antes que seguir instrucciones.",
+                "Se aburre en tareas sin desafío.",
+                "Encara los problemas de frente, no los evita."
+              ]
+            }
+          ]
+        ],
+        [
+          "Fortalezas y debilidades del aura roja",
+          [
+            "Como cualquier color del aura, el roja tiene un lado que suma y uno que conviene vigilar:",
+            {
+              "ul": [
+                "<strong>A favor:</strong> Actúa cuando otros dudan.",
+                "<strong>A favor:</strong> Lidera con decisión en momentos críticos.",
+                "<strong>A favor:</strong> No se paraliza frente a la incertidumbre."
+              ]
+            },
+            {
+              "ul": [
+                "<strong>A cuidar:</strong> Puede actuar antes de pensar del todo.",
+                "<strong>A cuidar:</strong> Le cuesta la paciencia en procesos lentos.",
+                "<strong>A cuidar:</strong> Puede pasar por encima de opiniones ajenas sin querer."
+              ]
+            }
+          ]
+        ],
+        [
+          "Si tu aura es roja",
+          [
+            "Tener el aura roja es señal de que tienes harta energía disponible. El lado a cuidar es la impulsividad: no toda decisión rápida es la correcta.",
+            "Recuerda que esto es una lectura simbólica, no una etiqueta fija: tu aura puede cambiar según la etapa que estás viviendo."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Qué significa el aura roja?",
+          "El aura roja se asocia con la pasión, la energía física y la fuerza de voluntad. Es el color más ligado al liderazgo y a la acción: quien la tiene no se queda esperando que las cosas pasen."
+        ],
+        [
+          "¿Qué significa tener el aura roja en una persona?",
+          "Significa que esa persona muestra, de forma predominante, los rasgos asociados a este color: toma decisiones rápido, sin darle mil vueltas; tiene mucha energía física y le cuesta estar quieto/a; se apasiona con facilidad por lo que hace. No es una etiqueta cerrada, sino la energía que más se nota en ella ahora."
+        ],
+        [
+          "¿Tener aura roja es buena o mala señal?",
+          "Ninguna. Cada color del aura tiene rasgos positivos y aspectos para trabajar — no hay un color \"mejor\" que otro."
+        ]
+      ],
+      "related": [
+        [
+          "¿De qué color es tu aura?",
+          "https://farmearaura.com/es/color-de-aura/"
+        ],
+        [
+          "Aura negra",
+          "https://farmearaura.com/es/aura-negra/"
+        ],
+        [
+          "Aura morada",
+          "https://farmearaura.com/es/aura-morada/"
+        ],
+        [
+          "Aura rosa",
+          "https://farmearaura.com/es/aura-rosa/"
+        ]
+      ],
+      "sources": [
+        "farmearaura.com — <a href=\"https://farmearaura.com/es/color-de-aura/\">de qué color es tu aura, guía completa</a>."
+      ],
+      "promoK": "¿Cuál es tu color de aura?",
+      "promoP": "Descubre el significado de los ocho colores.",
+      "promoBtn": "VER TODOS LOS COLORES DE AURA",
+      "promoUrl": "https://farmearaura.com/es/color-de-aura/",
+      "ctaNav": "COLOR DE AURA",
+      "guideLink": "Aura roja",
+      "footerNote": "farmearaura.com — contenido informativo sobre creencias populares. No sustituye asesoramiento profesional."
+    },
+    {
+      "slug": "aura-negra",
+      "title": "Aura negra: su significado | Farmear Aura",
+      "desc": "Qué significa tener el aura negra: características, rasgos y qué hacer si es tu color.",
+      "h1": "Aura negra ⚫: significado",
+      "meta": "Actualizado: agosto de 2026 · Lectura: 4 min",
+      "answer": "El aura negra suele malinterpretarse. No significa \"mala energía\": se asocia con la protección, la introspección profunda y, a veces, con un momento de agotamiento que pide descanso.",
+      "sections": [
+        [
+          "Origen del significado del aura negra",
+          [
+            "A diferencia de lo que sugiere el nombre, en la tradición de lectura de auras el negro no se lee como una energía \"mala\", sino como una energía que absorbe en vez de irradiar. Por eso se la asocia tanto a la protección (una barrera hacia afuera) como al agotamiento (no queda energía para dar)."
+          ]
+        ],
+        [
+          "Características de las personas con aura negra",
+          [
+            {
+              "ul": [
+                "Necesita tiempo a solas para procesar las cosas.",
+                "Es protector/a con la gente que quiere.",
+                "Puede estar atravesando una etapa de cansancio o sobrecarga.",
+                "Prefiere guardarse lo que siente hasta tenerlo claro.",
+                "No comparte sus problemas hasta resolverlos por su cuenta.",
+                "Se recarga en soledad, no en compañía."
+              ]
+            }
+          ]
+        ],
+        [
+          "Fortalezas y debilidades del aura negra",
+          [
+            "Como cualquier color del aura, el negra tiene un lado que suma y uno que conviene vigilar:",
+            {
+              "ul": [
+                "<strong>A favor:</strong> Es leal y protector con su círculo cercano.",
+                "<strong>A favor:</strong> Procesa las cosas con profundidad antes de hablar.",
+                "<strong>A favor:</strong> Sabe cuándo alejarse para cuidarse."
+              ]
+            },
+            {
+              "ul": [
+                "<strong>A cuidar:</strong> Puede aislarse más de lo que necesita.",
+                "<strong>A cuidar:</strong> Le cuesta pedir ayuda cuando está agotado.",
+                "<strong>A cuidar:</strong> Puede parecer cerrado cuando en realidad está reservado."
+              ]
+            }
+          ]
+        ],
+        [
+          "Si tu aura es negra",
+          [
+            "Tener el aura negra no es una señal negativa, es una invitación a bajar el ritmo. El lado a cuidar es no aislarte tanto que te cueste pedir ayuda.",
+            "Recuerda que esto es una lectura simbólica, no una etiqueta fija: tu aura puede cambiar según la etapa que estás viviendo."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Qué significa el aura negra?",
+          "El aura negra suele malinterpretarse. No significa \"mala energía\": se asocia con la protección, la introspección profunda y, a veces, con un momento de agotamiento que pide descanso."
+        ],
+        [
+          "¿Qué significa tener el aura negra en una persona?",
+          "Significa que esa persona muestra, de forma predominante, los rasgos asociados a este color: necesita tiempo a solas para procesar las cosas; es protector/a con la gente que quiere; puede estar atravesando una etapa de cansancio o sobrecarga. No es una etiqueta cerrada, sino la energía que más se nota en ella ahora."
+        ],
+        [
+          "¿Tener aura negra es buena o mala señal?",
+          "Ninguna. Cada color del aura tiene rasgos positivos y aspectos para trabajar — no hay un color \"mejor\" que otro."
+        ]
+      ],
+      "related": [
+        [
+          "¿De qué color es tu aura?",
+          "https://farmearaura.com/es/color-de-aura/"
+        ],
+        [
+          "Aura morada",
+          "https://farmearaura.com/es/aura-morada/"
+        ],
+        [
+          "Aura rosa",
+          "https://farmearaura.com/es/aura-rosa/"
+        ],
+        [
+          "Aura azul",
+          "https://farmearaura.com/es/aura-azul/"
+        ]
+      ],
+      "sources": [
+        "farmearaura.com — <a href=\"https://farmearaura.com/es/color-de-aura/\">de qué color es tu aura, guía completa</a>."
+      ],
+      "promoK": "¿Cuál es tu color de aura?",
+      "promoP": "Descubre el significado de los ocho colores.",
+      "promoBtn": "VER TODOS LOS COLORES DE AURA",
+      "promoUrl": "https://farmearaura.com/es/color-de-aura/",
+      "ctaNav": "COLOR DE AURA",
+      "guideLink": "Aura negra",
+      "footerNote": "farmearaura.com — contenido informativo sobre creencias populares. No sustituye asesoramiento profesional."
+    },
+    {
+      "slug": "aura-morada",
+      "title": "Aura morada: su significado | Farmear Aura",
+      "desc": "Qué significa tener el aura morada: características, rasgos y qué hacer si es tu color.",
+      "h1": "Aura morada 🟣: significado",
+      "meta": "Actualizado: agosto de 2026 · Lectura: 4 min",
+      "answer": "El aura morada (o violeta) se asocia con la espiritualidad, la intuición y la sabiduría. Es de los colores menos comunes, y suele aparecer en personas muy sensibles a lo que pasa a su alrededor.",
+      "sections": [
+        [
+          "Origen del significado del aura morada",
+          [
+            "Se asocia al chakra corona (Sahasrara), el más alto de los siete y el vinculado a la conexión espiritual. Según la tradición, es uno de los colores menos frecuentes porque representa un nivel de conciencia que pocas personas sostienen todo el tiempo — la mayoría lo atraviesa en momentos puntuales, no como estado constante."
+          ]
+        ],
+        [
+          "Características de las personas con aura morada",
+          [
+            {
+              "ul": [
+                "Percibe cosas que otros no notan.",
+                "Le atraen los temas espirituales o filosóficos.",
+                "Tiene una imaginación muy activa.",
+                "Se conecta fácil con desconocidos, casi por intuición.",
+                "Nota cuando algo \"no cierra\" antes de saber por qué.",
+                "Prefiere las conversaciones profundas a las superficiales."
+              ]
+            }
+          ]
+        ],
+        [
+          "Fortalezas y debilidades del aura morada",
+          [
+            "Como cualquier color del aura, el morada tiene un lado que suma y uno que conviene vigilar:",
+            {
+              "ul": [
+                "<strong>A favor:</strong> Percibe matices que otros pasan por alto.",
+                "<strong>A favor:</strong> Conecta rápido con desconocidos.",
+                "<strong>A favor:</strong> Tiene una imaginación fuera de lo común."
+              ]
+            },
+            {
+              "ul": [
+                "<strong>A cuidar:</strong> Puede perderse en sus propias ideas.",
+                "<strong>A cuidar:</strong> Le cuesta bajar lo abstracto a lo concreto.",
+                "<strong>A cuidar:</strong> A veces parece distraído cuando está procesando algo profundo."
+              ]
+            }
+          ]
+        ],
+        [
+          "Aura morada o aura violeta: ¿es lo mismo?",
+          [
+            "Sí, son el mismo color leído con dos nombres distintos. \"Morado\" y \"violeta\" se usan como sinónimos en la lectura de auras, y ambos apuntan al mismo significado: espiritualidad, intuición y sabiduría. La diferencia es puramente de idioma o de región — en algunos países se dice más \"morado\", en otros \"violeta\" —, pero no hay ninguna distinción real entre los dos en este contexto."
+          ]
+        ],
+        [
+          "Si tu aura es morada",
+          [
+            "Tener el aura morada es de las auras menos frecuentes. El lado a cuidar es no perderte tanto en tus ideas que te alejes de lo concreto del día a día.",
+            "Recuerda que esto es una lectura simbólica, no una etiqueta fija: tu aura puede cambiar según la etapa que estás viviendo."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Qué significa el aura morada?",
+          "El aura morada (o violeta) se asocia con la espiritualidad, la intuición y la sabiduría. Es de los colores menos comunes, y suele aparecer en personas muy sensibles a lo que pasa a su alrededor."
+        ],
+        [
+          "¿Qué significa tener el aura morada en una persona?",
+          "Significa que esa persona muestra, de forma predominante, los rasgos asociados a este color: percibe cosas que otros no notan; le atraen los temas espirituales o filosóficos; tiene una imaginación muy activa. No es una etiqueta cerrada, sino la energía que más se nota en ella ahora."
+        ],
+        [
+          "¿Tener aura morada es buena o mala señal?",
+          "Ninguna. Cada color del aura tiene rasgos positivos y aspectos para trabajar — no hay un color \"mejor\" que otro."
+        ],
+        [
+          "¿Es lo mismo el aura morada que el aura violeta?",
+          "Sí, son el mismo color leído con dos nombres distintos. \"Morado\" y \"violeta\" se usan como sinónimos en la lectura de auras, y ambos apuntan al mismo significado: espiritualidad, intuición y sabiduría. La diferencia es puramente de idioma o de región — en algunos países se dice más \"morado\", en otros \"violeta\" —, pero no hay ninguna distinción real entre los dos en este contexto."
+        ]
+      ],
+      "related": [
+        [
+          "¿De qué color es tu aura?",
+          "https://farmearaura.com/es/color-de-aura/"
+        ],
+        [
+          "Aura rosa",
+          "https://farmearaura.com/es/aura-rosa/"
+        ],
+        [
+          "Aura azul",
+          "https://farmearaura.com/es/aura-azul/"
+        ],
+        [
+          "Aura amarilla",
+          "https://farmearaura.com/es/aura-amarilla/"
+        ]
+      ],
+      "sources": [
+        "farmearaura.com — <a href=\"https://farmearaura.com/es/color-de-aura/\">de qué color es tu aura, guía completa</a>."
+      ],
+      "promoK": "¿Cuál es tu color de aura?",
+      "promoP": "Descubre el significado de los ocho colores.",
+      "promoBtn": "VER TODOS LOS COLORES DE AURA",
+      "promoUrl": "https://farmearaura.com/es/color-de-aura/",
+      "ctaNav": "COLOR DE AURA",
+      "guideLink": "Aura morada",
+      "footerNote": "farmearaura.com — contenido informativo sobre creencias populares. No sustituye asesoramiento profesional."
+    },
+    {
+      "slug": "aura-rosa",
+      "title": "Aura rosa: su significado | Farmear Aura",
+      "desc": "Qué significa tener el aura rosa: características, rasgos y qué hacer si es tu color.",
+      "h1": "Aura rosa 🩷: significado",
+      "meta": "Actualizado: agosto de 2026 · Lectura: 4 min",
+      "answer": "El aura rosa se asocia con el amor, la ternura y la sensibilidad emocional. Es el color que más aparece en personas para quienes los vínculos y el cuidado del otro son el centro de todo.",
+      "sections": [
+        [
+          "Origen del significado del aura rosa",
+          [
+            "Se lee como una variante más suave del rojo (energía, acción) mezclada con blanco (pureza). Por eso se asocia al amor incondicional más que a la pasión: es, según la tradición, el color del cuidado desinteresado, no el del deseo."
+          ]
+        ],
+        [
+          "Características de las personas con aura rosa",
+          [
+            {
+              "ul": [
+                "Antepone el bienestar de la gente que quiere al propio.",
+                "Se emociona con facilidad, para bien y para mal.",
+                "Es de las primeras personas en notar cuando alguien no está bien.",
+                "Da segundas (y terceras) oportunidades sin que se lo pidan.",
+                "Recuerda detalles pequeños de la gente que le importa.",
+                "Le cuesta ver a alguien cercano pasarla mal sin actuar."
+              ]
+            }
+          ]
+        ],
+        [
+          "Fortalezas y debilidades del aura rosa",
+          [
+            "Como cualquier color del aura, el rosa tiene un lado que suma y uno que conviene vigilar:",
+            {
+              "ul": [
+                "<strong>A favor:</strong> Genera vínculos genuinos con facilidad.",
+                "<strong>A favor:</strong> Es de las primeras personas en notar si alguien no está bien.",
+                "<strong>A favor:</strong> Da segundas oportunidades sin rencor."
+              ]
+            },
+            {
+              "ul": [
+                "<strong>A cuidar:</strong> Puede dar más de lo que recibe.",
+                "<strong>A cuidar:</strong> Le cuesta poner límites.",
+                "<strong>A cuidar:</strong> Se toma las cosas de forma muy personal."
+              ]
+            }
+          ]
+        ],
+        [
+          "Si tu aura es rosa",
+          [
+            "Tener el aura rosa es señal de una sensibilidad genuina. El lado a cuidar es aprender a poner límites antes de terminar agotado/a de dar tanto.",
+            "Recuerda que esto es una lectura simbólica, no una etiqueta fija: tu aura puede cambiar según la etapa que estás viviendo."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Qué significa el aura rosa?",
+          "El aura rosa se asocia con el amor, la ternura y la sensibilidad emocional. Es el color que más aparece en personas para quienes los vínculos y el cuidado del otro son el centro de todo."
+        ],
+        [
+          "¿Qué significa tener el aura rosa en una persona?",
+          "Significa que esa persona muestra, de forma predominante, los rasgos asociados a este color: antepone el bienestar de la gente que quiere al propio; se emociona con facilidad, para bien y para mal; es de las primeras personas en notar cuando alguien no está bien. No es una etiqueta cerrada, sino la energía que más se nota en ella ahora."
+        ],
+        [
+          "¿Tener aura rosa es buena o mala señal?",
+          "Ninguna. Cada color del aura tiene rasgos positivos y aspectos para trabajar — no hay un color \"mejor\" que otro."
+        ]
+      ],
+      "related": [
+        [
+          "¿De qué color es tu aura?",
+          "https://farmearaura.com/es/color-de-aura/"
+        ],
+        [
+          "Aura azul",
+          "https://farmearaura.com/es/aura-azul/"
+        ],
+        [
+          "Aura amarilla",
+          "https://farmearaura.com/es/aura-amarilla/"
+        ],
+        [
+          "Aura verde",
+          "https://farmearaura.com/es/aura-verde/"
+        ]
+      ],
+      "sources": [
+        "farmearaura.com — <a href=\"https://farmearaura.com/es/color-de-aura/\">de qué color es tu aura, guía completa</a>."
+      ],
+      "promoK": "¿Cuál es tu color de aura?",
+      "promoP": "Descubre el significado de los ocho colores.",
+      "promoBtn": "VER TODOS LOS COLORES DE AURA",
+      "promoUrl": "https://farmearaura.com/es/color-de-aura/",
+      "ctaNav": "COLOR DE AURA",
+      "guideLink": "Aura rosa",
+      "footerNote": "farmearaura.com — contenido informativo sobre creencias populares. No sustituye asesoramiento profesional."
     }
   ]
 }
