@@ -390,7 +390,7 @@ def build_guide(l):
         oglocale=l["lang"].replace("-", "_"), home=l["path"],
         ogimage=f'{DOMAIN}/og-{l["_code"]}.jpg',
         h1=esc(g["h1"]), answer=g["answer"],
-        meta=g.get("meta", "Actualizado: agosto de 2026 &middot; Lectura: 5 min"),
+        meta=g.get("meta", "Actualizado: agosto de 2026 · Lectura: 5 min"),
         homeLabel=esc(g.get("homeLabel", "Inicio")),
         tocLabel=esc(g.get("tocLabel", "EN ESTA P&Aacute;GINA")).replace("&amp;", "&"),
         quizWidget="", analytics=analytics_tag, toc=toc, sections=sections, related=related,
