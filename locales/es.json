@@ -151,7 +151,7 @@
  "desc":"El aura farming consiste en acumular puntos imaginarios de carisma sin esfuerzo aparente. Significado, origen del término, cuánto vale cada situación y las reglas del meme.",
  "h1":"Qué es el aura farming",
  "answer":"El <strong>aura farming</strong> consiste en acumular puntos imaginarios de carisma haciendo cosas que quedan bien sin esfuerzo: mantener la calma, no dar explicaciones y no buscar la reacción de nadie. Los puntos no existen y no los cuenta nadie, pero la regla social que hay detrás sí es real.",
- "headings":["De dónde viene el término","Cómo funcionan los puntos de aura","Las 7 reglas del aura farming","Lo que te quita aura","Glosario","Preguntas frecuentes"],
+ "headings":["De dónde viene el término","Cómo funcionan los puntos de aura","Las 7 reglas del aura farming","Lo que te quita aura","Más sobre farmear aura","Glosario","Preguntas frecuentes"],
  "origin":[
   "La expresión junta dos palabras de mundos distintos. <strong>Farming</strong> viene de los videojuegos: repetir una acción muchas veces para acumular recursos, experiencia u objetos; en español se dice <em>farmear</em>. <strong>Aura</strong> se usa aquí como sinónimo de presencia, de lo que transmite alguien al entrar en un sitio. Aura farming es, por tanto, acumular presencia a propósito.",
   "El término ya circulaba en comunidades de gaming y anime, pero explotó a mediados de 2025 con un vídeo muy concreto: un niño indonesio de 11 años llamado <strong>Rayyan Arkan Dikha</strong>, con gafas de sol y traje tradicional, bailando en la punta de una canoa mientras su equipo remaba.",
@@ -180,6 +180,7 @@
  ],
  "loseIntro":"El aura negativa es la mitad divertida del meme, y casi siempre se reduce a lo mismo: <strong>necesitar que los demás te confirmen algo</strong>. Los casos más citados:",
  "lose":["Repetir un chiste que no ha oído nadie.","Explicar por qué tu chiste era bueno.","Escribir \"?\" cuando no te contestan.","Decir lo que te ha costado algo sin que te pregunten.","Pedir que borren una foto (la va a ir a ver todo el mundo).","Poner una excusa que no te ha pedido nadie."],
+ "extras_post":[["Más sobre farmear aura",["El sitio tiene más contenido relacionado: un <a href=\"https://farmearaura.com/es/lexico-de-farmear-aura/\">léxico completo</a> con todos los términos del meme, y el <a href=\"https://farmearaura.com/es/aura-gamer/\">aura gamer</a>, la versión del test aplicada a los videojuegos."]]],
  "glossary":[
   ["aura farming / farmear aura","Acumular carisma a propósito con acciones que parecen no costar esfuerzo."],
   ["aura points / puntos de aura","Unidad ficticia para medir una acción. Siempre en cifras redondas y exageradas."],

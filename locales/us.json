@@ -187,7 +187,7 @@
     "desc": "Aura farming means racking up imaginary charisma points without trying. The meaning, where the term comes from, how much each situation is worth, and the rules of aura farming.",
     "h1": "What Is Aura Farming",
     "answer": "<strong>Aura farming</strong> means racking up imaginary charisma points by doing things that look effortless: staying calm, never explaining yourself, and never checking for a reaction. The points aren't real and nobody's actually counting, but the social rule behind them is.",
-    "headings": ["Where the Term Comes From", "How Aura Points Work", "The 7 Rules of Aura Farming", "What Costs You Aura", "Glossary", "Frequently Asked Questions"],
+    "headings":["Where the Term Comes From","How Aura Points Work","The 7 Rules of Aura Farming","What Costs You Aura","More about aura farming","Glossary","Frequently Asked Questions"],
     "origin": [
       "The phrase pairs two words from different worlds. <strong>Farming</strong> comes from gaming: repeating an action over and over to rack up resources, experience, or loot. <strong>Aura</strong> is used here as a stand-in for presence — whatever someone gives off the second they walk into a room. Aura farming, then, is stacking up presence on purpose.",
       "The term had already been floating around gaming and anime communities, but it exploded in mid-2025 with one very specific video: an 11-year-old boy from Indonesia named <strong>Rayyan Arkan Dikha</strong>, wearing dark sunglasses and traditional dress, dancing on the bow of a canoe while his team rowed behind him.",
@@ -216,7 +216,8 @@
     ],
     "loseIntro": "Negative aura is the fun half of the meme, and it almost always comes down to the same thing: <strong>needing someone else to confirm something for you</strong>. The most common cases:",
     "lose": ["Repeating a joke nobody heard the first time.", "Explaining why your joke was actually funny.", "Texting \"?\" when someone leaves you on read.", "Announcing how much something cost when nobody asked.", "Asking someone to delete a photo (everyone goes and looks now).", "Making up an excuse nobody asked for."],
-    "glossary": [
+    "extras_post":[["More about aura farming",["The site has more related content: a full <a href=\"https://farmearaura.com/us/aura-farming-glossary/\">glossary</a> covering every term from the meme, a <a href=\"https://farmearaura.com/us/aura-gamer/\">gamer aura</a> test, and a look at real-life <a href=\"https://farmearaura.com/us/aura-battles/\">aura battles</a>."]]],
+ "glossary": [
       ["aura farming", "Deliberately racking up charisma through actions that look effortless."],
       ["aura points", "A made-up unit for scoring a moment. Always round, always exaggerated."],
       ["negative aura", "A running total that's dropped below zero after an embarrassing moment."],
