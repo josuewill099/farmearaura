@@ -1492,6 +1492,86 @@
       "ctaNav": "AURA GAMER",
       "guideLink": "Aura Gamer",
       "footerNote": "farmearaura.com &mdash; contenido de humor. Los puntos de aura no existen. Los nombres de los juegos pertenecen a sus respectivos titulares de derechos."
+    },
+    {
+      "slug": "aura-crush",
+      "title": "Aura de Crush: las situaciones que más aura dan (o sacan) | Farmear Aura",
+      "desc": "Mensajes a las 2 am, doble check azul, la app abierta sin responder: las situaciones de crush que más aura dan o sacan, y el modo del test que las mide todas.",
+      "h1": "Aura de Crush",
+      "meta": "Actualizado: agosto de 2026 &middot; Lectura: 3 min",
+      "answer": "El <strong>aura de crush</strong> es la versión del meme aplicada a los mensajes con quien te gusta: el doble check azul, el &ldquo;escribiendo&hellip;&rdquo; que se corta, el mensaje que mandaste a las 2 de la mañana. Reaccionar con calma suma aura; explicar el mensaje al otro día, resta.",
+      "sections": [
+        [
+          "Situaciones que dan aura",
+          [
+            {
+              "ul": [
+                "Le escribís algo directo y no lo borrás aunque te arrepientas medio segundo después.",
+                "Te deja en visto y vos seguís con tu vida sin mandar un segundo mensaje.",
+                "Se conecta, no te escribe, y vos tampoco le escribís por orgullo.",
+                "Bailás con otra persona en la joda y tu crush se entera recién al otro día.",
+                "No le das like a la historia a los cinco minutos de que la suba."
+              ]
+            }
+          ]
+        ],
+        [
+          "Situaciones que sacan aura",
+          [
+            {
+              "ul": [
+                "Le mandaste un mensaje a las 2 de la mañana. Ya amaneció.",
+                "Le escribís \"jaja\" nervioso a todo lo que te dice.",
+                "Le preguntás directamente si te vio la historia.",
+                "Borrás el mensaje antes de que lo lea, pero el aviso de \"mensaje eliminado\" ya quedó."
+              ]
+            },
+            "La regla de siempre aplica también acá: el que se explica, pierde. Nadie recupera aura aclarando un mensaje de las 2 am."
+          ]
+        ],
+        [
+          "El modo del test que lo mide",
+          [
+            "La <a href=\"https://farmearaura.com/\">calculadora de aura</a> del sitio tiene un <strong>Modo Joda y Crush</strong> con situaciones exactamente de este estilo, mezcladas con salidas y momentos sociales. Es la versión con puntaje real de todo lo de acá arriba."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿Hay un test específico de aura de crush?",
+          "Sí, es el Modo Joda y Crush de la <a href=\"https://farmearaura.com/\">calculadora de aura</a> del sitio, que combina situaciones de salidas con mensajes de crush."
+        ],
+        [
+          "¿El test menciona a alguien en particular?",
+          "No. Todas las situaciones son genéricas y anónimas &mdash; no hace falta nombrar ni describir a ninguna persona real para hacer el test."
+        ],
+        [
+          "¿Sirve para saber si le gusto a mi crush?",
+          "No, es humor. No mide atracción real ni nada parecido, solo qué tan bien reaccionás vos a las situaciones típicas de mensajes y salidas."
+        ]
+      ],
+      "related": [
+        [
+          "Calculadora de aura",
+          "https://farmearaura.com/"
+        ],
+        [
+          "Qué es farmar aura (guía completa)",
+          "https://farmearaura.com/que-es-farmear-aura/"
+        ],
+        [
+          "Duelos de aura",
+          "https://farmearaura.com/duelos/"
+        ]
+      ],
+      "sources": [],
+      "promoK": "Probá el Modo Joda y Crush",
+      "promoP": "Siete situaciones, incluidas las de crush. Sin cuenta, sin fotos, sin guardar nada.",
+      "promoBtn": "CALCULAR MI AURA",
+      "promoUrl": "https://farmearaura.com/",
+      "ctaNav": "AURA DE CRUSH",
+      "guideLink": "Aura de Crush",
+      "footerNote": "farmearaura.com &mdash; contenido de humor. Los puntos de aura no existen. Ninguna situación describe a una persona real."
     }
   ]
 }
