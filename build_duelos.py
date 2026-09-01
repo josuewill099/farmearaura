@@ -12,6 +12,7 @@ loc) y suma las URLs a dist/sitemap.xml si ese archivo existe.
 
 import json
 import re
+from datetime import date
 from pathlib import Path
 
 import nav_data
@@ -19,6 +20,7 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
+TODAY = date.today().isoformat()   # sitemap <lastmod> for this build
 LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"]
 GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
 
@@ -344,8 +346,8 @@ def build():
         nuevas = [u for u in urls if "<loc>%s</loc>" % u not in xml]
         if nuevas:
             bloque = "".join(
-                "<url><loc>%s</loc><changefreq>daily</changefreq>"
-                "<priority>0.8</priority></url>\n" % u for u in nuevas
+                "<url><loc>%s</loc><lastmod>%s</lastmod>"
+                "<changefreq>daily</changefreq></url>\n" % (u, TODAY) for u in nuevas
             )
             xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
             sm.write_text(xml, encoding="utf-8")

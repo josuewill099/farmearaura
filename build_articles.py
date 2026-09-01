@@ -25,6 +25,7 @@ build_duelos.py/build_historia.py/build_famosos.py hacen entre locales.
 
 import json
 import re
+from datetime import date
 from pathlib import Path
 
 import nav_data
@@ -32,6 +33,7 @@ import nav_data
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
+TODAY = date.today().isoformat()   # sitemap <lastmod> for this build
 DOMAIN = "https://farmearaura.com"
 
 GUIDE_TPL = (SRC / "guide.tpl.html").read_text(encoding="utf-8")
@@ -986,8 +988,8 @@ def build():
         nuevas = [u for u in urls if "<loc>%s</loc>" % u not in xml]
         if nuevas:
             bloque = "".join(
-                "<url><loc>%s</loc><changefreq>monthly</changefreq>"
-                "<priority>0.7</priority></url>\n" % u for u in nuevas)
+                "<url><loc>%s</loc><lastmod>%s</lastmod>"
+                "<changefreq>monthly</changefreq></url>\n" % (u, TODAY) for u in nuevas)
             xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
             sm.write_text(xml, encoding="utf-8")
             print("  -> sitemap.xml (+%d URLs)" % len(nuevas))

@@ -21,6 +21,11 @@ DIST   = ROOT / "dist"
 DOMAIN = "https://farmearaura.com"
 ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec"]    # ar first = default
 GENERIC = {"es": "ar", "pt": "br", "en": "us"}   # bare language code -> owning locale
+TODAY  = date.today().isoformat()   # sitemap <lastmod> for this build -- shared with
+                                     # build_articles.py/build_duelos.py/build_historia.py/
+                                     # build_famosos.py so every sitemap entry from a given
+                                     # deploy carries the same real date instead of a
+                                     # hand-edited constant that goes stale.
 
 # Mismo tag que build_duelos.py/build_historia.py/build_famosos.py -- antes
 # solo esos tres builders lo cargaban; la calculadora, la guia y las
@@ -491,8 +496,7 @@ def build_sitemap():
             l = LOC[c]
             loc = DOMAIN + l["path"] if kind == "app" else f'{DOMAIN}{l["path"]}{l["guide"]["slug"]}/'
             urls.append(f'  <url>\n    <loc>{loc}</loc>\n{alts(kind)}\n'
-                        f'    <lastmod>2026-08-14</lastmod>\n'
-                        f'    <priority>{"1.0" if kind == "app" else "0.8"}</priority>\n  </url>')
+                        f'    <lastmod>{TODAY}</lastmod>\n  </url>')
     for pair in LEGAL_PAIRS:
         # privacidad/cookies se sirven con robots noindex (ver build_legal()),
         # asi que no van al sitemap: enviarlas daba "Submitted URL marked
@@ -506,8 +510,7 @@ def build_sitemap():
         alt += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{legal_urls["es"]}"/>'
         for u in legal_urls.values():
             urls.append(f'  <url>\n    <loc>{u}</loc>\n{alt}\n'
-                        f'    <lastmod>2026-08-14</lastmod>\n'
-                        f'    <priority>0.3</priority>\n  </url>')
+                        f'    <lastmod>{TODAY}</lastmod>\n  </url>')
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" {X}>\n'
             + "\n".join(urls) + "\n</urlset>\n")
