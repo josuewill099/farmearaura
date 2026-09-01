@@ -47,7 +47,11 @@
     '<div class="c-presets" id="c-presets">' + presetsHtml + "</div>" +
     '<button type="button" class="c-reset" id="c-reset">' + esc(C.reset) + "</button>";
 
-  root.querySelector("#c-num").textContent = fmt(total);
+  // No solo el texto: si el total guardado es negativo, la clase .neg tiene
+  // que aplicarse ya en la carga, no recien despues del primer clic.
+  var numEl0 = root.querySelector("#c-num");
+  numEl0.textContent = fmt(total);
+  numEl0.className = "c-num" + (total < 0 ? " neg" : total > 0 ? " pos" : "");
 
   root.querySelector("#c-btn").addEventListener("click", function () {
     var ev = C.events[Math.floor(Math.random() * C.events.length)];

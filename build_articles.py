@@ -515,8 +515,10 @@ GAMER_INFO_EN = {
                 "blurb": "Plays for real, barely talks, and clears everything without any fuss. The aura shows up in the result, not the chat."},
     "trol": {"emoji": "😏", "nombre": "Stylish Troll",
              "blurb": "Takes everything as a joke, even losing. Nobody gets mad at this one, not even when they should be losing aura."},
+    # Nota: aura-quiz.js pasa el blurb por esc() al renderizarlo, asi que aca
+    # va un guion largo literal, no la entidad HTML (&mdash; se mostraria tal cual).
     "frio": {"emoji": "🧊", "nombre": "Total Ice",
-             "blurb": "Same poker face no matter what happens. Wins or loses with the exact same expression &mdash; the literal definition of having aura."},
+             "blurb": "Same poker face no matter what happens. Wins or loses with the exact same expression — the literal definition of having aura."},
     "picante": {"emoji": "🔥", "nombre": "Spicy Mode",
                 "blurb": "Heats up fast, but with style. The aura swings up and down quickly, but it's never boring."},
 }
@@ -961,7 +963,7 @@ def build():
                 promoK=esc(art["promoK"]), promoP=esc(art["promoP"]), promoBtn=esc(art["promoBtn"]),
                 promoUrl=art.get("promoUrl", home),
                 ctaNav=esc(art["ctaNav"]), guideLink=esc(art.get("guideLink", art["h1"])),
-                footerNote=esc(art["footerNote"]), ld=ld,
+                footerNote=art["footerNote"], ld=ld,
                 legalLinks=nav_data.legal_links_html(loc, home),
             )
 

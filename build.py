@@ -493,6 +493,11 @@ def build_sitemap():
                         f'    <lastmod>2026-08-14</lastmod>\n'
                         f'    <priority>{"1.0" if kind == "app" else "0.8"}</priority>\n  </url>')
     for pair in LEGAL_PAIRS:
+        # privacidad/cookies se sirven con robots noindex (ver build_legal()),
+        # asi que no van al sitemap: enviarlas daba "Submitted URL marked
+        # noindex" en Search Console.
+        if any(slug in NOINDEX_LEGAL for slug in pair.values()):
+            continue
         legal_urls = {lk: legal_url(lk, slug) for lk, slug in pair.items()}
         alt = "\n".join(
             f'    <xhtml:link rel="alternate" hreflang="{lk}" href="{u}"/>'
