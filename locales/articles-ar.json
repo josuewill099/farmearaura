@@ -1348,7 +1348,7 @@
       "desc": "Por qué el chiste de que Messi tiene aura infinita se volvió costumbre entre los hinchas argentinos, y qué otras jugadas de potrero dan (o sacan) aura.",
       "h1": "Aura futbolera",
       "meta": "Actualizado: agosto de 2026 &middot; Lectura: 4 min",
-      "answer": "La <strong>aura futbolera</strong> es la versión del meme aplicada a la cancha: desde el chiste viral de que <strong>Messi tiene aura infinita</strong> hasta las jugadas típicas del fútbol de potrero, como el 9 que la tira afuera con el arco vacío o el arquero que sale jugando en la última línea sin inmutarse. Acá va de dónde salió el chiste de Messi y qué otras jugadas dan o sacan aura.",
+      "answer": "La <strong>aura futbolera</strong> es la versión del meme aplicada a la cancha: desde el chiste viral de que <strong>Messi tiene aura infinita</strong> hasta las jugadas típicas del fútbol de potrero, como el 9 que la tira afuera con el arco vacío o el arquero que sale jugando en la última línea sin inmutarse. Hacé el test de seis preguntas de acá abajo para saber tu perfil de aura futbolera, y seguí leyendo para el resto.",
       "sections": [
         [
           "Por qué dicen que Messi tiene aura infinita",
@@ -1395,6 +1395,10 @@
         ]
       ],
       "faq": [
+        [
+          "¿Cómo funciona el test de aura futbolera?",
+          "Son seis preguntas sobre cómo reaccionás en situaciones típicas de la cancha: un caño, un gol errado, un reclamo al árbitro. Cada respuesta suma a uno de cuatro perfiles posibles."
+        ],
         [
           "¿De dónde salió el chiste de que Messi tiene aura infinita?",
           "De los clips y memes que circularon después del Mundial 2022, que agarraban gestos mínimos de Messi y los presentaban como el máximo nivel de aura posible, siguiendo la misma lógica del meme original de farmar aura."

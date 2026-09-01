@@ -547,6 +547,128 @@ def build_gamer_quiz_widget(loc, lang, voseo, quiz_id):
             f'  <script>{QUIZ_JS}</script>')
 
 
+# ------------------------------------------------------- static quiz helper
+# Version simplificada de build_gamer_quiz_widget para quizzes de una sola
+# locale (no necesitan ramificar por idioma ni voseo): aura-futbol (AR) y
+# aura-anime (BR) se embeben en sus respectivos articulos editoriales ya
+# existentes en vez de crear una pagina nueva que compita por las mismas
+# queries -- ver notas del plan de contenido Tier 4.
+def build_static_quiz_widget(loc, quiz_id, questions, info, strings):
+    categories = {cid: {"nombre": c["nombre"], "emoji": c["emoji"], "blurb": c["blurb"], "url": ""}
+                  for cid, c in info.items()}
+    cfg = {"questions": questions, "colors": categories, "quizId": quiz_id, "loc": loc, **strings}
+    return ('  <div class="quiz" id="aura-quiz"></div>\n'
+            f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
+            f'  <script>{QUIZ_JS}</script>')
+
+
+FUTBOL_QUESTIONS_AR = [
+    {"q": "Le hacés un caño a un rival en el picado. ¿Qué hacés después?", "opts": [
+        {"t": "Sigo jugando como si nada", "c": "crack"},
+        {"t": "Miro a ver si alguien lo vio", "c": "figura"},
+        {"t": "Ni cambio la cara", "c": "roca"},
+        {"t": "Grito y se lo señalo al que se la hice", "c": "nervioso"},
+    ]},
+    {"q": "Errás un gol cantado con el arco vacío. ¿Cómo reaccionás?", "opts": [
+        {"t": "Sigo corriendo, ya fue", "c": "crack"},
+        {"t": "Me río de mí mismo antes que los demás", "c": "figura"},
+        {"t": "Cara de piedra, ni un gesto", "c": "roca"},
+        {"t": "Pateo el aire y puteo un rato", "c": "nervioso"},
+    ]},
+    {"q": "El árbitro te cobra un offside que no fue. ¿Qué decís?", "opts": [
+        {"t": "Nada, sigo jugando", "c": "crack"},
+        {"t": "Un comentario picante pero con onda", "c": "figura"},
+        {"t": "Ni lo miro", "c": "roca"},
+        {"t": "Le reclamo un buen rato", "c": "nervioso"},
+    ]},
+    {"q": "Atajás un penal en la última jugada. ¿Cómo festejás?", "opts": [
+        {"t": "Me paro y sigo, ni un grito", "c": "crack"},
+        {"t": "Un festejo armado, coreografía y todo", "c": "figura"},
+        {"t": "Ni un gesto, como si fuera de rutina", "c": "roca"},
+        {"t": "Grito tan fuerte que se escucha en la otra cancha", "c": "nervioso"},
+    ]},
+    {"q": "Un compañero te putea por un pase mal dado. ¿Qué hacés?", "opts": [
+        {"t": "Sigo jugando, no le doy bola", "c": "crack"},
+        {"t": "Le respondo con un chiste", "c": "figura"},
+        {"t": "Ni lo escucho", "c": "roca"},
+        {"t": "Le devuelvo la puteada", "c": "nervioso"},
+    ]},
+    {"q": "¿Cómo te definen en el equipo?", "opts": [
+        {"t": "El que resuelve sin hacer ruido", "c": "crack"},
+        {"t": "El que siempre tiene una gambeta de más", "c": "figura"},
+        {"t": "El que no cambia la cara ni ganando ni perdiendo", "c": "roca"},
+        {"t": "El que se prende fácil en cualquier discusión", "c": "nervioso"},
+    ]},
+]
+
+FUTBOL_INFO_AR = {
+    "crack": {"emoji": "🐐", "nombre": "Crack Silencioso",
+              "blurb": "Resuelve todo sin necesidad de mostrarlo. Su aura se nota en el resultado, no en el festejo."},
+    "figura": {"emoji": "😏", "nombre": "Figura del Picado",
+               "blurb": "Se luce con estilo, hasta cuando nadie se lo pidió. Nunca se toma nada del todo en serio."},
+    "roca": {"emoji": "🧊", "nombre": "Roca de Área",
+             "blurb": "Cara de piedra pase lo que pase. Ganar o perder le cambia la cara lo mismo: nada."},
+    "nervioso": {"emoji": "🔥", "nombre": "Nueve Nervioso",
+                 "blurb": "Se calienta rápido y lo demuestra. Su aura sube y baja en el mismo partido."},
+}
+
+FUTBOL_STRINGS_ES = {"resultLabel": "Tu aura futbolera es", "seeMore": "Ver el significado completo",
+                      "retry": "Volver a hacer el test"}
+
+ANIME_QUESTIONS_BR = [
+    {"q": "Você resolve um problema gigante em segundos. Como reage?", "opts": [
+        {"t": "Fico calado e sigo andando", "c": "piccolo"},
+        {"t": "Solto uma piada e sigo em frente", "c": "gojo"},
+        {"t": "Dou de ombros, nem foi difícil", "c": "saitama"},
+        {"t": "Nem comento, só sigo pro próximo problema", "c": "levi"},
+    ]},
+    {"q": "Alguém tenta te provocar no meio de uma treta grande. O que você faz?", "opts": [
+        {"t": "Fico sério e não respondo", "c": "piccolo"},
+        {"t": "Devolvo com outra provocação, sorrindo", "c": "gojo"},
+        {"t": "Nem escuto, tô entediado", "c": "saitama"},
+        {"t": "Encaro rápido e resolvo sem falar", "c": "levi"},
+    ]},
+    {"q": "Você vence uma disputa que parecia impossível. Como comemora?", "opts": [
+        {"t": "Não comemoro, sigo minha rotina", "c": "piccolo"},
+        {"t": "Faço pose e curto o momento", "c": "gojo"},
+        {"t": "Nem foi empolgante, próximo", "c": "saitama"},
+        {"t": "Só confirmo que terminou e sigo", "c": "levi"},
+    ]},
+    {"q": "Um adversário jura que vai te superar. Sua resposta?", "opts": [
+        {"t": "Nada. O silêncio já responde", "c": "piccolo"},
+        {"t": "Rio e aceito o desafio na hora", "c": "gojo"},
+        {"t": "Espero que seja mais interessante que o último", "c": "saitama"},
+        {"t": "Não perco tempo respondendo", "c": "levi"},
+    ]},
+    {"q": "No meio de uma crise, todo mundo entra em pânico. E você?", "opts": [
+        {"t": "Fico parado, calculando o próximo passo", "c": "piccolo"},
+        {"t": "Brinco com a situação pra aliviar o clima", "c": "gojo"},
+        {"t": "Acho estranho tanto alarde por tão pouco", "c": "saitama"},
+        {"t": "Dou ordens rápidas e direto ao ponto", "c": "levi"},
+    ]},
+    {"q": "O que mais te define numa batalha?", "opts": [
+        {"t": "Paciência e silêncio", "c": "piccolo"},
+        {"t": "Confiança e humor", "c": "gojo"},
+        {"t": "Poder tão grande que virou tédio", "c": "saitama"},
+        {"t": "Precisão fria, sem espaço pra erro", "c": "levi"},
+    ]},
+]
+
+ANIME_INFO_BR = {
+    "piccolo": {"emoji": "🗿", "nombre": "Estilo Piccolo",
+                "blurb": "Calma extrema, quase não fala. Resolve tudo em silêncio e deixa o resultado falar por si."},
+    "gojo": {"emoji": "😏", "nombre": "Estilo Gojo",
+             "blurb": "Confiança displicente, sempre com uma piada solta. Encara qualquer desafio como se fosse fácil."},
+    "saitama": {"emoji": "😐", "nombre": "Estilo Saitama",
+                "blurb": "Tão poderoso que ficou entediado. A maior ironia da aura: parecer aborrecido com o próprio poder."},
+    "levi": {"emoji": "🧊", "nombre": "Estilo Levi",
+             "blurb": "Frieza cirúrgica e zero espaço pra erro. Resolve rápido e sem gastar uma palavra a mais."},
+}
+
+ANIME_STRINGS_PT = {"resultLabel": "Sua aura de anime é", "seeMore": "Ver o significado completo",
+                     "retry": "Refazer o teste"}
+
+
 # --------------------------------------------------------------- aura counter
 # "contador de aura"/"contador de farmear aura": trafico real (GSC) sin
 # volumen en Ahrefs todavia (el termino es demasiado nuevo), pero sin
@@ -744,6 +866,10 @@ def build():
                 quiz_widget = build_student_quiz_widget(loc, art["slug"])
             elif art["slug"] == "aura-gamer":
                 quiz_widget = build_gamer_quiz_widget(loc, lang, loc in VOSEO_LOCS, art["slug"])
+            elif art["slug"] == "aura-futbol":
+                quiz_widget = build_static_quiz_widget(loc, art["slug"], FUTBOL_QUESTIONS_AR, FUTBOL_INFO_AR, FUTBOL_STRINGS_ES)
+            elif art["slug"] == "aura-anime":
+                quiz_widget = build_static_quiz_widget(loc, art["slug"], ANIME_QUESTIONS_BR, ANIME_INFO_BR, ANIME_STRINGS_PT)
             else:
                 quiz_widget = ""
 
