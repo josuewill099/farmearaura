@@ -1341,6 +1341,95 @@
       "ctaNav": "FARMEAR AURA",
       "guideLink": "Piccolo Aura Farming",
       "footerNote": "farmearaura.com &mdash; contenido de humor. Los puntos de aura no existen. Los nombres de personajes pertenecen a sus respectivos titulares de derechos."
+    },
+    {
+      "slug": "aura-futbol",
+      "title": "Aura futbolera: por qué dicen que Messi tiene aura infinita | Farmear Aura",
+      "desc": "Por qué el chiste de que Messi tiene aura infinita se volvió costumbre entre los hinchas argentinos, y qué otras jugadas de potrero dan (o sacan) aura.",
+      "h1": "Aura futbolera",
+      "meta": "Actualizado: agosto de 2026 &middot; Lectura: 4 min",
+      "answer": "La <strong>aura futbolera</strong> es la versión del meme aplicada a la cancha: desde el chiste viral de que <strong>Messi tiene aura infinita</strong> hasta las jugadas típicas del fútbol de potrero, como el 9 que la tira afuera con el arco vacío o el arquero que sale jugando en la última línea sin inmutarse. Acá va de dónde salió el chiste de Messi y qué otras jugadas dan o sacan aura.",
+      "sections": [
+        [
+          "Por qué dicen que Messi tiene aura infinita",
+          [
+            "Después del Mundial 2022 empezaron a circular clips y memes que agarraban cualquier gesto mínimo de Messi &mdash; una mirada, una caminata, un gesto de mano pidiendo la pelota &mdash; y lo presentaban como el nivel máximo de aura posible. La lógica es la misma que la del meme original: alguien haciendo algo determinante sin ninguna reacción visible, como si no le costara nada.",
+            "Lo que lo hizo tan viral en Argentina puntualmente es que encaja con un estereotipo ya instalado del jugador argentino \"vivo\" que resuelve sin apurarse. Messi ganando la Copa del Mundo caminando, literalmente, es la imagen perfecta del chiste."
+          ]
+        ],
+        [
+          "Jugadas de potrero que dan aura",
+          [
+            "No hace falta ser Messi. El fútbol amateur tiene sus propias situaciones clásicas:",
+            {
+              "ul": [
+                "Dejarla pasar con la suela sin girar a mirar adónde fue.",
+                "Gambetear a tres y no festejar, como si fuera lo de siempre.",
+                "Patear un penal fuerte al ángulo sin cambiar la cara.",
+                "Dar un pase filtrado sin mirar al que lo recibe.",
+                "Atajar un mano a mano y no decir absolutamente nada."
+              ]
+            }
+          ]
+        ],
+        [
+          "Lo que te saca el aura en la cancha",
+          [
+            "El lado B también tiene sus clásicos, y duelen más delante de todo el equipo:",
+            {
+              "ul": [
+                "Fallar el gol cantado con el arco vacío.",
+                "Reclamarle al árbitro un fallo que fue correcto.",
+                "Putear a un compañero después de un error propio.",
+                "Festejar de más un gol en un picado de amigos."
+              ]
+            },
+            "La regla de siempre se cumple también acá: el que se explica, pierde. Nadie recupera aura discutiendo un fallo del árbitro."
+          ]
+        ],
+        [
+          "Votá quién tiene más aura: los duelos de famosos",
+          [
+            "Si el chiste de Messi te convenció, la versión con votación real está en los <a href=\"https://farmearaura.com/duelos/famosos/\">duelos de famosos argentinos</a> del sitio: Messi contra Scaloni, Di María o el Dibu Martínez, con un ranking que se actualiza en vivo con cada voto de la gente. Es la manera de convertir el chiste de \"tiene aura infinita\" en un número real que compite contra otros."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿De dónde salió el chiste de que Messi tiene aura infinita?",
+          "De los clips y memes que circularon después del Mundial 2022, que agarraban gestos mínimos de Messi y los presentaban como el máximo nivel de aura posible, siguiendo la misma lógica del meme original de farmar aura."
+        ],
+        [
+          "¿La aura futbolera es lo mismo que el meme original de farmar aura?",
+          "Sí, es la misma idea aplicada a situaciones de la cancha: reaccionar con calma y sin explicar nada da aura, explicarse o reclamar de más la saca."
+        ],
+        [
+          "¿Puedo votar a Messi contra otro jugador en el sitio?",
+          "Sí, en los <a href=\"https://farmearaura.com/duelos/famosos/\">duelos de famosos</a> podés votar entre Messi y otras figuras argentinas del fútbol y del espectáculo, con un ranking en vivo armado por los votos de la gente."
+        ]
+      ],
+      "related": [
+        [
+          "Duelos de famosos",
+          "https://farmearaura.com/duelos/famosos/"
+        ],
+        [
+          "Qué es farmar aura (guía completa)",
+          "https://farmearaura.com/que-es-farmear-aura/"
+        ],
+        [
+          "Batalla de farmear aura",
+          "https://farmearaura.com/batalla-de-farmear-aura/"
+        ]
+      ],
+      "sources": [],
+      "promoK": "¿Messi o Scaloni: quién tiene más aura?",
+      "promoP": "Votá en los duelos de famosos argentinos y mirá el ranking cambiar en vivo.",
+      "promoBtn": "VOTAR EN DUELOS DE FAMOSOS",
+      "promoUrl": "https://farmearaura.com/duelos/famosos/",
+      "ctaNav": "CALCULAR MI AURA",
+      "guideLink": "Aura futbolera",
+      "footerNote": "farmearaura.com &mdash; contenido de humor. Los puntos de aura no existen. Comentario editorial sobre un meme; no implica relación con las personas mencionadas."
     }
   ]
 }
