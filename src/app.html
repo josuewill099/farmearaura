@@ -150,7 +150,8 @@ input[type=text]:focus{border-color:var(--aura);box-shadow:0 0 0 3px rgba(176,38
 .modes{margin:22px 0 20px;display:flex;flex-direction:column;gap:9px}
 .mode{display:flex;align-items:center;gap:13px;width:100%;text-align:left;cursor:pointer;
   background:linear-gradient(100deg,var(--panel),var(--ink));border:2px solid #33204F;color:var(--bone);
-  padding:14px 16px;border-radius:3px;font-family:var(--body);transition:transform .12s,border-color .12s}
+  padding:14px 16px;border-radius:3px;font-family:var(--body);transition:transform .12s,border-color .12s;
+  text-decoration:none}
 .mode:active{transform:scale(.97)}
 .mode:hover{border-color:var(--aura)}
 .mode .ic{font-size:26px;filter:drop-shadow(0 0 10px rgba(176,38,255,.7))}
@@ -158,6 +159,7 @@ input[type=text]:focus{border-color:var(--aura);box-shadow:0 0 0 3px rgba(176,38
 .mode .d{font-size:12px;color:var(--dim);margin-top:3px}
 .mode .go{margin-left:auto;font-family:var(--data);color:var(--cyan);font-size:20px}
 .fineprint{text-align:center;font-size:11px;color:#54476A;padding-bottom:12px;line-height:1.6}
+.duelcards{margin-top:22px}
 
 /* ---------- HUD ---------- */
 .hud{padding:14px 0 10px;position:relative}
@@ -241,6 +243,7 @@ canvas{display:none}
 
     <div class="modes" id="modes"></div>
     <p class="fineprint">Sin cuenta. Sin fotos. Sin guardar nada.<br>Todo pasa dentro de tu celular.</p>
+    <div class="modes duelcards"><!--DUELCARDS--></div>
   </section>
 
   <!-- QUIZ -->

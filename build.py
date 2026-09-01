@@ -236,6 +236,7 @@ def build_app(l):
         ("Calcula la tuya en 7 preguntas", a["cardTagline"]),
         ("Calculadora<br>de Aura", f'{a["wordmark"][0]}<br>{a["wordmark"][1]}'),
         ("<!--LEGALLINKS2-->", app_legal_links(l)),
+        ("<!--DUELCARDS-->", app_duel_cards(l)),
         ("Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com",
          a["shareText"].replace("{score}", "${fmt(S.score)}")),
         ("Sobre farmearaura.com", a["aboutH2"]),
@@ -260,6 +261,34 @@ def app_legal_links(l):
     return "<br>" + " &middot; ".join(
         f'<a href="{L["base"]}{pg["slug"]}/" style="color:#54476A">{esc(pg["h1"])}</a>'
         for pg in L["pages"].values())
+
+# Tarjetas de duelos que aparecen debajo del fineprint de la calculadora,
+# con el mismo look que .mode -- reusan nav_data (labels/URLs ya existen
+# por locale, asi que esto no pide ningun campo nuevo en los JSON).
+DUEL_CARD_DESC = {
+    "es": {"duelos": "Arquetipos cotidianos, cara a cara",
+           "historia": "Personajes históricos, cara a cara",
+           "famosos": "Famosos, cara a cara"},
+    "pt": {"duelos": "Arquétipos do dia a dia, cara a cara",
+           "historia": "Personagens históricos, cara a cara",
+           "famosos": "Famosos, cara a cara"},
+    "en": {"duelos": "Everyday archetypes, head to head",
+           "historia": "Historical figures, head to head",
+           "famosos": "Celebrities, head to head"},
+}
+DUEL_CARD_ICON = {"duelos": "⚔️", "historia": "🏛️", "famosos": "🌟"}
+
+def app_duel_cards(l):
+    code = l["_code"]
+    U, L = nav_data.NAV_URLS[code], nav_data.NAV_LABELS[code]
+    lang = "pt" if l["lang"].startswith("pt") else "en" if l["lang"].startswith("en") else "es"
+    desc = DUEL_CARD_DESC[lang]
+    return "".join(
+        f'<a class="mode" href="{U[key]}">'
+        f'<span class="ic">{DUEL_CARD_ICON[key]}</span>'
+        f'<span><span class="t">{esc(L[key].upper())}</span><span class="d">{esc(desc[key])}</span></span>'
+        f'<span class="go">▶</span></a>'
+        for key in ("duelos", "historia", "famosos"))
 
 def modes_js(l):
     return {k: {"ic": v["ic"], "name": v["name"], "desc": v["desc"],
