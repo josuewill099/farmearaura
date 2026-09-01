@@ -801,9 +801,16 @@ def render_sections(sections):
     for h, blocks in sections:
         inner = []
         for b in blocks:
-            if isinstance(b, dict):
+            if isinstance(b, dict) and "ul" in b:
                 inner.append('  <ul class="plain">\n' + "\n".join(
                     f"    <li>{x}</li>" for x in b["ul"]) + "\n  </ul>")
+            elif isinstance(b, dict) and "dl" in b:
+                # Mismo shape que el "Glosario" de build_guide() (dl.glo ya
+                # tiene estilos en guide.tpl.html) -- reusado aca para la
+                # pagina de lexico, que necesita listas de definicion, no
+                # bullets sueltos.
+                inner.append('  <dl class="glo">\n' + "\n".join(
+                    f"    <dt>{esc(t)}</dt><dd>{d}</dd>" for t, d in b["dl"]) + "\n  </dl>")
             else:
                 inner.append(f"  <p>{b}</p>")
         out.append((h, "\n".join(inner)))
@@ -874,6 +881,11 @@ def build():
                 quiz_widget = ""
 
             blocks = render_sections(art["sections"])
+            glossary_terms = [
+                (t, d) for _, section_blocks in art["sections"]
+                for b in section_blocks if isinstance(b, dict) and "dl" in b
+                for t, d in b["dl"]
+            ]
             if art.get("faq"):
                 faq_html = "\n".join(
                     f'  <details{" open" if i == 0 else ""}><summary>{esc(q)}</summary>'
@@ -904,6 +916,14 @@ def build():
                  "author": {"@type": "Organization", "name": "farmearaura.com", "url": DOMAIN + "/"},
                  "publisher": {"@type": "Organization", "name": "farmearaura.com", "url": DOMAIN + "/"}},
             ]
+            if glossary_terms:
+                graph.append({"@type": "DefinedTermSet", "@id": canonical + "#lexico",
+                              "name": art["h1"], "hasDefinedTerm": [
+                                  {"@type": "DefinedTerm", "@id": f"{canonical}#term-{i}",
+                                   "name": re.sub("<[^>]+>", "", t).split(" / ")[0],
+                                   "description": re.sub("<[^>]+>", "", d),
+                                   "inDefinedTermSet": canonical + "#lexico"}
+                                  for i, (t, d) in enumerate(glossary_terms)]})
             if art.get("faq"):
                 graph.append({"@type": "FAQPage", "@id": canonical + "#faq",
                                "mainEntity": [
