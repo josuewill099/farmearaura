@@ -55,9 +55,51 @@ a{{color:var(--cyan);text-decoration-thickness:1px;text-underline-offset:3px}}
 header{{padding:20px 0;border-bottom:1px solid #2A1A3E}}
 .logo{{font-family:var(--display);font-size:16px;color:var(--bone);text-decoration:none;
   text-shadow:2px 0 0 var(--aura),-2px 0 0 var(--cyan)}}
-nav{{display:flex;justify-content:space-between;align-items:center;gap:16px}}
-nav .cta{{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.16em;
+.topnav{{display:flex;justify-content:space-between;align-items:center;gap:16px}}
+.topnav .cta{{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.16em;
   background:var(--gold);color:#150B22;padding:9px 14px;border-radius:2px;text-decoration:none;white-space:nowrap}}
+/* Menu con dropdowns (identico en funcion a duelos.css/app.html, con las
+   variables de color de esta plantilla) -- solo se usa cuando navblock trae
+   el nav_data.nav_html() rico en vez del CTA simple (por ahora, contador). */
+.nav{{display:flex;gap:2px;align-items:center}}
+.nav>a,.nav .item>a{{
+  display:inline-flex;align-items:center;min-height:38px;
+  font-size:13px;font-weight:600;color:var(--mid);text-decoration:none;
+  padding:9px 10px;border-radius:999px;
+}}
+.nav>a:hover,.nav .item>a:hover{{color:var(--bone)}}
+.nav>a[aria-current="page"],.nav .item>a[aria-current="page"]{{color:var(--ink);background:var(--bone)}}
+.nav .item{{position:relative;display:flex;align-items:center}}
+.nav .caret{{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:38px;margin-left:-6px;padding:0;border:0;background:none;
+  color:var(--mid);font-size:10px;line-height:1;cursor:pointer;border-radius:999px;
+  transition:transform .15s ease,color .15s ease;
+}}
+.nav .caret:hover{{color:var(--bone)}}
+.nav .item.open .caret{{color:var(--bone);transform:rotate(180deg)}}
+@media (max-width:480px){{
+  .logo{{font-size:11px}}
+  .nav{{gap:0}}
+  .nav>a,.nav .item>a{{font-size:10px;padding:7px 5px;min-height:34px}}
+  .nav .caret{{width:22px;height:34px;margin-left:-9px;font-size:9px}}
+}}
+.nav .sub{{
+  display:none;position:absolute;top:100%;right:0;margin-top:2px;z-index:30;min-width:160px;
+  flex-direction:column;gap:2px;padding:6px;border-radius:12px;
+  background:var(--panel);border:1px solid #2A1A3E;
+}}
+.nav .item.open .sub{{display:flex;animation:navsub .15s ease both}}
+@media (hover:hover) and (pointer:fine){{
+  .nav .item:hover .sub{{display:flex;animation:navsub .15s ease both}}
+}}
+@keyframes navsub{{from{{opacity:0;transform:translateY(-4px)}}to{{opacity:1;transform:translateY(0)}}}}
+.nav .sub a{{
+  display:block;padding:11px 12px;border-radius:7px;font-size:13px;font-weight:600;
+  color:var(--mid);text-decoration:none;white-space:nowrap;
+}}
+.nav .sub a:hover{{background:#2A1A3E;color:var(--bone)}}
+.nav .sub a[aria-current="page"]{{color:var(--bone);background:#2A1A3E}}
 
 .crumb{{font-family:var(--data);font-size:12px;color:var(--dim);padding:18px 0 0;letter-spacing:.04em}}
 .crumb a{{color:var(--dim)}}
@@ -184,10 +226,10 @@ footer a{{color:var(--mid)}}
 <body>
 <div class="bg"></div>
 
-<header><div class="wrap"><nav>
+<header><div class="wrap"><div class="topnav">
   <a class="logo" href="{home}">FARMEARAURA</a>
-  <a class="cta" href="{home}">{ctaNav}</a>
-</nav></div></header>
+  {navblock}
+</div></div></header>
 
 <main class="wrap">
   <p class="crumb"><a href="{home}">{homeLabel}</a> / {h1}</p>

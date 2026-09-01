@@ -399,6 +399,7 @@ def build_guide(l):
         promoK=esc(g["promoK"]), promoP=esc(g["promoP"]), promoBtn=esc(g["promoBtn"]),
         promoUrl=l["path"],
         ctaNav=esc(g["ctaNav"]), guideLink=esc(a["guideLink"]),
+        navblock=f'<a class="cta" href="{l["path"]}">{esc(g["ctaNav"])}</a>',
         footerNote=esc(g["footerNote"]), ld=json.dumps(schema(l), ensure_ascii=False, indent=2),
         legalLinks=legal_links(LEGAL_OF[l["_code"]], l["path"]),
     )
