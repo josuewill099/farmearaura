@@ -726,6 +726,64 @@
       "ctaNav": "BATALLA DE FARMEAR AURA",
       "guideLink": "Batalla de farmear aura",
       "footerNote": "farmearaura.com — contenido de humor. Los puntos de aura no existen."
+    },
+    {
+      "slug": "aura-gamer",
+      "title": "Aura Gamer: cuál es tu perfil jugando | Farmear Aura",
+      "desc": "Test de aura gamer: perder la ranked, hacer un clutch, se corta el internet. Seis preguntas para descubrir el perfil real jugando.",
+      "h1": "Aura Gamer",
+      "meta": "Actualizado: agosto de 2026 &middot; Lectura: 2 min",
+      "answer": "El <strong>aura gamer</strong> no depende del rango ni del K/D: depende de cómo se reacciona cuando algo sale bien o mal. Este test de seis preguntas mide justamente eso &mdash; tilt, clutches, excusas de lag &mdash; y devuelve un perfil de aura gamer.",
+      "sections": [
+        [
+          "Qué es el aura gamer",
+          [
+            "El aura gamer es la versión del meme aplicada a cualquier partida: no importa si el juego es Free Fire, Roblox, Fortnite, Valorant o cualquier otro, la regla es la misma que en cualquier otra farmeada de aura. Reaccionar con calma suma aura; explicarse de más, explotar o buscar excusas la resta."
+          ]
+        ],
+        [
+          "Cómo se reparte cada aura",
+          [
+            "Las cuatro auras posibles no tienen que ver con el nivel de juego, sino con la reacción: hay quien resuelve todo en silencio, quien se ríe de todo incluso perdiendo, quien no cambia la cara pase lo que pase, y quien se calienta rápido pero con estilo. Ningún resultado es mejor que otro &mdash; cada perfil gana (o pierde) aura a su manera."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "¿El test de aura gamer sirve para cualquier juego?",
+          "Sí. El concepto de aura gamer no depende de la plataforma ni del título &mdash; aplica igual en Free Fire, Roblox, Fortnite o cualquier otro juego competitivo. Lo que se mide es la reacción, no el juego en sí."
+        ],
+        [
+          "¿Qué significa tener \"aura fría\" en el resultado?",
+          "Significa reaccionar igual pase lo que pase, sin cambiar la expresión ni al ganar ni al perder. Es uno de los perfiles con más aura posible, según la lógica del meme."
+        ],
+        [
+          "¿Se guarda el resultado del test?",
+          "No. Es para hacer y compartir en el momento, sin cuenta, sin fotos y sin guardar nada, igual que la calculadora de aura del sitio."
+        ]
+      ],
+      "related": [
+        [
+          "Duelos de aura",
+          "https://farmearaura.com/es/duelos/"
+        ],
+        [
+          "Qué es farmear aura",
+          "https://farmearaura.com/es/aura-farming/"
+        ],
+        [
+          "Calculadora de aura",
+          "https://farmearaura.com/es/"
+        ]
+      ],
+      "sources": [],
+      "promoK": "¿Y tu aura real, cuánto vale?",
+      "promoP": "Siete situaciones. Un número. Sin cuenta, sin fotos, sin guardar nada.",
+      "promoBtn": "CALCULAR MI AURA",
+      "promoUrl": "https://farmearaura.com/es/",
+      "ctaNav": "AURA GAMER",
+      "guideLink": "Aura Gamer",
+      "footerNote": "farmearaura.com &mdash; contenido de humor. Los puntos de aura no existen. Los nombres de los juegos pertenecen a sus respectivos titulares de derechos."
     }
   ]
 }

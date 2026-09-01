@@ -350,6 +350,64 @@
       "ctaNav": "AURA BATTLES",
       "guideLink": "Aura battles",
       "footerNote": "farmearaura.com — humor content. Aura points aren't real."
+    },
+    {
+      "slug": "aura-gamer",
+      "title": "Aura Gamer: What's Your Gaming Aura Profile | Farmear Aura",
+      "desc": "Take the gamer aura test: losing ranked, hitting a clutch, lag at the worst time. Six questions, one gaming aura profile.",
+      "h1": "Aura Gamer",
+      "meta": "Updated: August 2026 &middot; 2 min read",
+      "answer": "<strong>Gamer aura</strong> has nothing to do with your rank or K/D: it's about how you react when something goes right or wrong. This six-question test measures exactly that &mdash; tilt, clutches, lag excuses &mdash; and returns a gamer aura profile.",
+      "sections": [
+        [
+          "What gamer aura actually means",
+          [
+            "Gamer aura is the meme applied to any match: it doesn't matter if the game is Free Fire, Roblox, Fortnite, Valorant, or anything else, the rule is the same as any other aura farming situation. Reacting calmly adds aura; over-explaining, raging, or making excuses takes it away."
+          ]
+        ],
+        [
+          "How each aura gets assigned",
+          [
+            "The four possible auras aren't about skill level, they're about reaction: some people handle everything in silence, some laugh off even a loss, some never change expression no matter what happens, and some heat up fast but with style. No result is better than another &mdash; each profile earns (or loses) aura its own way."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "Does the gamer aura test work for any game?",
+          "Yes. The gamer aura concept doesn't depend on the platform or the title &mdash; it applies the same way in Free Fire, Roblox, Fortnite, or any other competitive game. What gets measured is the reaction, not the game itself."
+        ],
+        [
+          "What does having a \"total ice\" result mean?",
+          "It means reacting the same way no matter what happens, without changing expression whether you win or lose. It's one of the highest-aura profiles possible, by the meme's own logic."
+        ],
+        [
+          "Does the test save my result?",
+          "No. It's meant to be taken and shared in the moment, with no account, no photos, and nothing saved, just like the site's aura calculator."
+        ]
+      ],
+      "related": [
+        [
+          "Aura Duels",
+          "https://farmearaura.com/us/duels/"
+        ],
+        [
+          "What Is Aura Farming",
+          "https://farmearaura.com/us/what-is-aura-farming/"
+        ],
+        [
+          "Aura Calculator",
+          "https://farmearaura.com/us/"
+        ]
+      ],
+      "sources": [],
+      "promoK": "What's your real aura score?",
+      "promoP": "Seven situations. One number. No account, no photos, nothing saved.",
+      "promoBtn": "CALCULATE MY AURA POINTS",
+      "promoUrl": "https://farmearaura.com/us/",
+      "ctaNav": "AURA GAMER",
+      "guideLink": "Aura Gamer",
+      "footerNote": "farmearaura.com &mdash; humor content. Aura points aren't real. Game names belong to their respective copyright holders."
     }
   ]
 }

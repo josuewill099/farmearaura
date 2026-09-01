@@ -185,7 +185,11 @@ QUIZ_JS = (SRC / "aura-quiz.js").read_text(encoding="utf-8")
 _VOSEO_PAIRS = [("reaccionás/reaccionas", "reaccionás", "reaccionas"),
                 ("pensás/piensas", "pensás", "piensas"),
                 ("recuperás/recuperas", "recuperás", "recuperas"),
-                ("hacés/haces", "hacés", "haces")]
+                ("hacés/haces", "hacés", "haces"),
+                ("decís/dices", "decís", "dices"),
+                ("agradecés/agradeces", "agradecés", "agradeces"),
+                ("mencionás/mencionas", "mencionás", "mencionas"),
+                ("vos solo/tú solo", "vos solo", "tú solo")]
 
 
 def fix_voseo(s, voseo):
@@ -306,6 +310,238 @@ def build_student_quiz_widget(loc, quiz_id):
                "seeMore": "Ver el significado completo", "retry": "Volver a hacer el test"}
     cfg = {"questions": QUIZ_QUESTIONS_ESTUDIANTE_AR, "colors": categories,
            "quizId": quiz_id, "loc": loc, **strings}
+    return ('  <div class="quiz" id="aura-quiz"></div>\n'
+            f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
+            f'  <script>{QUIZ_JS}</script>')
+
+
+# ------------------------------------------------------------- gamer quiz
+# "aura-gamer" -- Tier 4 del plan de contenido: quiz-mode standalone, share-
+# first. Preguntas en voseo + fix_voseo() para servir las 9 locales
+# hispanas desde un unico set (mismo patron que build_quiz_widget con los
+# colores); br/pt y us tienen sus propios sets porque difieren en registro
+# ("você" vs "tu") o idioma, no solo en un par de verbos.
+GAMER_QUESTIONS_ES = [
+    {"q": "Perdiste la ranked por un compañero que la cagó. ¿Qué hacés?", "opts": [
+        {"t": "Reviso la repetición para ver qué mejorar la próxima", "c": "tryhard"},
+        {"t": "Tiro un meme en el chat y me río de todo", "c": "trol"},
+        {"t": "Cierro el juego sin decir una palabra", "c": "frio"},
+        {"t": "Le dejo un mensaje bien picante antes de salir", "c": "picante"},
+    ]},
+    {"q": "Hacés una jugada clutch y ganás un 1vX. ¿Cómo reaccionás?", "opts": [
+        {"t": "Sigo jugando como si nada, ya lo esperaba", "c": "tryhard"},
+        {"t": "Hago un baile random con el personaje", "c": "trol"},
+        {"t": "Ni un emoji. Silencio total", "c": "frio"},
+        {"t": "Grito re fuerte, que se entere todo el server", "c": "picante"},
+    ]},
+    {"q": "Se te corta el internet en el peor momento posible. ¿Qué decís?", "opts": [
+        {"t": "Nada, reconecto y sigo jugando", "c": "tryhard"},
+        {"t": "\"Bueno, así no vale\" entre risas", "c": "trol"},
+        {"t": "No digo nada, ni me inmuto", "c": "frio"},
+        {"t": "\"SE ME LAGGEÓ\" en mayúsculas, obvio", "c": "picante"},
+    ]},
+    {"q": "Un desconocido te carrya toda la partida. ¿Cómo se lo agradecés?", "opts": [
+        {"t": "Le dejo un GG bien seco y listo", "c": "tryhard"},
+        {"t": "Le mando un montón de emojis de fuego", "c": "trol"},
+        {"t": "No digo nada, sigo a la siguiente partida", "c": "frio"},
+        {"t": "Le escribo un párrafo agradeciéndole re efusivo", "c": "picante"},
+    ]},
+    {"q": "Estás carryando vos solo a todo el equipo. ¿Lo mencionás?", "opts": [
+        {"t": "Ni loco, que se den cuenta solos", "c": "tryhard"},
+        {"t": "Sí, con memes de por medio", "c": "trol"},
+        {"t": "Ni ahí. Sigo jugando", "c": "frio"},
+        {"t": "Sí, se los recuerdo cada dos minutos", "c": "picante"},
+    ]},
+    {"q": "¿Qué te define mejor en el chat de voz?", "opts": [
+        {"t": "Callado, enfocado, cero distracciones", "c": "tryhard"},
+        {"t": "El que tira chistes todo el partido", "c": "trol"},
+        {"t": "El que casi ni prende el micro", "c": "frio"},
+        {"t": "El que se calienta rápido pero se le pasa rápido", "c": "picante"},
+    ]},
+]
+
+GAMER_INFO_ES = {
+    "tryhard": {"emoji": "🎯", "nombre": "Tryhard Silencioso",
+                "blurb": "Juega en serio, casi no habla y resuelve todo sin aspavientos. El aura se nota en el resultado, no en el chat."},
+    "trol": {"emoji": "😏", "nombre": "Troll con Estilo",
+             "blurb": "Se toma todo con humor, hasta perder. Nadie se enoja con este perfil, ni cuando debería perder aura."},
+    "frio": {"emoji": "🧊", "nombre": "Frío Total",
+             "blurb": "Cara de piedra pase lo que pase. Gana o pierde con la misma expresión, que es la definición exacta de tener aura."},
+    "picante": {"emoji": "🔥", "nombre": "Modo Picante",
+                "blurb": "Se calienta fácil pero con estilo. Su aura sube y baja rápido, pero nunca aburre."},
+}
+
+GAMER_QUESTIONS_PT_BR = [
+    {"q": "Você perde a ranqueada por erro de um parceiro de time. O que você faz?", "opts": [
+        {"t": "Revejo a repetição pra ver o que melhorar da próxima vez", "c": "tryhard"},
+        {"t": "Mando um meme no chat e levo na esportiva", "c": "trol"},
+        {"t": "Fecho o jogo sem falar nada", "c": "frio"},
+        {"t": "Deixo uma mensagem bem ácida antes de sair", "c": "picante"},
+    ]},
+    {"q": "Você faz uma jogada clutch e ganha um 1vX. Como reage?", "opts": [
+        {"t": "Sigo jogando numa boa, já esperava isso", "c": "tryhard"},
+        {"t": "Faço uma dancinha aleatória com o personagem", "c": "trol"},
+        {"t": "Nem um emoji. Silêncio total", "c": "frio"},
+        {"t": "Grito tão alto que o servidor inteiro escuta", "c": "picante"},
+    ]},
+    {"q": "Sua internet cai bem na pior hora possível. O que você diz?", "opts": [
+        {"t": "Nada, só reconecto e continuo jogando", "c": "tryhard"},
+        {"t": "\"Ah, então não vale\" rindo", "c": "trol"},
+        {"t": "Nada. Nem me abalo", "c": "frio"},
+        {"t": "\"DEU LAG\" em caixa alta, óbvio", "c": "picante"},
+    ]},
+    {"q": "Um desconhecido carrega o time inteiro na partida. Como você agradece?", "opts": [
+        {"t": "Mando um \"gg\" seco e sigo", "c": "tryhard"},
+        {"t": "Mando uma sequência enorme de emoji de fogo", "c": "trol"},
+        {"t": "Não digo nada, já entro na próxima partida", "c": "frio"},
+        {"t": "Escrevo um parágrafo inteiro de agradecimento", "c": "picante"},
+    ]},
+    {"q": "Você está carregando o time sozinho. Você comenta isso?", "opts": [
+        {"t": "De jeito nenhum, que percebam sozinhos", "c": "tryhard"},
+        {"t": "Sim, com memes no meio", "c": "trol"},
+        {"t": "Nem pensar. Sigo jogando", "c": "frio"},
+        {"t": "Sim, e lembro todo mundo a cada dois minutos", "c": "picante"},
+    ]},
+    {"q": "O que mais define você no chat de voz?", "opts": [
+        {"t": "Quieto, focado, zero distração", "c": "tryhard"},
+        {"t": "Aquele que solta piada o jogo inteiro", "c": "trol"},
+        {"t": "Aquele que quase nem liga o microfone", "c": "frio"},
+        {"t": "Esquenta rápido, mas também esfria rápido", "c": "picante"},
+    ]},
+]
+
+GAMER_QUESTIONS_PT_PT = [
+    {"q": "Perdes a ranqueada por erro de um colega de equipa. O que fazes?", "opts": [
+        {"t": "Revejo a repetição para ver o que melhorar da próxima vez", "c": "tryhard"},
+        {"t": "Mando um meme no chat e levo na brincadeira", "c": "trol"},
+        {"t": "Fecho o jogo sem dizer nada", "c": "frio"},
+        {"t": "Deixo uma mensagem bem ácida antes de sair", "c": "picante"},
+    ]},
+    {"q": "Fazes uma jogada clutch e ganhas um 1vX. Como reages?", "opts": [
+        {"t": "Continuo a jogar na boa, já esperava isso", "c": "tryhard"},
+        {"t": "Faço uma dancinha aleatória com a personagem", "c": "trol"},
+        {"t": "Nem um emoji. Silêncio total", "c": "frio"},
+        {"t": "Grito tão alto que o servidor inteiro ouve", "c": "picante"},
+    ]},
+    {"q": "A tua internet cai mesmo na pior altura possível. O que dizes?", "opts": [
+        {"t": "Nada, reconecto e continuo a jogar", "c": "tryhard"},
+        {"t": "\"Então isso não conta\" a rir", "c": "trol"},
+        {"t": "Nada. Nem me abalo", "c": "frio"},
+        {"t": "\"DEU LAG\" em maiúsculas, óbvio", "c": "picante"},
+    ]},
+    {"q": "Um desconhecido carrega a equipa toda na partida. Como agradeces?", "opts": [
+        {"t": "Deixo um \"gg\" seco e sigo em frente", "c": "tryhard"},
+        {"t": "Mando uma sequência enorme de emoji de fogo", "c": "trol"},
+        {"t": "Não digo nada, entro logo na próxima partida", "c": "frio"},
+        {"t": "Escrevo um parágrafo inteiro de agradecimento", "c": "picante"},
+    ]},
+    {"q": "Estás a carregar a equipa toda sozinho. Comentas isso?", "opts": [
+        {"t": "De maneira nenhuma, que percebam sozinhos", "c": "tryhard"},
+        {"t": "Sim, com memes pelo meio", "c": "trol"},
+        {"t": "Nem pensar. Continuo a jogar", "c": "frio"},
+        {"t": "Sim, e lembro toda a gente a cada dois minutos", "c": "picante"},
+    ]},
+    {"q": "O que te define melhor no chat de voz?", "opts": [
+        {"t": "Calado, focado, zero distrações", "c": "tryhard"},
+        {"t": "Aquele que conta piadas o jogo todo", "c": "trol"},
+        {"t": "Aquele que quase nunca liga o microfone", "c": "frio"},
+        {"t": "Aquece depressa, mas também arrefece depressa", "c": "picante"},
+    ]},
+]
+
+GAMER_INFO_PT_BR = {
+    "tryhard": {"emoji": "🎯", "nombre": "Tryhard Silencioso",
+                "blurb": "Joga a sério, quase não fala e resolve tudo sem alarde. A aura aparece no resultado, não no chat."},
+    "trol": {"emoji": "😏", "nombre": "Troll com Estilo",
+             "blurb": "Leva tudo na esportiva, até perder. Ninguém fica bravo com esse perfil, nem quando deveria estar perdendo aura."},
+    "frio": {"emoji": "🧊", "nombre": "Frio Total",
+             "blurb": "Cara de paisagem não importa o que aconteça. Ganha ou perde com a mesma expressão, que é a definição exata de ter aura."},
+    "picante": {"emoji": "🔥", "nombre": "Modo Ácido",
+                "blurb": "Esquenta fácil, mas com estilo. A aura sobe e desce rápido, mas nunca fica sem graça."},
+}
+
+GAMER_INFO_PT_PT = {
+    "tryhard": {"emoji": "🎯", "nombre": "Tryhard Silencioso",
+                "blurb": "Joga a sério, quase não fala e resolve tudo sem alarido. A aura aparece no resultado, não no chat."},
+    "trol": {"emoji": "😏", "nombre": "Troll com Estilo",
+             "blurb": "Leva tudo na brincadeira, até perder. Ninguém fica chateado com este perfil, nem quando devia estar a perder aura."},
+    "frio": {"emoji": "🧊", "nombre": "Frio Total",
+             "blurb": "Cara de pedra não importa o que aconteça. Ganha ou perde com a mesma expressão, que é a definição exata de ter aura."},
+    "picante": {"emoji": "🔥", "nombre": "Modo Ácido",
+                "blurb": "Aquece facilmente, mas com estilo. A aura sobe e desce depressa, mas nunca é maçador."},
+}
+
+GAMER_QUESTIONS_EN = [
+    {"q": "You lose ranked because of a teammate's mistake. What do you do?", "opts": [
+        {"t": "Review the replay to see what to improve next time", "c": "tryhard"},
+        {"t": "Drop a meme in chat and laugh it off", "c": "trol"},
+        {"t": "Close the game without saying a word", "c": "frio"},
+        {"t": "Leave a spicy message in chat before you go", "c": "picante"},
+    ]},
+    {"q": "You pull off a clutch 1vX win. How do you react?", "opts": [
+        {"t": "Keep playing like it's nothing, saw it coming", "c": "tryhard"},
+        {"t": "Hit a random dance emote with the character", "c": "trol"},
+        {"t": "Not a single emoji. Total silence", "c": "frio"},
+        {"t": "Scream loud enough for the whole server to hear", "c": "picante"},
+    ]},
+    {"q": "Your internet cuts out at the worst possible moment. What do you say?", "opts": [
+        {"t": "Nothing, just reconnect and keep playing", "c": "tryhard"},
+        {"t": "\"Well, that doesn't count\" laughing", "c": "trol"},
+        {"t": "Nothing. Don't even flinch", "c": "frio"},
+        {"t": "\"MY GAME LAGGED\" in all caps, obviously", "c": "picante"},
+    ]},
+    {"q": "A stranger carries the entire match. How do you thank them?", "opts": [
+        {"t": "Drop a dry \"GG\" and move on", "c": "tryhard"},
+        {"t": "Send a wall of fire emojis", "c": "trol"},
+        {"t": "Say nothing, queue for the next match", "c": "frio"},
+        {"t": "Write them a whole paragraph of thanks", "c": "picante"},
+    ]},
+    {"q": "You're solo-carrying the entire team. Do you mention it?", "opts": [
+        {"t": "No way, let them figure it out themselves", "c": "tryhard"},
+        {"t": "Yeah, with memes attached", "c": "trol"},
+        {"t": "Not a chance. Keep playing", "c": "frio"},
+        {"t": "Yes, and I remind them every two minutes", "c": "picante"},
+    ]},
+    {"q": "What best describes you in voice chat?", "opts": [
+        {"t": "Quiet, focused, zero distractions", "c": "tryhard"},
+        {"t": "The one cracking jokes all match", "c": "trol"},
+        {"t": "The one who barely turns the mic on", "c": "frio"},
+        {"t": "Quick to get heated, quick to cool down", "c": "picante"},
+    ]},
+]
+
+GAMER_INFO_EN = {
+    "tryhard": {"emoji": "🎯", "nombre": "Silent Tryhard",
+                "blurb": "Plays for real, barely talks, and clears everything without any fuss. The aura shows up in the result, not the chat."},
+    "trol": {"emoji": "😏", "nombre": "Stylish Troll",
+             "blurb": "Takes everything as a joke, even losing. Nobody gets mad at this one, not even when they should be losing aura."},
+    "frio": {"emoji": "🧊", "nombre": "Total Ice",
+             "blurb": "Same poker face no matter what happens. Wins or loses with the exact same expression &mdash; the literal definition of having aura."},
+    "picante": {"emoji": "🔥", "nombre": "Spicy Mode",
+                "blurb": "Heats up fast, but with style. The aura swings up and down quickly, but it's never boring."},
+}
+
+GAMER_STRINGS = {
+    "es": {"resultLabel": "Tu aura gamer es", "seeMore": "Ver el significado completo", "retry": "Volver a hacer el test"},
+    "pt": {"resultLabel": "Sua aura gamer é", "seeMore": "Ver o significado completo", "retry": "Refazer o teste"},
+    "pt-pt": {"resultLabel": "A tua aura gamer é", "seeMore": "Ver o significado completo", "retry": "Refazer o teste"},
+    "en": {"resultLabel": "Your gamer aura is", "seeMore": "See the full meaning", "retry": "Retake the quiz"},
+}
+
+def build_gamer_quiz_widget(loc, lang, voseo, quiz_id):
+    if lang.startswith("pt"):
+        questions = GAMER_QUESTIONS_PT_PT if loc == "pt" else GAMER_QUESTIONS_PT_BR
+        info = GAMER_INFO_PT_PT if loc == "pt" else GAMER_INFO_PT_BR
+        strings = GAMER_STRINGS["pt-pt"] if loc == "pt" else GAMER_STRINGS["pt"]
+    elif lang.startswith("en"):
+        questions, info, strings = GAMER_QUESTIONS_EN, GAMER_INFO_EN, GAMER_STRINGS["en"]
+    else:
+        questions = [{"q": fix_voseo(q["q"], voseo), "opts": q["opts"]} for q in GAMER_QUESTIONS_ES]
+        info, strings = GAMER_INFO_ES, GAMER_STRINGS["es"]
+
+    categories = {cid: {"nombre": c["nombre"], "emoji": c["emoji"], "blurb": c["blurb"], "url": ""}
+                  for cid, c in info.items()}
+    cfg = {"questions": questions, "colors": categories, "quizId": quiz_id, "loc": loc, **strings}
     return ('  <div class="quiz" id="aura-quiz"></div>\n'
             f'  <script>window.AURA_QUIZ={json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))};</script>\n'
             f'  <script>{QUIZ_JS}</script>')
@@ -506,6 +742,8 @@ def build():
                 quiz_widget = build_counter_widget(loc)
             elif art["slug"] in STUDENT_QUIZ_SLUGS:
                 quiz_widget = build_student_quiz_widget(loc, art["slug"])
+            elif art["slug"] == "aura-gamer":
+                quiz_widget = build_gamer_quiz_widget(loc, lang, loc in VOSEO_LOCS, art["slug"])
             else:
                 quiz_widget = ""
 
