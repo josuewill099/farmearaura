@@ -7,13 +7,22 @@ fecha y fuente por entrada.
     python3 build_batallas.py
 
 Solo Argentina por ahora (ver plan). Mapa esquematico de provincias por
-posicion (lat/lon proyectadas a mano), no un shapefile real: los SVG de
-provincias disponibles en Wikimedia Commons no traen un <path> separado
-y etiquetado por provincia (son ilustraciones cartograficas de una sola
-pieza), asi que en vez de adivinar cual de ~300 paths sin nombre es cada
-provincia, cada una es un punto (su capital aproximada) ubicado por
-proyeccion lineal de lat/lon -- simple, correcto en las posiciones
-relativas, y cada punto es su propio elemento clickeable desde el dia 1.
+posicion, no un shapefile real: los SVG de provincias disponibles en
+Wikimedia Commons no traen un <path> separado y etiquetado por
+provincia (son ilustraciones cartograficas de una sola pieza), asi que
+en vez de adivinar cual de ~300 paths sin nombre es cada provincia,
+cada una es un punto clickeable desde el dia 1.
+
+Las coordenadas de PROVINCES son pixeles finales, no lat/lon: arrancaron
+como una proyeccion lineal de la capital real de cada provincia, pero
+esa proyeccion cruda dejaba varios pares pegados o superpuestos (jujuy/
+salta, chaco/corrientes, santa-fe/entre-rios, catamarca vs. su propia
+etiqueta de texto sobre la-rioja, etc. -- confirmado en el navegador,
+no solo a ojo). Se resolvio con un relajamiento iterativo simple
+(separar cualquier par mas cerca de lo que su radio + su etiqueta de
+texto necesitan, con un tironeo suave de vuelta a la posicion real) y
+el resultado ya verificado se dejo fijo aca -- no recalcular desde
+lat/lon de nuevo sin repetir esa verificacion de colisiones.
 """
 
 import json
@@ -38,45 +47,37 @@ ANALYTICS = (
     'gtag("js",new Date());gtag("config","%s");</script>'
 ) % (GA4_ID, GA4_ID)
 
-# (slug, nombre completo, etiqueta corta para el mapa, lat, lon)
-# lat/lon = capital provincial aproximada, con pequenos ajustes a mano en
-# grupos que la capital real deja demasiado juntos para el radio de un
-# marcador (jujuy/salta, chaco/corrientes, santa-fe/entre-rios -- las
-# primeras coordenadas, sin ajustar, dejaban esos pares a 3-13px de
-# distancia con circulos de 11-15px de radio, superpuestos en el mapa
-# real; verificado en el navegador, no solo calculado). Proyeccion lineal
-# simple mas abajo (build_svg): no es una proyeccion cartografica real,
-# solo ubica cada punto en su posicion relativa correcta dentro del pais.
+# (slug, nombre completo, etiqueta corta para el mapa, x, y, radio)
+# x/y en pixeles dentro del viewBox 0 0 460 800 (ver "por que estan fijas
+# y no calculadas" en el docstring de arriba). radio 15 = con datos desde
+# el arranque (Cordoba, Santa Fe, Tucuman, Buenos Aires), 11 = el resto.
 PROVINCES = [
-    ("jujuy", "Jujuy", "Jujuy", -23.0, -65.5),
-    ("salta", "Salta", "Salta", -25.5, -65.2),
-    ("formosa", "Formosa", "For.", -26.18, -58.18),
-    ("chaco", "Chaco", "Chaco", -26.8, -59.8),
-    ("misiones", "Misiones", "Mis.", -27.37, -55.90),
-    ("corrientes", "Corrientes", "Ctes.", -28.7, -57.5),
-    ("catamarca", "Catamarca", "Cat.", -28.47, -65.78),
-    ("tucuman", "Tucumán", "Tuc.", -26.82, -65.22),
-    ("santiago-del-estero", "Santiago del Estero", "S.E.", -27.78, -64.26),
-    ("la-rioja", "La Rioja", "La Rioja", -29.41, -66.85),
-    ("san-juan", "San Juan", "San Juan", -31.54, -68.54),
-    ("mendoza", "Mendoza", "Mendoza", -32.89, -68.84),
-    ("cordoba", "Córdoba", "Córdoba", -31.42, -64.18),
-    ("santa-fe", "Santa Fe", "Santa Fe", -31.2, -61.3),
-    ("entre-rios", "Entre Ríos", "E. Ríos", -32.3, -59.2),
-    ("san-luis", "San Luis", "San Luis", -33.30, -66.34),
-    ("la-pampa", "La Pampa", "La Pampa", -36.62, -64.29),
-    ("buenos-aires", "Buenos Aires", "Bs. As.", -37.5, -60.5),
-    ("caba", "CABA", "CABA", -34.61, -58.38),
-    ("neuquen", "Neuquén", "Neuquén", -38.95, -68.06),
-    ("rio-negro", "Río Negro", "Río Negro", -40.81, -63.00),
-    ("chubut", "Chubut", "Chubut", -43.30, -65.10),
-    ("santa-cruz", "Santa Cruz", "Santa Cruz", -51.62, -69.22),
-    ("tierra-del-fuego", "Tierra del Fuego", "T. Fuego", -54.80, -68.30),
+    ("jujuy", "Jujuy", "Jujuy", 215.8, 97.6, 11),
+    ("salta", "Salta", "Salta", 171.3, 110.7, 11),
+    ("formosa", "Formosa", "For.", 332.3, 141.4, 11),
+    ("chaco", "Chaco", "Chaco", 290.8, 164.8, 11),
+    ("misiones", "Misiones", "Mis.", 373.9, 170.0, 11),
+    ("corrientes", "Corrientes", "Ctes.", 330.1, 189.1, 11),
+    ("catamarca", "Catamarca", "Cat.", 199.1, 209.0, 11),
+    ("tucuman", "Tucumán", "Tuc.", 189.6, 158.3, 15),
+    ("santiago-del-estero", "Santiago del Estero", "S.E.", 235.9, 179.6, 11),
+    ("la-rioja", "La Rioja", "La Rioja", 152.4, 210.2, 11),
+    ("san-juan", "San Juan", "San Juan", 137.0, 255.3, 11),
+    ("mendoza", "Mendoza", "Mendoza", 129.8, 301.9, 11),
+    ("cordoba", "Córdoba", "Córdoba", 215.6, 259.3, 15),
+    ("santa-fe", "Santa Fe", "Santa Fe", 269.3, 243.8, 15),
+    ("entre-rios", "Entre Ríos", "E. Ríos", 298.9, 284.2, 11),
+    ("san-luis", "San Luis", "San Luis", 177.7, 299.1, 11),
+    ("la-pampa", "La Pampa", "La Pampa", 215.4, 370.4, 11),
+    ("buenos-aires", "Buenos Aires", "Bs. As.", 285.3, 389.3, 15),
+    ("caba", "CABA", "CABA", 324.3, 327.2, 11),
+    ("neuquen", "Neuquén", "Neuquén", 146.0, 420.4, 11),
+    ("rio-negro", "Río Negro", "Río Negro", 239.2, 460.3, 11),
+    ("chubut", "Chubut", "Chubut", 200.5, 513.8, 11),
+    ("santa-cruz", "Santa Cruz", "Santa Cruz", 124.6, 692.4, 11),
+    ("tierra-del-fuego", "Tierra del Fuego", "T. Fuego", 141.6, 760.7, 11),
 ]
 
-LON_MIN, LON_MAX = -73, -54
-LAT_MIN, LAT_MAX = -55, -21
-PAD_X, PAD_Y = 55, 35
 VIEW_W, VIEW_H = 460, 800
 
 
@@ -85,22 +86,14 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def project(lat, lon):
-    x = PAD_X + (lon - LON_MIN) / (LON_MAX - LON_MIN) * (VIEW_W - 2 * PAD_X)
-    y = PAD_Y + (LAT_MAX - lat) / (LAT_MAX - LAT_MIN) * (VIEW_H - 2 * PAD_Y)
-    return round(x, 1), round(y, 1)
-
-
 def build_svg(counts):
     parts = [
         f'<svg viewBox="0 0 {VIEW_W} {VIEW_H}" xmlns="http://www.w3.org/2000/svg" '
         f'role="img" aria-label="Mapa de provincias de Argentina con batallas de aura registradas">'
     ]
-    for slug, name, short, lat, lon in PROVINCES:
-        x, y = project(lat, lon)
+    for slug, name, short, x, y, r in PROVINCES:
         n = counts.get(slug, 0)
         cls = "prov has-data" if n else "prov"
-        r = 15 if n else 11
         label = f"{esc(name)}: {n} lugar{'es' if n != 1 else ''}" if n else esc(name)
         parts.append(
             f'<g data-provincia="{slug}">'
