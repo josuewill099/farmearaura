@@ -7,8 +7,8 @@
   "app": {
     "title": "Calculadora de Puntos de Aura — Farmear Aura",
     "desc": "7 preguntas y tu aura lista para compartir. El sitio también tiene duelos de aura: Shakira, Bolívar y más colombianos en un ranking votado en vivo.",
-    "tag1": "7 situaciones. Un número.",
-    "tag2": "Tu aura real, sin filtros.",
+    "tag1": "El sitio definitivo para",
+    "tag2": "testear, rankear y farmear tu aura.",
     "nameLabel": "Tu nombre o @",
     "fine1": "Sin cuenta. Sin fotos. Sin guardar nada.",
     "fine2": "Todo pasa dentro de tu celular.",
@@ -19,7 +19,7 @@
     "wordmark": ["Calculadora", "de Aura"],
     "aboutH2": "Sobre farmearaura.com",
     "about": [
-      "farmearaura.com tiene una calculadora de puntos de aura: siete situaciones cotidianas, tres modos (Gamer, Colegio, Rumba y Crush) y un puntaje final que se convierte en una tarjeta para compartir. No necesitas cuenta, no subes ninguna foto y no se guarda nada: todo el cálculo pasa dentro de tu celular.",
+      "farmearaura.com es el sitio definitivo para testear, rankear y farmear tu aura, con una calculadora de puntos de aura: siete situaciones cotidianas, tres modos (Gamer, Colegio, Rumba y Crush) y un puntaje final que se convierte en una tarjeta para compartir. No necesitas cuenta, no subes ninguna foto y no se guarda nada: todo el cálculo pasa dentro de tu celular.",
       "Además del test, el sitio tiene duelos de aura: puedes votar quién tiene más aura entre arquetipos cotidianos o entre personajes históricos, y ver el ranking que arma la gente votando."
     ],
     "faqH2": "Preguntas frecuentes"

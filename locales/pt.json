@@ -3,7 +3,7 @@
 "app":{
  "title":"Calculadora de Pontos de Aura — Farmear Aura",
  "desc":"7 perguntas e a tua aura pronta para partilhar. O site também tem duelos de aura: Cristiano Ronaldo, Camões e mais portugueses num ranking votado ao vivo.",
- "tag1":"7 situações. Um número.","tag2":"A tua aura real, sem filtro.",
+ "tag1":"O site definitivo para","tag2":"testar, rankear e farmar a tua aura.",
  "nameLabel":"O teu nome ou @","fine1":"Sem conta. Sem fotos. Sem guardar nada.","fine2":"Tudo acontece dentro do teu telemóvel.",
  "guideLink":"O que é farmar aura?","guideHref":"/pt/o-que-e-farmar-aura/",
  "shareText":"Fiz {score} pontos de aura. Calcula a tua em farmearaura.com",
@@ -11,7 +11,7 @@
  "wordmark":["Calculadora","de Aura"],
  "aboutH2":"Sobre o farmearaura.com",
  "about":[
-  "farmearaura.com tem uma calculadora de pontos de aura: sete situações do dia a dia, três modos (Gamer, Escola, Saída e Crush) e uma pontuação final que se transforma num cartão para partilhar. Não é preciso conta, não se carrega nenhuma foto e nada fica guardado: todo o cálculo acontece dentro do teu telemóvel.",
+  "farmearaura.com é o site definitivo para testar, rankear e farmar a tua aura, com uma calculadora de pontos de aura: sete situações do dia a dia, três modos (Gamer, Escola, Saída e Crush) e uma pontuação final que se transforma num cartão para partilhar. Não é preciso conta, não se carrega nenhuma foto e nada fica guardado: todo o cálculo acontece dentro do teu telemóvel.",
   "Além do teste, o site tem duelos de aura: podes votar em quem tem mais aura entre arquétipos do dia a dia ou entre personagens históricos, e ver o ranking construído com os votos de toda a gente."
  ],
  "faqH2":"Perguntas frequentes"

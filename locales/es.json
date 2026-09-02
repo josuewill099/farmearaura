@@ -3,7 +3,7 @@
 "app":{
  "title":"Calculadora de Aura Farming — Farmear Aura",
  "desc":"7 preguntas y tu aura lista para compartir. El sitio también tiene duelos de aura: Rosalía, Cervantes y más españoles en un ranking votado en directo.",
- "tag1":"7 situaciones. Un número.","tag2":"Tu aura real, sin filtros.",
+ "tag1":"El sitio definitivo para","tag2":"testear, rankear y farmear tu aura.",
  "nameLabel":"Tu nombre o @","fine1":"Sin cuenta. Sin fotos. Sin guardar nada.","fine2":"Todo pasa dentro de tu móvil.",
  "guideLink":"¿Qué es el aura farming?","guideHref":"/es/aura-farming/",
  "shareText":"He sacado {score} puntos de aura. Calcula la tuya en farmearaura.com",
@@ -11,7 +11,7 @@
  "wordmark":["Calculadora","de Aura"],
  "aboutH2":"Sobre farmearaura.com",
  "about":[
-  "farmearaura.com tiene una calculadora de puntos de aura: siete situaciones del día a día, tres modos (Gamer, Insti, Fiesta) y una puntuación final que se convierte en una tarjeta para compartir. No hace falta cuenta, no se sube ninguna foto y no se guarda nada: todo el cálculo ocurre dentro de tu móvil.",
+  "farmearaura.com es el sitio definitivo para testear, rankear y farmear tu aura, con una calculadora de puntos de aura: siete situaciones del día a día, tres modos (Gamer, Insti, Fiesta) y una puntuación final que se convierte en una tarjeta para compartir. No hace falta cuenta, no se sube ninguna foto y no se guarda nada: todo el cálculo ocurre dentro de tu móvil.",
   "Además del test, la web tiene duelos de aura: puedes votar quién tiene más aura entre arquetipos del día a día o entre personajes históricos, y ver el ranking que arma la gente votando."
  ],
  "faqH2":"Preguntas frecuentes"
