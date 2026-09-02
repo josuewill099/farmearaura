@@ -58,6 +58,10 @@ SHORT_LABEL = {
     "treinta-y-tres": "33", "rio-negro": "Río Negro",
     "santa-cruz-tenerife": "Tenerife", "ciudad-real": "C. Real",
     "castellon": "Castel.", "la-rioja-es": "La Rioja",
+    "arica-parinacota": "Arica", "metropolitana": "R.M.",
+    "san-andres": "S. Andrés", "norte-de-santander": "N. Sant.",
+    "valle-del-cauca": "V. Cauca", "madre-de-dios": "M. de Dios",
+    "lima-provincia": "Lima Prov.",
 }
 
 LOCALES = {
@@ -65,7 +69,7 @@ LOCALES = {
         "home": "/",
         "geo_file": "provincias-ar.geo.json",
         "view_w": 460, "view_h": 800,
-        "region_word": "provincia",
+        "region_word": "provincia", "article": "una",
         "country_name": "Argentina",
         "lang": "es-AR",
         "address_country": "AR",
@@ -75,7 +79,7 @@ LOCALES = {
         "home": "/uy/",
         "geo_file": "departamentos-uy.geo.json",
         "view_w": 460, "view_h": 546,
-        "region_word": "departamento",
+        "region_word": "departamento", "article": "un",
         "country_name": "Uruguay",
         "lang": "es-UY",
         "address_country": "UY",
@@ -85,10 +89,40 @@ LOCALES = {
         "home": "/es/",
         "geo_file": "provincias-es.geo.json",
         "view_w": 460, "view_h": 424,
-        "region_word": "provincia",
+        "region_word": "provincia", "article": "una",
         "country_name": "España",
         "lang": "es-ES",
         "address_country": "ES",
+        "voseo": False,
+    },
+    "cl": {
+        "home": "/cl/",
+        "geo_file": "regiones-cl.geo.json",
+        "view_w": 460, "view_h": 2776,
+        "region_word": "región", "article": "una",
+        "country_name": "Chile",
+        "lang": "es-CL",
+        "address_country": "CL",
+        "voseo": False,
+    },
+    "co": {
+        "home": "/co/",
+        "geo_file": "departamentos-co.geo.json",
+        "view_w": 460, "view_h": 567,
+        "region_word": "departamento", "article": "un",
+        "country_name": "Colombia",
+        "lang": "es-CO",
+        "address_country": "CO",
+        "voseo": False,
+    },
+    "pe": {
+        "home": "/pe/",
+        "geo_file": "regiones-pe.geo.json",
+        "view_w": 460, "view_h": 713,
+        "region_word": "región", "article": "una",
+        "country_name": "Perú",
+        "lang": "es-PE",
+        "address_country": "PE",
         "voseo": False,
     },
 }
@@ -99,10 +133,17 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
+# "provincia"/"departamento" pluralizan con solo +s, pero "region" no
+# ("regiones", no "regions") -- diccionario en vez de una regla generica
+# porque el vocabulario real es de 3 palabras nada mas.
+REGION_WORD_PLURAL = {"provincia": "provincias", "departamento": "departamentos", "región": "regiones"}
+
+
 def build_svg(cfg, regions_geo, counts):
+    plural = REGION_WORD_PLURAL[cfg["region_word"]]
     parts = [
         f'<svg viewBox="0 0 {cfg["view_w"]} {cfg["view_h"]}" xmlns="http://www.w3.org/2000/svg" '
-        f'role="img" aria-label="Mapa de {cfg["region_word"]}s de {cfg["country_name"]} '
+        f'role="img" aria-label="Mapa de {plural} de {cfg["country_name"]} '
         f'con batallas de aura registradas">'
     ]
     for p in regions_geo:
@@ -191,8 +232,7 @@ def build_one(loc, cfg):
         ("H1", esc(L["h1"])),
         ("SUB", esc(L["sub"])),
         ("INTRO", esc(L["intro"])),
-        ("MAP_HINT", f'{"Tocá" if cfg["voseo"] else "Toca"} '
-                     f'{"una" if cfg["region_word"] == "provincia" else "un"} '
+        ("MAP_HINT", f'{"Tocá" if cfg["voseo"] else "Toca"} {cfg["article"]} '
                      f'{cfg["region_word"]} con marca para filtrar'),
         ("VENUE_COUNT", str(len(L["venues"]))),
         ("MAP_SVG", build_svg(cfg, regions_geo, counts)),

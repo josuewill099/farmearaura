@@ -1,0 +1,43 @@
+{
+  "title": "Mapa de Batallas de Aura en Colombia | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Colombia: plazas y parques donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Colombia",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza o parque y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Colombia.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "venues": [
+    {
+      "id": "bogota-hippies",
+      "provincia": "bogota",
+      "ciudad": "Bogotá",
+      "lugar": "Parque de los Hippies",
+      "fecha": "2026-08-21",
+      "descripcion": "Convocatoria difundida por redes sociales en uno de los puntos de encuentro juvenil más conocidos de la ciudad.",
+      "fuente": [
+        ["Semana", "https://www.semana.com/nacion/bogota/articulo/de-los-therian-a-farmear-aura-la-extrana-tendencia-de-internet-que-ahora-reune-a-jovenes-en-colombia/202603/"]
+      ]
+    },
+    {
+      "id": "bogota-unal",
+      "provincia": "bogota",
+      "ciudad": "Bogotá",
+      "lugar": "Universidad Nacional (sede Bogotá)",
+      "fecha": "2026-08-19",
+      "descripcion": "Uno de los primeros torneos registrados en el país. La universidad aclaró que el evento no contó con autorización institucional.",
+      "fuente": [
+        ["Semana", "https://www.semana.com/nacion/bogota/articulo/de-los-therian-a-farmear-aura-la-extrana-tendencia-de-internet-que-ahora-reune-a-jovenes-en-colombia/202603/"]
+      ]
+    },
+    {
+      "id": "bucaramanga",
+      "provincia": "santander",
+      "ciudad": "Bucaramanga",
+      "lugar": "Afueras de la UIS, sector Ciudadela Real de Minas",
+      "fecha": "2026-08-21",
+      "descripcion": "Primera batalla registrada en la ciudad, convocada para las 19:00 horas.",
+      "fuente": [
+        ["Alerta Bucaramanga", "https://bucaramanga.alerta.com.co/bochinches/bucaramanga-primera-batalla-farmear-aura-21-agosto-249012"]
+      ]
+    }
+  ]
+}

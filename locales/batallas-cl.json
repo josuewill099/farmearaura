@@ -1,0 +1,22 @@
+{
+  "title": "Mapa de Batallas de Aura en Chile | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Chile: plazas donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Chile",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Chile.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "venues": [
+    {
+      "id": "santiago-costanera",
+      "provincia": "metropolitana",
+      "ciudad": "Santiago (Providencia)",
+      "lugar": "Costanera Center",
+      "fecha": "2026-08-22",
+      "descripcion": "El mall Costanera Center, en Providencia, fue el escenario elegido por decenas de jóvenes para la primera batalla masiva del país.",
+      "fuente": [
+        ["Cooperativa.cl", "https://www.cooperativa.cl/noticias/magazine/tendencias/farmear-aura-el-fenonemo-que-se-toma-el-costanera-center/2026-08-22/184948.html"],
+        ["En Cancha", "https://www.encancha.cl/enlahora/nacional/2026/8/22/video-asi-se-vivio-la-batalla-de-aura-en-el-costanera-center-de-santiago-316591.html"]
+      ]
+    }
+  ]
+}

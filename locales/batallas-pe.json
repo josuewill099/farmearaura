@@ -1,0 +1,32 @@
+{
+  "title": "Mapa de Batallas de Aura en Perú | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Perú: parques y espacios donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Perú",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en un parque y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Perú.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "venues": [
+    {
+      "id": "lima-kennedy",
+      "provincia": "lima-provincia",
+      "ciudad": "Lima (Miraflores)",
+      "lugar": "Parque Kennedy",
+      "fecha": "2026-08-15",
+      "descripcion": "Torneo organizado por el creador de contenido Fernando Ropa, con S/100 de premio para el ganador.",
+      "fuente": [
+        ["RPP", "https://rpp.pe/mundo/actualidad/que-es-farmear-aura-conoce-mas-del-fenomeno-que-arrasa-en-tiktok-y-redes-sociales-noticia-1701647"]
+      ]
+    },
+    {
+      "id": "lima-museo",
+      "provincia": "lima-provincia",
+      "ciudad": "Lima",
+      "lugar": "Museo Metropolitano de Lima",
+      "fecha": "2026-08-15",
+      "descripcion": "Batalla incluida dentro de la programación del Alameda Fest Snoopy el mismo fin de semana.",
+      "fuente": [
+        ["El Popular", "https://elpopular.pe/actualidad/2026/08/21/de-tiktok-a-las-calles-asi-son-las-batallas-de-aura-que-ya-causan-furor-en-peru-1010730"]
+      ]
+    }
+  ]
+}
