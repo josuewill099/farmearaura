@@ -111,6 +111,32 @@ LOCALES = {
         "view_w": 460, "view_h": 741,
         "lang": "pt-PT", "address_country": "PT",
     },
+    "mx": {
+        "home": "/mx/", "slug": "batallas-de-aura",
+        "geo_file": "estados-mx.geo.json",
+        "view_w": 460, "view_h": 329,
+        "lang": "es-MX", "address_country": "MX",
+    },
+    "ec": {
+        "home": "/ec/", "slug": "batallas-de-aura",
+        "geo_file": "provincias-ec.geo.json",
+        "view_w": 460, "view_h": 438,
+        "lang": "es-EC", "address_country": "EC",
+    },
+    # us/esus son el mismo pais, mismo geo_file -- solo cambia el idioma
+    # (y, por ahora, los dos arrancan con venues: [] -- ver el commit).
+    "us": {
+        "home": "/us/", "slug": "aura-battles",
+        "geo_file": "states-us.geo.json",
+        "view_w": 460, "view_h": 346,
+        "lang": "en-US", "address_country": "US",
+    },
+    "esus": {
+        "home": "/es-us/", "slug": "batallas-de-aura",
+        "geo_file": "states-us.geo.json",
+        "view_w": 460, "view_h": 346,
+        "lang": "es-US", "address_country": "US",
+    },
 }
 
 

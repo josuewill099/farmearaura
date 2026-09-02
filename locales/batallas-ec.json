@@ -1,0 +1,47 @@
+{
+  "title": "Mapa de Batallas de Aura en Ecuador | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Ecuador: parques y espacios donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Ecuador",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en un parque y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Ecuador.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "mapHint": "Toca una provincia con marca para filtrar",
+  "mapAriaLabel": "Mapa de provincias de Ecuador con batallas de aura registradas",
+  "venueCountLabel": "lugares registrados",
+  "venues": [
+    {
+      "id": "guayaquil",
+      "provincia": "guayas",
+      "ciudad": "Guayaquil",
+      "lugar": "Malecón 2000",
+      "fecha": "2026-08-15",
+      "descripcion": "Primera edición registrada en el país, con decenas de curiosos y participantes.",
+      "fuente": [
+        ["Metro Ecuador", "https://www.metroecuador.com.ec/entretenimiento/2026/08/16/asi-fue-el-primer-torneo-de-farmear-aura-en-guayaquil/"]
+      ]
+    },
+    {
+      "id": "quito-carolina",
+      "provincia": "pichincha",
+      "ciudad": "Quito",
+      "lugar": "Parque La Carolina",
+      "fecha": "2026-08-20",
+      "descripcion": "Primera batalla registrada en la capital.",
+      "fuente": [
+        ["Metro Ecuador", "https://www.metroecuador.com.ec/entretenimiento/2026/08/21/asi-fue-la-primera-batalla-de-farmear-aura-en-quito/"],
+        ["Notimercio", "https://notimercio.ec/2026/08/21/quito-vive-su-primera-batalla-de-farmear-aura-en-el-parque-la-carolina/"]
+      ]
+    },
+    {
+      "id": "quito-usfq",
+      "provincia": "pichincha",
+      "ciudad": "Quito (Cumbayá)",
+      "lugar": "Campus de la USFQ",
+      "fecha": "2026-08-27",
+      "descripcion": "Batalla universitaria en uno de los patios principales del campus.",
+      "fuente": [
+        ["La Prensa", "https://laprensa.com.ec/primera-batalla-de-farmear-aura-en-la-usfq/"]
+      ]
+    }
+  ]
+}

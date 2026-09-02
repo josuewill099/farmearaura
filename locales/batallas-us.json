@@ -1,0 +1,12 @@
+{
+  "title": "Aura Battle Map in the US | Farmear Aura",
+  "desc": "Where real aura battles have happened in the United States, with date and verified source. None confirmed yet.",
+  "h1": "Aura Battle Map in the US",
+  "sub": "A curated record of where this has really happened — with date and source. Not a live calendar: a map of what's actually been confirmed.",
+  "intro": "Aura farming battles have been spreading across plazas and parks in Latin America and Spain since August 2026, but we haven't found a single confirmed battle inside the US yet — just US media covering the trend elsewhere. As soon as a real one happens here, it shows up on this map.",
+  "footerNote": "Know of a battle that already happened in the US? <a href=\"https://farmearaura.com/us/legal/contact/\">Tell us</a> — with a date and a source, if you can.",
+  "mapHint": "Tap a highlighted state to filter",
+  "mapAriaLabel": "Map of US states with recorded aura battles",
+  "venueCountLabel": "places on record",
+  "venues": []
+}

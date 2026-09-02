@@ -1,0 +1,12 @@
+{
+  "title": "Mapa de Batallas de Aura en Estados Unidos | Farmear Aura",
+  "desc": "Dónde han pasado batallas de aura reales en Estados Unidos, con fecha y fuente verificada. Todavía no hay ninguna confirmada.",
+  "h1": "Batallas de Aura en Estados Unidos",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se confirmó.",
+  "intro": "Las batallas de farmear aura se vienen multiplicando en plazas y parques de Latinoamérica y España desde agosto de 2026, pero todavía no encontramos ninguna batalla confirmada dentro de Estados Unidos — solo medios estadounidenses cubriendo lo que pasa en otros países. Apenas haya una confirmada acá, aparece en este mapa.",
+  "footerNote": "¿Conoces una batalla que ya pasó en Estados Unidos? <a href=\"https://farmearaura.com/legal/contacto/\">Cuéntanos</a> — con fecha y fuente, si es posible.",
+  "mapHint": "Toca un estado con marca para filtrar",
+  "mapAriaLabel": "Mapa de estados de Estados Unidos con batallas de aura registradas",
+  "venueCountLabel": "lugares registrados",
+  "venues": []
+}

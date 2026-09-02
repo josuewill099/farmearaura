@@ -1,0 +1,37 @@
+{
+  "title": "Mapa de Batallas de Aura en México | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en México: plazas y monumentos donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en México",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza o monumento y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en México.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "mapHint": "Toca un estado con marca para filtrar",
+  "mapAriaLabel": "Mapa de estados de México con batallas de aura registradas",
+  "venueCountLabel": "lugares registrados",
+  "venues": [
+    {
+      "id": "cdmx-monumento",
+      "provincia": "cdmx",
+      "ciudad": "Ciudad de México",
+      "lugar": "Monumento a la Revolución",
+      "fecha": "2026-08-22",
+      "descripcion": "Convocatoria organizada por el creador de contenido Islas Vlogs, con premios de hasta $3,000 pesos.",
+      "fuente": [
+        ["N+", "https://www.nmas.com.mx/entretenimiento/como-son-batallas-farmear-aura-2026-asi-realizan-eventos-virales-llegaron-cdmx/"],
+        ["Nación321", "https://www.nacion321.com/ciudadanos/2026/08/19/las-primeras-batallas-de-farmear-aura-llegaron-a-cdmx-ofrecen-hasta-3-mil-pesos-al-ganador/"]
+      ]
+    },
+    {
+      "id": "cdmx-parque-mexico",
+      "provincia": "cdmx",
+      "ciudad": "Ciudad de México",
+      "lugar": "Parque México",
+      "fecha": "2026-08-22",
+      "descripcion": "Segunda convocatoria del mismo fin de semana, organizada por Proyecto Escolar.",
+      "fuente": [
+        ["ClaroSports", "https://www.clarosports.com/tendencias/batallas-de-farmear-aura-en-la-cdmx-con-premios-de-hasta-3-mil-pesos-cuando-y-donde-seran/"],
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
+      ]
+    }
+  ]
+}

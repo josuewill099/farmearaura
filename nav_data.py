@@ -83,7 +83,7 @@ NAV_LABELS = {
            "contador": "Contador", "batallas": "Batallas"},
     "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Batallas"},
     "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador", "batallas": "Batallas"},
@@ -101,10 +101,10 @@ NAV_LABELS = {
            "contador": "Contador", "batallas": "Batallas"},
     "us": {"calculadora": "Calculator", "duelos": "Duels", "historia": "Historical Duels",
            "famosos": "Celebrities", "ranking": "Ranking", "historial": "Recent",
-           "contador": "Counter"},
+           "contador": "Counter", "batallas": "Battles"},
     "esus": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
              "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
-             "contador": "Contador"},
+             "contador": "Contador", "batallas": "Batallas"},
     "uy": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador", "batallas": "Batallas"},
@@ -113,7 +113,7 @@ NAV_LABELS = {
            "contador": "Contador", "batallas": "Mapa"},
     "ec": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Batallas"},
 }
 
 NAV_URLS = {
@@ -139,6 +139,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/mx/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/mx/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/mx/contador-de-aura/",
+        "batallas": "https://farmearaura.com/mx/batallas-de-aura/",
     },
     "es": {
         "home": "https://farmearaura.com/es/",
@@ -210,6 +211,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/us/duels/celebrities/",
         "famosos_ranking": "https://farmearaura.com/us/duels/celebrities/ranking/",
         "contador": "https://farmearaura.com/us/aura-counter/",
+        "batallas": "https://farmearaura.com/us/aura-battles/",
     },
     "esus": {
         "home": "https://farmearaura.com/es-us/",
@@ -221,6 +223,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/es-us/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/es-us/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/es-us/contador-de-aura/",
+        "batallas": "https://farmearaura.com/es-us/batallas-de-aura/",
     },
     "uy": {
         "home": "https://farmearaura.com/uy/",
@@ -256,6 +259,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/ec/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/ec/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/ec/contador-de-aura/",
+        "batallas": "https://farmearaura.com/ec/batallas-de-aura/",
     },
 }
 
