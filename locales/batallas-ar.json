@@ -1,0 +1,68 @@
+{
+  "title": "Mapa de Batallas de Aura en Argentina | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Argentina: plazas y monumentos donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Argentina",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza o monumento y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Acá vamos sumando, con fecha y fuente, los lugares donde ya pasó en Argentina.",
+  "footerNote": "Cada entrada tiene su fuente. Si conocés una batalla que no está, escribinos.",
+  "venues": [
+    {
+      "id": "mar-del-plata",
+      "provincia": "buenos-aires",
+      "ciudad": "Mar del Plata",
+      "lugar": "Plaza Mitre",
+      "fecha": "2026-08-17",
+      "descripcion": "La primera edición masiva del fenómeno en Argentina. Un grupo ajeno a la batalla interrumpió tirando piedras y botellas contra los participantes, y el episodio se viralizó a nivel nacional.",
+      "fuente": [
+        ["Emisoras Unidas", "https://emisorasunidas.com/viral/2026/08/21/jovenes-atacados-con-piedras-batalla-de-aura"],
+        ["Nación321", "https://www.nacion321.com/internacional/2026/08/21/video-batalla-de-farmear-aura-paso-a-los-golpes-en-argentina/"]
+      ]
+    },
+    {
+      "id": "la-plata",
+      "provincia": "buenos-aires",
+      "ciudad": "La Plata",
+      "lugar": "Plaza Moreno",
+      "fecha": "2026-08-22",
+      "descripcion": "Primera batalla oficial de la ciudad, con una multitud de jóvenes reunida frente a la catedral.",
+      "fuente": [
+        ["0221.com.ar", "https://www.0221.com.ar/la-plata/video-la-competencia-farmear-aura-la-plata-reune-una-multitud-plaza-moreno-n133009"],
+        ["El Día", "https://www.eldia.com/la-ciudad/farmear-aura-el-duelo-de-las-redes-gana-la-calle-la-ciudad_1787373773"]
+      ]
+    },
+    {
+      "id": "rosario",
+      "provincia": "santa-fe",
+      "ciudad": "Rosario",
+      "lugar": "Monumento a la Bandera",
+      "fecha": "2026-08-21",
+      "descripcion": "Primera edición al pie del monumento más emblemático de la ciudad.",
+      "fuente": [
+        ["Rosario3", "https://www.rosario3.com/informaciongeneral/rosario-recibira-la-primera-batalla-de-farmear-aura-en-el-monumento-y-en-de-12-a-14-hubo-un-desopilante-adelanto-20260821-0039.html"],
+        ["Versión Rosario", "https://www.versionrosario.com.ar/rosario-vivio-la-primera-e-insolita-batalla-para-farmear-aura-al-pie-del-monumento/amp/"]
+      ]
+    },
+    {
+      "id": "cordoba",
+      "provincia": "cordoba",
+      "ciudad": "Córdoba",
+      "lugar": "Patio Olmos",
+      "fecha": "2026-08-22",
+      "descripcion": "Cerca de 150 participantes, con premios de hasta $50.000 destinados a causas solidarias.",
+      "fuente": [
+        ["InformadosCBA", "https://informadoscba.com/la-batalla-de-farmear-aura-llego-a-cordoba-con-150-participantes"]
+      ]
+    },
+    {
+      "id": "tucuman",
+      "provincia": "tucuman",
+      "ciudad": "San Miguel de Tucumán",
+      "lugar": "Plaza Urquiza",
+      "fecha": "2026-08-23",
+      "descripcion": "Encuentro masivo con jóvenes de distintos puntos de la provincia.",
+      "fuente": [
+        ["Sin Código Tucumán", "https://sincodigotucuman.com/campeonato-farmear-aura-en-tucuman-masivo-encuentro-en-plaza-urquiza/"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="{{OGIMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{OGIMAGE}}">
+<meta name="theme-color" content="#0B0416">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+:root{
+  --ink:#0B0416;
+  --ink-2:#150A28;
+  --line:#2C1A48;
+  --bone:#F2ECFF;
+  --muted:#8C7FA6;
+  --aura:#FF2FB9;
+  --cyan:#35F0FF;
+  --gold:#FFC93C;
+  --display:"Archivo Black",Haettenschweiler,"Arial Narrow Bold",Impact,"Anton",sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--ink);color:var(--bone);font-family:var(--body);
+  -webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(60% 40% at 15% 0%,rgba(255,47,185,.18),transparent 70%),
+    radial-gradient(50% 40% at 90% 10%,rgba(53,240,255,.12),transparent 70%);
+}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 16px 64px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0 14px}
+.logo{font-family:var(--display);font-size:15px;letter-spacing:.14em;color:var(--bone);text-decoration:none;text-transform:uppercase}
+.logo span{color:var(--aura)}
+.nav{display:flex;gap:2px;align-items:center}
+.nav>a,.nav .item>a{display:inline-flex;align-items:center;min-height:38px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;padding:9px 10px;border-radius:999px}
+.nav>a:hover,.nav .item>a:hover{color:var(--bone)}
+.nav>a[aria-current="page"],.nav .item>a[aria-current="page"]{color:var(--ink);background:var(--bone)}
+.nav .item{position:relative;display:flex;align-items:center}
+.nav .caret{display:inline-flex;align-items:center;justify-content:center;width:34px;height:38px;margin-left:-6px;padding:0;border:0;background:none;color:var(--muted);font-size:10px;line-height:1;cursor:pointer;border-radius:999px;transition:transform .15s ease,color .15s ease}
+.nav .caret:hover{color:var(--bone)}
+.nav .item.open .caret{color:var(--bone);transform:rotate(180deg)}
+.nav .sub{display:none;position:absolute;top:100%;right:0;margin-top:2px;z-index:30;min-width:160px;flex-direction:column;gap:2px;padding:6px;border-radius:12px;background:var(--ink-2);border:1px solid var(--line)}
+.nav .item.open .sub{display:flex;animation:navsub .15s ease both}
+@media (hover:hover) and (pointer:fine){.nav .item:hover .sub{display:flex;animation:navsub .15s ease both}}
+@keyframes navsub{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.nav .sub a{display:block;padding:11px 12px;border-radius:7px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.nav .sub a:hover{background:var(--line);color:var(--bone)}
+.nav .sub a[aria-current="page"]{color:var(--bone);background:var(--line)}
+@media (max-width:480px){
+  .top{gap:4px}.logo{font-size:11px}.nav{gap:0}
+  .nav>a,.nav .item>a{font-size:10px;padding:7px 5px;min-height:34px}
+  .nav .caret{width:22px;height:34px;margin-left:-9px;font-size:9px}
+}
+
+h1{font-family:var(--display);text-transform:uppercase;font-size:clamp(28px,7.5vw,46px);line-height:.95;letter-spacing:.01em;margin:14px 0 8px}
+h1 em{font-style:normal;color:var(--aura)}
+.sub{color:var(--muted);font-size:15px;margin:0 0 6px;letter-spacing:.01em;max-width:640px}
+.intro{color:var(--bone);opacity:.85;font-size:14px;line-height:1.6;margin:14px 0 26px;max-width:680px}
+
+.layout{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+@media (max-width:860px){.layout{grid-template-columns:1fr}}
+
+.card{border:1px solid var(--line);background:linear-gradient(160deg,var(--ink-2),#0E0620);border-radius:20px;overflow:hidden}
+
+.map-toolbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);flex-wrap:wrap;gap:8px}
+.map-toolbar b{color:var(--cyan);font-weight:700}
+.map-canvas{padding:10px}
+.map-canvas svg{width:100%;height:auto;display:block;max-height:640px;margin:0 auto}
+
+.prov{fill:var(--line);stroke:var(--ink);stroke-width:2;cursor:default;transition:fill .15s ease,filter .15s ease}
+.prov.has-data{fill:var(--aura);opacity:.55;cursor:pointer}
+.prov.has-data:hover{opacity:.8;filter:drop-shadow(0 0 6px rgba(255,47,185,.5))}
+.prov.is-active{fill:var(--cyan);opacity:1;filter:drop-shadow(0 0 8px rgba(53,240,255,.6))}
+.prov-label{font-family:var(--body);font-size:10px;font-weight:600;fill:var(--bone);opacity:.55;pointer-events:none;text-anchor:middle;dominant-baseline:central}
+.prov.has-data ~ .prov-label,.prov-label.has-data{opacity:.9}
+.prov-label.is-active{opacity:1;fill:var(--ink);font-weight:800}
+
+.sidebar-header{padding:16px 16px 12px;border-bottom:1px solid var(--line)}
+.sidebar-header__title{font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sidebar-count{color:var(--cyan);font-weight:700}
+.venue-list{list-style:none;margin:0;padding:8px;max-height:640px;overflow:auto}
+.venue{border:1px solid var(--line);border-radius:14px;padding:14px;margin:6px;background:rgba(255,255,255,.02)}
+.venue[hidden]{display:none}
+.venue__place{font-family:var(--display);font-size:15px;text-transform:uppercase;letter-spacing:.01em;color:var(--bone);margin:0 0 2px}
+.venue__meta{font-size:12px;color:var(--muted);margin:0 0 8px}
+.venue__desc{font-size:13px;line-height:1.55;color:var(--bone);opacity:.85;margin:0 0 10px}
+.venue__sources{display:flex;flex-wrap:wrap;gap:6px}
+.venue__sources a{font-size:11px;font-weight:700;color:var(--ink);background:var(--cyan);text-decoration:none;padding:5px 10px;border-radius:999px}
+.venue__sources a:hover{background:var(--bone)}
+.filter-clear{display:none;margin:8px 8px 0;font-size:12px;font-weight:700;color:var(--aura);background:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}
+.filter-clear.on{display:inline-block}
+
+.footnote{color:var(--muted);font-size:12px;line-height:1.6;margin-top:22px;max-width:680px}
+.legal{color:var(--muted);font-size:12px;text-align:center;margin-top:40px;line-height:1.9}
+.legal a{color:var(--muted)}
+</style>
+{{JSONLD}}
+<!--ANALYTICS-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9154720924448333"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="logo" href="{{HOME}}">FARMEAR<span>AURA</span></a>
+    <nav class="nav">{{NAV}}</nav>
+  </div>
+
+  <h1>{{H1}}</h1>
+  <p class="sub">{{SUB}}</p>
+  <p class="intro">{{INTRO}}</p>
+
+  <div class="layout">
+    <div class="card">
+      <div class="map-toolbar">
+        <span>Tocá una provincia con marca para filtrar</span>
+        <span><b id="js-count">{{VENUE_COUNT}}</b> lugares registrados</span>
+      </div>
+      <div class="map-canvas">
+        {{MAP_SVG}}
+      </div>
+    </div>
+
+    <aside class="card">
+      <div class="sidebar-header">
+        <span class="sidebar-header__title">Lugares</span>
+        <button class="filter-clear" id="js-clear" type="button">✕ ver todos</button>
+      </div>
+      <ul class="venue-list" id="js-venue-list">
+        {{VENUE_CARDS}}
+      </ul>
+    </aside>
+  </div>
+
+  <p class="footnote">{{FOOTERNOTE}}</p>
+
+  <p class="legal">{{LEGALLINKS}}</p>
+</div>
+
+<script>
+(function(){
+  var provinces = document.querySelectorAll('.prov[data-provincia]');
+  var venues = document.querySelectorAll('.venue[data-provincia]');
+  var clearBtn = document.getElementById('js-clear');
+  var countEl = document.getElementById('js-count');
+  var total = venues.length;
+  var active = null;
+
+  function apply(){
+    provinces.forEach(function(p){
+      p.classList.toggle('is-active', active && p.dataset.provincia === active);
+    });
+    var shown = 0;
+    venues.forEach(function(v){
+      var show = !active || v.dataset.provincia === active;
+      v.hidden = !show;
+      if (show) shown++;
+    });
+    countEl.textContent = shown;
+    clearBtn.classList.toggle('on', !!active);
+  }
+
+  provinces.forEach(function(p){
+    if (!p.classList.contains('has-data')) return;
+    p.addEventListener('click', function(){
+      active = (active === p.dataset.provincia) ? null : p.dataset.provincia;
+      apply();
+    });
+  });
+  clearBtn.addEventListener('click', function(){ active = null; apply(); });
+})();
+</script>
+</body>
+</html>
