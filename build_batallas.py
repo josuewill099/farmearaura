@@ -99,7 +99,8 @@ def build_svg(counts):
         label = f"{esc(name)}: {n} lugar{'es' if n != 1 else ''}" if n else esc(name)
         parts.append(
             f'<g data-provincia="{slug}">'
-            f'<circle class="{cls}" cx="{x}" cy="{y}" r="{r}"><title>{label}</title></circle>'
+            f'<circle class="{cls}" data-provincia="{slug}" cx="{x}" cy="{y}" r="{r}">'
+            f'<title>{label}</title></circle>'
             f'<text class="prov-label{" has-data" if n else ""}" x="{x}" y="{y + r + 11}">{esc(short)}</text>'
             f'</g>'
         )
