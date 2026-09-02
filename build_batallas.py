@@ -80,6 +80,23 @@ PROVINCES = [
 
 VIEW_W, VIEW_H = 460, 800
 
+# Silueta simplificada del pais (continente + Tierra del Fuego), a mano,
+# calibrada con la MISMA proyeccion lineal de lat/lon que se uso para
+# ubicar los puntos de provincia antes de fijarlos en pixeles -- por
+# construccion, no por ajuste visual, asi que el contorno y los puntos
+# coinciden. No es un trazado catastral (~25 vertices, no miles), es
+# contexto geografico para que el mapa no sean puntos flotando en la
+# nada -- lo que pidio el usuario al ver la primera version.
+OUTLINE_MAINLAND = (
+    "M191.3,56.5 226.3,58.6 294.5,62.9 393.9,131.6 370,174.6 320.3,174.6 "
+    "338.7,232.5 323.9,296.9 355.3,363.5 252.1,421.5 239.2,464.4 202.4,513.8 "
+    "156.3,569.6 185.8,610.4 139.7,664.1 128.7,698.4 101.1,707 67.9,636.2 "
+    "77.1,571.8 82.6,485.9 110.3,400 110.3,292.6 141.6,217.5 169.2,99.4 Z"
+)
+OUTLINE_TDF = (
+    "M136.1,713.5 156.3,724.2 196.8,754.3 160,762.9 136.1,752.1 130.5,732.8 Z"
+)
+
 
 def esc(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;")
@@ -90,6 +107,8 @@ def build_svg(counts):
     parts = [
         f'<svg viewBox="0 0 {VIEW_W} {VIEW_H}" xmlns="http://www.w3.org/2000/svg" '
         f'role="img" aria-label="Mapa de provincias de Argentina con batallas de aura registradas">'
+        f'<path class="country-outline" d="{OUTLINE_MAINLAND}"/>'
+        f'<path class="country-outline" d="{OUTLINE_TDF}"/>'
     ]
     for slug, name, short, x, y, r in PROVINCES:
         n = counts.get(slug, 0)
