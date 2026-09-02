@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="{{LANG}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 <meta property="og:title" content="{{TITLE}}">
 <meta property="og:description" content="{{DESC}}">
 <meta property="og:url" content="{{CANONICAL}}">
-<meta property="og:locale" content="es_AR">
+<meta property="og:locale" content="{{OGLOCALE}}">
 <meta property="og:image" content="{{OGIMAGE}}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -136,7 +136,7 @@ h1 em{font-style:normal;color:var(--aura)}
   <div class="layout">
     <div class="card">
       <div class="map-toolbar">
-        <span>Tocá una provincia con marca para filtrar</span>
+        <span>{{MAP_HINT}}</span>
         <span><b id="js-count">{{VENUE_COUNT}}</b> lugares registrados</span>
       </div>
       <div class="map-canvas">

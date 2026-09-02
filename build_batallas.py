@@ -1,26 +1,25 @@
 #!/usr/bin/env python3
 """
-Mapa de "batallas de aura" en Argentina -- un registro curado (no un
+Mapas de "batallas de aura" por pais -- un registro curado (no un
 calendario en vivo) de lugares donde paso de verdad el fenomeno, con
 fecha y fuente por entrada.
 
     python3 build_batallas.py
 
-Solo Argentina por ahora (ver plan).
-
-El mapa usa las formas reales de las 24 provincias (no puntos ni un
-contorno esquematico dibujado a mano): locales/provincias-ar.geo.json
-tiene, por provincia, un <path> ya proyectado a pixeles y un punto de
-etiqueta (centroide del poligono mas grande de cada provincia, para
-Buenos Aires/Tierra del Fuego que son MultiPolygon). Ese archivo sale
-de countries/ar/ar-all.geo.json del repo highcharts/map-collection-dist
+Cada mapa usa las formas reales de las divisiones de primer nivel del
+pais (provincias en Argentina, departamentos en Uruguay), no puntos ni
+un contorno esquematico dibujado a mano: locales/<geo_file> tiene, por
+division, un <path> ya proyectado a pixeles y un punto de etiqueta
+(centroide del poligono mas grande de la feature, para los casos
+MultiPolygon como Buenos Aires o Tierra del Fuego). Esos archivos salen
+de countries/<cc>/<cc>-all.geo.json del repo highcharts/map-collection-dist
 (datos de Natural Earth, ver ATTRIBUTION mas abajo) -- a diferencia de
-los mapas de Wikimedia Commons usados en un intento anterior (~300-400
-<path> sin nombre ni id, imposibles de asociar a una provincia sin
-adivinar), este trae "name" real por feature, asi que cada forma se
-pudo mapear a su slug con certeza. Ver el script de conversion
-(convert-geojson.js, no versionado -- fue un scratch de una sola vez)
-si hay que regenerar el archivo con otra fuente.
+los mapas de Wikimedia Commons probados primero (~300-400 <path> sin
+nombre ni id, imposibles de asociar a una region sin adivinar), estos
+traen "name" real por feature, asi que cada forma se pudo mapear a su
+slug con certeza. Ver los scripts de conversion (convert-geojson*.js,
+no versionados -- fueron scratches de una sola vez) si hay que agregar
+otro pais.
 """
 
 import json
@@ -46,16 +45,38 @@ ANALYTICS = (
     'gtag("js",new Date());gtag("config","%s");</script>'
 ) % (GA4_ID, GA4_ID)
 
-VIEW_W, VIEW_H = 460, 800
-
-# Etiqueta corta para provincias chicas donde el nombre completo no entra
-# adentro de su propia forma (CABA, Tucuman...). Las demas usan su nombre
-# completo tal cual viene en el geojson.
+# Etiqueta corta para regiones chicas donde el nombre completo no entra
+# adentro de su propia forma. Las demas usan su nombre completo tal cual
+# viene en el geojson. Clave = slug de la region (unico en todo el sitio,
+# no hay colision entre provincias AR y departamentos UY).
 SHORT_LABEL = {
     "formosa": "For.", "misiones": "Mis.", "corrientes": "Ctes.",
     "catamarca": "Cat.", "tucuman": "Tuc.", "santiago-del-estero": "S.E.",
     "entre-rios": "E. Ríos", "buenos-aires": "Bs. As.", "caba": "CABA",
     "tierra-del-fuego": "T. Fuego",
+    "cerro-largo": "C. Largo", "tacuarembo": "Tacuar.",
+    "treinta-y-tres": "33", "rio-negro": "Río Negro",
+}
+
+LOCALES = {
+    "ar": {
+        "home": "/",
+        "geo_file": "provincias-ar.geo.json",
+        "view_w": 460, "view_h": 800,
+        "region_word": "provincia",
+        "country_name": "Argentina",
+        "lang": "es-AR",
+        "address_country": "AR",
+    },
+    "uy": {
+        "home": "/uy/",
+        "geo_file": "departamentos-uy.geo.json",
+        "view_w": 460, "view_h": 546,
+        "region_word": "departamento",
+        "country_name": "Uruguay",
+        "lang": "es-UY",
+        "address_country": "UY",
+    },
 }
 
 
@@ -64,12 +85,13 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def build_svg(provinces_geo, counts):
+def build_svg(cfg, regions_geo, counts):
     parts = [
-        f'<svg viewBox="0 0 {VIEW_W} {VIEW_H}" xmlns="http://www.w3.org/2000/svg" '
-        f'role="img" aria-label="Mapa de provincias de Argentina con batallas de aura registradas">'
+        f'<svg viewBox="0 0 {cfg["view_w"]} {cfg["view_h"]}" xmlns="http://www.w3.org/2000/svg" '
+        f'role="img" aria-label="Mapa de {cfg["region_word"]}s de {cfg["country_name"]} '
+        f'con batallas de aura registradas">'
     ]
-    for p in provinces_geo:
+    for p in regions_geo:
         slug = p["slug"]
         n = counts.get(slug, 0)
         cls = "prov has-data" if n else "prov"
@@ -104,10 +126,10 @@ def build_venue_cards(venues):
     return "\n".join(cards)
 
 
-def build_jsonld(L, canonical):
+def build_jsonld(cfg, L, canonical):
     graph = [{
         "@type": "WebPage", "@id": canonical, "url": canonical,
-        "name": L["h1"], "description": L["desc"], "inLanguage": "es-AR",
+        "name": L["h1"], "description": L["desc"], "inLanguage": cfg["lang"],
         "isPartOf": {"@id": f"{DOMAIN}/#website"},
     }]
     for v in L["venues"]:
@@ -121,7 +143,7 @@ def build_jsonld(L, canonical):
                 "@type": "Place",
                 "name": v["lugar"],
                 "address": {"@type": "PostalAddress", "addressLocality": v["ciudad"],
-                            "addressCountry": "AR"},
+                            "addressCountry": cfg["address_country"]},
             },
             "description": v["descripcion"],
         })
@@ -130,12 +152,12 @@ def build_jsonld(L, canonical):
             '</script>')
 
 
-def build():
-    L = json.loads((ROOT / "locales" / "batallas-ar.json").read_text(encoding="utf-8"))
-    provinces_geo = json.loads((ROOT / "locales" / "provincias-ar.geo.json").read_text(encoding="utf-8"))
+def build_one(loc, cfg):
+    L = json.loads((ROOT / "locales" / f"batallas-{loc}.json").read_text(encoding="utf-8"))
+    regions_geo = json.loads((ROOT / "locales" / cfg["geo_file"]).read_text(encoding="utf-8"))
     tpl = (SRC / "batallas.tpl.html").read_text(encoding="utf-8")
-    home = DOMAIN + "/"
-    canonical = f"{DOMAIN}/{SLUG}/"
+    home = DOMAIN + cfg["home"]
+    canonical = f"{home}{SLUG}/"
 
     counts = {}
     for v in L["venues"]:
@@ -143,28 +165,33 @@ def build():
 
     html = tpl
     for k, v in [
+        ("LANG", cfg["lang"]),
         ("TITLE", esc(L["title"])),
         ("DESC", esc(L["desc"])),
         ("CANONICAL", canonical),
-        ("OGIMAGE", f"{DOMAIN}/og-ar.jpg"),
-        ("JSONLD", build_jsonld(L, canonical)),
+        ("OGLOCALE", cfg["lang"].replace("-", "_")),
+        ("OGIMAGE", f"{DOMAIN}/og-{loc}.jpg"),
+        ("JSONLD", build_jsonld(cfg, L, canonical)),
         ("HOME", home),
-        ("NAV", nav_data.nav_html("ar", "batallas")),
+        ("NAV", nav_data.nav_html(loc, "batallas")),
         ("H1", esc(L["h1"])),
         ("SUB", esc(L["sub"])),
         ("INTRO", esc(L["intro"])),
+        ("MAP_HINT", f'Tocá {"una" if cfg["region_word"] == "provincia" else "un"} '
+                     f'{cfg["region_word"]} con marca para filtrar'),
         ("VENUE_COUNT", str(len(L["venues"]))),
-        ("MAP_SVG", build_svg(provinces_geo, counts)),
+        ("MAP_SVG", build_svg(cfg, regions_geo, counts)),
         ("MAP_ATTRIBUTION", ATTRIBUTION),
         ("VENUE_CARDS", build_venue_cards(L["venues"])),
         ("FOOTERNOTE", L["footerNote"]),  # contiene un <a> real, no escapar
-        ("LEGALLINKS", nav_data.legal_links_html("ar", home)),
+        ("LEGALLINKS", nav_data.legal_links_html(loc, home)),
     ]:
         html = html.replace("{{%s}}" % k, v)
 
     html = html.replace("<!--ANALYTICS-->", ANALYTICS)
 
-    out = DIST / SLUG / "index.html"
+    home_dir = cfg["home"].strip("/")   # "" for ar (root), "uy" for uruguay
+    out = (DIST / SLUG / "index.html") if not home_dir else (DIST / home_dir / SLUG / "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
     print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))
@@ -178,6 +205,11 @@ def build():
             xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
             sm.write_text(xml, encoding="utf-8")
             print("  -> sitemap.xml (+1 URL)")
+
+
+def build():
+    for loc, cfg in LOCALES.items():
+        build_one(loc, cfg)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,44 @@
+{
+  "title": "Mapa de Batallas de Aura en Uruguay | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Uruguay: plazas donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Uruguay",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Acá vamos sumando, con fecha y fuente, los lugares donde ya pasó en Uruguay.",
+  "footerNote": "Cada entrada tiene su fuente. Si conocés una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escribinos</a>.",
+  "venues": [
+    {
+      "id": "montevideo-independencia",
+      "provincia": "montevideo",
+      "ciudad": "Montevideo",
+      "lugar": "Plaza Independencia",
+      "fecha": "2026-08-22",
+      "descripcion": "Primera convocatoria pública de la movida en Uruguay, difundida por redes sociales.",
+      "fuente": [
+        ["Montevideo Portal", "https://www.montevideo.com.uy/Noticias/Ya-hay-dos-convocatorias-publicas-para-farmear-aura-en-Uruguay-donde-y-cuando-son-uc972249"],
+        ["Montevideo Portal", "https://www.montevideo.com.uy/Noticias/-Farmear-aura--los-videos-de-las-batallas-que-reunieron-a-jovenes-en-Montevideo-uc972827"]
+      ]
+    },
+    {
+      "id": "montevideo-intendencia",
+      "provincia": "montevideo",
+      "ciudad": "Montevideo",
+      "lugar": "Frente a la Intendencia de Montevideo",
+      "fecha": "2026-08-23",
+      "descripcion": "Segunda convocatoria, organizada por la cuenta \"Juntadasdeaura\" un día después de la primera.",
+      "fuente": [
+        ["Montevideo Portal", "https://www.montevideo.com.uy/Noticias/Ya-hay-dos-convocatorias-publicas-para-farmear-aura-en-Uruguay-donde-y-cuando-son-uc972249"]
+      ]
+    },
+    {
+      "id": "san-jose-de-mayo",
+      "provincia": "san-jose",
+      "ciudad": "San José de Mayo",
+      "lugar": "Plaza Independencia",
+      "fecha": "2026-08-23",
+      "descripcion": "Reunió a más de cien personas, una de las convocatorias más grandes del interior del país.",
+      "fuente": [
+        ["San José Ahora", "https://sanjoseahora.com.uy/2026/08/23/una-batalla-de-farmear-aura-reunio-a-mas-de-cien-personas-en-la-plaza-independencia-de-san-jose-de-mayo/"]
+      ]
+    }
+  ]
+}
