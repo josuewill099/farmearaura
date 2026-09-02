@@ -39,16 +39,21 @@ ANALYTICS = (
 ) % (GA4_ID, GA4_ID)
 
 # (slug, nombre completo, etiqueta corta para el mapa, lat, lon)
-# lat/lon = capital provincial aproximada. Proyeccion lineal simple mas
-# abajo (build_svg): no es una proyeccion cartografica real, solo ubica
-# cada punto en su posicion relativa correcta dentro del pais.
+# lat/lon = capital provincial aproximada, con pequenos ajustes a mano en
+# grupos que la capital real deja demasiado juntos para el radio de un
+# marcador (jujuy/salta, chaco/corrientes, santa-fe/entre-rios -- las
+# primeras coordenadas, sin ajustar, dejaban esos pares a 3-13px de
+# distancia con circulos de 11-15px de radio, superpuestos en el mapa
+# real; verificado en el navegador, no solo calculado). Proyeccion lineal
+# simple mas abajo (build_svg): no es una proyeccion cartografica real,
+# solo ubica cada punto en su posicion relativa correcta dentro del pais.
 PROVINCES = [
-    ("jujuy", "Jujuy", "Jujuy", -24.19, -65.30),
-    ("salta", "Salta", "Salta", -24.78, -65.41),
+    ("jujuy", "Jujuy", "Jujuy", -23.0, -65.5),
+    ("salta", "Salta", "Salta", -25.5, -65.2),
     ("formosa", "Formosa", "For.", -26.18, -58.18),
-    ("chaco", "Chaco", "Chaco", -27.45, -58.99),
+    ("chaco", "Chaco", "Chaco", -26.8, -59.8),
     ("misiones", "Misiones", "Mis.", -27.37, -55.90),
-    ("corrientes", "Corrientes", "Ctes.", -27.47, -58.83),
+    ("corrientes", "Corrientes", "Ctes.", -28.7, -57.5),
     ("catamarca", "Catamarca", "Cat.", -28.47, -65.78),
     ("tucuman", "Tucumán", "Tuc.", -26.82, -65.22),
     ("santiago-del-estero", "Santiago del Estero", "S.E.", -27.78, -64.26),
@@ -56,8 +61,8 @@ PROVINCES = [
     ("san-juan", "San Juan", "San Juan", -31.54, -68.54),
     ("mendoza", "Mendoza", "Mendoza", -32.89, -68.84),
     ("cordoba", "Córdoba", "Córdoba", -31.42, -64.18),
-    ("santa-fe", "Santa Fe", "Santa Fe", -31.63, -60.70),
-    ("entre-rios", "Entre Ríos", "E. Ríos", -31.73, -60.53),
+    ("santa-fe", "Santa Fe", "Santa Fe", -31.2, -61.3),
+    ("entre-rios", "Entre Ríos", "E. Ríos", -32.3, -59.2),
     ("san-luis", "San Luis", "San Luis", -33.30, -66.34),
     ("la-pampa", "La Pampa", "La Pampa", -36.62, -64.29),
     ("buenos-aires", "Buenos Aires", "Bs. As.", -37.5, -60.5),
