@@ -34,8 +34,6 @@ SRC = ROOT / "src"
 DIST = ROOT / "dist"
 DOMAIN = "https://farmearaura.com"
 TODAY = date.today().isoformat()
-
-SLUG = "batallas-de-aura"
 ATTRIBUTION = "Mapa: Natural Earth, vía Highcharts map-collection-dist"
 GA4_ID = "G-XHZ0MM619V"   # mismo tag que el resto del sitio
 ANALYTICS = (
@@ -66,64 +64,52 @@ SHORT_LABEL = {
 
 LOCALES = {
     "ar": {
-        "home": "/",
+        "home": "/", "slug": "batallas-de-aura",
         "geo_file": "provincias-ar.geo.json",
         "view_w": 460, "view_h": 800,
-        "region_word": "provincia", "article": "una",
-        "country_name": "Argentina",
-        "lang": "es-AR",
-        "address_country": "AR",
-        "voseo": True,
+        "lang": "es-AR", "address_country": "AR",
     },
     "uy": {
-        "home": "/uy/",
+        "home": "/uy/", "slug": "batallas-de-aura",
         "geo_file": "departamentos-uy.geo.json",
         "view_w": 460, "view_h": 546,
-        "region_word": "departamento", "article": "un",
-        "country_name": "Uruguay",
-        "lang": "es-UY",
-        "address_country": "UY",
-        "voseo": True,
+        "lang": "es-UY", "address_country": "UY",
     },
     "es": {
-        "home": "/es/",
+        "home": "/es/", "slug": "batallas-de-aura",
         "geo_file": "provincias-es.geo.json",
         "view_w": 460, "view_h": 424,
-        "region_word": "provincia", "article": "una",
-        "country_name": "España",
-        "lang": "es-ES",
-        "address_country": "ES",
-        "voseo": False,
+        "lang": "es-ES", "address_country": "ES",
     },
     "cl": {
-        "home": "/cl/",
+        "home": "/cl/", "slug": "batallas-de-aura",
         "geo_file": "regiones-cl.geo.json",
         "view_w": 460, "view_h": 2776,
-        "region_word": "región", "article": "una",
-        "country_name": "Chile",
-        "lang": "es-CL",
-        "address_country": "CL",
-        "voseo": False,
+        "lang": "es-CL", "address_country": "CL",
     },
     "co": {
-        "home": "/co/",
+        "home": "/co/", "slug": "batallas-de-aura",
         "geo_file": "departamentos-co.geo.json",
         "view_w": 460, "view_h": 567,
-        "region_word": "departamento", "article": "un",
-        "country_name": "Colombia",
-        "lang": "es-CO",
-        "address_country": "CO",
-        "voseo": False,
+        "lang": "es-CO", "address_country": "CO",
     },
     "pe": {
-        "home": "/pe/",
+        "home": "/pe/", "slug": "batallas-de-aura",
         "geo_file": "regiones-pe.geo.json",
         "view_w": 460, "view_h": 713,
-        "region_word": "región", "article": "una",
-        "country_name": "Perú",
-        "lang": "es-PE",
-        "address_country": "PE",
-        "voseo": False,
+        "lang": "es-PE", "address_country": "PE",
+    },
+    "br": {
+        "home": "/br/", "slug": "batalhas-de-farmar-aura",
+        "geo_file": "estados-br.geo.json",
+        "view_w": 460, "view_h": 499,
+        "lang": "pt-BR", "address_country": "BR",
+    },
+    "pt": {
+        "home": "/pt/", "slug": "batalhas-de-farmar-aura",
+        "geo_file": "distritos-pt.geo.json",
+        "view_w": 460, "view_h": 741,
+        "lang": "pt-PT", "address_country": "PT",
     },
 }
 
@@ -133,18 +119,10 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-# "provincia"/"departamento" pluralizan con solo +s, pero "region" no
-# ("regiones", no "regions") -- diccionario en vez de una regla generica
-# porque el vocabulario real es de 3 palabras nada mas.
-REGION_WORD_PLURAL = {"provincia": "provincias", "departamento": "departamentos", "región": "regiones"}
-
-
-def build_svg(cfg, regions_geo, counts):
-    plural = REGION_WORD_PLURAL[cfg["region_word"]]
+def build_svg(cfg, regions_geo, counts, aria_label):
     parts = [
         f'<svg viewBox="0 0 {cfg["view_w"]} {cfg["view_h"]}" xmlns="http://www.w3.org/2000/svg" '
-        f'role="img" aria-label="Mapa de {plural} de {cfg["country_name"]} '
-        f'con batallas de aura registradas">'
+        f'role="img" aria-label="{esc(aria_label)}">'
     ]
     for p in regions_geo:
         slug = p["slug"]
@@ -182,6 +160,10 @@ def build_venue_cards(venues):
 
 
 def build_jsonld(cfg, L, canonical):
+    # "Batalla" en espanol, "Batalha" en portugues -- unica palabra que
+    # cambia en este nombre, asi que se resuelve por idioma en vez de
+    # sumar otro campo mas al JSON de cada locale.
+    event_word = "Batalha" if cfg["lang"].startswith("pt") else "Batalla"
     graph = [{
         "@type": "WebPage", "@id": canonical, "url": canonical,
         "name": L["h1"], "description": L["desc"], "inLanguage": cfg["lang"],
@@ -190,7 +172,7 @@ def build_jsonld(cfg, L, canonical):
     for v in L["venues"]:
         graph.append({
             "@type": "Event",
-            "name": f'Batalla de Aura — {v["lugar"]}, {v["ciudad"]}',
+            "name": f'{event_word} de Aura — {v["lugar"]}, {v["ciudad"]}',
             "startDate": v["fecha"],
             "eventStatus": "https://schema.org/EventScheduled",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -212,7 +194,7 @@ def build_one(loc, cfg):
     regions_geo = json.loads((ROOT / "locales" / cfg["geo_file"]).read_text(encoding="utf-8"))
     tpl = (SRC / "batallas.tpl.html").read_text(encoding="utf-8")
     home = DOMAIN + cfg["home"]
-    canonical = f"{home}{SLUG}/"
+    canonical = f"{home}{cfg['slug']}/"
 
     counts = {}
     for v in L["venues"]:
@@ -232,10 +214,18 @@ def build_one(loc, cfg):
         ("H1", esc(L["h1"])),
         ("SUB", esc(L["sub"])),
         ("INTRO", esc(L["intro"])),
-        ("MAP_HINT", f'{"Tocá" if cfg["voseo"] else "Toca"} {cfg["article"]} '
-                     f'{cfg["region_word"]} con marca para filtrar'),
+        # mapHint/mapAriaLabel/venueCountLabel son oraciones completas ya
+        # escritas en el idioma de cada locale (no armadas por Python a
+        # partir de piezas) -- con dos idiomas (es/pt) y variantes internas
+        # (voseo/tuteo, provincia/departamento/region, estado/distrito,
+        # genero de cada palabra), tratar de ensamblar la oracion aca
+        # termina rompiendo la gramatica de alguna combinacion tarde o
+        # temprano (paso dos veces: "un region" en vez de "una region",
+        # "regions" en vez de "regiones").
+        ("MAP_HINT", esc(L["mapHint"])),
         ("VENUE_COUNT", str(len(L["venues"]))),
-        ("MAP_SVG", build_svg(cfg, regions_geo, counts)),
+        ("VENUE_COUNT_LABEL", esc(L["venueCountLabel"])),
+        ("MAP_SVG", build_svg(cfg, regions_geo, counts, L["mapAriaLabel"])),
         ("MAP_ATTRIBUTION", ATTRIBUTION),
         ("VENUE_CARDS", build_venue_cards(L["venues"])),
         ("FOOTERNOTE", L["footerNote"]),  # contiene un <a> real, no escapar
@@ -246,7 +236,8 @@ def build_one(loc, cfg):
     html = html.replace("<!--ANALYTICS-->", ANALYTICS)
 
     home_dir = cfg["home"].strip("/")   # "" for ar (root), "uy" for uruguay
-    out = (DIST / SLUG / "index.html") if not home_dir else (DIST / home_dir / SLUG / "index.html")
+    slug = cfg["slug"]
+    out = (DIST / slug / "index.html") if not home_dir else (DIST / home_dir / slug / "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
     print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))

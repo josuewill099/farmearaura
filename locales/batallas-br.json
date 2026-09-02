@@ -1,0 +1,59 @@
+{
+  "title": "Mapa de Batalhas de Farmar Aura no Brasil | Farmear Aura",
+  "desc": "Onde já rolaram batalhas de farmar aura no Brasil: praças e lugares reais, com data e fonte verificada.",
+  "h1": "Batalhas de Farmar Aura no Brasil",
+  "sub": "Um registro com curadoria de onde já rolou de verdade — com data e fonte. Não é um calendário ao vivo: é um mapa do que já foi farmado.",
+  "intro": "\"Farmar aura\" saltou do TikTok para a rua: grupos de gente se juntam numa praça e competem em poses, jeitos de andar e gestos pra ver quem tem mais aura. Aqui a gente vai somando, com data e fonte, os lugares onde isso já rolou no Brasil.",
+  "footerNote": "Cada item tem sua fonte. Se você souber de uma batalha que não está aqui, <a href=\"https://farmearaura.com/br/legal/contato/\">fala com a gente</a>.",
+  "mapHint": "Toque num estado com marca pra filtrar",
+  "mapAriaLabel": "Mapa de estados do Brasil com batalhas de farmar aura registradas",
+  "venueCountLabel": "lugares registrados",
+  "venues": [
+    {
+      "id": "juazeiro-do-norte",
+      "provincia": "ceara",
+      "ciudad": "Juazeiro do Norte",
+      "lugar": "Praça do Giradouro",
+      "fecha": "2026-06-12",
+      "descripcion": "Uma das primeiras edições registradas no Brasil, na região do Cariri.",
+      "fuente": [
+        ["Miséria.com.br", "https://www.miseria.com.br/ultimas-noticias/cariri/praca-do-giradouro-em-juazeiro-do-norte-vai-receber-campeonato-inedito-de-farmar-aura/"],
+        ["Diário do Nordeste", "https://diariodonordeste.verdesmares.com.br/entretenimento/zoeira/o-que-e-farmar-aura-entenda-a-giria-que-virou-campeonato-no-ce-e-viralizou-nas-redes-1.3771426"]
+      ]
+    },
+    {
+      "id": "fortaleza",
+      "provincia": "ceara",
+      "ciudad": "Fortaleza",
+      "lugar": "Shopping da cidade",
+      "fecha": "2026-07-29",
+      "descripcion": "Campeonato com tema inspirado no Homem-Aranha.",
+      "fuente": [
+        ["O Povo", "https://www.opovo.com.br/vidaearte/2026/07/29/campeonato-de-farmar-aura-acontece-em-shopping-de-fortaleza.html"]
+      ]
+    },
+    {
+      "id": "vilhena",
+      "provincia": "rondonia",
+      "ciudad": "Vilhena",
+      "lugar": "Praça do Shopping, em frente ao Estádio Municipal",
+      "fecha": "2026-08-01",
+      "descripcion": "Torneio eliminatório com 12 \"farmadores\" inscritos. Terminou com reclamações de moradores e intervenção da polícia por causa do som alto.",
+      "fuente": [
+        ["Folha do Sul Online", "https://www.folhadosulonline.com.br/noticias/detalhe/2026/confirmado-vilhena-realiza-campeonato-farmar-aura-neste-sabado-organizador-comenta-competicao"],
+        ["Rondôniaovivo.com", "https://www.rondoniaovivo.com/noticia/policia/2026/08/03/som-alto-campeonato-de-farmar-aura-reune-jovens-em-praca-e-gera-perturbacao.html"]
+      ]
+    },
+    {
+      "id": "campo-grande",
+      "provincia": "mato-grosso-do-sul",
+      "ciudad": "Campo Grande",
+      "lugar": "Praça pública",
+      "fecha": "2026-08-02",
+      "descripcion": "1º Campeonato de Farmar Aura da capital, reunindo jovens, famílias e curiosos.",
+      "fuente": [
+        ["Midiamax", "https://midiamax.com.br/midiamais/2026/meme-internet-evento-capital-1o-campeonato-farmar-aura-reune-jovens-familias-curiosos-campo-grande/"]
+      ]
+    }
+  ]
+}

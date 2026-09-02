@@ -89,7 +89,7 @@ NAV_LABELS = {
            "contador": "Contador", "batallas": "Batallas"},
     "br": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Mapa"},
     "cl": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador", "batallas": "Batallas"},
@@ -110,7 +110,7 @@ NAV_LABELS = {
            "contador": "Contador", "batallas": "Batallas"},
     "pt": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Mapa"},
     "ec": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador"},
@@ -162,6 +162,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/br/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/br/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/br/contador-de-farmar-aura/",
+        "batallas": "https://farmearaura.com/br/batalhas-de-farmar-aura/",
     },
     "cl": {
         "home": "https://farmearaura.com/cl/",
@@ -243,6 +244,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/pt/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/pt/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/pt/contador-de-farmar-aura/",
+        "batallas": "https://farmearaura.com/pt/batalhas-de-farmar-aura/",
     },
     "ec": {
         "home": "https://farmearaura.com/ec/",

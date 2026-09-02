@@ -5,6 +5,9 @@
   "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
   "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza o parque y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Colombia.",
   "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "mapHint": "Toca un departamento con marca para filtrar",
+  "mapAriaLabel": "Mapa de departamentos de Colombia con batallas de aura registradas",
+  "venueCountLabel": "lugares registrados",
   "venues": [
     {
       "id": "bogota-hippies",
