@@ -157,7 +157,7 @@ def build():
         ("MAP_SVG", build_svg(provinces_geo, counts)),
         ("MAP_ATTRIBUTION", ATTRIBUTION),
         ("VENUE_CARDS", build_venue_cards(L["venues"])),
-        ("FOOTERNOTE", esc(L["footerNote"])),
+        ("FOOTERNOTE", L["footerNote"]),  # contiene un <a> real, no escapar
         ("LEGALLINKS", nav_data.legal_links_html("ar", home)),
     ]:
         html = html.replace("{{%s}}" % k, v)

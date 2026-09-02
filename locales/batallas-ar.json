@@ -4,7 +4,7 @@
   "h1": "Batallas de Aura en Argentina",
   "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
   "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza o monumento y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Acá vamos sumando, con fecha y fuente, los lugares donde ya pasó en Argentina.",
-  "footerNote": "Cada entrada tiene su fuente. Si conocés una batalla que no está, escribinos.",
+  "footerNote": "Cada entrada tiene su fuente. Si conocés una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escribinos</a>.",
   "venues": [
     {
       "id": "mar-del-plata",
