@@ -80,7 +80,7 @@ GUIDE_LABELS = {
 NAV_LABELS = {
     "ar": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Batallas"},
     "mx": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador"},
@@ -107,7 +107,7 @@ NAV_LABELS = {
              "contador": "Contador"},
     "uy": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Batallas"},
     "pt": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico",
            "contador": "Contador"},
@@ -127,6 +127,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/contador-de-aura/",
+        "batallas": "https://farmearaura.com/batallas-de-aura/",
     },
     "mx": {
         "home": "https://farmearaura.com/mx/",
@@ -226,6 +227,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/uy/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/uy/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/uy/contador-de-aura/",
+        "batallas": "https://farmearaura.com/uy/batallas-de-aura/",
     },
     "pt": {
         "home": "https://farmearaura.com/pt/",
@@ -304,7 +306,15 @@ def nav_html(loc, current):
             )
         )
 
-    parts = ['<a href="%s"%s>%s</a>' % (U["home"], cur("home"), _esc(L["calculadora"]))]
+    # ar/uy cambian el primer item de "Calculadora" (a la home) por "Batallas"
+    # (a /batallas-de-aura/) -- las otras diez locales no tienen esa pagina
+    # todavia, asi que se quedan con Calculadora. La calculadora sigue
+    # siendo alcanzable desde esas dos locales via el logo, que siempre
+    # apunta a home.
+    if "batallas" in U:
+        parts = ['<a href="%s"%s>%s</a>' % (U["batallas"], cur("batallas"), _esc(L["batallas"]))]
+    else:
+        parts = ['<a href="%s"%s>%s</a>' % (U["home"], cur("home"), _esc(L["calculadora"]))]
     # "contador" va justo al lado de la calculadora, en las diez locales.
     if "contador" in U:
         parts.append('<a href="%s"%s>%s</a>' % (U["contador"], cur("contador"), _esc(L["contador"])))
