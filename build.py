@@ -552,6 +552,8 @@ Preferred-Languages: es, pt, en
 Canonical: https://farmearaura.com/.well-known/security.txt
 """
 
+ADS_TXT = "google.com, pub-9154720924448333, DIRECT, f08c47fec0942fa0\n"
+
 # /ar/ is not a real page — Argentina is the root. 301 anyone who links it.
 REDIRECTS = """/ar/                     /                         301
 /ar/que-es-farmear-aura/ /que-es-farmear-aura/     301
@@ -660,6 +662,7 @@ def main():
         print(f"  legal/{langkey} -> {LEGAL[langkey]['base']}*")
     (DIST / "sitemap.xml").write_text(build_sitemap(), "utf-8")
     (DIST / "robots.txt").write_text(ROBOTS, "utf-8")
+    (DIST / "ads.txt").write_text(ADS_TXT, "utf-8")
     (DIST / "_redirects").write_text(REDIRECTS, "utf-8")
     (DIST / "_headers").write_text(HEADERS, "utf-8")
     (DIST / ".well-known").mkdir(exist_ok=True)
