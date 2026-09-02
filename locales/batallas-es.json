@@ -1,0 +1,79 @@
+{
+  "title": "Mapa de Batallas de Aura en España | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en España: plazas donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en España",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan en una plaza y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en España.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "venues": [
+    {
+      "id": "sevilla",
+      "provincia": "sevilla",
+      "ciudad": "Sevilla",
+      "lugar": "Plaza de España",
+      "fecha": "2026-09-01",
+      "descripcion": "Primera batalla de la ciudad, con un premio de 100 € para el ganador.",
+      "fuente": [
+        ["El Pespunte", "https://www.elpespunte.es/articulo/sevilla/sevilla-suma-fenomeno-batallas-aura-convocatoria-plaza-espana/20260826182623147732.html"],
+        ["Excélsior", "https://www.excelsior.com.mx/internacional/batalla-farmear-aura-sevilla"]
+      ]
+    },
+    {
+      "id": "vigo",
+      "provincia": "pontevedra",
+      "ciudad": "Vigo",
+      "lugar": "Entrada de Vialia Vigo",
+      "fecha": "2026-09-01",
+      "descripcion": "Convocatoria difundida por redes sociales para las 19:00 horas.",
+      "fuente": [
+        ["HIGHXTAR", "https://highxtar.com/las-batallas-de-farmear-aura-llegan-a-espana-que-son-y-como-prepararse-para-ganarlas/"]
+      ]
+    },
+    {
+      "id": "a-coruna",
+      "provincia": "a-coruna",
+      "ciudad": "A Coruña",
+      "lugar": "Jardines de Méndez Núñez",
+      "fecha": "2026-08-22",
+      "descripcion": "Una de las primeras batallas registradas en Galicia.",
+      "fuente": [
+        ["Telecinco", "https://www.telecinco.es/noticias/sociedad/20260826/batallas-farmear-aura-expanden-jovenes-espana-burgos-valencia-barcelona_18_020020404.html"]
+      ]
+    },
+    {
+      "id": "pamplona",
+      "provincia": "navarra",
+      "ciudad": "Pamplona",
+      "lugar": "Plaza del Castillo",
+      "fecha": "2026-08-28",
+      "descripcion": "Cientos de jóvenes reunidos en la plaza más emblemática de la ciudad.",
+      "fuente": [
+        ["Noticias de Navarra", "https://www.noticiasdenavarra.com/sociedad/2026/08/25/batallas-aura-ponen-pamplona-mapa-11466908.html"],
+        ["OKDIARIO Navarra", "https://navarra.okdiario.com/articulo/pamplona/extrana-batalla-que-ha-reunido-cientos-adolescentes-pamplona-asi-farmea-aura/20260828192828658253.html"]
+      ]
+    },
+    {
+      "id": "barcelona",
+      "provincia": "barcelona",
+      "ciudad": "Barcelona",
+      "lugar": "Convocatoria de Auron Play",
+      "fecha": "2026-08-31",
+      "descripcion": "Organizada por el creador de contenido Auron Play.",
+      "fuente": [
+        ["Boicot Influencers", "https://boicotinfluencers.com/auron-play-convoca-una-batalla-de-farmear-aura-en-barcelona/"]
+      ]
+    },
+    {
+      "id": "palma",
+      "provincia": "baleares",
+      "ciudad": "Palma",
+      "lugar": "Plaza de España",
+      "fecha": "2026-08-30",
+      "descripcion": "Primer campeonato de la isla, después de una primera quedada espontánea días antes en el Parc de ses Estacions.",
+      "fuente": [
+        ["Última Hora", "https://www.ultimahora.es/noticias/sociedad/2026/08/25/2695301/mallorca-tiene-fecha-para-primer-campeonato-batallas-aura.html"],
+        ["Última Hora", "https://www.ultimahora.es/noticias/sociedad/2026/08/30/2698815/batallas-aura-toman-plaza-espana-palma.html"]
+      ]
+    }
+  ]
+}

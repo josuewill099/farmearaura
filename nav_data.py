@@ -86,7 +86,7 @@ NAV_LABELS = {
            "contador": "Contador"},
     "es": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
-           "contador": "Contador"},
+           "contador": "Contador", "batallas": "Batallas"},
     "br": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Batalhas",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico",
            "contador": "Contador"},
@@ -150,6 +150,7 @@ NAV_URLS = {
         "famosos": "https://farmearaura.com/es/duelos/famosos/",
         "famosos_ranking": "https://farmearaura.com/es/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/es/contador-de-aura/",
+        "batallas": "https://farmearaura.com/es/batallas-de-aura/",
     },
     "br": {
         "home": "https://farmearaura.com/br/",

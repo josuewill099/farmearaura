@@ -56,6 +56,8 @@ SHORT_LABEL = {
     "tierra-del-fuego": "T. Fuego",
     "cerro-largo": "C. Largo", "tacuarembo": "Tacuar.",
     "treinta-y-tres": "33", "rio-negro": "Río Negro",
+    "santa-cruz-tenerife": "Tenerife", "ciudad-real": "C. Real",
+    "castellon": "Castel.", "la-rioja-es": "La Rioja",
 }
 
 LOCALES = {
@@ -67,6 +69,7 @@ LOCALES = {
         "country_name": "Argentina",
         "lang": "es-AR",
         "address_country": "AR",
+        "voseo": True,
     },
     "uy": {
         "home": "/uy/",
@@ -76,6 +79,17 @@ LOCALES = {
         "country_name": "Uruguay",
         "lang": "es-UY",
         "address_country": "UY",
+        "voseo": True,
+    },
+    "es": {
+        "home": "/es/",
+        "geo_file": "provincias-es.geo.json",
+        "view_w": 460, "view_h": 424,
+        "region_word": "provincia",
+        "country_name": "España",
+        "lang": "es-ES",
+        "address_country": "ES",
+        "voseo": False,
     },
 }
 
@@ -177,7 +191,8 @@ def build_one(loc, cfg):
         ("H1", esc(L["h1"])),
         ("SUB", esc(L["sub"])),
         ("INTRO", esc(L["intro"])),
-        ("MAP_HINT", f'Tocá {"una" if cfg["region_word"] == "provincia" else "un"} '
+        ("MAP_HINT", f'{"Tocá" if cfg["voseo"] else "Toca"} '
+                     f'{"una" if cfg["region_word"] == "provincia" else "un"} '
                      f'{cfg["region_word"]} con marca para filtrar'),
         ("VENUE_COUNT", str(len(L["venues"]))),
         ("MAP_SVG", build_svg(cfg, regions_geo, counts)),
