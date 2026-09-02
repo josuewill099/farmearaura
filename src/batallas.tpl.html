@@ -88,14 +88,14 @@ h1 em{font-style:normal;color:var(--aura)}
 .map-canvas{padding:10px}
 .map-canvas svg{width:100%;height:auto;display:block;max-height:640px;margin:0 auto}
 
-.country-outline{fill:rgba(242,236,255,.04);stroke:var(--line);stroke-width:2;stroke-linejoin:round}
-.prov{fill:var(--line);stroke:var(--ink);stroke-width:2;cursor:default;transition:fill .15s ease,filter .15s ease}
+.prov{fill:var(--line);stroke:var(--ink);stroke-width:1;stroke-linejoin:round;cursor:default;transition:fill .15s ease,filter .15s ease}
 .prov.has-data{fill:var(--aura);opacity:.55;cursor:pointer}
 .prov.has-data:hover{opacity:.8;filter:drop-shadow(0 0 6px rgba(255,47,185,.5))}
 .prov.is-active{fill:var(--cyan);opacity:1;filter:drop-shadow(0 0 8px rgba(53,240,255,.6))}
-.prov-label{font-family:var(--body);font-size:10px;font-weight:600;fill:var(--bone);opacity:.55;pointer-events:none;text-anchor:middle;dominant-baseline:central}
-.prov.has-data ~ .prov-label,.prov-label.has-data{opacity:.9}
+.prov-label{font-family:var(--body);font-size:9px;font-weight:600;fill:var(--bone);opacity:.6;pointer-events:none;text-anchor:middle;dominant-baseline:central}
+.prov-label.has-data{opacity:.95;font-weight:700}
 .prov-label.is-active{opacity:1;fill:var(--ink);font-weight:800}
+.map-attribution{padding:6px 16px 12px;font-size:10px;color:var(--muted);opacity:.7;text-align:right}
 
 .sidebar-header{padding:16px 16px 12px;border-bottom:1px solid var(--line)}
 .sidebar-header__title{font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -141,6 +141,7 @@ h1 em{font-style:normal;color:var(--aura)}
       <div class="map-canvas">
         {{MAP_SVG}}
       </div>
+      <p class="map-attribution">{{MAP_ATTRIBUTION}}</p>
     </div>
 
     <aside class="card">
