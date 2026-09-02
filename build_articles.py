@@ -815,6 +815,10 @@ def render_sections(sections):
                 # bullets sueltos.
                 inner.append('  <dl class="glo">\n' + "\n".join(
                     f"    <dt>{esc(t)}</dt><dd>{d}</dd>" for t, d in b["dl"]) + "\n  </dl>")
+            elif isinstance(b, dict) and "embed" in b:
+                # Embed oficial (oEmbed de TikTok, etc.) pegado tal cual --
+                # sin envolver en <p>, que rompe el blockquote de embed.js.
+                inner.append(f'  <div class="embed-wrap">{b["embed"]}</div>')
             else:
                 inner.append(f"  <p>{b}</p>")
         out.append((h, "\n".join(inner)))
