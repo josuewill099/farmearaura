@@ -8,5 +8,13 @@
   "mapHint": "Toca num distrito com marca para filtrar",
   "mapAriaLabel": "Mapa de distritos de Portugal com batalhas de farmar aura registadas",
   "venueCountLabel": "lugares registados",
+  "faqHeading": "Perguntas frequentes",
+  "faq": [
+    ["O que é uma batalha de farmar aura?", "Duas pessoas encaram-se com poses, olhares, passos de dança ou gestos exagerados, sem contacto físico, enquanto quem está à volta decide quem tem mais presença. Não há regras fixas: ganha quem conseguir a melhor reação do público."],
+    ["Como se ganha uma batalha de aura?", "Não há pontuação técnica nem juiz oficial na maioria dos casos: ganha quem o público sentir que tem mais carisma, confiança ou \"aura\" naquele momento. Algumas edições organizadas usam formato eliminatório e até prémios em dinheiro."],
+    ["De onde veio esta moda?", "\"Farmar\" vem do inglês \"to farm\", que nos videojogos significa acumular pontos ou recursos, e \"aura\" é usado como sinónimo de carisma ou presença. A ideia nasceu no TikTok e chegou à rua em 2026."],
+    ["Este mapa é atualizado em direto?", "Não. É um registo com curadoria de batalhas que já aconteceram mesmo, cada uma com data e fonte. Não é um calendário de próximos eventos."],
+    ["Quem organiza estas batalhas?", "Quase nunca é uma instituição: a maioria é convocada por contas de redes sociais, criadores de conteúdo ou grupos de amigos. Por isso, algumas já foram esclarecidas como \"não autorizadas\" pelos locais onde acabaram por acontecer."]
+  ],
   "venues": []
 }

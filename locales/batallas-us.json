@@ -8,5 +8,13 @@
   "mapHint": "Tap a highlighted state to filter",
   "mapAriaLabel": "Map of US states with recorded aura battles",
   "venueCountLabel": "places on record",
+  "faqHeading": "FAQ",
+  "faq": [
+    ["What is an aura battle?", "Two people face off with poses, stares, dance moves, or exaggerated gestures, with no physical contact, while the crowd around them decides who has more presence. There are no fixed rules: whoever gets the best reaction from the audience wins."],
+    ["How do you win an aura battle?", "There's no technical scoring or official judges in most cases: the crowd decides who has more charisma, confidence, or \"aura\" in the moment. Some organized editions do use a bracket format and even cash prizes."],
+    ["Where did this trend come from?", "\"Farming\" comes from video games, where it means grinding for points or resources, and \"aura\" is used as a stand-in for charisma or presence. The idea started on TikTok and moved into the street during 2026."],
+    ["Is this map updated live?", "No. It's a curated record of battles that have actually happened, each with a date and a source. It's not a calendar of upcoming events."],
+    ["Who organizes these battles?", "Almost never an institution: most are called by social media accounts, content creators, or groups of friends. That's why several have since been clarified as \"unauthorized\" by the places where they ended up happening."]
+  ],
   "venues": []
 }

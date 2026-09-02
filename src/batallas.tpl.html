@@ -112,6 +112,16 @@ h1 em{font-style:normal;color:var(--aura)}
 .filter-clear{display:none;margin:8px 8px 0;font-size:12px;font-weight:700;color:var(--aura);background:none;border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}
 .filter-clear.on{display:inline-block}
 
+.faq{margin-top:32px;max-width:680px}
+.faq h2{font-family:var(--display);text-transform:uppercase;font-size:20px;letter-spacing:.01em;margin:0 0 6px;color:var(--bone)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 30px 16px 0;position:relative;font-weight:700;font-size:15px;color:var(--bone)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:2px;top:12px;font-size:20px;color:var(--aura)}
+.faq details[open] summary::after{content:'−'}
+.faq .a{padding:0 30px 18px 0;color:var(--bone);opacity:.8;font-size:14px;line-height:1.6}
+.faq .a p{margin:0}
+
 .footnote{color:var(--muted);font-size:12px;line-height:1.6;margin-top:22px;max-width:680px}
 .footnote a{color:var(--cyan);font-weight:600;text-decoration:none}
 .footnote a:hover{text-decoration:underline}
@@ -155,6 +165,12 @@ h1 em{font-style:normal;color:var(--aura)}
   </div>
 
   <p class="intro">{{INTRO}}</p>
+
+  <div class="faq">
+    <h2>{{FAQ_HEADING}}</h2>
+    {{FAQ_HTML}}
+  </div>
+
   <p class="footnote">{{FOOTERNOTE}}</p>
 
   <p class="legal">{{LEGALLINKS}}</p>

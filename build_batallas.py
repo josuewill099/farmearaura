@@ -185,6 +185,14 @@ def build_venue_cards(venues):
     return "\n".join(cards)
 
 
+def build_faq_html(faq):
+    return "\n".join(
+        f'<details{" open" if i == 0 else ""}><summary>{esc(q)}</summary>'
+        f'<div class="a"><p>{esc(a)}</p></div></details>'
+        for i, (q, a) in enumerate(faq)
+    )
+
+
 def build_jsonld(cfg, L, canonical):
     # "Batalla" en espanol, "Batalha" en portugues -- unica palabra que
     # cambia en este nombre, asi que se resuelve por idioma en vez de
@@ -209,6 +217,15 @@ def build_jsonld(cfg, L, canonical):
                             "addressCountry": cfg["address_country"]},
             },
             "description": v["descripcion"],
+        })
+    if L.get("faq"):
+        graph.append({
+            "@type": "FAQPage", "@id": canonical + "#faq",
+            "mainEntity": [
+                {"@type": "Question", "name": q,
+                 "acceptedAnswer": {"@type": "Answer", "text": a}}
+                for q, a in L["faq"]
+            ],
         })
     return ('<script type="application/ld+json">' +
             json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False) +
@@ -254,6 +271,8 @@ def build_one(loc, cfg):
         ("MAP_SVG", build_svg(cfg, regions_geo, counts, L["mapAriaLabel"])),
         ("MAP_ATTRIBUTION", ATTRIBUTION),
         ("VENUE_CARDS", build_venue_cards(L["venues"])),
+        ("FAQ_HEADING", esc(L["faqHeading"])),
+        ("FAQ_HTML", build_faq_html(L["faq"])),
         ("FOOTERNOTE", L["footerNote"]),  # contiene un <a> real, no escapar
         ("LEGALLINKS", nav_data.legal_links_html(loc, home)),
     ]:
