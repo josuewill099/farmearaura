@@ -196,6 +196,7 @@ h1 em{font-style:normal;color:var(--aura)}
   <footer class="site-footer">{{SITEFOOTER}}</footer>
 </div>
 
+<script>window.BATALLAS={{CONFIG}};</script>
 <script>
 (function(){
   var provinces = document.querySelectorAll('.prov[data-provincia]');
@@ -204,6 +205,22 @@ h1 em{font-style:normal;color:var(--aura)}
   var countEl = document.getElementById('js-count');
   var total = venues.length;
   var active = null;
+
+  // Clic en una card de venue (no en un link de fuente adentro): manda un
+  // evento por card, con el pais (loc) y la provincia/lugar de esa card
+  // puntual, para medir que ubicaciones enganchan mas por locale.
+  venues.forEach(function(v){
+    v.addEventListener('click', function(e){
+      if (e.target.closest('a')) return;
+      if (!window.gtag) return;
+      var place = v.querySelector('.venue__place');
+      gtag('event', 'batalla_venue_card_click', {
+        loc: window.BATALLAS.loc,
+        provincia: v.dataset.provincia,
+        lugar: place ? place.textContent : ''
+      });
+    });
+  });
 
   function apply(){
     provinces.forEach(function(p){

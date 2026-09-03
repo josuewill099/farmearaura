@@ -342,6 +342,7 @@ def build_one(loc, cfg):
         ("FAQ_HTML", build_faq_html(L["faq"])),
         ("FOOTERNOTE", L["footerNote"]),  # contiene un <a> real, no escapar
         ("SITEFOOTER", nav_data.site_footer_html(loc, home)),
+        ("CONFIG", json.dumps({"loc": loc}, ensure_ascii=False, separators=(",", ":"))),
     ]:
         html = html.replace("{{%s}}" % k, v)
 
