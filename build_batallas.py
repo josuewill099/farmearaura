@@ -158,6 +158,13 @@ LOCALES = {
         "lang": "es-CR", "address_country": "CR",
         "update_label": "Mapa actualizado:",
     },
+    "gt": {
+        "home": "/gt/", "slug": "batallas-de-aura",
+        "geo_file": "departamentos-gt.geo.json",
+        "view_w": 460, "view_h": 481,
+        "lang": "es-GT", "address_country": "GT",
+        "update_label": "Mapa actualizado:",
+    },
     "esus": {
         "home": "/es-us/", "slug": "batallas-de-aura",
         "geo_file": "states-us.geo.json",

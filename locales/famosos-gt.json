@@ -1,0 +1,170 @@
+{
+ "loc": "gt",
+ "locale": "es-GT",
+ "lang": "es",
+ "numfmt": "es-GT",
+ "base": "https://farmearaura.com",
+ "aura_inicial": 1000,
+ "k": 32,
+ "slug_votar": "gt/duelos/famosos/",
+ "slug_ranking": "gt/duelos/famosos/ranking/",
+ "home": "/gt/",
+ "nav": {
+  "calculadora": "Calculadora",
+  "votar": "Duelos",
+  "ranking": "Ranking"
+ },
+ "votar": {
+  "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+  "description": "Carlos Ruiz contra Ricardo Arjona, Gaby Moreno contra Erick Barrondo. Elegí quién tiene más aura entre los famosos guatemaltecos y mirá el ranking en vivo.",
+  "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+  "sub": "Dos famosos guatemaltecos. Elegí uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "seo_h2": "Cómo se reparte la aura entre famosos",
+  "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que está arriba roba mucho, ganarle a uno que ya está abajo roba poco. El ranking se arma con los votos de todos los que entran, no solo los tuyos, y se puede terminar en aura negativa.",
+  "seo_link": "Ver el ranking completo de famosos"
+ },
+ "ranking": {
+  "title": "Ranking de aura entre famosos guatemaltecos | Farmear Aura",
+  "description": "El ranking de aura de los famosos guatemaltecos, armado con los votos de todos. Mirá quién manda y quién quedó en negativo.",
+  "h1": "Ranking de <em>aura</em> entre famosos",
+  "sub": "Se mueve con cada voto.",
+  "feed_titulo": "Últimos duelos",
+  "vacio": "Todavía no hay duelos. Estrenalo vos.",
+  "link": "Volver a votar"
+ },
+ "t": {
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "de_aura_label": "de aura",
+  "tiempo": {
+   "seg": "hace %s s",
+   "min": "hace %s min",
+   "hora": "hace %s h",
+   "dia": "hace %s d"
+  }
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "figuras": [
+  {
+   "id": "carlosruiz",
+   "emoji": "⚽",
+   "nombre": "Carlos \"El Pescadito\" Ruiz",
+   "anios": "Fútbol",
+   "oficio": "Máximo goleador histórico de la Sele, ícono del fútbol chapín."
+  },
+  {
+   "id": "olgerescobar",
+   "emoji": "⚽",
+   "nombre": "Olger Escobar",
+   "anios": "Fútbol",
+   "oficio": "Joven mediocampista del CF Montreal, Mejor Jugador Joven de la Copa Oro 2025."
+  },
+  {
+   "id": "erickbarrondo",
+   "emoji": "🥈",
+   "nombre": "Erick Barrondo",
+   "anios": "Atletismo",
+   "oficio": "Marchista que le dio a Guatemala su primera medalla olímpica, en Londres 2012."
+  },
+  {
+   "id": "ricardoarjona",
+   "emoji": "🎤",
+   "nombre": "Ricardo Arjona",
+   "anios": "Música",
+   "oficio": "Cantautor de fama mundial, uno de los artistas latinos más exitosos de la historia."
+  },
+  {
+   "id": "gabymoreno",
+   "emoji": "🎶",
+   "nombre": "Gaby Moreno",
+   "anios": "Música",
+   "oficio": "Cantautora ganadora de un Grammy y varios Latin Grammy, orgullo musical chapín."
+  },
+  {
+   "id": "malacatestrebolshop",
+   "emoji": "🎸",
+   "nombre": "Malacates Trébol Shop",
+   "anios": "Música",
+   "oficio": "Banda de rock/ska referente de la música guatemalteca desde los 90."
+  },
+  {
+   "id": "rebecalane",
+   "emoji": "🎧",
+   "nombre": "Rebeca Lane",
+   "anios": "Música",
+   "oficio": "Rapera y activista feminista, pionera del hip hop guatemalteco."
+  },
+  {
+   "id": "oscarisaac",
+   "emoji": "🎬",
+   "nombre": "Oscar Isaac",
+   "anios": "Actuación",
+   "oficio": "Actor nacido en Guatemala, estrella de Star Wars y Hollywood."
+  },
+  {
+   "id": "arturocastro",
+   "emoji": "🎥",
+   "nombre": "Arturo Castro",
+   "anios": "Actuación",
+   "oficio": "Actor chapín conocido por Narcos y Broad City."
+  },
+  {
+   "id": "christianbarillas",
+   "emoji": "🎭",
+   "nombre": "Christian Barillas",
+   "anios": "Actuación",
+   "oficio": "Actor guatemalteco con papeles en cine y series de Hollywood."
+  },
+  {
+   "id": "mariamercedescoroy",
+   "emoji": "🌺",
+   "nombre": "María Mercedes Coroy",
+   "anios": "Actuación",
+   "oficio": "Actriz indígena guatemalteca de Ixcanul y La Llorona, reconocida internacionalmente."
+  },
+  {
+   "id": "hectorsandarti",
+   "emoji": "📺",
+   "nombre": "Héctor Sandarti",
+   "anios": "TV",
+   "oficio": "Presentador, actor y comediante con 25 años de trayectoria en Televisa."
+  },
+  {
+   "id": "bambuchia",
+   "emoji": "🤣",
+   "nombre": "Bambuchia (Edwin Ramírez)",
+   "anios": "Comedia",
+   "oficio": "Comediante y productor de sketches y películas de humor familiar chapín."
+  },
+  {
+   "id": "jexs",
+   "emoji": "🎮",
+   "nombre": "Jexs",
+   "anios": "YouTube",
+   "oficio": "YouTuber con más de 13 millones de suscriptores, referente de la comedia digital chapina."
+  },
+  {
+   "id": "gamefer",
+   "emoji": "🕹️",
+   "nombre": "GameFer (Stefany Ferrera)",
+   "anios": "Streaming",
+   "oficio": "Gamer y streamer guatemalteca, ex integrante del equipo Team Queso."
+  },
+  {
+   "id": "davidgodoy",
+   "emoji": "📱",
+   "nombre": "David Godoy",
+   "anios": "Redes sociales",
+   "oficio": "Creador de contenido viral en TikTok, referente chapín entre la diáspora en EE.UU."
+  },
+  {
+   "id": "mariaadelinacastillo",
+   "emoji": "👑",
+   "nombre": "María Adelina Castillo",
+   "anios": "Belleza",
+   "oficio": "Miss Universo Guatemala 2026, médica pediatra representando al país."
+  }
+ ]
+}

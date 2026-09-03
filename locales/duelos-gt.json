@@ -1,0 +1,169 @@
+{
+ "locale": "es-GT",
+ "lang": "es",
+ "base": "https://farmearaura.com",
+ "brand": "FARMEAR AURA",
+ "aura_inicial": 1000,
+ "k": 32,
+ "nav": {
+  "votar": "Votar",
+  "ranking": "Ranking",
+  "historial": "Duelos",
+  "calculadora": "Calculadora"
+ },
+ "votar": {
+  "slug": "gt/duelos/",
+  "title": "¿Quién tiene más aura en Guatemala? — Duelos de aura | Farmear Aura",
+  "description": "Elegí quién tiene más aura en Guatemala. El que gana le roba puntos de aura al otro. Votá y mirá el ranking en vivo.",
+  "h1": "¿Quién tiene más aura en Guatemala?",
+  "sub": "Elegí uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "otro": "Otro duelo",
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "seo_h2": "Cómo funciona el duelo de aura",
+  "seo_p": "Un duelo de aura es una votación uno contra uno: elegís quién tiene más aura entre dos arquetipos cotidianos y el ganador le roba puntos al perdedor. Cada personaje arranca con 1.000 de aura. Cuando votás, el ganador le roba puntos al perdedor: si le gana a alguien con más aura, le roba más; si le gana a uno que ya estaba abajo, le roba poco. Los puntos se actualizan al toque y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Se puede quedar en negativo, obvio.",
+  "seo_link": "¿Querés saber cuánta aura tenés vos? Hacé el test de aura."
+ },
+ "ranking": {
+  "slug": "gt/duelos/ranking/",
+  "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+  "description": "El ranking de aura en vivo, armado con los votos de todos. Mirá quién está primero y quién quedó en aura negativa.",
+  "h1": "Ranking de aura",
+  "sub": "Actualizado con cada voto.",
+  "col_aura": "aura",
+  "vacio": "Todavía no hay votos. Andá a votar."
+ },
+ "historial": {
+  "slug": "gt/duelos/historial/",
+  "title": "Últimos duelos de aura | Farmear Aura",
+  "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+  "h1": "Últimos duelos",
+  "sub": "Los votos más recientes, uno por uno.",
+  "vacio": "Todavía no hay duelos. Estrenalo vos."
+ },
+ "offline": "Modo local: los votos no se guardan todavía.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "candidatos": [
+  {
+   "id": "camioneta-sin-pisto",
+   "emoji": "🚌",
+   "nombre": "El que sube a la camioneta y cuando el brocha le pide el pasaje se da cuenta de que se le quedó el pisto en la casa, con todo el mundo mirándolo esperando a que se baje."
+  },
+  {
+   "id": "transmetro-puerta-cerrada",
+   "emoji": "🚏",
+   "nombre": "El que llega corriendo a la parada del Transmetro y ve cómo la puerta se cierra justo en sus narices, dejándolo ahí parado viendo cómo se va el bus sin él."
+  },
+  {
+   "id": "camioneta-frenazo",
+   "emoji": "🛑",
+   "nombre": "El que va parado en la camioneta agarrado de un tubo pegajoso y el piloto pega un frenazo tan brusco que termina sentado en las piernas de un desconocido."
+  },
+  {
+   "id": "transurbano-perdido",
+   "emoji": "🗺️",
+   "nombre": "La que se sube al Transurbano equivocado por andar shute con el celular y termina como media hora lejos de su casa sin saber ni para dónde regresar."
+  },
+  {
+   "id": "talegazo-banqueta",
+   "emoji": "🕳️",
+   "nombre": "El que va caminando bien despreocupado por la banqueta, viendo el celular, y de repente se pega un talegazo en un hueco frente a todo el mercado."
+  },
+  {
+   "id": "chucho-vecino",
+   "emoji": "🐕",
+   "nombre": "El que se pone a correr para no llegar tarde al trabajo y el chucho del vecino sale ladrando y lo persigue media cuadra mientras los que van pasando se ríen a carcajadas."
+  },
+  {
+   "id": "shuco-camisa",
+   "emoji": "🌭",
+   "nombre": "El que se compra un shuco en la esquina y justo en el primer mordisco se le chorrea todo el chirmol en la camisa nueva un minuto antes de entrar a la reunión."
+  },
+  {
+   "id": "goma-domingo",
+   "emoji": "🥴",
+   "nombre": "El que se despierta con una goma tremenda un domingo y la mamá lo obliga a ir a misa igual, oliendo a trago y escondido detrás de unos lentes oscuros para que no se le note."
+  },
+  {
+   "id": "torneo-wifi",
+   "emoji": "🎮",
+   "nombre": "El que está a punto de ganar la partida en un torneo de videojuegos con sus amigos y justo en ese momento se va el wifi de toda la colonia, dejándolo plantado frente a la pantalla sin poder hacer nada."
+  },
+  {
+   "id": "celular-bateria-chat",
+   "emoji": "🔋",
+   "nombre": "La que anda de shute revisando el chat del ex a medianoche y se le muere el celular justo cuando estaba a punto de mandar el mensaje que no debía."
+  },
+  {
+   "id": "audio-grupo-equivocado",
+   "emoji": "🎙️",
+   "nombre": "El que manda un audio quejándose bien feo del jefe pensando que es al chat de sus patojos de confianza y en realidad lo manda directo al grupo completo del trabajo."
+  },
+  {
+   "id": "acordeon-examen",
+   "emoji": "📝",
+   "nombre": "El que se pasa toda la noche haciendo un acordeón bien clavado para el examen y llega el catedrático y cambia las preguntas justo cuando ya se lo había memorizado todo."
+  },
+  {
+   "id": "tesis-version-vieja",
+   "emoji": "🎓",
+   "nombre": "El que llega a defender la tesis en la universidad bien nervioso y al abrir la laptop se da cuenta de que subió la versión vieja, sin ninguna de las correcciones que le pidió el asesor."
+  },
+  {
+   "id": "mochila-regada",
+   "emoji": "🎒",
+   "nombre": "El que de patojo salía corriendo al bus de la escuela con la mochila mal cerrada y se le regaban todos los cuadernos justo en medio del parqueo lleno de gente."
+  },
+  {
+   "id": "fiesta-bolo",
+   "emoji": "🍻",
+   "nombre": "El que llega bien centrado a la fiesta y para la medianoche ya anda bien bolo contándole su vida entera a un desconocido que solo quería otra cerveza."
+  },
+  {
+   "id": "quince-anos-resbalon",
+   "emoji": "👗",
+   "nombre": "La que baila el vals en la fiesta de quince años de la prima y se resbala en plena pista, dejando a la quinceañera con cara de espanto y a todos los invitados muertos de risa."
+  },
+  {
+   "id": "cita-plantada",
+   "emoji": "☕",
+   "nombre": "La que se arregla bien chilera para una cita y espera solita en el café más de una hora hasta darse cuenta de que la dejaron plantada sin ni un mensaje de disculpa."
+  },
+  {
+   "id": "despedida-soltera-pastel",
+   "emoji": "🎂",
+   "nombre": "La que organiza la despedida de soltera de su mejor amiga y se le olvida el pastel en la casa, dejando a todas las invitadas nomás con el pisto gastado y el estómago vacío."
+  },
+  {
+   "id": "zoom-microfono-abierto",
+   "emoji": "💻",
+   "nombre": "El que entra tarde a la reunión de Zoom con el jefe y no se da cuenta de que sigue con el micrófono abierto mientras comenta bien shute todo lo que piensa de la empresa."
+  },
+  {
+   "id": "aguinaldo-volado",
+   "emoji": "💸",
+   "nombre": "El que recibe el aguinaldo bien contento y a los tres días ya se lo ha volado todo, sin dejar ni un centavo de pisto para las fiestas de fin de año."
+  },
+  {
+   "id": "almuerzo-tupper-jefe",
+   "emoji": "🍱",
+   "nombre": "El que se roba el almuerzo del refrigerador de la oficina pensando que nadie se va a dar cuenta y resulta que era el tupper del jefe con su nombre bien marcado en la tapa."
+  },
+  {
+   "id": "tia-shute-boda",
+   "emoji": "👵",
+   "nombre": "El que llega a la reunión familiar y la tía más shute de todas ya lo está esperando en la puerta con la pregunta incómoda de cuándo se va a casar."
+  },
+  {
+   "id": "almuerzo-abuela-tarde",
+   "emoji": "🫓",
+   "nombre": "El que llega bien cabal a la hora que dijo la abuela para el almuerzo familiar y se encuentra con que ya no queda ni una tortilla con chirmol."
+  },
+  {
+   "id": "abuelo-cuenta-anecdota",
+   "emoji": "🍬",
+   "nombre": "El que de patojo se robaba los chicles de la tienda de la esquina y ahora, ya grande, la abuela le sigue contando la misma anécdota a toda la familia en cada convivio como si hubiera pasado ayer."
+  }
+ ]
+}
