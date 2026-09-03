@@ -1,0 +1,169 @@
+{
+ "locale": "es-PR",
+ "lang": "es",
+ "base": "https://farmearaura.com",
+ "brand": "FARMEAR AURA",
+ "aura_inicial": 1000,
+ "k": 32,
+ "nav": {
+  "votar": "Votar",
+  "ranking": "Ranking",
+  "historial": "Duelos",
+  "calculadora": "Calculadora"
+ },
+ "votar": {
+  "slug": "pr/duelos/",
+  "title": "¿Quién tiene más aura? — Duelos de aura | Farmear Aura",
+  "description": "Elige quién tiene más aura. El que gana le roba puntos de aura al otro. Vota y mira el ranking en vivo.",
+  "h1": "¿Quién tiene más aura?",
+  "sub": "Elige uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "otro": "Otro duelo",
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "seo_h2": "Cómo funciona el duelo de aura",
+  "seo_p": "Cada personaje arranca con 1.000 de aura. Cuando votas, el que gana le roba puntos al que pierde: si le gana a alguien con más aura, le roba más; si le gana a uno que ya estaba abajo, le roba poquito. Los puntos se actualizan al toque y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Se puede quedar en números rojos, obvio.",
+  "seo_link": "¿Quieres saber cuánta aura tienes tú? Haz el test de aura."
+ },
+ "ranking": {
+  "slug": "pr/duelos/ranking/",
+  "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+  "description": "El ranking de aura en vivo, armado con los votos de todos. Mira quién va primero y quién quedó en aura negativa.",
+  "h1": "Ranking de aura",
+  "sub": "Actualizado con cada voto.",
+  "col_aura": "aura",
+  "vacio": "Todavía no hay votos. Ve a votar."
+ },
+ "historial": {
+  "slug": "pr/duelos/historial/",
+  "title": "Últimos duelos de aura | Farmear Aura",
+  "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+  "h1": "Últimos duelos",
+  "sub": "Los votos más recientes, uno por uno.",
+  "vacio": "Todavía no hay duelos. Estrénalo tú."
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "candidatos": [
+  {
+   "id": "guagua-sin-tarjeta-tu",
+   "emoji": "🚌",
+   "nombre": "El que se monta en la guagua de la AMA y descubre que dejó la tarjeta TU metida en el mahón de ayer"
+  },
+  {
+   "id": "pon-tarde-trabajo",
+   "emoji": "🚗",
+   "nombre": "La que pide un pon pa'l trabajo y se pasa todo el camino bregando pa' que no se note que salió tarde otra vez"
+  },
+  {
+   "id": "chinchorreo-sin-chavos",
+   "emoji": "🍻",
+   "nombre": "El que llega al chinchorreo sin un chavo prestado y le toca pichar cuando cae la cuenta"
+  },
+  {
+   "id": "ay-bendito-boca-llena",
+   "emoji": "😋",
+   "nombre": "La que dice \"ay, bendito\" con la boca llena y sigue comiendo mientras le cuentan el problemón de su vida"
+  },
+  {
+   "id": "mahones-nuevos-rajados",
+   "emoji": "👖",
+   "nombre": "El que se estrena los mahones nuevos y se le rajan por la costura antes de llegar a la marquesina"
+  },
+  {
+   "id": "cola-fiesta-marquesina",
+   "emoji": "🎉",
+   "nombre": "La que llega colá a la fiesta de marquesina y es la primera en pedir plato"
+  },
+  {
+   "id": "ultimo-palo-chinchorro",
+   "emoji": "🥃",
+   "nombre": "El que jura que se está tomando \"el último palo\" y termina cerrando el chinchorro"
+  },
+  {
+   "id": "audio-gufeando-mal-enviado",
+   "emoji": "🎙️",
+   "nombre": "La que manda un audio gufeando de alguien directo al chat de esa misma persona"
+  },
+  {
+   "id": "china-jugo-manga",
+   "emoji": "🍊",
+   "nombre": "El que se come una china entera en la reunión de trabajo y termina con el jugo chorreándole por la manga"
+  },
+  {
+   "id": "econo-carrito-lleno",
+   "emoji": "🛒",
+   "nombre": "La que entra a Econo por dos cosas y sale con el carrito lleno hasta el tope"
+  },
+  {
+   "id": "zafacon-culpa",
+   "emoji": "💨",
+   "nombre": "El que le echa la culpa al zafacón de la oficina por el peo que se acaba de tirar"
+  },
+  {
+   "id": "labios-espejo-guagua",
+   "emoji": "💄",
+   "nombre": "La que se pinta los labios frente al espejo retrovisor de la guagua AMA justo cuando el chofer frena de sopetón"
+  },
+  {
+   "id": "cangriman-group-chat",
+   "emoji": "🕴️",
+   "nombre": "El que se cree cangrimán en el group chat de la oficina y no tiene ni las llaves de su propio cubículo"
+  },
+  {
+   "id": "cascara-guineo",
+   "emoji": "🍌",
+   "nombre": "La que se resbala con una cáscara de guineo en el pasillo del súper — el chiste más viejo del mundo, pero de verdad"
+  },
+  {
+   "id": "fresco-con-la-cajera",
+   "emoji": "😏",
+   "nombre": "El que se pone bien fresco con la cajera y ella lo manda pa'l final de la fila"
+  },
+  {
+   "id": "esnu-ola-playa",
+   "emoji": "🌊",
+   "nombre": "La que se queda esnú en la orilla porque una ola le robó el pantalón corto frente a todo el mundo"
+  },
+  {
+   "id": "medalla-caida-arena",
+   "emoji": "🍺",
+   "nombre": "El que se le cae la Medalla llena en la arena y trata de salvarla soplándole a la espuma"
+  },
+  {
+   "id": "vellon-parking-plaza",
+   "emoji": "🪙",
+   "nombre": "La que gasta su último vellón en el parking del Plaza y se queda sin chavos pa'l peaje"
+  },
+  {
+   "id": "revolu-chat-familia",
+   "emoji": "📱",
+   "nombre": "El que arma tremendo revolú en el chat de la familia por un mensaje que era pa'l otro grupo"
+  },
+  {
+   "id": "wepa-cancion-equivocada",
+   "emoji": "🎉",
+   "nombre": "La que grita \"¡wepa!\" antes de que suene la canción y se da cuenta de que puso la equivocada"
+  },
+  {
+   "id": "janguear-hasta-el-sol",
+   "emoji": "🌅",
+   "nombre": "El que jura que solo iba a janguear un rato y llega a la casa con el sol ya arriba"
+  },
+  {
+   "id": "piragua-derretida",
+   "emoji": "🍧",
+   "nombre": "La que se compra una piragua de china y se le derrite entera antes de llegar a la sombrilla"
+  },
+  {
+   "id": "walgreens-equivocado",
+   "emoji": "💊",
+   "nombre": "El que sale de un Walgreens y sin querer entra al Walgreens de al lado porque no se dio cuenta que era otro"
+  },
+  {
+   "id": "corillo-bregando-palos",
+   "emoji": "🚕",
+   "nombre": "La que se pasa todo el chinchorreo bregando con el corillo pa' que nadie maneje después de los palos"
+  }
+ ]
+}

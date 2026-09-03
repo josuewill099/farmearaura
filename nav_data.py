@@ -28,7 +28,8 @@ _ROOT = Path(__file__).parent
 
 LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
             "cl": "es", "pe": "es", "co": "es", "us": "en", "esus": "es", "uy": "es",
-            "pt": "pt", "ec": "es", "ve": "es", "cr": "es", "gt": "es", "bo": "es"}
+            "pt": "pt", "ec": "es", "ve": "es", "cr": "es", "gt": "es", "bo": "es",
+            "pr": "es"}
 _legal_cache = {}
 
 
@@ -60,6 +61,7 @@ GUIDE_URLS = {
     "pt": "https://farmearaura.com/pt/o-que-e-farmar-aura/",
     "ec": "https://farmearaura.com/ec/que-es-farmear-aura/",
     "ve": "https://farmearaura.com/ve/que-es-farmear-aura/",
+    "pr": "https://farmearaura.com/pr/que-es-farmear-aura/",
     "cr": "https://farmearaura.com/cr/que-es-farmear-aura/",
     "gt": "https://farmearaura.com/gt/que-es-farmear-aura/",
     "bo": "https://farmearaura.com/bo/que-es-farmear-aura/",
@@ -72,6 +74,7 @@ GUIDE_LABELS = {
     "esus": "¿Qué es el aura farming?", "uy": "¿Qué es farmear aura?",
     "pt": "O que é farmar aura?", "ec": "¿Qué es farmear aura?",
     "ve": "¿Qué es farmear aura?",
+    "pr": "¿Qué es farmear aura?",
     "cr": "¿Qué es farmear aura?",
     "gt": "¿Qué es farmear aura?",
     "bo": "¿Qué es farmear aura?",
@@ -127,6 +130,9 @@ NAV_LABELS = {
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador", "batallas": "Batallas"},
     "bo": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador", "batallas": "Batallas"},
+    "pr": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador", "batallas": "Batallas"},
 }
@@ -323,6 +329,18 @@ NAV_URLS = {
         "famosos_ranking": "https://farmearaura.com/bo/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/bo/contador-de-aura/",
         "batallas": "https://farmearaura.com/bo/batallas-de-aura/",
+    },
+    "pr": {
+        "home": "https://farmearaura.com/pr/",
+        "duelos": "https://farmearaura.com/pr/duelos/",
+        "duelos_ranking": "https://farmearaura.com/pr/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/pr/duelos/historial/",
+        "historia": "https://farmearaura.com/pr/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/pr/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/pr/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/pr/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/pr/contador-de-aura/",
+        "batallas": "https://farmearaura.com/pr/batallas-de-aura/",
     },
 }
 

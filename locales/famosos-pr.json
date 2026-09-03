@@ -1,0 +1,170 @@
+{
+ "loc": "pr",
+ "locale": "es-PR",
+ "lang": "es",
+ "numfmt": "es-PR",
+ "base": "https://farmearaura.com",
+ "aura_inicial": 1000,
+ "k": 32,
+ "slug_votar": "pr/duelos/famosos/",
+ "slug_ranking": "pr/duelos/famosos/ranking/",
+ "home": "/pr/",
+ "nav": {
+  "calculadora": "Calculadora",
+  "votar": "Duelos",
+  "ranking": "Ranking"
+ },
+ "votar": {
+  "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+  "description": "Bad Bunny contra Chente Ydrach, Amanda Serrano contra Roselyn Sánchez. Escoge quién tiene más aura entre los famosos boricuas y mira el ranking en vivo.",
+  "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+  "sub": "Dos famosos boricuas. Escoge uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "seo_h2": "Cómo se reparte la aura entre famosos",
+  "seo_p": "Los famosos empiezan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que va arriba roba bastante, ganarle a uno hundido roba poquito. El ranking se mueve con los votos de toda la gente que entra, no solo con los tuyos, y sí se puede terminar en aura negativa.",
+  "seo_link": "Ver el ranking completo de famosos"
+ },
+ "ranking": {
+  "title": "Ranking de aura entre famosos boricuas | Farmear Aura",
+  "description": "El ranking de aura de los famosos boricuas, hecho con los votos de todos. Mira quién manda y quién quedó en negativo.",
+  "h1": "Ranking de <em>aura</em> entre famosos",
+  "sub": "Se mueve con cada voto.",
+  "feed_titulo": "Últimos duelos",
+  "vacio": "Todavía no hay duelos. Estrénalo tú.",
+  "link": "Volver a votar"
+ },
+ "t": {
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "de_aura_label": "de aura",
+  "tiempo": {
+   "seg": "hace %s s",
+   "min": "hace %s min",
+   "hora": "hace %s h",
+   "dia": "hace %s d"
+  }
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+ "figuras": [
+  {
+   "id": "badbunny",
+   "emoji": "🎤",
+   "nombre": "Bad Bunny",
+   "anios": "Música",
+   "oficio": "Superstar global, headliner del Super Bowl LX"
+  },
+  {
+   "id": "rauwalejandro",
+   "emoji": "🎤",
+   "nombre": "Rauw Alejandro",
+   "anios": "Música",
+   "oficio": "Estrella del reggaetón y R&B"
+  },
+  {
+   "id": "ozuna",
+   "emoji": "🎤",
+   "nombre": "Ozuna",
+   "anios": "Música",
+   "oficio": "Pesado del género urbano"
+  },
+  {
+   "id": "youngmiko",
+   "emoji": "🎤",
+   "nombre": "Young Miko",
+   "anios": "Música",
+   "oficio": "Estrella del trap, Super Bowl LX"
+  },
+  {
+   "id": "kanygarcia",
+   "emoji": "🎤",
+   "nombre": "Kany García",
+   "anios": "Música",
+   "oficio": "Cantautora, seis veces ganadora del Latin Grammy"
+  },
+  {
+   "id": "ivyqueen",
+   "emoji": "🎤",
+   "nombre": "Ivy Queen",
+   "anios": "Música",
+   "oficio": "La Reina del reggaetón"
+  },
+  {
+   "id": "franciscolindor",
+   "emoji": "⚾",
+   "nombre": "Francisco Lindor",
+   "anios": "Béisbol",
+   "oficio": "Shortstop de los NY Mets"
+  },
+  {
+   "id": "carloscorrea",
+   "emoji": "⚾",
+   "nombre": "Carlos Correa",
+   "anios": "Béisbol",
+   "oficio": "Shortstop de los Houston Astros, nacido en Ponce"
+  },
+  {
+   "id": "jjbarea",
+   "emoji": "🏀",
+   "nombre": "JJ Barea",
+   "anios": "Baloncesto",
+   "oficio": "Leyenda boricua de la NBA, hoy asistente en los Nuggets"
+  },
+  {
+   "id": "amandaserrano",
+   "emoji": "🥊",
+   "nombre": "Amanda Serrano",
+   "anios": "Boxeo",
+   "oficio": "Campeona indiscutida"
+  },
+  {
+   "id": "subrielmatias",
+   "emoji": "🥊",
+   "nombre": "Subriel Matías",
+   "anios": "Boxeo",
+   "oficio": "Excampeón mundial WBC, de Fajardo"
+  },
+  {
+   "id": "beniciodeltoro",
+   "emoji": "🎬",
+   "nombre": "Benicio del Toro",
+   "anios": "Actuación",
+   "oficio": "Actor ganador del Óscar"
+  },
+  {
+   "id": "roselynsanchez",
+   "emoji": "🎬",
+   "nombre": "Roselyn Sánchez",
+   "anios": "Actuación",
+   "oficio": "Actriz y productora"
+  },
+  {
+   "id": "adamarilopez",
+   "emoji": "📺",
+   "nombre": "Adamari López",
+   "anios": "TV",
+   "oficio": "Presentadora de televisión"
+  },
+  {
+   "id": "molusco",
+   "emoji": "🎙️",
+   "nombre": "Molusco",
+   "anios": "Redes sociales",
+   "oficio": "Personalidad de radio y YouTube más escuchada de PR"
+  },
+  {
+   "id": "chenteydrach",
+   "emoji": "😂",
+   "nombre": "Chente Ydrach",
+   "anios": "Comedia",
+   "oficio": "Comediante y podcaster"
+  },
+  {
+   "id": "gabyalicea",
+   "emoji": "😂",
+   "nombre": "Gaby Alicea",
+   "anios": "Comedia",
+   "oficio": "Comediante de stand-up"
+  }
+ ]
+}

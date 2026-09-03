@@ -19,7 +19,7 @@ ROOT   = pathlib.Path(__file__).parent
 SRC    = ROOT / "src"
 DIST   = ROOT / "dist"
 DOMAIN = "https://farmearaura.com"
-ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec", "ve", "cr", "gt", "bo"]    # ar first = default
+ORDER  = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec", "ve", "cr", "gt", "bo", "pr"]    # ar first = default
 GENERIC = {"es": "ar", "pt": "br", "en": "us"}   # bare language code -> owning locale
 TODAY  = date.today().isoformat()   # sitemap <lastmod> for this build -- shared with
                                      # build_articles.py/build_duelos.py/build_historia.py/
@@ -47,7 +47,8 @@ LEGAL = {k: json.loads((ROOT / "locales" / f"legal-{k}.json").read_text("utf-8")
          for k in ("es", "pt", "en")}
 LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
             "cl": "es", "pe": "es", "co": "es", "us": "en",
-            "esus": "es", "uy": "es", "pt": "pt", "ec": "es", "ve": "es", "cr": "es", "gt": "es", "bo": "es"}   # locale -> legal language
+            "esus": "es", "uy": "es", "pt": "pt", "ec": "es", "ve": "es", "cr": "es", "gt": "es", "bo": "es",
+            "pr": "es"}   # locale -> legal language
 for _c, _l in LOC.items():
     _l["_code"] = _c
 DEFAULT = next(l for l in LOC.values() if l["isDefault"])
@@ -573,7 +574,8 @@ def build_llms():
                 ("co", "Colombia"), ("us", "United States (English)"),
                 ("esus", "Estados Unidos (español)"), ("uy", "Uruguay"),
                 ("pt", "Portugal (português)"), ("ec", "Ecuador"), ("ve", "Venezuela"),
-                ("cr", "Costa Rica"), ("gt", "Guatemala"), ("bo", "Bolivia")]
+                ("cr", "Costa Rica"), ("gt", "Guatemala"), ("bo", "Bolivia"),
+                ("pr", "Puerto Rico")]
     calculadora = "\n".join(
         f"- {label}{' (predeterminada)' if c == 'ar' else ''}: {U[c]['home']} · "
         f"guía: {DOMAIN}{LOC[c]['path']}{LOC[c]['guide']['slug']}/"

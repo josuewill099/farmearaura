@@ -172,6 +172,13 @@ LOCALES = {
         "lang": "es-BO", "address_country": "BO",
         "update_label": "Mapa actualizado:",
     },
+    "pr": {
+        "home": "/pr/", "slug": "batallas-de-aura",
+        "geo_file": "municipios-pr.geo.json",
+        "view_w": 460, "view_h": 157,
+        "lang": "es-PR", "address_country": "PR",
+        "update_label": "Mapa actualizado:",
+    },
     "esus": {
         "home": "/es-us/", "slug": "batallas-de-aura",
         "geo_file": "states-us.geo.json",
