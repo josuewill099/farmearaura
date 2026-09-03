@@ -198,7 +198,7 @@ def build():
                 ("SUB", esc(page["sub"])),
                 ("OFFLINE", esc(L["offline"])),
                 ("MAIN", main),
-                ("SITEFOOTER", nav_data.site_footer_html(loc, base + L["home"], L["footer"])),
+                ("SITEFOOTER", nav_data.site_footer_html(loc, base + L["home"])),
                 ("CONFIG", json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))),
                 ("JS", js),
             ]:

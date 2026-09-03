@@ -1087,7 +1087,7 @@ def build():
                           if art["slug"] in COUNTER_SLUGS
                           else f'<a class="cta" href="{home}">{esc(art["ctaNav"])}</a>'),
                 ld=ld,
-                sitefooter=nav_data.site_footer_html(loc, home, art["footerNote"]),
+                sitefooter=nav_data.site_footer_html(loc, home),
             )
 
             # home.strip("/") es "" para ar (locale por defecto, vive en /);

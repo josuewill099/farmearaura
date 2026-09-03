@@ -13,13 +13,11 @@ esta el visitante, para marcar aria-current en el item (y sub-item) correcto:
     "home", "duelos", "duelos_ranking", "duelos_historial",
     "historia", "historia_ranking"
 
-site_footer_html(loc, home, blurb=None) arma el <footer> de 4 columnas
-(Marca / Enlaces / Legal / Contacto) que reemplaza la vieja linea unica de
-legal_links_html en todos los tipos de pagina. "blurb" es el texto de la
-columna de marca -- cada builder ya tiene a mano una frase propia de esa
-locale (footerNote de guia, o el "footer" de duelos/famosos/historia) y la
-pasa aca en vez de que este modulo intente adivinarla; si no se pasa nada
-cae a BRAND_BLURB (generico, por idioma).
+site_footer_html(loc, home) arma el <footer> de 4 columnas (Marca / Enlaces
+/ Legal / Contacto) que reemplaza la vieja linea unica de legal_links_html
+en todos los tipos de pagina. El texto de la columna de marca es
+BRAND_BLURB, generico por idioma (no por locale) -- una sola frase de
+marketing repetida en todo el sitio, igual en cada tipo de pagina.
 """
 
 import json
@@ -338,17 +336,15 @@ def _esc(s):
 # tabla LEGAL -- 3 variantes, no 16, porque este texto es generico de marca,
 # no propio de cada locale.
 BRAND_BLURB = {
-    "es": "El sitio de humor sobre farmear aura: calculadora de puntos, "
-          "duelos y rankings. Los puntos no existen, la diversión sí.",
-    "pt": "O site de humor sobre farmar aura: calculadora de pontos, duelos "
-          "e rankings. Os pontos não existem, a diversão sim.",
-    "en": "The aura-farming humor site: a points calculator, duels, and "
-          "rankings. The points aren't real — the fun is.",
-}
-CROSS_PROMO_LABEL = {
-    "es": "También por nuestro equipo: ",
-    "pt": "Também da nossa equipe: ",
-    "en": "Also by our team: ",
+    "es": "La plataforma definitiva y la guía número uno para dominar el "
+          "arte del farmeo de aura, calcular tu puntaje de estilo en tiempo "
+          "real y llevarla al siguiente nivel.",
+    "pt": "A plataforma definitiva e o guia número um para dominar a arte "
+          "de farmar aura, calcular seu placar de estilo em tempo real e "
+          "levá-la ao próximo nível.",
+    "en": "The definitive platform and #1 guide to mastering the art of "
+          "aura farming, calculating your style score in real time, and "
+          "taking it to the next level.",
 }
 COPYRIGHT_RIGHTS = {
     "es": "Todos los derechos reservados.",
@@ -362,7 +358,7 @@ FOOTER_HEADINGS = {
 }
 
 
-def site_footer_html(loc, home, blurb=None):
+def site_footer_html(loc, home):
     lang = LEGAL_OF[loc]
     L, U = NAV_LABELS[loc], NAV_URLS[loc]
     H = FOOTER_HEADINGS[lang]
@@ -384,7 +380,6 @@ def site_footer_html(loc, home, blurb=None):
         '<div class="site-footer-section">'
         '<h3>FARMEARAURA</h3>'
         '<p>%s</p>'
-        '<p>%s<a href="https://lingostar.ai">Lingostar AI</a>.</p>'
         '</div>'
         '<div class="site-footer-section">'
         '<h3>%s</h3>'
@@ -407,8 +402,7 @@ def site_footer_html(loc, home, blurb=None):
         '<p>&copy; %d Farmear Aura SRL. %s</p>'
         '</div>'
     ) % (
-        _esc(blurb if blurb is not None else BRAND_BLURB[lang]),
-        CROSS_PROMO_LABEL[lang],
+        _esc(BRAND_BLURB[lang]),
         _esc(H["quick"]), quick_html,
         _esc(H["legal"]), legal_html,
         _esc(H["contact"]),

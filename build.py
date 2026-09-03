@@ -131,8 +131,7 @@ def build_legal(langkey):
             homeLabel=esc(L["homeLabel"]), navLabel=esc(L["navLabel"]),
             h1=esc(pg["h1"]), updated=esc(L["updated"]), lead=pg["lead"],
             sections="\n\n".join(body),
-            sitefooter=nav_data.site_footer_html(
-                owner["_code"], home, owner["guide"]["footerNote"]),
+            sitefooter=nav_data.site_footer_html(owner["_code"], home),
             analytics=analytics_tag, robots=robots,
             ld=json.dumps(ld, ensure_ascii=False, indent=2))
     return out
@@ -231,7 +230,7 @@ def build_app(l):
         ("Todo pasa dentro de tu celular.", a["fine2"]),
         ("Calcula la tuya en 7 preguntas", a["cardTagline"]),
         ("Calculadora<br>de Aura", f'{a["wordmark"][0]}<br>{a["wordmark"][1]}'),
-        ("<!--SITEFOOTER-->", nav_data.site_footer_html(l["_code"], canonical, l["guide"]["footerNote"])),
+        ("<!--SITEFOOTER-->", nav_data.site_footer_html(l["_code"], canonical)),
         ("<!--DUELCARDS-->", app_duel_cards(l)),
         ("Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com",
          a["shareText"].replace("{score}", "${fmt(S.score)}")),
@@ -390,7 +389,7 @@ def build_guide(l):
         promoUrl=l["path"],
         navblock=f'<a class="cta" href="{l["path"]}">{esc(g["ctaNav"])}</a>',
         ld=json.dumps(schema(l), ensure_ascii=False, indent=2),
-        sitefooter=nav_data.site_footer_html(code, l["path"], g["footerNote"]),
+        sitefooter=nav_data.site_footer_html(code, l["path"]),
     )
 
 def schema(l):
