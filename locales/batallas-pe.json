@@ -23,9 +23,10 @@
       "ciudad": "Lima (Miraflores)",
       "lugar": "Parque Kennedy",
       "fecha": "2026-08-15",
-      "descripcion": "Torneo organizado por el creador de contenido Fernando Ropa, con S/100 de premio para el ganador.",
+      "descripcion": "Torneo organizado por el creador de contenido Fernando Ropa, con inicio a las 16:00. Los participantes compitieron con poses, miradas, gestos, bailes y referencias a memes, por un premio de S/100 para el ganador.",
       "fuente": [
-        ["RPP", "https://rpp.pe/mundo/actualidad/que-es-farmear-aura-conoce-mas-del-fenomeno-que-arrasa-en-tiktok-y-redes-sociales-noticia-1701647"]
+        ["RPP", "https://rpp.pe/mundo/actualidad/que-es-farmear-aura-conoce-mas-del-fenomeno-que-arrasa-en-tiktok-y-redes-sociales-noticia-1701647"],
+        ["Infobae", "https://www.infobae.com/peru/2026/08/15/batalla-de-farmear-aura-llega-al-peru-de-que-trata-la-nueva-tendencia-de-tiktok-entre-jovenes-y-como-se-gana/"]
       ]
     },
     {
@@ -33,10 +34,11 @@
       "provincia": "lima-provincia",
       "ciudad": "Lima",
       "lugar": "Museo Metropolitano de Lima",
-      "fecha": "2026-08-15",
-      "descripcion": "Batalla incluida dentro de la programación del Alameda Fest Snoopy el mismo fin de semana.",
+      "fecha": "2026-08-16",
+      "descripcion": "Batalla de \"Farmear Aura\" incluida dentro de la programación del Alameda Fest Snoopy, con entrada libre e inicio a las 16:00. El ganador se llevó S/200.",
       "fuente": [
-        ["El Popular", "https://elpopular.pe/actualidad/2026/08/21/de-tiktok-a-las-calles-asi-son-las-batallas-de-aura-que-ya-causan-furor-en-peru-1010730"]
+        ["El Popular", "https://elpopular.pe/actualidad/2026/08/21/de-tiktok-a-las-calles-asi-son-las-batallas-de-aura-que-ya-causan-furor-en-peru-1010730"],
+        ["Infobae", "https://www.infobae.com/peru/2026/08/15/batalla-de-farmear-aura-llega-al-peru-de-que-trata-la-nueva-tendencia-de-tiktok-entre-jovenes-y-como-se-gana/"]
       ]
     }
   ]
