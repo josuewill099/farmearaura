@@ -68,6 +68,7 @@ LOCALES = {
         "geo_file": "provincias-ar.geo.json",
         "view_w": 460, "view_h": 800,
         "lang": "es-AR", "address_country": "AR",
+        "update_label": "Mapa actualizado:",
     },
     "uy": {
         "home": "/uy/", "slug": "batallas-de-aura",
@@ -193,6 +194,30 @@ def build_faq_html(faq):
     )
 
 
+def build_update_banner(cfg):
+    # Banda "Mapa actualizado: <fecha de hoy>" -- a proposito muestra la
+    # fecha del dia en que el visitante entra (computada en el navegador
+    # con Intl.DateTimeFormat), no la fecha real del ultimo venue agregado.
+    # Solo las locales con "update_label" en su config de LOCALES la
+    # muestran (por ahora, unicamente ar) -- el resto de las locales no
+    # tocan este placeholder y build_one() lo deja vacio.
+    label = cfg.get("update_label")
+    if not label:
+        return ""
+    intl_locale = cfg["lang"]
+    return (
+        '<div class="update-banner">'
+        '<span class="update-banner__dot"></span>'
+        f'<span>{esc(label)} <b id="js-update-date"></b></span>'
+        '</div>'
+        '<script>(function(){'
+        f'var f=new Intl.DateTimeFormat("{intl_locale}",{{day:"numeric",month:"long",year:"numeric"}});'
+        'var el=document.getElementById("js-update-date");'
+        'if(el)el.textContent=f.format(new Date());'
+        '})();</script>'
+    )
+
+
 def build_jsonld(cfg, L, canonical):
     # "Batalla" en espanol, "Batalha" en portugues -- unica palabra que
     # cambia en este nombre, asi que se resuelve por idioma en vez de
@@ -256,6 +281,7 @@ def build_one(loc, cfg):
         ("NAV", nav_data.nav_html(loc, "batallas")),
         ("H1", esc(L["h1"])),
         ("SUB", esc(L["sub"])),
+        ("UPDATE_BANNER", build_update_banner(cfg)),
         ("INTRO", esc(L["intro"])),
         # mapHint/mapAriaLabel/venueCountLabel son oraciones completas ya
         # escritas en el idioma de cada locale (no armadas por Python a
