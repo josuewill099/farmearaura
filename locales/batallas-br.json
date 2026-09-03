@@ -62,6 +62,77 @@
       "fuente": [
         ["Midiamax", "https://midiamax.com.br/midiamais/2026/meme-internet-evento-capital-1o-campeonato-farmar-aura-reune-jovens-familias-curiosos-campo-grande/"]
       ]
+    },
+    {
+      "id": "cameta",
+      "provincia": "para",
+      "ciudad": "Cametá",
+      "lugar": "Praça pública",
+      "fecha": "2026-06-26",
+      "descripcion": "Um dos primeiros campeonatos documentados no Brasil. Centenas de pessoas se reuniram numa praça pública, e o vencedor recebeu uma caixa de som como prêmio.",
+      "fuente": [
+        ["DW Brasil", "https://www.dw.com/pt-br/como-nasce-um-campeonato-de-farmar-aura/a-78141782"],
+        ["iG Último Segundo", "https://ultimosegundo.ig.com.br/2026-06-26/campeonato-de-farmar-aura-reune-multidao-no-para.html"]
+      ]
+    },
+    {
+      "id": "suzano",
+      "provincia": "sao-paulo",
+      "ciudad": "Suzano",
+      "lugar": "Parque Municipal Max Feffer",
+      "fecha": "2026-07-15",
+      "descripcion": "Mais de 200 jovens se reuniram no parque, e a multidão escolheu o vencedor, premiado com R$ 250. Uma segunda edição chegou a ser anunciada para 18 de julho, embora sem confirmação posterior de que tenha realmente acontecido.",
+      "fuente": [
+        ["G1", "https://g1.globo.com/sp/mogi-das-cruzes-suzano/noticia/2026/07/15/campeonato-de-farmar-aura-reune-mais-de-200-jovens-na-grande-sp-e-viraliza-video.ghtml"],
+        ["Metrópoles", "https://www.metropoles.com/sao-paulo/suzano-vira-palco-de-campeonato-de-farmar-aura-entenda-a-trend"]
+      ]
+    },
+    {
+      "id": "sao-mateus",
+      "provincia": "sao-paulo",
+      "ciudad": "São Paulo",
+      "lugar": "Largo de São Mateus",
+      "fecha": "2026-07-21",
+      "descripcion": "Cerca de 200 pessoas participaram do campeonato no bairro de São Mateus, com premiação de R$ 1.000 para o primeiro lugar.",
+      "fuente": [
+        ["DW Brasil", "https://www.dw.com/pt-br/como-nasce-um-campeonato-de-farmar-aura/a-78141782"],
+        ["R7", "https://noticias.r7.com/sao-paulo/como-e-farmar-aura-sao-paulo-teve-ate-competicao-pra-isso-no-fim-de-semana-21072026/"]
+      ]
+    },
+    {
+      "id": "jaboatao-dos-guararapes",
+      "provincia": "pernambuco",
+      "ciudad": "Jaboatão dos Guararapes",
+      "lugar": "Praia de Candeias",
+      "fecha": "2026-07-13",
+      "descripcion": "Campeonato na Região Metropolitana do Recife em que os participantes usaram dança, atuação, carisma e performances criativas para conquistar o apoio do público, que escolheu quem tinha mais carisma.",
+      "fuente": [
+        ["G1 Pernambuco", "https://g1.globo.com/pe/pernambuco/noticia/2026/07/13/campeonato-de-farmar-aura-reune-jovens-na-praia-no-grande-recife-video.ghtml"],
+        ["G1 Bom Dia PE", "https://g1.globo.com/pe/pernambuco/bom-dia-pe/video/bora-farmar-aura-competicao-em-jaboatao-escolhe-o-que-tem-mais-carisma-entre-o-publico-14774000.ghtml"]
+      ]
+    },
+    {
+      "id": "rio-verde",
+      "provincia": "goias",
+      "ciudad": "Rio Verde",
+      "lugar": "Evento público",
+      "fecha": "2026-07-15",
+      "descripcion": "Um campeonato de farmar aura na cidade viralizou nas redes sociais, embora o local exato, o vencedor e o prêmio não tenham sido detalhados na cobertura.",
+      "fuente": [
+        ["G1 Goiás", "https://g1.globo.com/go/goias/noticia/2026/07/15/campeonato-de-farmar-aura-chama-atencao-nas-redes-sociais-video.ghtml"]
+      ]
+    },
+    {
+      "id": "cuiaba",
+      "provincia": "mato-grosso",
+      "ciudad": "Cuiabá",
+      "lugar": "Parque Tia Nair",
+      "fecha": "2026-07-24",
+      "descripcion": "A prefeitura vetou o uso do parque da cidade inicialmente proposto por falta de autorização dos organizadores, e o campeonato — que prometia R$ 100, R$ 50 e um lanche tradicional cuiabano de prêmio — precisou mudar de local. Relatos divergem sobre o destino final: um cita o Parque Tia Nair, outro um estacionamento da UFMT.",
+      "fuente": [
+        ["Folha de S.Paulo", "https://www1.folha.uol.com.br/cotidiano/2026/07/23/prefeitura-de-cuiaba-veta-campeonato-de-farmar-aura-em-parque-da-cidade.shtml"],
+        ["DW Brasil", "https://www.dw.com/pt-br/como-nasce-um-campeonato-de-farmar-aura/a-78141782"]
+      ]
     }
   ]
 }
