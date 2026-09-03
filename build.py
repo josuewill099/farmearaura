@@ -95,7 +95,7 @@ def legal_links(langkey, home):
     items = " &middot; ".join(
         f'<a href="{L["base"]}{pg["slug"]}/">{esc(pg["h1"])}</a>'
         for pg in L["pages"].values())
-    return f'  <a href="{home}">farmearaura.com</a> &middot; {items}<br>'
+    return f'  <a href="{home}">farmearaura.com</a> &middot; {items} &middot; {nav_data.SOCIAL_LINKS}<br>'
 
 PAGE_TPL = (SRC / "page.tpl.html").read_text("utf-8")
 
@@ -263,9 +263,15 @@ def build_app(l):
 
 def app_legal_links(l):
     L = LEGAL[LEGAL_OF[l["_code"]]]
-    return "<br>" + " &middot; ".join(
+    items = " &middot; ".join(
         f'<a href="{L["base"]}{pg["slug"]}/" style="color:#54476A">{esc(pg["h1"])}</a>'
         for pg in L["pages"].values())
+    social = (
+        '<a href="https://www.facebook.com/farmearauracom" style="color:#54476A" rel="noopener" target="_blank">Facebook</a>'
+        ' &middot; '
+        '<a href="https://www.instagram.com/farmear_aura_com" style="color:#54476A" rel="noopener" target="_blank">Instagram</a>'
+    )
+    return "<br>" + items + " &middot; " + social
 
 # Tarjetas de duelos que aparecen debajo del fineprint de la calculadora,
 # con el mismo look que .mode -- reusan nav_data (labels/URLs ya existen

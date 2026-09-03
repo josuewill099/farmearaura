@@ -39,13 +39,20 @@ def _legal(langkey):
     return _legal_cache[langkey]
 
 
+SOCIAL_LINKS = (
+    '<a href="https://www.facebook.com/farmearauracom" rel="noopener" target="_blank">Facebook</a>'
+    ' &middot; '
+    '<a href="https://www.instagram.com/farmear_aura_com" rel="noopener" target="_blank">Instagram</a>'
+)
+
+
 def legal_links_html(loc, home):
     L = _legal(LEGAL_OF[loc])
     items = " &middot; ".join(
         '<a href="%s%s/">%s</a>' % (L["base"], pg["slug"], _esc(pg["h1"]))
         for pg in L["pages"].values()
     )
-    return '<a href="%s">farmearaura.com</a> &middot; %s' % (home, items)
+    return '<a href="%s">farmearaura.com</a> &middot; %s &middot; %s' % (home, items, SOCIAL_LINKS)
 
 
 # URL + link text for each locale's guide article. Vive aca (no en cada
