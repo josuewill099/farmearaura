@@ -675,6 +675,183 @@
         "ctaNav": "AURA BATTLES",
         "guideLink": "The Best Aura Memes, Explained",
         "footerNote": "farmearaura.com — humor content. Aura points aren't real. Character names and likenesses belong to their respective copyright holders."
-      }
+      },
+    {
+      "slug": "how-to-organize-an-aura-battle",
+      "title": "How to Organize an Aura Battle in Your City: The Complete Guide | Farmear Aura",
+      "desc": "A practical guide to running your own aura battle: step-by-step setup, a permits-and-safety checklist, social post and sign-up templates, and what to do if your city says no.",
+      "h1": "How to Organize an Aura Battle in Your City",
+      "meta": "Updated: September 2026 · 9 min read",
+      "answer": "Running an aura battle doesn't take much more than open space, a speaker, and people willing to compete without physical contact. What's worth sorting out beforehand is permission for the space, who runs the circle and calls the rounds, and what to do if your city says no — something that's already happened to several real battles in 2026. This guide covers all four, in order: the step-by-step for event day, the pre-event checklist, how to promote it, and what to learn from the battles that got blocked.",
+      "sections": [
+        [
+          "Step by step: running the battle on the day",
+          [
+            "You don't need an official format — most real battles are put together by a group of friends or a social account with just this:",
+            {
+              "ul": [
+                "<strong>Set the circle.</strong> An open space where people can stand around the edge without crowding the center. Plazas, wide sidewalks, or a school courtyard work better than a narrow street.",
+                "<strong>Bring the music.</strong> A portable speaker is enough. Music sets the pace for each round and cues the next competitor's turn.",
+                "<strong>Pick a host or MC.</strong> Someone to introduce each competitor, keep the order moving, and call it once the crowd has clearly decided. No mic needed if the group is small.",
+                "<strong>Set up the round format.</strong> The simplest version: straight elimination, one-on-one, 15-30 seconds per turn, crowd decides who moves on by applause or noise.",
+                "<strong>Decide how voting works.</strong> Crowd noise (an \"applause-o-meter\") is the most common — whoever gets the loudest reaction wins. No judges or scorecards needed.",
+                "<strong>Announce it with lead time.</strong> Post the place and time a day or two ahead — check the checklist below before you announce anything publicly."
+              ]
+            }
+          ]
+        ],
+        [
+          "Checklist before the day",
+          [
+            "Go through this before you lock in a date, not the same day:",
+            {
+              "ul": [
+                "<strong>Permission for the space.</strong> If it's a plaza, park, or other public space, check whether your city requires authorization — see the permits section below.",
+                "<strong>Location.</strong> Flat ground, good lighting if it's at night, and somewhere that won't block traffic or people who didn't come for the event.",
+                "<strong>Sound.</strong> A charged speaker (or a charger on hand) and a playlist ready to go.",
+                "<strong>Safety.</strong> Someone in charge who isn't competing, a circle that stays clear, and a plan for if more people show up than expected.",
+                "<strong>Age of participants.</strong> If minors are competing, make sure they're with an adult and the time slot fits their age.",
+                "<strong>Backup plan for rain or a closed venue.</strong> A nearby alternate spot in case the main one isn't available on the day."
+              ]
+            }
+          ]
+        ],
+        [
+          "How to pick a location and get permission",
+          [
+            "A plaza or park is public space: using it for an organized event — even an informal one — usually means notifying your city, not just showing up and setting up the circle. This varies by city, but the pattern that repeated across the battles that got blocked in 2026 was always the same: the event was announced on social media before permission was confirmed in writing.",
+            {
+              "ul": [
+                "Look up your city's parks, events, or public-space department (usually on the official website, or reachable by phone).",
+                "Ask for permission a few days ahead, not the night before — some cities have processes that take more than 24 hours.",
+                "If you get a yes, keep the confirmation in writing (email, text, whatever works) before you post the announcement.",
+                "If your main spot doesn't have confirmed permission in time, have a backup location (a wide sidewalk, a private courtyard) ready — that way you're not stuck depending on a single answer."
+              ]
+            }
+          ]
+        ],
+        [
+          "Safety, minors, and public space",
+          [
+            "The aura battle format already comes with a built-in safety rule: no physical contact. Still, a few things are worth managing:",
+            {
+              "ul": [
+                "Keep the circle clear of cars, bikes, and scooters — pick a spot where that's easy to control.",
+                "If minors are competing, have them come with an adult and keep the time slot appropriate for their age.",
+                "Put one person (not competing) in charge of the event: they cut it off if it gets tense, call time if things need to wrap up early, and are the point of contact if any authority shows up.",
+                "Don't oversell the event's scale — a group of friends competing in a plaza reads very differently to a city than a \"championship\" with paid sign-ups and hundreds of expected attendees."
+              ]
+            }
+          ]
+        ],
+        [
+          "How to promote your battle on TikTok and Instagram",
+          [
+            "Most real battles filled up through social media, not flyers on the street:",
+            {
+              "ul": [
+                "Post a short video announcing the date, time, and place, using whatever sound or meme is trending.",
+                "Tag the location so it shows up on that app's map.",
+                "Add trend hashtags (#auraFarming, #aurabattle) plus one specific to your event, so you can track reposts afterward.",
+                "Ask everyone who's already confirmed to share the post to their story — that's what actually brings real people, more than any paid boost."
+              ]
+            }
+          ]
+        ],
+        [
+          "Copy-paste templates",
+          [
+            "Social post caption (swap out the brackets):",
+            {
+              "ul": [
+                "\"Aura battle at [location], [city] 🔥 [day], [date] at [time]. No sign-up, no physical contact, whoever's got the most aura wins. Bring your best pose. #auraFarming #aurabattle\""
+              ]
+            },
+            "The minimum info for a flyer or pinned post (save this as a text checklist):",
+            {
+              "ul": [
+                "Event name and exact date/time.",
+                "Location with a clear landmark (\"in front of [known spot]\", not just an address).",
+                "Format: straight elimination, how voting works, how long each turn is.",
+                "Minimum age, or a note that minors need to come with an adult.",
+                "One contact (a handle or number) for questions before the event."
+              ]
+            },
+            "Fields for a simple sign-up sheet (if your battle uses one):",
+            {
+              "ul": [
+                "Name and social handle.",
+                "Age (and an emergency adult contact if a minor).",
+                "Emergency contact.",
+                "A checkbox for \"I agree to compete with no physical contact and under the event's rules.\""
+              ]
+            }
+          ]
+        ],
+        [
+          "What to do if your city won't authorize your event",
+          [
+            "It's already happened more than once in 2026, in different countries, always for the same reason: the event was announced in a public space before permission was confirmed.",
+            {
+              "ul": [
+                "In <strong>Veracruz</strong>, Mexico, a municipal park blocked an aura battle for lacking authorization. Organizers didn't cancel — they moved the event to the sidewalk right outside the park instead.",
+                "In <strong>Niterói</strong>, Brazil, the city government blocked a \"farmar aura\" championship at Caminho Niemeyer because organizers never requested permission from the city's Events Coordination office — the venue was also already booked for something else the next day. Organizers rescheduled.",
+                "In <strong>Cuiabá</strong>, Brazil, the mayor directly vetoed the city's first \"farmar aura\" championship for lacking a permit to use the park — even so, a group ended up competing right in front of city hall."
+              ]
+            },
+            "The lesson that repeats across all three: ask for permission before you announce the event, not alongside it. If you still get turned down, have a backup location ready (a wide sidewalk, a private space) instead of canceling outright — that's what all three battles above did, and none of them fell through completely."
+          ]
+        ]
+      ],
+      "faq": [
+        [
+          "Do I need permission to run an aura battle in a plaza",
+          "It depends on the city, but as a general rule, yes — using public space for an organized event, even an informal one, usually means notifying your city's parks or events department. Getting that confirmed in writing before you announce on social media avoids the problem the Veracruz, Niterói, and Cuiabá battles ran into in 2026."
+        ],
+        [
+          "How many people do I need to run a battle",
+          "A small group is enough: two people competing and everyone else forming the circle that decides. Plenty of battles that went viral started exactly that way, with no sign-up or formal organizing at all."
+        ],
+        [
+          "How do you decide who wins each round",
+          "The most common method is crowd noise: one person competes at a time, and whoever gets the loudest reaction from the circle wins. No judges or scorecards required."
+        ],
+        [
+          "Can minors compete",
+          "Yes, as long as they come with a responsible adult and the event's time slot fits their age. The battle format itself has no physical contact, which makes it safer than a lot of other street-competition formats."
+        ],
+        [
+          "What do I do if my city won't give me a permit",
+          "Have a backup location planned ahead of time — a wide sidewalk or a private space near the original spot. In Veracruz and Cuiabá, when permission didn't come through, organizers moved the event a few steps from the original location instead of canceling."
+        ],
+        [
+          "Do I need money or sponsors to organize one",
+          "No. Most real battles ran on zero budget: a speaker, open space, and social media promotion is enough. Cash prizes show up in some bigger editions, but they're not a requirement of the format."
+        ]
+      ],
+      "related": [
+        [
+          "What is aura farming",
+          "https://farmearaura.com/us/what-is-aura-farming/"
+        ],
+        [
+          "Aura battles: map of real events",
+          "https://farmearaura.com/us/aura-battles/"
+        ]
+      ],
+      "sources": [
+        "Infobae — <a href=\"https://www.infobae.com/mexico/2026/08/22/prohiben-batalla-de-farmear-aura-en-veracruz-estas-son-las-razones/\" rel=\"nofollow noopener\" target=\"_blank\">Veracruz park bans an aura battle over missing permits</a>.",
+        "Tempo Real RJ — <a href=\"https://temporealrj.com/prefeitura-niteroi-campeonato-farmar-aura/\" rel=\"nofollow noopener\" target=\"_blank\">Niterói city hall blocks a \"farmar aura\" championship</a>.",
+        "CartaCapital — <a href=\"https://www.cartacapital.com.br/politica/prefeito-bolsonarista-veta-campeonato-de-farmar-aura-em-cuiaba/\" rel=\"nofollow noopener\" target=\"_blank\">Cuiabá's mayor vetoes a \"farmar aura\" championship</a>.",
+        "farmearaura.com — <a href=\"https://farmearaura.com/us/aura-battles/\">map of real aura battles in the United States</a>."
+      ],
+      "promoK": "What's your aura score?",
+      "promoP": "Seven situations. One number. No account, no photos, nothing saved.",
+      "promoBtn": "CALCULATE MY AURA POINTS",
+      "promoUrl": "https://farmearaura.com/us/",
+      "ctaNav": "HOW TO ORGANIZE A BATTLE",
+      "guideLink": "How to organize an aura battle",
+      "footerNote": "farmearaura.com — humor content. Aura points aren't real."
+    }
   ]
 }
