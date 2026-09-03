@@ -36,7 +36,8 @@
       "fecha": "2026-08-19",
       "descripcion": "Uno de los primeros torneos registrados en el país. La universidad aclaró que el evento no contó con autorización institucional.",
       "fuente": [
-        ["Semana", "https://www.semana.com/nacion/bogota/articulo/de-los-therian-a-farmear-aura-la-extrana-tendencia-de-internet-que-ahora-reune-a-jovenes-en-colombia/202603/"]
+        ["Semana", "https://www.semana.com/nacion/bogota/articulo/de-los-therian-a-farmear-aura-la-extrana-tendencia-de-internet-que-ahora-reune-a-jovenes-en-colombia/202603/"],
+        ["Semana", "https://www.semana.com/nacion/bogota/articulo/universidad-nacional-se-pronuncio-sobre-el-torneo-viral-de-farmear-aura-en-bogota/202645/"]
       ]
     },
     {
@@ -48,6 +49,30 @@
       "descripcion": "Primera batalla registrada en la ciudad, convocada para las 19:00 horas.",
       "fuente": [
         ["Alerta Bucaramanga", "https://bucaramanga.alerta.com.co/bochinches/bucaramanga-primera-batalla-farmear-aura-21-agosto-249012"]
+      ]
+    },
+    {
+      "id": "envigado",
+      "provincia": "antioquia",
+      "ciudad": "Envigado",
+      "lugar": "Parque Cultural Débora Arango",
+      "fecha": "2026-08-28",
+      "descripcion": "Primera batalla registrada en Envigado, con inicio a las 19:00. Los participantes compitieron con poses, miradas seguras, gestos, caminatas, bailes y referencias virales, mientras el público reaccionaba para definir quién tenía más aura.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/colombia/2026/08/19/que-significa-farmear-aura-ya-hay-batallas-anunciadas-en-envigado-e-ibague/"],
+        ["El Colombiano", "https://www.elcolombiano.com/tendencias/farmear-aura-significado-de-donde-viene-tendencia-KD40073898"],
+        ["Telemedellín", "https://telemedellin.tv/batalla-de-farmear-aura-en-envigado/"]
+      ]
+    },
+    {
+      "id": "ibague",
+      "provincia": "tolima",
+      "ciudad": "Ibagué",
+      "lugar": "Plaza de Bolívar",
+      "fecha": "2026-08-21",
+      "descripcion": "Convocatoria para reunir a jóvenes en una competencia sin contacto físico, basada en seguridad, compostura, creatividad, gestos, poses y la reacción del público.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/colombia/2026/08/19/que-significa-farmear-aura-ya-hay-batallas-anunciadas-en-envigado-e-ibague/"]
       ]
     }
   ]
