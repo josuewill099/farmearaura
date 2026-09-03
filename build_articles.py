@@ -179,7 +179,92 @@ QUIZ_QUESTIONS_EN = [
 QUIZ_STRINGS = {
     "es": {"resultLabel": "Tu aura es", "seeMore": "Ver el significado completo", "retry": "Volver a hacer el test"},
     "en": {"resultLabel": "Your aura is", "seeMore": "See the full meaning", "retry": "Retake the quiz"},
+    "pt": {"resultLabel": "Sua aura é", "seeMore": "Ver o significado completo", "retry": "Refazer o teste"},
+    "pt-pt": {"resultLabel": "A tua aura é", "seeMore": "Ver o significado completo", "retry": "Refazer o teste"},
 }
+
+# Mismas 6 preguntas que QUIZ_QUESTIONS_ES, traducidas -- br en "voce",
+# pt en "tu" (mismo patron que GAMER_QUESTIONS_PT_BR/PT_PT). Los valores
+# "c" de cada opcion se quedan en los ids en espanol (azul/amarilla/...)
+# porque son claves internas compartidas con COLOR_EMOJI/color_ids, no
+# texto mostrado -- ver PT_COLOR_NAME/PT_COLOR_SLUG para lo que sí se ve.
+QUIZ_QUESTIONS_PT_BR = [
+    {"q": "Alguém te diz algo injusto sem querer te machucar. Como você reage?", "opts": [
+        {"t": "Respiro fundo por um segundo e respondo com calma.", "c": "azul"},
+        {"t": "Não dou bola, solto uma piada e sigo o meu dia.", "c": "amarilla"},
+        {"t": "Digo o que penso na hora, sem filtro.", "c": "roja"},
+        {"t": "Guardo isso comigo e penso sozinho(a) mais tarde.", "c": "negra"},
+    ]},
+    {"q": "O que te faz sentir mais em paz?", "opts": [
+        {"t": "Um tempo na natureza, longe de todo mundo.", "c": "verde"},
+        {"t": "Começar algo novo depois de fechar um ciclo.", "c": "blanca"},
+        {"t": "Uma conversa profunda que te faça pensar.", "c": "morada"},
+        {"t": "Passar tempo com quem você ama.", "c": "rosa"},
+    ]},
+    {"q": "Num grupo de amigos, o seu papel natural é...", "opts": [
+        {"t": "O ou a que escuta e dá um conselho quando precisa.", "c": "azul"},
+        {"t": "O ou a que acalma as coisas quando há tensão.", "c": "verde"},
+        {"t": "O ou a que toma a iniciativa e monta o plano.", "c": "roja"},
+        {"t": "O ou a que percebe coisas que os outros não veem.", "c": "morada"},
+    ]},
+    {"q": "Te oferecem uma grande mudança (mudança de cidade, emprego novo). O que você pensa primeiro?", "opts": [
+        {"t": "Que emocionante, novas possibilidades!", "c": "amarilla"},
+        {"t": "É a hora certa de recomeçar.", "c": "blanca"},
+        {"t": "Preciso de um tempo sozinho(a) pra pensar direito.", "c": "negra"},
+        {"t": "Como isso afeta as pessoas que eu amo?", "c": "rosa"},
+    ]},
+    {"q": "Como você se recupera depois de um dia ruim?", "opts": [
+        {"t": "Conversando com calma com alguém de confiança.", "c": "azul"},
+        {"t": "Deixando aquela fase pra trás e olhando pra frente.", "c": "blanca"},
+        {"t": "Refletindo sozinho(a) até entender o que houve.", "c": "morada"},
+        {"t": "Procurando alguém que me faça sentir melhor.", "c": "rosa"},
+    ]},
+    {"q": "Te dão uma tarefa sem instruções claras. O que você faz?", "opts": [
+        {"t": "Improviso algo criativo na hora.", "c": "amarilla"},
+        {"t": "Pergunto com calma até ficar claro.", "c": "verde"},
+        {"t": "Já começo, depois ajusto o que for preciso.", "c": "roja"},
+        {"t": "Penso bem antes de dar o primeiro passo.", "c": "negra"},
+    ]},
+]
+
+QUIZ_QUESTIONS_PT_PT = [
+    {"q": "Alguém te diz algo injusto sem querer magoar-te. Como reages?", "opts": [
+        {"t": "Paro um segundo, respiro e respondo com calma.", "c": "azul"},
+        {"t": "Não ligo, faço uma piada e sigo o meu dia.", "c": "amarilla"},
+        {"t": "Digo o que penso ali mesmo, sem filtro.", "c": "roja"},
+        {"t": "Guardo isso para mim e penso sozinho(a) mais tarde.", "c": "negra"},
+    ]},
+    {"q": "O que te faz sentir mais em paz?", "opts": [
+        {"t": "Um tempo na natureza, longe de todos.", "c": "verde"},
+        {"t": "Começar algo novo depois de fechar um capítulo.", "c": "blanca"},
+        {"t": "Uma conversa profunda que te faça pensar.", "c": "morada"},
+        {"t": "Passar tempo com quem tu amas.", "c": "rosa"},
+    ]},
+    {"q": "Num grupo de amigos, o teu papel natural é...", "opts": [
+        {"t": "O ou a que ouve e dá um conselho quando é preciso.", "c": "azul"},
+        {"t": "O ou a que acalma as coisas quando há tensão.", "c": "verde"},
+        {"t": "O ou a que toma a iniciativa e monta o plano.", "c": "roja"},
+        {"t": "O ou a que repara em coisas que os outros não veem.", "c": "morada"},
+    ]},
+    {"q": "Oferecem-te uma grande mudança (mudança de cidade, emprego novo). O que pensas primeiro?", "opts": [
+        {"t": "Que emocionante, novas possibilidades!", "c": "amarilla"},
+        {"t": "É a altura certa para recomeçar.", "c": "blanca"},
+        {"t": "Preciso de tempo sozinho(a) para pensar bem.", "c": "negra"},
+        {"t": "Como é que isto afeta as pessoas que eu amo?", "c": "rosa"},
+    ]},
+    {"q": "Como recuperas depois de um dia mau?", "opts": [
+        {"t": "Falando com calma com alguém de confiança.", "c": "azul"},
+        {"t": "Deixando essa fase para trás e olhando em frente.", "c": "blanca"},
+        {"t": "Refletindo sozinho(a) até perceberes o que aconteceu.", "c": "morada"},
+        {"t": "Procurando alguém que te faça sentir melhor.", "c": "rosa"},
+    ]},
+    {"q": "Dão-te uma tarefa sem instruções claras. O que fazes?", "opts": [
+        {"t": "Improviso algo criativo na hora.", "c": "amarilla"},
+        {"t": "Pergunto com calma até ficar claro.", "c": "verde"},
+        {"t": "Começo já, depois ajusto o que for preciso.", "c": "roja"},
+        {"t": "Penso bem antes de dar o primeiro passo.", "c": "negra"},
+    ]},
+]
 
 QUIZ_JS = (SRC / "aura-quiz.js").read_text(encoding="utf-8")
 # Fija sin/con voseo -- reutiliza las mismas marcas "X/Y" que ya usa el
@@ -218,6 +303,15 @@ ENGLISH_COLOR_INFO = {
     "rosa": ("Pink", "Pink auras are associated with love, tenderness, and emotional sensitivity. It's the color that shows up most in people for whom relationships and caring for others are at the center of everything."),
 }
 
+# br/pt usan la palabra real en portugues en el slug (aura-amarela, no
+# aura-amarilla) por SEO -- este dict traduce el id interno compartido
+# (azul/amarilla/...) al slug real de cada pagina y al nombre que se
+# muestra en el widget del quiz.
+PT_COLOR_NAME = {"azul": "Azul", "amarilla": "Amarela", "verde": "Verde", "blanca": "Branca",
+                 "roja": "Vermelha", "negra": "Preta", "morada": "Roxa", "rosa": "Rosa"}
+PT_COLOR_SLUG = {"azul": "azul", "amarilla": "amarela", "verde": "verde", "blanca": "branca",
+                 "roja": "vermelha", "negra": "preta", "morada": "roxa", "rosa": "rosa"}
+
 
 def build_quiz_widget(loc, lang, base, articles_by_slug, voseo, quiz_id):
     color_ids = ["azul", "amarilla", "verde", "blanca", "roja", "negra", "morada", "rosa"]
@@ -231,6 +325,16 @@ def build_quiz_widget(loc, lang, base, articles_by_slug, voseo, quiz_id):
                 return ""   # la locale no tiene los 8 colores -- se salta el quiz
             colors[cid] = {"nombre": cid, "emoji": COLOR_EMOJI[cid],
                            "blurb": art["answer"], "url": f"{base}/aura-{cid}/"}
+    elif lang.startswith("pt"):
+        questions = QUIZ_QUESTIONS_PT_PT if loc == "pt" else QUIZ_QUESTIONS_PT_BR
+        strings = QUIZ_STRINGS["pt-pt"] if loc == "pt" else QUIZ_STRINGS["pt"]
+        for cid in color_ids:
+            slug = PT_COLOR_SLUG[cid]
+            art = articles_by_slug.get(f"aura-{slug}")
+            if not art:
+                return ""
+            colors[cid] = {"nombre": PT_COLOR_NAME[cid], "emoji": COLOR_EMOJI[cid],
+                           "blurb": art["answer"], "url": f"{base}/aura-{slug}/"}
     else:
         questions, strings = QUIZ_QUESTIONS_EN, QUIZ_STRINGS["en"]
         for cid in color_ids:
