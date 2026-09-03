@@ -23,10 +23,57 @@
       "ciudad": "Santiago (Providencia)",
       "lugar": "Costanera Center",
       "fecha": "2026-08-22",
-      "descripcion": "El mall Costanera Center, en Providencia, fue el escenario elegido por decenas de jóvenes para la primera batalla masiva del país.",
+      "descripcion": "El mall Costanera Center, en Providencia, fue el escenario elegido por decenas (y luego cientos) de jóvenes para la primera batalla masiva del país, que se extendió entre el 21 y el 22 de agosto.",
       "fuente": [
         ["Cooperativa.cl", "https://www.cooperativa.cl/noticias/magazine/tendencias/farmear-aura-el-fenonemo-que-se-toma-el-costanera-center/2026-08-22/184948.html"],
-        ["En Cancha", "https://www.encancha.cl/enlahora/nacional/2026/8/22/video-asi-se-vivio-la-batalla-de-aura-en-el-costanera-center-de-santiago-316591.html"]
+        ["En Cancha", "https://www.encancha.cl/enlahora/nacional/2026/8/22/video-asi-se-vivio-la-batalla-de-aura-en-el-costanera-center-de-santiago-316591.html"],
+        ["TNT Sports", "https://tntsports.cl/tendencias/VIDEO-Asi-fue-la-primera-batalla-de-farmear-aura-en-el-Costanera-Center-de-Santiago-chile-20260824-0010.html"]
+      ]
+    },
+    {
+      "id": "santiago-gam",
+      "provincia": "metropolitana",
+      "ciudad": "Santiago",
+      "lugar": "Centro Cultural Gabriela Mistral (GAM)",
+      "fecha": "2026-08-21",
+      "descripcion": "Un segundo escenario documentado por separado en la capital, donde los participantes hicieron poses, gestos, bailes y movimientos frente al público.",
+      "fuente": [
+        ["Chicureo Hoy", "https://www.chicureohoy.cl/variedades/video-batallas-de-aura-llegan-a-chile-la-nueva-tendencia-viral-que-ya-se-toma-las-redes/"]
+      ]
+    },
+    {
+      "id": "providencia-baquedano",
+      "provincia": "metropolitana",
+      "ciudad": "Providencia",
+      "lugar": "Plaza Baquedano y alrededores de Cenco Costanera",
+      "fecha": "2026-08-24",
+      "descripcion": "Grandes grupos de adolescentes se reunieron para elegir, entre todos, quién tenía más seguridad, presencia escénica, gestos y personalidad.",
+      "fuente": [
+        ["The Clinic", "https://www.theclinic.cl/2026/08/24/batallas-de-farmear-aura-se-toman-las-calles-de-providencia-adolescentes-son-los-principales-convocados/"]
+      ]
+    },
+    {
+      "id": "maipu",
+      "provincia": "metropolitana",
+      "ciudad": "Maipú",
+      "lugar": "Plaza de Maipú",
+      "fecha": "2026-08-31",
+      "descripcion": "Primera batalla local de la comuna, con inicio a las 17:15. La convocatoria invitó a estudiantes de colegios locales y de otras comunas a participar o mirar, y los organizadores alentaron a llevar grupos, memes y parlantes.",
+      "fuente": [
+        ["La Voz de Maipú", "https://lavozdemaipu.cl/primer-batalla-de-aura-en-maipu-confirmada"],
+        ["La Batalla", "https://www.labatalla.cl/la-tendencia-viral-de-las-batallas-de-aura-llega-este-lunes-a-la-plaza-de-maipu/"]
+      ]
+    },
+    {
+      "id": "puerto-varas",
+      "provincia": "los-lagos",
+      "ciudad": "Puerto Varas",
+      "lugar": "Plaza de Puerto Varas",
+      "fecha": "2026-08-21",
+      "descripcion": "Primera batalla oficial de farmear aura de la ciudad, con inicio a las 14:00 y promovida como evento público con poses, movimientos, bailes y gestos distintivos. Una de las primeras ciudades chilenas fuera de Santiago en organizar un evento público oficial.",
+      "fuente": [
+        ["Emol", "https://www.emol.com/noticias/Tendencias/2026/08/21/1209186/farmear-aura-tendencia-jovenes.html"],
+        ["Publimetro", "https://www.publimetro.cl/social/2026/08/24/que-es-farmear-aura-la-tendencia-de-la-generacion-z-y-alfa-que-desconcierta-a-los-adultos/"]
       ]
     }
   ]
