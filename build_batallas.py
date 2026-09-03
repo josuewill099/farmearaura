@@ -75,54 +75,63 @@ LOCALES = {
         "geo_file": "departamentos-uy.geo.json",
         "view_w": 460, "view_h": 546,
         "lang": "es-UY", "address_country": "UY",
+        "update_label": "Mapa actualizado:",
     },
     "es": {
         "home": "/es/", "slug": "batallas-de-aura",
         "geo_file": "provincias-es.geo.json",
         "view_w": 460, "view_h": 424,
         "lang": "es-ES", "address_country": "ES",
+        "update_label": "Mapa actualizado:",
     },
     "cl": {
         "home": "/cl/", "slug": "batallas-de-aura",
         "geo_file": "regiones-cl.geo.json",
         "view_w": 460, "view_h": 2776,
         "lang": "es-CL", "address_country": "CL",
+        "update_label": "Mapa actualizado:",
     },
     "co": {
         "home": "/co/", "slug": "batallas-de-aura",
         "geo_file": "departamentos-co.geo.json",
         "view_w": 460, "view_h": 567,
         "lang": "es-CO", "address_country": "CO",
+        "update_label": "Mapa actualizado:",
     },
     "pe": {
         "home": "/pe/", "slug": "batallas-de-aura",
         "geo_file": "regiones-pe.geo.json",
         "view_w": 460, "view_h": 713,
         "lang": "es-PE", "address_country": "PE",
+        "update_label": "Mapa actualizado:",
     },
     "br": {
         "home": "/br/", "slug": "batalhas-de-farmar-aura",
         "geo_file": "estados-br.geo.json",
         "view_w": 460, "view_h": 499,
         "lang": "pt-BR", "address_country": "BR",
+        "update_label": "Mapa atualizado:",
     },
     "pt": {
         "home": "/pt/", "slug": "batalhas-de-farmar-aura",
         "geo_file": "distritos-pt.geo.json",
         "view_w": 460, "view_h": 741,
         "lang": "pt-PT", "address_country": "PT",
+        "update_label": "Mapa atualizado:",
     },
     "mx": {
         "home": "/mx/", "slug": "batallas-de-aura",
         "geo_file": "estados-mx.geo.json",
         "view_w": 460, "view_h": 329,
         "lang": "es-MX", "address_country": "MX",
+        "update_label": "Mapa actualizado:",
     },
     "ec": {
         "home": "/ec/", "slug": "batallas-de-aura",
         "geo_file": "provincias-ec.geo.json",
         "view_w": 460, "view_h": 438,
         "lang": "es-EC", "address_country": "EC",
+        "update_label": "Mapa actualizado:",
     },
     # us/esus son el mismo pais, mismo geo_file -- solo cambia el idioma
     # (y, por ahora, los dos arrancan con venues: [] -- ver el commit).
@@ -131,12 +140,14 @@ LOCALES = {
         "geo_file": "states-us.geo.json",
         "view_w": 460, "view_h": 346,
         "lang": "en-US", "address_country": "US",
+        "update_label": "Map updated:",
     },
     "esus": {
         "home": "/es-us/", "slug": "batallas-de-aura",
         "geo_file": "states-us.geo.json",
         "view_w": 460, "view_h": 346,
         "lang": "es-US", "address_country": "US",
+        "update_label": "Mapa actualizado:",
     },
 }
 
