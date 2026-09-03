@@ -74,6 +74,42 @@
       "fuente": [
         ["Sin Código Tucumán", "https://sincodigotucuman.com/campeonato-farmear-aura-en-tucuman-masivo-encuentro-en-plaza-urquiza/"]
       ]
+    },
+    {
+      "id": "maipu",
+      "provincia": "mendoza",
+      "ciudad": "Maipú",
+      "lugar": "Plaza 12 de Febrero",
+      "fecha": "2026-08-21",
+      "descripcion": "Primera competencia provincial de farmeo de aura en Mendoza. Gratuita y abierta a cualquiera, con inscripción previa por formulario online y premios para los mejores competidores.",
+      "fuente": []
+    },
+    {
+      "id": "esperanza",
+      "provincia": "santa-fe",
+      "ciudad": "Esperanza",
+      "lugar": "Parque de la Agricultura",
+      "fecha": "2026-08-21",
+      "descripcion": "Primera batalla de farmear aura registrada en la ciudad, con inicio previsto para las 16:00.",
+      "fuente": []
+    },
+    {
+      "id": "parana",
+      "provincia": "entre-rios",
+      "ciudad": "Paraná",
+      "lugar": "Puente de los Suspiros",
+      "fecha": "2026-08-15",
+      "descripcion": "Una de las primeras ciudades del país en anunciar su batalla de farmear aura, con competidores midiendo poses, gestos, bailes y demostraciones de seguridad.",
+      "fuente": []
+    },
+    {
+      "id": "rio-gallegos",
+      "provincia": "santa-cruz",
+      "ciudad": "Río Gallegos",
+      "lugar": "Plaza San Martín",
+      "fecha": "2026-08-23",
+      "descripcion": "Convocatoria pública para definir quién tenía más aura en la plaza, con el ganador decidido por respuesta del público o criterio de los organizadores.",
+      "fuente": []
     }
   ]
 }
