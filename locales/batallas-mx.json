@@ -23,10 +23,11 @@
       "ciudad": "Ciudad de México",
       "lugar": "Monumento a la Revolución",
       "fecha": "2026-08-22",
-      "descripcion": "Convocatoria organizada por el creador de contenido Islas Vlogs, con premios de hasta $3,000 pesos.",
+      "descripcion": "Convocatoria organizada por el creador de contenido Islas Vlogs, con inicio a las 13:00, entrada libre y sin límite de edad especificado, y premios de hasta $3,000 pesos para el ganador.",
       "fuente": [
         ["N+", "https://www.nmas.com.mx/entretenimiento/como-son-batallas-farmear-aura-2026-asi-realizan-eventos-virales-llegaron-cdmx/"],
-        ["Nación321", "https://www.nacion321.com/ciudadanos/2026/08/19/las-primeras-batallas-de-farmear-aura-llegaron-a-cdmx-ofrecen-hasta-3-mil-pesos-al-ganador/"]
+        ["Nación321", "https://www.nacion321.com/ciudadanos/2026/08/19/las-primeras-batallas-de-farmear-aura-llegaron-a-cdmx-ofrecen-hasta-3-mil-pesos-al-ganador/"],
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
       ]
     },
     {
@@ -34,11 +35,156 @@
       "provincia": "cdmx",
       "ciudad": "Ciudad de México",
       "lugar": "Parque México",
-      "fecha": "2026-08-22",
-      "descripcion": "Segunda convocatoria del mismo fin de semana, organizada por Proyecto Escolar.",
+      "fecha": "2026-08-23",
+      "descripcion": "Convocatoria organizada por Proyecto Escolar, un día después de la de Islas Vlogs, con inicio a las 15:00 y premio de $3,000 pesos. El público elegía al ganador a punta de aplausos y gritos.",
       "fuente": [
         ["ClaroSports", "https://www.clarosports.com/tendencias/batallas-de-farmear-aura-en-la-cdmx-con-premios-de-hasta-3-mil-pesos-cuando-y-donde-seran/"],
         ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
+      ]
+    },
+    {
+      "id": "cdmx-bellas-artes",
+      "provincia": "cdmx",
+      "ciudad": "Ciudad de México",
+      "lugar": "Explanada de Bellas Artes",
+      "fecha": "2026-08-20",
+      "descripcion": "Convocatoria de Eddy Nahual con inicio a las 15:00, con premios de $2,000 pesos para el primer lugar, $1,000 para el segundo y $500 para el tercero. Un medio en inglés reportó por separado una batalla en el mismo lugar un día después, aunque las fuentes no terminan de coincidir en la fecha exacta.",
+      "fuente": [
+        ["Heraldo de México", "https://heraldodemexico.com.mx/espectaculos/2026/8/20/habra-batallas-de-aura-en-cdmx-como-inscribirse-para-ganar-un-premio-de-hasta-3000-pesos-fechas-horarios-872352.html"],
+        ["Chilango", "https://www.chilango.com/que-hacer/batalla-farmear-aura-cdmx-donde-cuando-premios/"],
+        ["Mexico News Daily", "https://mexiconewsdaily.com/culture/aura-farming-battles-mexico/"]
+      ]
+    },
+    {
+      "id": "cdmx-chabacano",
+      "provincia": "cdmx",
+      "ciudad": "Ciudad de México",
+      "lugar": "Explanada del Metro Chabacano (Línea 9)",
+      "fecha": "2026-08-22",
+      "descripcion": "Batalla convocada para las 15:00. La cobertura disponible no identifica con claridad al organizador ni confirma un premio.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
+      ]
+    },
+    {
+      "id": "cdmx-tlaxcoaque",
+      "provincia": "cdmx",
+      "ciudad": "Ciudad de México",
+      "lugar": "Plaza Tlaxcoaque",
+      "fecha": "2026-08-23",
+      "descripcion": "Batalla atribuida al ciclista y creador de contenido Tlahui León, con inicio a las 14:00. La fuente disponible no confirma el resultado final ni el premio.",
+      "fuente": [
+        ["Claro Sports", "https://www.clarosports.com/tendencias/batallas-de-farmear-aura-en-la-cdmx-con-premios-de-hasta-3-mil-pesos-cuando-y-donde-seran/"]
+      ]
+    },
+    {
+      "id": "cdmx-itam",
+      "provincia": "cdmx",
+      "ciudad": "Ciudad de México",
+      "lugar": "Plaza Roja del ITAM, San Ángel",
+      "fecha": "2026-08-22",
+      "descripcion": "Batalla pública convocada para las 18:00 en Calle Río Hondo 1. El premio no fue confirmado.",
+      "fuente": [
+        ["N+", "https://www.nmas.com.mx/sociedad/cuando-donde-hay-batallas-farmear-aura-mexico-premios-eventos-22-23-de-agosto-2026/"]
+      ]
+    },
+    {
+      "id": "lerma",
+      "provincia": "mexico-estado",
+      "ciudad": "Lerma",
+      "lugar": "Frente a la Iglesia Santa Clara de Asís",
+      "fecha": "2026-08-22",
+      "descripcion": "Batalla convocada para las 16:00, con los participantes compitiendo a través de poses, gestos y movimientos seguros.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
+      ]
+    },
+    {
+      "id": "veracruz-ciudad",
+      "provincia": "veracruz",
+      "ciudad": "Veracruz",
+      "lugar": "Evento público",
+      "fecha": "2026-08-08",
+      "descripcion": "El primer encuentro público documentado en México, según reportes, con cerca de 20 jóvenes participantes.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
+      ]
+    },
+    {
+      "id": "xalapa",
+      "provincia": "veracruz",
+      "ciudad": "Xalapa",
+      "lugar": "Parque Juárez",
+      "fecha": "2026-08-19",
+      "descripcion": "Torneo grande con inicio a las 13:00, en el que los participantes usaron disfraces y caracterizaciones como parte de sus actuaciones.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/21/preparan-batallas-de-farmear-aura-en-cdmx-para-este-fin-de-semana-con-premios-incluidos-donde-y-como-participar/"]
+      ]
+    },
+    {
+      "id": "mixtequilla",
+      "provincia": "veracruz",
+      "ciudad": "Mixtequilla",
+      "lugar": "Frente al parque municipal",
+      "fecha": "2026-08-30",
+      "descripcion": "El parque municipal prohibió la batalla anunciada por falta de autorización de los organizadores, que respondieron que la harían frente al parque en su lugar.",
+      "fuente": [
+        ["Crónica", "https://www.cronica.com.mx/estados/2026/08/21/parque-municipal-de-veracruz-prohibe-batalla-de-aura-al-no-contar-con-autorizacion-la-haremos-frente-al-parque-responden-jovenes/"]
+      ]
+    },
+    {
+      "id": "puebla-buap",
+      "provincia": "puebla",
+      "ciudad": "Puebla",
+      "lugar": "Explanada de Rectoría, BUAP",
+      "fecha": "2026-08-19",
+      "descripcion": "Batalla organizada por estudiantes de la universidad, que se enfrentaron con poses, caminatas, bailes y gestos mientras el público hacía de jurado informal.",
+      "fuente": [
+        ["El Popular (Puebla)", "https://elpopular.mx/conect-arte/2026/08/19/farmear-aura-llega-a-la-buap-y-a-puebla-donde-seran-las-proximas-batallas"]
+      ]
+    },
+    {
+      "id": "puebla-villa-frontera",
+      "provincia": "puebla",
+      "ciudad": "Puebla",
+      "lugar": "Canchas de Villa Frontera",
+      "fecha": "2026-08-19",
+      "descripcion": "Evento gratuito anunciado en las canchas del barrio. La fuente disponible no confirma la asistencia final, el ganador ni el premio.",
+      "fuente": [
+        ["El Popular (Puebla)", "https://elpopular.mx/conect-arte/2026/08/19/farmear-aura-llega-a-la-buap-y-a-puebla-donde-seran-las-proximas-batallas"]
+      ]
+    },
+    {
+      "id": "san-martin-texmelucan",
+      "provincia": "puebla",
+      "ciudad": "San Martín Texmelucan",
+      "lugar": "Zócalo",
+      "fecha": "2026-08-23",
+      "descripcion": "Batalla gratuita anunciada para las 19:00, con el ganador definido por la reacción del público.",
+      "fuente": [
+        ["El Popular (Puebla)", "https://elpopular.mx/conect-arte/2026/08/19/farmear-aura-llega-a-la-buap-y-a-puebla-donde-seran-las-proximas-batallas"]
+      ]
+    },
+    {
+      "id": "la-paz",
+      "provincia": "baja-california-sur",
+      "ciudad": "La Paz",
+      "lugar": "Kiosko de La Paz",
+      "fecha": "2026-08-23",
+      "descripcion": "Batalla listada para las 19:00 hora local. La fuente disponible no especifica organizador, premio ni resultado final.",
+      "fuente": [
+        ["N+", "https://www.nmas.com.mx/sociedad/cuando-donde-hay-batallas-farmear-aura-mexico-premios-eventos-22-23-de-agosto-2026/"]
+      ]
+    },
+    {
+      "id": "ciudad-juarez",
+      "provincia": "chihuahua",
+      "ciudad": "Ciudad Juárez",
+      "lugar": "Instituto de Ciencias Biomédicas",
+      "fecha": "2026-08-22",
+      "descripcion": "Batalla entre estudiantes universitarios que se volvió viral después de que el enfrentamiento terminara con dos competidores besándose.",
+      "fuente": [
+        ["Infobae", "https://www.infobae.com/mexico/2026/08/22/batalla-de-aura-entre-estudiantes-de-universidad-en-ciudad-juarez-termina-en-beso-y-se-vuelve-viral/"]
       ]
     }
   ]
