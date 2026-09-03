@@ -1,0 +1,169 @@
+{
+ "locale": "es-BO",
+ "lang": "es",
+ "base": "https://farmearaura.com",
+ "brand": "FARMEAR AURA",
+ "aura_inicial": 1000,
+ "k": 32,
+ "nav": {
+  "votar": "Votar",
+  "ranking": "Ranking",
+  "historial": "Duelos",
+  "calculadora": "Calculadora"
+ },
+ "votar": {
+  "slug": "bo/duelos/",
+  "title": "¿Quién tiene más aura en Bolivia? — Duelos de aura | Farmear Aura",
+  "description": "Elegí quién tiene más aura en Bolivia. El que gana le roba puntos de aura al otro. Votá y mirá el ranking en vivo.",
+  "h1": "¿Quién tiene más aura en Bolivia?",
+  "sub": "Elegí uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "otro": "Otro duelo",
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "seo_h2": "Cómo funciona el duelo de aura",
+  "seo_p": "Un duelo de aura es una votación uno contra uno: elegís quién tiene más aura entre dos arquetipos cotidianos y el ganador le roba puntos al perdedor. Cada personaje arranca con 1.000 de aura. Cuando votás, el ganador le roba puntos al perdedor: si le gana a alguien con más aura, le roba más; si le gana a uno que ya estaba abajo, le roba poco. Los puntos se actualizan al toque y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Se puede quedar en negativo, obvio.",
+  "seo_link": "¿Querés saber cuánta aura tenés vos? Hacé el test de aura."
+ },
+ "ranking": {
+  "slug": "bo/duelos/ranking/",
+  "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+  "description": "El ranking de aura en vivo, armado con los votos de todos. Mirá quién está primero y quién quedó en aura negativa.",
+  "h1": "Ranking de aura",
+  "sub": "Actualizado con cada voto.",
+  "col_aura": "aura",
+  "vacio": "Todavía no hay votos. Andá a votar."
+ },
+ "historial": {
+  "slug": "bo/duelos/historial/",
+  "title": "Últimos duelos de aura | Farmear Aura",
+  "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+  "h1": "Últimos duelos",
+  "sub": "Los votos más recientes, uno por uno.",
+  "vacio": "Todavía no hay duelos. Estrenalo vos."
+ },
+ "offline": "Modo local: los votos no se guardan todavía.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "candidatos": [
+  {
+   "id": "trufi-sin-sencillo",
+   "emoji": "🚐",
+   "nombre": "El que sube al trufi y se da cuenta de que no tiene sencillo para pagar, mientras todo el mundo lo mira rebuscar en los bolsillos."
+  },
+  {
+   "id": "grito-esquina-micro",
+   "emoji": "📢",
+   "nombre": "La que le grita '¡esquina, por favor!' al chofer del micro como cinco veces porque el hombre lleva la radio a todo volumen y ni la escucha."
+  },
+  {
+   "id": "dormido-chaki-minibus",
+   "emoji": "😴",
+   "nombre": "El que se queda dormido en el minibús con un chaki tremendo después de la joda del fin de semana y se pasa como diez paradas de su casa."
+  },
+  {
+   "id": "trufi-equivocado",
+   "emoji": "🗺️",
+   "nombre": "La que se sube al trufi equivocado porque todos los carteles están pintados a mano y termina en un barrio que ni en el mapa conocía."
+  },
+  {
+   "id": "vuelto-micro-billete",
+   "emoji": "💵",
+   "nombre": "El que le paga el pasaje al chofer del micro con un billete grande y arma toda una cola porque nadie tiene para el vuelto."
+  },
+  {
+   "id": "teleferico-datos-cortados",
+   "emoji": "🚡",
+   "nombre": "La que se queda colgada en la cabina del teleférico justo entre dos estaciones cuando se le acaban los datos del celular y no tiene con quién hablar."
+  },
+  {
+   "id": "teleferico-bolsas-feria",
+   "emoji": "🛍️",
+   "nombre": "El que sube al teleférico con las bolsas de la feria hasta el tope y se le revienta una justo cuando se abren las puertas en la estación llena de gente."
+  },
+  {
+   "id": "resbalon-camino-pega",
+   "emoji": "🌧️",
+   "nombre": "La que se resbala camino a la pega en plena calle mojada y termina sentada en el suelo frente a todos los que esperan el mismo micro."
+  },
+  {
+   "id": "caserita-pijama-crush",
+   "emoji": "🩴",
+   "nombre": "El que sale disparado a comprarle algo a la caserita de la esquina en pijama y ojotas justo cuando se encuentra de frente con su crush del colegio."
+  },
+  {
+   "id": "estornudo-fila-banco",
+   "emoji": "🤧",
+   "nombre": "La que estornuda tan fuerte haciendo cola en el banco que asusta a todo el mundo y hasta el guardia de seguridad se sobresalta."
+  },
+  {
+   "id": "colla-calor-santacruz",
+   "emoji": "🥵",
+   "nombre": "La que es colla de toda la vida y viaja a Santa Cruz en pleno febrero, y a los cinco minutos de bajar del avión ya anda empapada en sudor buscando el aire acondicionado más cercano."
+  },
+  {
+   "id": "cargador-chuto-quemado",
+   "emoji": "🔌",
+   "nombre": "El que compra un cargador chuto en la calle porque se le rompió el original y termina friendo el celular a la mitad de una partida importante."
+  },
+  {
+   "id": "internet-cortado-gaming",
+   "emoji": "🎮",
+   "nombre": "La que está a punto de ganar la partida online y se le corta el internet justo en el momento decisivo, dejando a todo el equipo furioso en el chat de voz."
+  },
+  {
+   "id": "juego-chuto-virus",
+   "emoji": "💾",
+   "nombre": "El que descarga un juego chuto de una página rara para no pagarlo y termina con la compu llena de virus la noche antes de un trabajo importante."
+  },
+  {
+   "id": "dormido-clase-universidad",
+   "emoji": "😪",
+   "nombre": "La que se queda dormida en plena clase de la universidad y se despierta justo cuando el profesor le pregunta algo directamente a ella."
+  },
+  {
+   "id": "machete-examen-cachado",
+   "emoji": "📝",
+   "nombre": "El que lleva el machete escondido para el examen y lo cacha el profesor justo cuando se le cae al suelo frente a todo el curso."
+  },
+  {
+   "id": "exposicion-olvido-total",
+   "emoji": "🎤",
+   "nombre": "La que se olvida completamente lo que iba a decir en plena exposición del colegio y se queda paralizada mirando a todo el curso sin saber qué decir."
+  },
+  {
+   "id": "camote-confesion-fiesta",
+   "emoji": "💔",
+   "nombre": "El que le confiesa su camote a alguien en plena fiesta y se da cuenta, ya tarde, de que la otra persona ni se acordaba de su nombre."
+  },
+  {
+   "id": "chela-derramada-crush",
+   "emoji": "🍺",
+   "nombre": "La que derrama la chela encima de su crush en plena joda y se queda paralizada sin saber si limpiar o salir corriendo del lugar."
+  },
+  {
+   "id": "baile-solo-video-grupo",
+   "emoji": "💃",
+   "nombre": "El que se pone a bailar solo en medio de la fiesta pensando que nadie lo mira y al día siguiente descubre que todos sus amigos ya tienen el video en el grupo."
+  },
+  {
+   "id": "chiste-jefe-grupo-pega",
+   "emoji": "📧",
+   "nombre": "El que manda un chiste sobre el jefe pensando que es un chat privado y en realidad lo manda al grupo de toda la pega."
+  },
+  {
+   "id": "dormido-reunion-virtual-pega",
+   "emoji": "💻",
+   "nombre": "La que se queda dormida en plena reunión virtual de la pega con la cámara prendida y todos sus compañeros la ven cabecear."
+  },
+  {
+   "id": "wawa-llorando-reunion",
+   "emoji": "👶",
+   "nombre": "El que se ofrece a cuidar a la wawa en la reunión familiar y la termina devolviendo llorando a los diez minutos frente a toda la familia."
+  },
+  {
+   "id": "kencha-comentario-familia",
+   "emoji": "🃏",
+   "nombre": "La que hace un comentario de más en el almuerzo familiar y la tía le suelta que es una k'encha, mientras todos se ríen y ella quiere que se la trague la tierra."
+  }
+ ]
+}

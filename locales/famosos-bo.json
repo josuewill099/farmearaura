@@ -1,0 +1,170 @@
+{
+ "loc": "bo",
+ "locale": "es-BO",
+ "lang": "es",
+ "numfmt": "es-BO",
+ "base": "https://farmearaura.com",
+ "aura_inicial": 1000,
+ "k": 32,
+ "slug_votar": "bo/duelos/famosos/",
+ "slug_ranking": "bo/duelos/famosos/ranking/",
+ "home": "/bo/",
+ "nav": {
+  "calculadora": "Calculadora",
+  "votar": "Duelos",
+  "ranking": "Ranking"
+ },
+ "votar": {
+  "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+  "description": "Marcelo Martins contra Los Kjarkas, Miguel Terceros contra Yessica Hausermann. Elegí quién tiene más aura entre los famosos bolivianos y mirá el ranking en vivo.",
+  "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+  "sub": "Dos famosos bolivianos. Elegí uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "seo_h2": "Cómo se reparte la aura entre famosos",
+  "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que está arriba roba mucho, ganarle a uno que ya está abajo roba poco. El ranking se arma con los votos de todos los que entran, no solo los tuyos, y se puede terminar en aura negativa.",
+  "seo_link": "Ver el ranking completo de famosos"
+ },
+ "ranking": {
+  "title": "Ranking de aura entre famosos bolivianos | Farmear Aura",
+  "description": "El ranking de aura de los famosos bolivianos, armado con los votos de todos. Mirá quién manda y quién quedó en negativo.",
+  "h1": "Ranking de <em>aura</em> entre famosos",
+  "sub": "Se mueve con cada voto.",
+  "feed_titulo": "Últimos duelos",
+  "vacio": "Todavía no hay duelos. Estrenalo vos.",
+  "link": "Volver a votar"
+ },
+ "t": {
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "de_aura_label": "de aura",
+  "tiempo": {
+   "seg": "hace %s s",
+   "min": "hace %s min",
+   "hora": "hace %s h",
+   "dia": "hace %s d"
+  }
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "figuras": [
+  {
+   "id": "marcelo-martins",
+   "emoji": "⚽",
+   "nombre": "Marcelo Martins Moreno",
+   "anios": "Fútbol",
+   "oficio": "Máximo goleador histórico de la selección boliviana, con más de 30 goles en 100+ partidos."
+  },
+  {
+   "id": "miguel-terceros",
+   "emoji": "🌟",
+   "nombre": "Miguel Terceros",
+   "anios": "Fútbol",
+   "oficio": "Joven mediocampista ofensivo del Santos FC, considerado la gran promesa boliviana."
+  },
+  {
+   "id": "ronald-raldes",
+   "emoji": "🧤",
+   "nombre": "Ronald Raldes",
+   "anios": "Fútbol",
+   "oficio": "Ex capitán y defensor central, primer boliviano en superar los 100 partidos con la selección."
+  },
+  {
+   "id": "guillermo-viscarra",
+   "emoji": "🥅",
+   "nombre": "Guillermo Viscarra",
+   "anios": "Fútbol",
+   "oficio": "Arquero titular de la selección boliviana, hoy en Alianza Lima de Perú."
+  },
+  {
+   "id": "los-kjarkas",
+   "emoji": "🎻",
+   "nombre": "Los Kjarkas",
+   "anios": "Música",
+   "oficio": "Banda folclórica boliviana, ícono mundial de la música andina desde 1965."
+  },
+  {
+   "id": "pirai-vaca",
+   "emoji": "🎸",
+   "nombre": "Piraí Vaca",
+   "anios": "Música",
+   "oficio": "Guitarrista clásico cruceño reconocido internacionalmente, premiado por el Kennedy Center."
+  },
+  {
+   "id": "luis-vega",
+   "emoji": "🎤",
+   "nombre": "Luis Vega",
+   "anios": "Música",
+   "oficio": "Cantante cruceño viral con 'Bailando Conmigo', Artista del Año en los Bolivia Music Awards."
+  },
+  {
+   "id": "bonny-lovy",
+   "emoji": "🎶",
+   "nombre": "Bonny Lovy",
+   "anios": "Música",
+   "oficio": "Cantante y productor de música urbana/cumbia, referente del género en Bolivia."
+  },
+  {
+   "id": "junior-mavity",
+   "emoji": "📱",
+   "nombre": "Junior Mavity",
+   "anios": "YouTube",
+   "oficio": "El tiktoker y youtuber boliviano con más seguidores, conocido por sus regalos virales."
+  },
+  {
+   "id": "gabo-alvarez",
+   "emoji": "🎬",
+   "nombre": "Gabo Alvarez",
+   "anios": "YouTube",
+   "oficio": "Creador de contenido de humor y nostalgia escolar con más de un millón de suscriptores."
+  },
+  {
+   "id": "andy-flores",
+   "emoji": "✨",
+   "nombre": "Andy Flores",
+   "anios": "Redes sociales",
+   "oficio": "Cantante e influencer cruceña con millones de seguidores en TikTok."
+  },
+  {
+   "id": "carlos-marquina",
+   "emoji": "📺",
+   "nombre": "Carlos Marquina",
+   "anios": "Actuación",
+   "oficio": "Presentador de TV y protagonista de 'Los Marquina', el primer docu-reality boliviano."
+  },
+  {
+   "id": "milton-cortez",
+   "emoji": "🎭",
+   "nombre": "Milton Cortez",
+   "anios": "Actuación",
+   "oficio": "Actor y cantautor boliviano con carrera en telenovelas mexicanas desde los 90."
+  },
+  {
+   "id": "javicho-soria",
+   "emoji": "😂",
+   "nombre": "Javicho Soria",
+   "anios": "Comedia",
+   "oficio": "Comediante de stand-up, campeón del Campeonato Argentino de Stand Up Comedy."
+  },
+  {
+   "id": "yessica-hausermann",
+   "emoji": "👑",
+   "nombre": "Yessica Hausermann",
+   "anios": "Belleza",
+   "oficio": "Miss Bolivia Universo 2025, dentista y representante del país en Miss Universo."
+  },
+  {
+   "id": "comando-salazar",
+   "emoji": "🎮",
+   "nombre": "Jhosep \"Comando\" Salazar",
+   "anios": "Esports",
+   "oficio": "Gamer profesional de Free Fire, distinguido como mejor jugador boliviano de la liga latinoamericana."
+  },
+  {
+   "id": "wara",
+   "emoji": "🥁",
+   "nombre": "Wara",
+   "anios": "Música",
+   "oficio": "Banda pionera del rock folclórico boliviano, creadora de himnos como 'Collita'."
+  }
+ ]
+}
