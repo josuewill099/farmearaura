@@ -23,9 +23,22 @@
       "ciudad": "Guayaquil",
       "lugar": "Malecón 2000",
       "fecha": "2026-08-15",
-      "descripcion": "Primera edición registrada en el país, con decenas de curiosos y participantes.",
+      "descripcion": "Primera edición registrada en el país, animada por los creadores de contenido Álex Vizuete y Anthony Swagg. Decenas de chicos, adolescentes y curiosos se sumaron a duelos informales con poses, bailes, gestos, mewing y el gesto viral \"seis-siete\".",
       "fuente": [
-        ["Metro Ecuador", "https://www.metroecuador.com.ec/entretenimiento/2026/08/16/asi-fue-el-primer-torneo-de-farmear-aura-en-guayaquil/"]
+        ["Metro Ecuador", "https://www.metroecuador.com.ec/entretenimiento/2026/08/16/asi-fue-el-primer-torneo-de-farmear-aura-en-guayaquil/"],
+        ["La Prensa", "https://laprensa.com.ec/guayaquil-vivio-su-primera-batalla-de-farmear-aura/"],
+        ["El Telégrafo", "https://www.eltelegrafo.com.ec/noticias/tendencias/213/que-significa-farmear-aura-la-tendencia-viral-que-ya-llego-a-ecuador"]
+      ]
+    },
+    {
+      "id": "guayaquil-espol",
+      "provincia": "guayas",
+      "ciudad": "Guayaquil",
+      "lugar": "Campus de la ESPOL",
+      "fecha": "2026-08-21",
+      "descripcion": "Segunda batalla masiva de la ciudad, afuera de una cafetería del campus. Decenas de estudiantes universitarios rodearon a dos participantes que usaron saltos, piruetas, el festejo de Cristiano Ronaldo y el gesto de \"seis-siete\". El evento lo organizaron los propios estudiantes, no la ESPOL.",
+      "fuente": [
+        ["Extra", "https://www.extra.ec/noticia/guayaquil/batalla-aura-espol-jovenes-vuelven-viral-reto-campus-161085.html"]
       ]
     },
     {
@@ -34,10 +47,22 @@
       "ciudad": "Quito",
       "lugar": "Parque La Carolina",
       "fecha": "2026-08-20",
-      "descripcion": "Primera batalla registrada en la capital.",
+      "descripcion": "Primera batalla registrada en la capital: cientos de jóvenes formaron una rueda alrededor de los competidores, que hacían poses, gestos y movimientos. El público eligió a Rafael Rosales y Luis como ganadores tras la final. Estaba prohibida la agresión física y verbal.",
       "fuente": [
         ["Metro Ecuador", "https://www.metroecuador.com.ec/entretenimiento/2026/08/21/asi-fue-la-primera-batalla-de-farmear-aura-en-quito/"],
-        ["Notimercio", "https://notimercio.ec/2026/08/21/quito-vive-su-primera-batalla-de-farmear-aura-en-el-parque-la-carolina/"]
+        ["Notimercio", "https://notimercio.ec/2026/08/21/quito-vive-su-primera-batalla-de-farmear-aura-en-el-parque-la-carolina/"],
+        ["La Hora", "https://www.lahora.com.ec/vibequito/quito-tuvo-su-primer-torneo-de-farmear-aura-20260821-0038.html"]
+      ]
+    },
+    {
+      "id": "quito-carolina-definitivo",
+      "provincia": "pichincha",
+      "ciudad": "Quito",
+      "lugar": "Parque La Carolina (sector del avión)",
+      "fecha": "2026-08-23",
+      "descripcion": "El \"Torneo Definitivo de Aura\", convocado para las 15:00 tras la primera edición en el mismo parque, con premio en efectivo aunque sin monto confirmado en la cobertura disponible.",
+      "fuente": [
+        ["Metro Ecuador", "https://www.metroecuador.com.ec/entretenimiento/2026/08/23/torneo-de-farmear-aura-en-quito-tendra-premios-economico/"]
       ]
     },
     {
@@ -48,7 +73,30 @@
       "fecha": "2026-08-27",
       "descripcion": "Batalla universitaria en uno de los patios principales del campus.",
       "fuente": [
-        ["La Prensa", "https://laprensa.com.ec/primera-batalla-de-farmear-aura-en-la-usfq/"]
+        ["La Prensa", "https://laprensa.com.ec/primera-batalla-de-farmear-aura-en-la-usfq/"],
+        ["La Hora", "https://www.lahora.com.ec/vibequito/estudiantes-de-la-universidad-san-francisco-de-quito-se-toman-el-campus-con-una-batalla-de-farmear-aura-20260827-0045.html"]
+      ]
+    },
+    {
+      "id": "portoviejo",
+      "provincia": "manabi",
+      "ciudad": "Portoviejo",
+      "lugar": "Parque La Rotonda",
+      "fecha": "2026-08-22",
+      "descripcion": "Primer torneo importante de la ciudad, convocado para las 16:00. Videos locales ya habían mostrado batallas informales de aura en el parque antes de esta competencia planificada.",
+      "fuente": [
+        ["El Diario", "https://www.eldiario.ec/portoviejo/alistan-torneo-de-farmear-aura-en-portoviejo-de-que-se-trata-19082026"]
+      ]
+    },
+    {
+      "id": "loja",
+      "provincia": "loja",
+      "ciudad": "Loja",
+      "lugar": "Parque Jipiro",
+      "fecha": "2026-08-23",
+      "descripcion": "Torneo público convocado en el parque, aunque la cobertura disponible no confirma el resultado, la asistencia ni el premio.",
+      "fuente": [
+        ["El Diario", "https://www.eldiario.ec/portoviejo/alistan-torneo-de-farmear-aura-en-portoviejo-de-que-se-trata-19082026"]
       ]
     }
   ]
