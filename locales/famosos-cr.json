@@ -1,0 +1,170 @@
+{
+ "loc": "cr",
+ "locale": "es-CR",
+ "lang": "es",
+ "numfmt": "es-CR",
+ "base": "https://farmearaura.com",
+ "aura_inicial": 1000,
+ "k": 32,
+ "slug_votar": "cr/duelos/famosos/",
+ "slug_ranking": "cr/duelos/famosos/ranking/",
+ "home": "/cr/",
+ "nav": {
+  "calculadora": "Calculadora",
+  "votar": "Duelos",
+  "ranking": "Ranking"
+ },
+ "votar": {
+  "title": "Duelo de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+  "description": "Keylor Navas contra Maribel Guardia, Debi Nova contra Bryan Ruiz. Elige quién tiene más aura entre los famosos costarricenses y mira el ranking en vivo.",
+  "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+  "sub": "Dos figuras famosas de Ecuador. Elige una. La que gana le roba aura a la otra.",
+  "cta": "Tiene más aura",
+  "seo_h2": "Cómo se reparte la aura entre los famosos",
+  "seo_p": "Los famosos arrancan con 1.000 de aura cada uno. En cada duelo el que gana le roba puntos al que pierde: ganarle a uno que está arriba roba mucho, ganarle a uno que ya está abajo roba poco. El ranking se mueve con los votos de todos los que entran, no solo con los tuyos, y se puede terminar en aura negativa.",
+  "seo_link": "Ver el ranking completo de famosos"
+ },
+ "ranking": {
+  "title": "Ranking de aura entre famosos ecuatorianos | Farmear Aura",
+  "description": "El ranking de aura de los famosos ecuatorianos, armado con los votos de todos. Mira quién manda y quién quedó en negativo.",
+  "h1": "Ranking de <em>aura</em> entre famosos",
+  "sub": "Se mueve con cada voto.",
+  "feed_titulo": "Últimos duelos",
+  "vacio": "Todavía no hay duelos. Estrénalo tú.",
+  "link": "Volver a votar"
+ },
+ "t": {
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "de_aura_label": "de aura",
+  "tiempo": {
+   "seg": "hace %s s",
+   "min": "hace %s min",
+   "hora": "hace %s h",
+   "dia": "hace %s d"
+  }
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "figuras": [
+  {
+   "id": "keylornavas",
+   "emoji": "🧤",
+   "nombre": "Keylor Navas",
+   "anios": "Fútbol",
+   "oficio": "Arquero histórico de la Sele, ícono del Mundial 2014 y campeón de Champions con el Real Madrid."
+  },
+  {
+   "id": "bryanruiz",
+   "emoji": "⚽",
+   "nombre": "Bryan Ruiz",
+   "anios": "Fútbol",
+   "oficio": "Excapitán de la Sele en tres Mundiales, autor de goles históricos ante Italia y Grecia en 2014."
+  },
+  {
+   "id": "joelcampbell",
+   "emoji": "🥅",
+   "nombre": "Joel Campbell",
+   "anios": "Fútbol",
+   "oficio": "Delantero histórico de la Sele, jugó en el Arsenal y sigue activo en el fútbol nacional."
+  },
+  {
+   "id": "celsoborges",
+   "emoji": "🎽",
+   "nombre": "Celso Borges",
+   "anios": "Fútbol",
+   "oficio": "Jugador con más partidos en la historia de la Sele, con tres Mundiales disputados."
+  },
+  {
+   "id": "kendallwaston",
+   "emoji": "🛡️",
+   "nombre": "Kendall Waston",
+   "anios": "Fútbol",
+   "oficio": "Defensor goleador, héroe de la clasificación al Mundial y estrella en la MLS."
+  },
+  {
+   "id": "paulowanchope",
+   "emoji": "🐴",
+   "nombre": "Paulo Wanchope",
+   "anios": "Fútbol",
+   "oficio": "Leyenda histórica de la Sele, brilló en la Premier League con Derby County y Manchester City."
+  },
+  {
+   "id": "kennethtencio",
+   "emoji": "🚴",
+   "nombre": "Kenneth Tencio",
+   "anios": "Deportes",
+   "oficio": "Referente mundial del BMX freestyle, primer tico en unos Juegos Olímpicos en la disciplina."
+  },
+  {
+   "id": "debinova",
+   "emoji": "🎤",
+   "nombre": "Debi Nova",
+   "anios": "Música",
+   "oficio": "Cantautora pop nominada al Latin Grammy, pionera tica en listas de Billboard."
+  },
+  {
+   "id": "editus",
+   "emoji": "🎻",
+   "nombre": "Éditus",
+   "anios": "Música",
+   "oficio": "Primera agrupación costarricense en ganar un Grammy, junto a Rubén Blades."
+  },
+  {
+   "id": "kavvo",
+   "emoji": "🎶",
+   "nombre": "Kavvo",
+   "anios": "Música",
+   "oficio": "Fenómeno musical juvenil con disco de oro y éxitos virales como \"Amarrau\"."
+  },
+  {
+   "id": "deestroying",
+   "emoji": "🏈",
+   "nombre": "Donald De La Haye (Deestroying)",
+   "anios": "YouTube",
+   "oficio": "Creador de contenido con millones de suscriptores, retador en competencias de MrBeast."
+  },
+  {
+   "id": "arayavlogs",
+   "emoji": "🎒",
+   "nombre": "Araya Vlogs",
+   "anios": "YouTube",
+   "oficio": "Viajero y documentalista tico que ha recorrido el mundo mostrando culturas poco conocidas."
+  },
+  {
+   "id": "elmae",
+   "emoji": "📱",
+   "nombre": "El Mae",
+   "anios": "Redes sociales",
+   "oficio": "Influencer costarricense conocido por su humor sarcástico y frases motivacionales."
+  },
+  {
+   "id": "emilyfernanda",
+   "emoji": "💅",
+   "nombre": "Emily Fernanda",
+   "anios": "Redes sociales",
+   "oficio": "Creadora de contenido de moda y estilo de vida con gran alcance en Instagram y TikTok."
+  },
+  {
+   "id": "hernanjimenez",
+   "emoji": "🎬",
+   "nombre": "Hernán Jiménez",
+   "anios": "Comedia",
+   "oficio": "Cineasta y comediante de monólogos, director de la película de Netflix \"¡Qué duro es el amor!\"."
+  },
+  {
+   "id": "maribelguardia",
+   "emoji": "🎭",
+   "nombre": "Maribel Guardia",
+   "anios": "Actuación",
+   "oficio": "Actriz y cantante, Miss Costa Rica 1978 que triunfó en telenovelas mexicanas."
+  },
+  {
+   "id": "norvalcalvo",
+   "emoji": "📺",
+   "nombre": "Norval Calvo",
+   "anios": "Comedia",
+   "oficio": "Humorista e imitador, rostro histórico de la comedia en la televisión costarricense."
+  }
+ ]
+}

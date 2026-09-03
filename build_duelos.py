@@ -21,21 +21,21 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
 TODAY = date.today().isoformat()   # sitemap <lastmod> for this build
-LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec", "ve"]
+LOCS = ["ar", "mx", "es", "br", "cl", "pe", "co", "us", "esus", "uy", "pt", "ec", "ve", "cr"]
 GA4_ID = "G-XHZ0MM619V"   # dejalo en "" para no cargar analytics en estas paginas
 
 # ar vive en la raiz (nunca tuvo prefijo de pais); el resto cuelga de /{cc}/.
 HOME = {"ar": "/", "mx": "/mx/", "es": "/es/", "br": "/br/",
         "cl": "/cl/", "pe": "/pe/", "co": "/co/", "us": "/us/", "esus": "/es-us/",
-        "uy": "/uy/", "pt": "/pt/", "ec": "/ec/", "ve": "/ve/"}
+        "uy": "/uy/", "pt": "/pt/", "ec": "/ec/", "ve": "/ve/", "cr": "/cr/"}
 HREFLANG = {"ar": ["es-AR", "es", "x-default"], "mx": ["es-MX"],
             "es": ["es-ES"], "br": ["pt-BR"],
             "cl": ["es-CL"], "pe": ["es-PE"], "co": ["es-CO"], "us": ["en-US", "en"],
             "esus": ["es-US"], "uy": ["es-UY"], "pt": ["pt-PT"], "ec": ["es-EC"],
-            "ve": ["es-VE"]}
+            "ve": ["es-VE"], "cr": ["es-CR"]}
 OG = {"ar": "es_AR", "mx": "es_MX", "es": "es_ES", "br": "pt_BR", "us": "en_US",
       "cl": "es_CL", "pe": "es_PE", "co": "es_CO", "esus": "es_US", "uy": "es_UY",
-      "pt": "pt_PT", "ec": "es_EC", "ve": "es_VE"}
+      "pt": "pt_PT", "ec": "es_EC", "ve": "es_VE", "cr": "es_CR"}
 
 ANALYTICS = (
     '<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
@@ -131,13 +131,14 @@ RANKING_CTA = {
     "co": "Vota tú y muévelo.", "us": "Cast your vote and move the needle.",
     "esus": "Vota tú y muévelo.", "uy": "Votá vos y movelo.",
     "pt": "Vota e mexe no ranking.", "ec": "Vota tú y muévelo.", "ve": "Vota tú y muévelo.",
+    "cr": "Vota tú y muévelo.",
 }
 HISTORIAL_CTA = {
     "ar": "Sumá tu duelo.", "mx": "Suma tu duelo.", "es": "Suma tu duelo.",
     "br": "Some o seu duelo.", "cl": "Suma tu duelo.", "pe": "Suma tu duelo.",
     "co": "Suma tu duelo.", "us": "Add your duel.", "esus": "Suma tu duelo.",
     "uy": "Sumá tu duelo.", "pt": "Soma o teu duelo.", "ec": "Suma tu duelo.",
-    "ve": "Suma tu duelo.",
+    "ve": "Suma tu duelo.", "cr": "Suma tu duelo.",
 }
 
 # Texto adicional debajo del link de la pagina de ranking -- explica como
@@ -169,7 +170,7 @@ RANKING_SEO_H2 = {
     "co": "Cómo se arma este ranking", "us": "How this ranking gets built",
     "esus": "Cómo se arma este ranking", "uy": "Cómo se arma este ranking",
     "pt": "Como este ranking é construído", "ec": "Cómo se arma este ranking",
-    "ve": "Cómo se arma este ranking",
+    "ve": "Cómo se arma este ranking", "cr": "Cómo se arma este ranking",
 }
 RANKING_SEO_P = {
     "ar": _RANKING_SEO_ES_VOSEO, "uy": _RANKING_SEO_ES_VOSEO,
@@ -177,6 +178,7 @@ RANKING_SEO_P = {
     "cl": _RANKING_SEO_ES_TUTEO, "pe": _RANKING_SEO_ES_TUTEO,
     "co": _RANKING_SEO_ES_TUTEO, "esus": _RANKING_SEO_ES_TUTEO,
     "ec": _RANKING_SEO_ES_TUTEO, "ve": _RANKING_SEO_ES_TUTEO,
+    "cr": _RANKING_SEO_ES_TUTEO,
     "br": (
         "Esse ranking não é decidido por ninguém: ele se monta sozinho, voto a voto. "
         "Todos os arquétipos começam com 1.000 de aura, e cada duelo mexe no placar de "
@@ -217,6 +219,7 @@ FAMOSOS_LABEL = {
     "co": "Duelos entre famosos", "us": "Celebrity duels",
     "esus": "Duelos entre famosos", "uy": "Duelos entre famosos",
     "pt": "Duelos entre famosos", "ec": "Duelos entre famosos", "ve": "Duelos entre famosos",
+    "cr": "Duelos entre famosos",
 }
 
 

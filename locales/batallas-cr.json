@@ -1,0 +1,34 @@
+{
+  "title": "Mapa de Batallas de Aura en Costa Rica | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Costa Rica: campus, parques y plazas donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Costa Rica",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Costa Rica.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "mapHint": "Toca una provincia con marca para filtrar",
+  "mapAriaLabel": "Mapa de provincias de Costa Rica con batallas de aura registradas",
+  "venueCountLabel": "lugares registrados",
+  "faqHeading": "Preguntas frecuentes",
+  "faq": [
+    ["¿Qué es una batalla de aura?", "Dos personas se enfrentan con poses, miradas, pasos de baile o gestos exagerados, sin contacto físico, mientras la gente que las rodea decide quién tiene más presencia. No hay reglas fijas: gana quien logre la mejor reacción del público."],
+    ["¿Cómo se gana una batalla de aura?", "No hay puntaje técnico ni jueces oficiales en la mayoría de los casos: gana quien el público sienta que tiene más carisma, seguridad o \"aura\" en ese momento. Algunas ediciones organizadas sí usan formato de eliminación directa y hasta premios."],
+    ["¿De dónde salió esta tendencia?", "\"Farmear\" viene del inglés \"to farm\", que en los videojuegos significa acumular puntos o recursos, y \"aura\" se usa como sinónimo de carisma o presencia. La idea nació en TikTok y saltó a la calle durante 2026."],
+    ["¿Este mapa se actualiza en vivo?", "No. Es un registro curado de batallas que ya pasaron de verdad, cada una con su fecha y su fuente. No es un calendario de próximos eventos."],
+    ["¿Quién organiza estas batallas?", "Casi nunca son instituciones: la mayoría se arman de forma espontánea entre estudiantes o grupos de amigos que se encuentran en un mismo lugar, como pasó en la Universidad de Costa Rica."]
+  ],
+  "venues": [
+    {
+      "id": "ucr-pretil",
+      "provincia": "san-jose",
+      "ciudad": "San Pedro de Montes de Oca",
+      "lugar": "El Pretil, Universidad de Costa Rica (sede Rodrigo Facio)",
+      "fecha": "2026-08-17",
+      "descripcion": "Primera batalla de aura documentada en el país: unos 300 estudiantes se reunieron en El Pretil, la plaza frente a la Facultad de Estudios Generales, para una tanda de duelos con poses, gestos y pasos de baile juzgados por los aplausos de la multitud. Un estudiante identificado como John (cuenta de Instagram @john.varr) contó que fue solo a observar y terminó metiéndose a competir, autoproclamándose el primer campeón de aura de Costa Rica. El episodio disparó las menciones nacionales de \"farmear aura\" en redes y fue citado por medios internacionales como CNN.",
+      "fuente": [
+        ["La Nación", "https://www.nacion.com/viva/como-surgieron-las-batallas-de-aura-en-la-ucr-uno/57J6IBB7OFHMHHOZY6IBCIRF6A/story/"],
+        ["CRHoy", "https://crhoy.com/entretenimiento/video-el-gano-la-batalla-de-aura-en-ucr-y-dice-que-no-pensaba-participar/"],
+        ["La Teja", "https://www.lateja.cr/teleguia/farandula/campeon-de-batalla-de-aura-revelo-como-se/MYHUWTH6HVA7NOABFSQANIQ6HM/story/"]
+      ]
+    }
+  ]
+}

@@ -151,6 +151,13 @@ LOCALES = {
         "lang": "es-VE", "address_country": "VE",
         "update_label": "Mapa actualizado:",
     },
+    "cr": {
+        "home": "/cr/", "slug": "batallas-de-aura",
+        "geo_file": "provincias-cr.geo.json",
+        "view_w": 460, "view_h": 436,
+        "lang": "es-CR", "address_country": "CR",
+        "update_label": "Mapa actualizado:",
+    },
     "esus": {
         "home": "/es-us/", "slug": "batallas-de-aura",
         "geo_file": "states-us.geo.json",

@@ -1,0 +1,169 @@
+{
+ "locale": "es-CR",
+ "lang": "es",
+ "base": "https://farmearaura.com",
+ "brand": "FARMEAR AURA",
+ "aura_inicial": 1000,
+ "k": 32,
+ "nav": {
+  "votar": "Votar",
+  "ranking": "Ranking",
+  "historial": "Duelos",
+  "calculadora": "Calculadora"
+ },
+ "votar": {
+  "slug": "cr/duelos/",
+  "title": "¿Quién tiene más aura? — Duelos de aura | Farmear Aura",
+  "description": "Elige quién tiene más aura. El que gana le roba puntos de aura al otro. Vota y mira el ranking en vivo.",
+  "h1": "¿Quién tiene más aura?",
+  "sub": "Elige uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "otro": "Otro duelo",
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "seo_h2": "Cómo funciona el duelo de aura",
+  "seo_p": "Cada personaje arranca con 1.000 de aura. Cuando votas, el que gana le roba puntos al que pierde: si le gana a alguien con más aura, le roba más; si le gana a uno que ya estaba abajo, le roba poquito. Los puntos se actualizan al toque y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Se puede quedar en números rojos, obvio.",
+  "seo_link": "¿Quieres saber cuánta aura tienes tú? Haz el test de aura."
+ },
+ "ranking": {
+  "slug": "cr/duelos/ranking/",
+  "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+  "description": "El ranking de aura en vivo, armado con los votos de todos. Mira quién va primero y quién quedó en aura negativa.",
+  "h1": "Ranking de aura",
+  "sub": "Actualizado con cada voto.",
+  "col_aura": "aura",
+  "vacio": "Todavía no hay votos. Ve a votar."
+ },
+ "historial": {
+  "slug": "cr/duelos/historial/",
+  "title": "Últimos duelos de aura | Farmear Aura",
+  "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+  "h1": "Últimos duelos",
+  "sub": "Los votos más recientes, uno por uno.",
+  "vacio": "Todavía no hay duelos. Estrénalo tú."
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "candidatos": [
+  {
+   "id": "bus-pasaje-incompleto",
+   "emoji": "🚌",
+   "nombre": "El que sube al bus y al meter la mano al bolsillo se da cuenta de que le falta como cien colones para el pasaje, mientras el chofer y medio bus se lo quedan viendo esperando a ver qué inventa."
+  },
+  {
+   "id": "bus-se-pasa-la-parada",
+   "emoji": "😴",
+   "nombre": "El que se queda dormido en el bus después de un brete larguísimo y despierta tres paradas después de la suya, en un barrio que ni conoce."
+  },
+  {
+   "id": "bus-pelea-por-puesto",
+   "emoji": "💺",
+   "nombre": "El que corre para agarrar el último campo libre en el bus repleto y llega justo cuando otro mae se sienta primero, dejándolo parado todo el camino agarrado de un tubo pegajoso."
+  },
+  {
+   "id": "goma-domingo-familiar",
+   "emoji": "🤢",
+   "nombre": "El que llega con una goma de las buenas al almuerzo dominical donde está toda la familia, fingiendo que el dolor de jupa es gripe mientras evita el olor del gallo pinto."
+  },
+  {
+   "id": "brete-jefe-sorprende",
+   "emoji": "💻",
+   "nombre": "El que se queda dormido a medio brete con la cámara de la videollamada prendida y el jefe lo descubre roncando justo cuando le tocaba presentar."
+  },
+  {
+   "id": "chunche-internet-torneo",
+   "emoji": "🎮",
+   "nombre": "El que está a punto de ganar el torneo online cuando se le va el internet justo en la jugada final, y sale gritándole al router como si el chunche le fuera a responder."
+  },
+  {
+   "id": "examen-copia-celular",
+   "emoji": "📱",
+   "nombre": "El que intenta copiar las respuestas del examen con el celular escondido en la tuca y el profesor lo agarra justo cuando el chunche empieza a sonar."
+  },
+  {
+   "id": "pulperia-resbalon",
+   "emoji": "🛒",
+   "nombre": "El que resbala en la entrada de la pulpería del barrio con una bolsa llena de chunches y termina rodando frente a toda la gente que hace fila para pagar."
+  },
+  {
+   "id": "fiesta-argolla-lo-deja",
+   "emoji": "🥳",
+   "nombre": "El que llega tarde a la fiesta que iba a estar bien tuanis y descubre que toda su argolla de amigos ya se fue para otra vara, dejándolo solo comiendo bocas y tomándose una Imperial sin nadie con quien hablar."
+  },
+  {
+   "id": "familia-pregunta-vieja",
+   "emoji": "👵",
+   "nombre": "El que llega solo al cumpleaños de la abuela y pasa toda la tarde escuchando a los tíos preguntarle cuándo va a conseguir vieja, mientras la mamá ya casi lo tiene comprometido con la hija de una vecina."
+  },
+  {
+   "id": "correo-torta-trabajo",
+   "emoji": "😱",
+   "nombre": "El que se manda una torta en el brete al contestar mal un correo y termina enviándoselo sin querer a toda la empresa, incluido el gerente que apenas conoce."
+  },
+  {
+   "id": "guachiman-cobro",
+   "emoji": "🅿️",
+   "nombre": "El que estaciona rapidito para hacer un mandado y al volver se encuentra al guachimán exigiéndole quinientos pesos por cuidarle el carro que nadie le pidió que cuidara."
+  },
+  {
+   "id": "universidad-tarea-olvidada",
+   "emoji": "📚",
+   "nombre": "El que llega a la U convencido de que entregó la tarea a tiempo y descubre en plena clase que el chunche se quedó abierto en la computadora de la casa sin nunca haberse enviado."
+  },
+  {
+   "id": "choza-jupa-marco",
+   "emoji": "🤕",
+   "nombre": "El que sale corriendo tarde para el bus y se pega en la jupa contra el marco de la puerta de la choza, quedando doblado del dolor justo cuando el bus pasa de largo sin esperarlo."
+  },
+  {
+   "id": "soda-cuenta-corta",
+   "emoji": "🍽️",
+   "nombre": "El que pide el casado completo en la soda de la esquina y al momento de pagar se da cuenta de que le falta harina, teniendo que llamar a medio grupo de WhatsApp para que le hagan un SINPE."
+  },
+  {
+   "id": "bomba-gasolina-vergonzosa",
+   "emoji": "⛽",
+   "nombre": "El que llega a la bomba con el carro sonando raro y el empleado le dice, delante de la fila de carros esperando, que el problema es que hace meses no le echa aceite."
+  },
+  {
+   "id": "gaming-microfono-abierto",
+   "emoji": "🎤",
+   "nombre": "El que insulta al equipo contrario del videojuego pensando que tiene el micrófono apagado y toda la sala de chat, incluido su primo, escucha cada palabra."
+  },
+  {
+   "id": "fiesta-camote-guaro",
+   "emoji": "🥴",
+   "nombre": "El que se toma un guarito de más en la fiesta y termina hecho un camote tratando de explicarle a la vieja del CD por qué se puso a bailar solo en medio de la sala."
+  },
+  {
+   "id": "trabajo-brete-doble-turno",
+   "emoji": "😩",
+   "nombre": "El que ya tenía planes con la vieja para el fin de semana y el jefe le cae con que hay que quedarse doble turno en el brete porque el sistema se cayó otra vez."
+  },
+  {
+   "id": "familia-comentario-peso",
+   "emoji": "🍚",
+   "nombre": "El que se sirve la segunda ronda de gallo pinto en la mesa familiar y la tía suelta el comentario de siempre sobre que ya no le queda la ropa, delante de todos los primos."
+  },
+  {
+   "id": "bus-goma-vomito",
+   "emoji": "🤮",
+   "nombre": "El que sube al bus todavía con la goma de la noche anterior y siente que el estómago se le revuelve con cada bache, rezando por que la parada llegue antes que el desastre."
+  },
+  {
+   "id": "universidad-presentacion-nervios",
+   "emoji": "😰",
+   "nombre": "El que se para al frente de la clase a exponer el trabajo final y se le olvida hasta el nombre del proyecto en cuanto ve al profesor con cara de pocos amigos."
+  },
+  {
+   "id": "chat-familiar-vergonzoso",
+   "emoji": "📲",
+   "nombre": "El que manda un mensaje quejándose del roco por el chat personal y por error lo pega en el grupo familiar completo, incluido el mismo roco."
+  },
+  {
+   "id": "choque-carro-pura-vida",
+   "emoji": "🫠",
+   "nombre": "El que choca sin querer el carro del vecino en la calle angosta y lo único que se le ocurre decir, con la jupa hecha un lío y los dos carros abollados, es 'pura vida, todo bien'."
+  }
+ ]
+}
