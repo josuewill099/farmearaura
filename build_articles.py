@@ -1083,12 +1083,11 @@ def build():
                 sources="\n".join(f"    <li>{x}</li>" for x in art.get("sources", [])),
                 promoK=esc(art["promoK"]), promoP=esc(art["promoP"]), promoBtn=esc(art["promoBtn"]),
                 promoUrl=art.get("promoUrl", home),
-                ctaNav=esc(art["ctaNav"]), guideLink=esc(art.get("guideLink", art["h1"])),
                 navblock=(f'<nav class="nav">{nav_data.nav_html(loc, "contador")}</nav>'
                           if art["slug"] in COUNTER_SLUGS
                           else f'<a class="cta" href="{home}">{esc(art["ctaNav"])}</a>'),
-                footerNote=art["footerNote"], ld=ld,
-                legalLinks=nav_data.legal_links_html(loc, home),
+                ld=ld,
+                sitefooter=nav_data.site_footer_html(loc, home, art["footerNote"]),
             )
 
             # home.strip("/") es "" para ar (locale por defecto, vive en /);

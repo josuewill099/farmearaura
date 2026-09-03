@@ -341,7 +341,7 @@ def build_one(loc, cfg):
         ("FAQ_HEADING", esc(L["faqHeading"])),
         ("FAQ_HTML", build_faq_html(L["faq"])),
         ("FOOTERNOTE", L["footerNote"]),  # contiene un <a> real, no escapar
-        ("LEGALLINKS", nav_data.legal_links_html(loc, home)),
+        ("SITEFOOTER", nav_data.site_footer_html(loc, home)),
     ]:
         html = html.replace("{{%s}}" % k, v)
 

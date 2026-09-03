@@ -90,13 +90,6 @@ def legal_hreflang(pagekey, langkey):
     out.append(f'<link rel="alternate" hreflang="x-default" href="{legal_url("es", pair["es"])}">')
     return "\n".join(out)
 
-def legal_links(langkey, home):
-    L = LEGAL[langkey]
-    items = " &middot; ".join(
-        f'<a href="{L["base"]}{pg["slug"]}/">{esc(pg["h1"])}</a>'
-        for pg in L["pages"].values())
-    return f'  <a href="{home}">farmearaura.com</a> &middot; {items} &middot; {nav_data.SOCIAL_LINKS}<br>'
-
 PAGE_TPL = (SRC / "page.tpl.html").read_text("utf-8")
 
 # Privacidad y cookies van noindex -- son paginas de compliance, no
@@ -138,8 +131,8 @@ def build_legal(langkey):
             homeLabel=esc(L["homeLabel"]), navLabel=esc(L["navLabel"]),
             h1=esc(pg["h1"]), updated=esc(L["updated"]), lead=pg["lead"],
             sections="\n\n".join(body),
-            legalLinks=legal_links(langkey, home),
-            footerNote=esc(owner["guide"]["footerNote"]),
+            sitefooter=nav_data.site_footer_html(
+                owner["_code"], home, owner["guide"]["footerNote"]),
             analytics=analytics_tag, robots=robots,
             ld=json.dumps(ld, ensure_ascii=False, indent=2))
     return out
@@ -236,11 +229,9 @@ def build_app(l):
         ("Tu nombre o @", a["nameLabel"]),
         ("Sin cuenta. Sin fotos. Sin guardar nada.", a["fine1"]),
         ("Todo pasa dentro de tu celular.", a["fine2"]),
-        ("¿Qué es farmear aura?", a["guideLink"]),
-        ('href="/que-es-farmear-aura/"', f'href="{a["guideHref"]}"'),
         ("Calcula la tuya en 7 preguntas", a["cardTagline"]),
         ("Calculadora<br>de Aura", f'{a["wordmark"][0]}<br>{a["wordmark"][1]}'),
-        ("<!--LEGALLINKS2-->", app_legal_links(l)),
+        ("<!--SITEFOOTER-->", nav_data.site_footer_html(l["_code"], canonical, l["guide"]["footerNote"])),
         ("<!--DUELCARDS-->", app_duel_cards(l)),
         ("Saqué ${fmt(S.score)} puntos de aura. Calcula la tuya en farmearaura.com",
          a["shareText"].replace("{score}", "${fmt(S.score)}")),
@@ -260,18 +251,6 @@ def build_app(l):
         h = h.replace(old, new)
     h = h.replace("<!--ANALYTICS-->", analytics_tag)
     return h
-
-def app_legal_links(l):
-    L = LEGAL[LEGAL_OF[l["_code"]]]
-    items = " &middot; ".join(
-        f'<a href="{L["base"]}{pg["slug"]}/" style="color:#54476A">{esc(pg["h1"])}</a>'
-        for pg in L["pages"].values())
-    social = (
-        '<a href="https://www.facebook.com/farmearauracom" style="color:#54476A" rel="noopener" target="_blank">Facebook</a>'
-        ' &middot; '
-        '<a href="https://www.instagram.com/farmear_aura_com" style="color:#54476A" rel="noopener" target="_blank">Instagram</a>'
-    )
-    return "<br>" + items + " &middot; " + social
 
 # Tarjetas de duelos que aparecen debajo del fineprint de la calculadora,
 # con el mismo look que .mode -- reusan nav_data (labels/URLs ya existen
@@ -321,7 +300,7 @@ def sub1(text, pattern, repl):
 
 # ----------------------------------------------------------------- guide
 def build_guide(l):
-    g, a = l["guide"], l["app"]
+    g = l["guide"]
     canonical = f'{DOMAIN}{l["path"]}{g["slug"]}/'
     hd = g["headings"]
 
@@ -409,10 +388,9 @@ def build_guide(l):
         sources="\n".join(f"    <li>{x}</li>" for x in srcs),
         promoK=esc(g["promoK"]), promoP=esc(g["promoP"]), promoBtn=esc(g["promoBtn"]),
         promoUrl=l["path"],
-        ctaNav=esc(g["ctaNav"]), guideLink=esc(a["guideLink"]),
         navblock=f'<a class="cta" href="{l["path"]}">{esc(g["ctaNav"])}</a>',
-        footerNote=esc(g["footerNote"]), ld=json.dumps(schema(l), ensure_ascii=False, indent=2),
-        legalLinks=legal_links(LEGAL_OF[l["_code"]], l["path"]),
+        ld=json.dumps(schema(l), ensure_ascii=False, indent=2),
+        sitefooter=nav_data.site_footer_html(code, l["path"], g["footerNote"]),
     )
 
 def schema(l):

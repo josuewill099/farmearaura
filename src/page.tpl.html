@@ -108,9 +108,17 @@ details .a p:last-child{{margin-bottom:0}}
 
 .sources{{font-size:14px;color:var(--dim);margin-top:14px}}
 .sources li{{margin:6px 0}}
-footer{{border-top:1px solid #2A1A3E;margin-top:56px;padding:26px 0 40px;
-  font-size:13px;color:var(--dim);text-align:center;line-height:1.9}}
-footer a{{color:var(--mid)}}
+.site-footer{{border-top:1px solid #2A1A3E;margin-top:48px;padding:32px 0 28px;background:var(--panel)}}
+.site-footer-content{{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;margin-bottom:24px;text-align:left}}
+.site-footer-section h3{{font-family:var(--display);font-size:12px;letter-spacing:.04em;margin:0 0 10px;
+  background:linear-gradient(120deg,var(--aura),var(--cyan));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}}
+.site-footer-section p{{color:var(--dim);font-size:13px;line-height:1.7;margin:0}}
+.site-footer-section p+p{{margin-top:8px}}
+.site-footer-links{{display:flex;flex-direction:column;gap:7px}}
+.site-footer-links a{{color:var(--mid);font-size:13px;text-decoration:none}}
+.site-footer-links a:hover{{color:var(--bone)}}
+.site-footer-bottom{{padding-top:18px;border-top:1px solid #2A1A3E;color:var(--dim);font-size:11px;text-align:center}}
+.site-footer-bottom p{{margin:0}}
 @media(max-width:480px){{body{{font-size:16.5px}}}}
 </style>
 <script type="application/ld+json">
@@ -135,9 +143,8 @@ footer a{{color:var(--mid)}}
 {sections}
 </main>
 
-<footer><div class="wrap">
-{legalLinks}
-  {footerNote}
+<footer class="site-footer"><div class="wrap">
+{sitefooter}
 </div></footer>
 </body>
 </html>

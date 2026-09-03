@@ -207,12 +207,11 @@ def build():
                 ("JSONLD", jsonld(L, page, canonical, figuras)),
                 ("HOME", base + L["home"]),
                 ("NAV", nav_html(loc, key)),
-                ("LEGALLINKS", nav_data.legal_links_html(loc, base + L["home"])),
                 ("H1", page["h1"]),
                 ("SUB", esc(page["sub"])),
                 ("OFFLINE", esc(L["offline"])),
                 ("MAIN", main),
-                ("FOOTER", esc(L["footer"])),
+                ("SITEFOOTER", nav_data.site_footer_html(loc, base + L["home"], L["footer"])),
                 ("CONFIG", json.dumps(cfg, ensure_ascii=False, separators=(",", ":"))),
                 ("JS", js),
             ]:

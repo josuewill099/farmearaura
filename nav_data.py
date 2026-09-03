@@ -13,15 +13,17 @@ esta el visitante, para marcar aria-current en el item (y sub-item) correcto:
     "home", "duelos", "duelos_ranking", "duelos_historial",
     "historia", "historia_ranking"
 
-legal_links_html(loc, home) arma la linea "farmearaura.com · Privacidad ·
-Cookies · ..." que build.py ya usaba en las paginas de guia/legal, pero que
-las paginas de duelos/historia nunca tuvieron -- build_duelos.py y
-build_historia.py son scripts aparte, sin acceso al LEGAL/LEGAL_OF de
-build.py. Duplica esa tabla (es chica y cambia poco) en vez de importar
-build.py entero solo para esto.
+site_footer_html(loc, home, blurb=None) arma el <footer> de 4 columnas
+(Marca / Enlaces / Legal / Contacto) que reemplaza la vieja linea unica de
+legal_links_html en todos los tipos de pagina. "blurb" es el texto de la
+columna de marca -- cada builder ya tiene a mano una frase propia de esa
+locale (footerNote de guia, o el "footer" de duelos/famosos/historia) y la
+pasa aca en vez de que este modulo intente adivinarla; si no se pasa nada
+cae a BRAND_BLURB (generico, por idioma).
 """
 
 import json
+from datetime import date
 from pathlib import Path
 
 _ROOT = Path(__file__).parent
@@ -39,20 +41,8 @@ def _legal(langkey):
     return _legal_cache[langkey]
 
 
-SOCIAL_LINKS = (
-    '<a href="https://www.facebook.com/farmearauracom" rel="noopener" target="_blank">Facebook</a>'
-    ' &middot; '
-    '<a href="https://www.instagram.com/farmear_aura_com" rel="noopener" target="_blank">Instagram</a>'
-)
-
-
-def legal_links_html(loc, home):
-    L = _legal(LEGAL_OF[loc])
-    items = " &middot; ".join(
-        '<a href="%s%s/">%s</a>' % (L["base"], pg["slug"], _esc(pg["h1"]))
-        for pg in L["pages"].values()
-    )
-    return '<a href="%s">farmearaura.com</a> &middot; %s &middot; %s' % (home, items, SOCIAL_LINKS)
+FACEBOOK_URL = "https://www.facebook.com/farmearauracom"
+INSTAGRAM_URL = "https://www.instagram.com/farmear_aura_com"
 
 
 # URL + link text for each locale's guide article. Vive aca (no en cada
@@ -342,6 +332,89 @@ NAV_URLS = {
 def _esc(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;")
              .replace(">", "&gt;").replace('"', "&quot;"))
+
+
+# Copy del footer de 4 columnas, agrupado por idioma (LEGAL_OF) igual que la
+# tabla LEGAL -- 3 variantes, no 16, porque este texto es generico de marca,
+# no propio de cada locale.
+BRAND_BLURB = {
+    "es": "El sitio de humor sobre farmear aura: calculadora de puntos, "
+          "duelos y rankings. Los puntos no existen, la diversión sí.",
+    "pt": "O site de humor sobre farmar aura: calculadora de pontos, duelos "
+          "e rankings. Os pontos não existem, a diversão sim.",
+    "en": "The aura-farming humor site: a points calculator, duels, and "
+          "rankings. The points aren't real — the fun is.",
+}
+CROSS_PROMO_LABEL = {
+    "es": "También por nuestro equipo: ",
+    "pt": "Também da nossa equipe: ",
+    "en": "Also by our team: ",
+}
+COPYRIGHT_RIGHTS = {
+    "es": "Todos los derechos reservados.",
+    "pt": "Todos os direitos reservados.",
+    "en": "All rights reserved.",
+}
+FOOTER_HEADINGS = {
+    "es": {"quick": "Enlaces rápidos", "legal": "Legal", "contact": "Contacto"},
+    "pt": {"quick": "Links rápidos", "legal": "Legal", "contact": "Contato"},
+    "en": {"quick": "Quick Links", "legal": "Legal", "contact": "Contact"},
+}
+
+
+def site_footer_html(loc, home, blurb=None):
+    lang = LEGAL_OF[loc]
+    L, U = NAV_LABELS[loc], NAV_URLS[loc]
+    H = FOOTER_HEADINGS[lang]
+
+    quick = [(GUIDE_URLS[loc], GUIDE_LABELS[loc]), (home, L["calculadora"])]
+    for key in ("batallas", "duelos", "historia", "famosos", "contador"):
+        if key in U:
+            quick.append((U[key], L[key]))
+    quick_html = "".join(
+        '<a href="%s">%s</a>' % (href, _esc(label)) for href, label in quick)
+
+    legal = _legal(lang)
+    legal_html = "".join(
+        '<a href="%s%s/">%s</a>' % (legal["base"], pg["slug"], _esc(pg["h1"]))
+        for pg in legal["pages"].values())
+
+    return (
+        '<div class="site-footer-content">'
+        '<div class="site-footer-section">'
+        '<h3>FARMEARAURA</h3>'
+        '<p>%s</p>'
+        '<p>%s<a href="https://lingostar.ai">Lingostar AI</a>.</p>'
+        '</div>'
+        '<div class="site-footer-section">'
+        '<h3>%s</h3>'
+        '<div class="site-footer-links">%s</div>'
+        '</div>'
+        '<div class="site-footer-section">'
+        '<h3>%s</h3>'
+        '<div class="site-footer-links">%s</div>'
+        '</div>'
+        '<div class="site-footer-section">'
+        '<h3>%s</h3>'
+        '<div class="site-footer-links">'
+        '<a href="mailto:hola@farmearaura.com">hola@farmearaura.com</a>'
+        '<a href="%s" rel="noopener" target="_blank">Facebook</a>'
+        '<a href="%s" rel="noopener" target="_blank">Instagram</a>'
+        '</div>'
+        '</div>'
+        '</div>'
+        '<div class="site-footer-bottom">'
+        '<p>&copy; %d Farmear Aura SRL. %s</p>'
+        '</div>'
+    ) % (
+        _esc(blurb if blurb is not None else BRAND_BLURB[lang]),
+        CROSS_PROMO_LABEL[lang],
+        _esc(H["quick"]), quick_html,
+        _esc(H["legal"]), legal_html,
+        _esc(H["contact"]),
+        FACEBOOK_URL, INSTAGRAM_URL,
+        date.today().year, COPYRIGHT_RIGHTS[lang],
+    )
 
 
 # Toca una vez por pagina, junto con el <nav> que genera. El hover-only de
