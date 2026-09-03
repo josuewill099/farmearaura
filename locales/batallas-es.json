@@ -23,10 +23,12 @@
       "ciudad": "Sevilla",
       "lugar": "Plaza de España",
       "fecha": "2026-09-01",
-      "descripcion": "Primera batalla de la ciudad, con un premio de 100 € para el ganador.",
+      "descripcion": "Primera batalla de la ciudad, con inicio a las 19:00, entrada libre y abierta tanto a competidores como a espectadores, y un premio de 100 € para el ganador.",
       "fuente": [
         ["El Pespunte", "https://www.elpespunte.es/articulo/sevilla/sevilla-suma-fenomeno-batallas-aura-convocatoria-plaza-espana/20260826182623147732.html"],
-        ["Excélsior", "https://www.excelsior.com.mx/internacional/batalla-farmear-aura-sevilla"]
+        ["Excélsior", "https://www.excelsior.com.mx/internacional/batalla-farmear-aura-sevilla"],
+        ["Diario de Sevilla", "https://www.diariodesevilla.es/vivirensevilla/sevilla-acogera-primera-batalla-aura_0_2007794118.html"],
+        ["Planomato", "https://www.planomato.com/es/sevilla/p/batalla-de-aura-sevilla"]
       ]
     },
     {
@@ -44,11 +46,13 @@
       "id": "a-coruna",
       "provincia": "a-coruna",
       "ciudad": "A Coruña",
-      "lugar": "Jardines de Méndez Núñez",
+      "lugar": "Palco de la Música (Jardines de Méndez Núñez)",
       "fecha": "2026-08-22",
-      "descripcion": "Una de las primeras batallas registradas en Galicia.",
+      "descripcion": "Una de las primeras batallas registradas en Galicia, con inicio a las 18:00. Los participantes se enfrentaban de a dos, y el público decidía quién se llevaba la victoria.",
       "fuente": [
-        ["Telecinco", "https://www.telecinco.es/noticias/sociedad/20260826/batallas-farmear-aura-expanden-jovenes-espana-burgos-valencia-barcelona_18_020020404.html"]
+        ["Telecinco", "https://www.telecinco.es/noticias/sociedad/20260826/batallas-farmear-aura-expanden-jovenes-espana-burgos-valencia-barcelona_18_020020404.html"],
+        ["El Español", "https://www.elespanol.com/quincemil/a-coruna/20260820/coruna-sabado-propia-batalla-aura-publico-decidira-gana/1003744358442_0.html"],
+        ["Planomato", "https://www.planomato.com/es/a-coruna/p/batalla-de-aura-a-coruna"]
       ]
     },
     {
@@ -57,10 +61,22 @@
       "ciudad": "Pamplona",
       "lugar": "Plaza del Castillo",
       "fecha": "2026-08-28",
-      "descripcion": "Cientos de jóvenes reunidos en la plaza más emblemática de la ciudad.",
+      "descripcion": "Cientos de jóvenes reunidos en la plaza más emblemática de la ciudad, midiendo carisma, gestos, poses y presencia de a dos, a partir de las 18:00.",
       "fuente": [
         ["Noticias de Navarra", "https://www.noticiasdenavarra.com/sociedad/2026/08/25/batallas-aura-ponen-pamplona-mapa-11466908.html"],
-        ["OKDIARIO Navarra", "https://navarra.okdiario.com/articulo/pamplona/extrana-batalla-que-ha-reunido-cientos-adolescentes-pamplona-asi-farmea-aura/20260828192828658253.html"]
+        ["OKDIARIO Navarra", "https://navarra.okdiario.com/articulo/pamplona/extrana-batalla-que-ha-reunido-cientos-adolescentes-pamplona-asi-farmea-aura/20260828192828658253.html"],
+        ["Diario de Navarra", "https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/08/25/llegan-pamplona-batallas-farmear-aura-nueva-moda-jovenes-832733-16.html"]
+      ]
+    },
+    {
+      "id": "pamplona-2",
+      "provincia": "navarra",
+      "ciudad": "Pamplona",
+      "lugar": "Plaza del Castillo",
+      "fecha": "2026-08-30",
+      "descripcion": "Segunda convocatoria en la misma plaza dos días después, esta vez con inicio a las 22:00.",
+      "fuente": [
+        ["Diario de Navarra", "https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2026/08/25/llegan-pamplona-batallas-farmear-aura-nueva-moda-jovenes-832733-16.html"]
       ]
     },
     {
@@ -80,10 +96,56 @@
       "ciudad": "Palma",
       "lugar": "Plaza de España",
       "fecha": "2026-08-30",
-      "descripcion": "Primer campeonato de la isla, después de una primera quedada espontánea días antes en el Parc de ses Estacions.",
+      "descripcion": "Primer campeonato de la isla, después de una primera quedada espontánea días antes en el Parc de ses Estacions. Cerca de 300 personas se acercaron a ver a los 16 participantes admitidos, que pagaron 1 € de inscripción para competir por un premio de 25 € al ganador.",
       "fuente": [
         ["Última Hora", "https://www.ultimahora.es/noticias/sociedad/2026/08/25/2695301/mallorca-tiene-fecha-para-primer-campeonato-batallas-aura.html"],
-        ["Última Hora", "https://www.ultimahora.es/noticias/sociedad/2026/08/30/2698815/batallas-aura-toman-plaza-espana-palma.html"]
+        ["Última Hora", "https://www.ultimahora.es/noticias/sociedad/2026/08/30/2698815/batallas-aura-toman-plaza-espana-palma.html"],
+        ["Diario de Mallorca", "https://www.diariodemallorca.es/palma/2026/08/31/batallas-llegan-mallorca-moda-farmear-aura-dvl-133797056.html"]
+      ]
+    },
+    {
+      "id": "madrid",
+      "provincia": "madrid",
+      "ciudad": "Madrid",
+      "lugar": "Evento público",
+      "fecha": "2026-08-31",
+      "descripcion": "Madrid tuvo su primera gran batalla de aura, con más de 100 jóvenes compitiendo a través de gestos, poses, baile, vestimenta, actitud y referencias a memes virales.",
+      "fuente": [
+        ["El País", "https://elpais.com/videos/2026-08-31/dentro-de-una-batalla-de-aura-el-nuevo-reto-viral-que-moviliza-a-miles-de-jovenes-lo-importante-es-pasarlo-bien.html"]
+      ]
+    },
+    {
+      "id": "castellon-de-la-plana",
+      "provincia": "castellon",
+      "ciudad": "Castellón de la Plana",
+      "lugar": "Parque Ribalta",
+      "fecha": "2026-08-28",
+      "descripcion": "Primera batalla de la ciudad, con inicio a las 17:30. Los participantes usaron gestos, bailes, provocaciones y referencias de TikTok mientras el público decidía quién tenía más aura.",
+      "fuente": [
+        ["El Periódico Mediterráneo", "https://www.elperiodicomediterraneo.com/castello-provincia/2026/08/28/aura-castellon-estrena-batallas-farmear-133745436.html"],
+        ["El Periódico Mediterráneo", "https://www.elperiodicomediterraneo.com/fotos/2026/08/28/sido-primera-batalla-farmear-aura-133746716.html"]
+      ]
+    },
+    {
+      "id": "zaragoza",
+      "provincia": "zaragoza",
+      "ciudad": "Zaragoza",
+      "lugar": "Plaza de la Seo",
+      "fecha": "2026-08-28",
+      "descripcion": "Convocatoria a las 18:07, en referencia al meme viral \"seis-siete\". Incluyó enfrentamientos uno contra uno y premios anunciados para los mejores participantes.",
+      "fuente": [
+        ["Zaragozala", "https://zaragozala.com/que-hacer/batalla-farmear-aura-zaragoza-28-agosto-2026/"]
+      ]
+    },
+    {
+      "id": "san-sebastian",
+      "provincia": "gipuzkoa",
+      "ciudad": "San Sebastián",
+      "lugar": "El Boulevard",
+      "fecha": "2026-08-29",
+      "descripcion": "Edición con temática \"emogoth\" organizada por la artista Joan Marie Arroyo, con decenas de espectadores siguiendo a los participantes en poses, expresiones, gestos y estilo personal.",
+      "fuente": [
+        ["Diario Vasco", "https://www.diariovasco.com/san-sebastian/batalla-farmear-aura-pleno-centro-san-sebastian-20260830161831-nt.html"]
       ]
     }
   ]
