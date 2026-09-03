@@ -194,7 +194,7 @@
     "q": "Alguien en el lobby te dice que tu skin está fea.",
     "a": [
      {
-      "t": "\"Es la default, pana\" y ganas la partida",
+      "t": "\"Es la default, mae\" y ganas la partida",
       "v": 80000,
       "r": "<b>Ganar con la default</b> es el nivel más alto."
      },
@@ -261,7 +261,7 @@
      {
       "t": "Te quejas toda la partida",
       "v": -20000,
-      "r": "Nadie quiere ese pana."
+      "r": "Nadie quiere ese mae."
      },
      {
       "t": "Inventas que no tienes internet",
@@ -691,7 +691,7 @@
     "down"
    ]
   ],
-  "pointsOutro": "Cuando el total queda debajo de cero se habla de <strong>aura negativa</strong>, y si está muy bajo, de <strong>bancarrota de aura</strong>. Es humor entre panas: nadie lleva la cuenta de verdad.",
+  "pointsOutro": "Cuando el total queda debajo de cero se habla de <strong>aura negativa</strong>, y si está muy bajo, de <strong>bancarrota de aura</strong>. Es humor entre maes: nadie lleva la cuenta de verdad.",
   "rulesIntro": "Aunque suene a chiste, el meme codifica reglas sociales bastante reconocibles. Estas son las que se repiten en casi todos los videos:",
   "rules": [
    [
