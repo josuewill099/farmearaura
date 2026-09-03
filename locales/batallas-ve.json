@@ -1,0 +1,33 @@
+{
+  "title": "Mapa de Batallas de Aura en Venezuela | Farmear Aura",
+  "desc": "Dónde pasaron las batallas de aura en Venezuela: centros comerciales y espacios donde se armó el duelo, con fecha y fuente verificada.",
+  "h1": "Batallas de Aura en Venezuela",
+  "sub": "Un registro curado de dónde pasó de verdad — con fecha y fuente. No es un calendario en vivo: es un mapa de lo que ya se farmeó.",
+  "intro": "\"Farmear aura\" saltó de TikTok a la calle: grupos de gente se juntan y compiten en posturas, caminatas y gestos para ver quién tiene más aura. Aquí vamos sumando, con fecha y fuente, los lugares donde ya pasó en Venezuela.",
+  "footerNote": "Cada entrada tiene su fuente. Si conoces una batalla que no está, <a href=\"https://farmearaura.com/legal/contacto/\">escríbenos</a>.",
+  "mapHint": "Toca un estado con marca para filtrar",
+  "mapAriaLabel": "Mapa de estados de Venezuela con batallas de aura registradas",
+  "venueCountLabel": "lugares registrados",
+  "faqHeading": "Preguntas frecuentes",
+  "faq": [
+    ["¿Qué es una batalla de aura?", "Dos personas se enfrentan con poses, miradas, pasos de baile o gestos exagerados, sin contacto físico, mientras la gente que las rodea decide quién tiene más presencia. No hay reglas fijas: gana quien logre la mejor reacción del público."],
+    ["¿Cómo se gana una batalla de aura?", "No hay puntaje técnico ni jueces oficiales en la mayoría de los casos: gana quien el público sienta que tiene más carisma, seguridad o \"aura\" en ese momento. Algunas ediciones organizadas sí usan formato de eliminación directa y hasta premios."],
+    ["¿De dónde salió esta tendencia?", "\"Farmear\" viene del inglés \"to farm\", que en los videojuegos significa acumular puntos o recursos, y \"aura\" se usa como sinónimo de carisma o presencia. La idea nació en TikTok y saltó a la calle durante 2026."],
+    ["¿Este mapa se actualiza en vivo?", "No. Es un registro curado de batallas que ya pasaron de verdad, cada una con su fecha y su fuente. No es un calendario de próximos eventos."],
+    ["¿Quién organiza estas batallas?", "Casi nunca son instituciones: la mayoría las convocan cuentas de redes sociales, creadores de contenido o grupos de amigos que se encuentran en un mismo lugar, como un centro comercial."]
+  ],
+  "venues": [
+    {
+      "id": "valencia-metropolis",
+      "provincia": "carabobo",
+      "ciudad": "Valencia",
+      "lugar": "Centro Comercial Metrópolis",
+      "fecha": "2026-08-29",
+      "descripcion": "Decenas de adolescentes llenaron los pasillos del centro comercial para una tanda de batallas de aura improvisadas: poses fijas, miradas serias, caminatas estilizadas y gestos inspirados en memes, todo juzgado por la propia multitud que se armaba alrededor de cada duelo. El video del evento terminó citado como ejemplo ilustrativo en el artículo de Wikipedia en inglés sobre \"aura farming\", y también quedó documentado en Wikimedia Commons.",
+      "fuente": [
+        ["SandyAveledo.Net", "https://sandyaveledo.net/jovenes-se-reunieron-en-el-cc-metropolis-en-una-batalla-para-farmear-aura/"],
+        ["Wikimedia Commons (video)", "https://commons.wikimedia.org/wiki/File:Batalla_de_Farmear_Aura_en_Valencia.webm"]
+      ]
+    }
+  ]
+}

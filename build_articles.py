@@ -63,6 +63,7 @@ LOCS = {
     "uy": "locales/articles-uy.json",
     "pt": "locales/articles-pt.json",
     "ec": "locales/articles-ec.json",
+    "ve": "locales/articles-ve.json",
 }
 
 # Defaults por locale para los textos de chrome (breadcrumb "home", label del
@@ -70,19 +71,21 @@ LOCS = {
 # clave si hace falta, pero la mayoria no necesita repetirlos.
 HOME_LABEL = {"br": "Início", "us": "Home", "ar": "Inicio", "mx": "Inicio", "es": "Inicio",
               "cl": "Inicio", "pe": "Inicio", "co": "Inicio", "esus": "Inicio", "uy": "Inicio",
-              "pt": "Início", "ec": "Inicio"}
+              "pt": "Início", "ec": "Inicio", "ve": "Inicio"}
 TOC_LABEL = {"br": "NESTA PÁGINA", "us": "ON THIS PAGE", "ar": "EN ESTA PÁGINA",
              "mx": "EN ESTA PÁGINA", "es": "EN ESTA PÁGINA", "cl": "EN ESTA PÁGINA",
              "pe": "EN ESTA PÁGINA", "co": "EN ESTA PÁGINA", "esus": "EN ESTA PÁGINA",
-             "uy": "EN ESTA PÁGINA", "pt": "NESTA PÁGINA", "ec": "EN ESTA PÁGINA"}
+             "uy": "EN ESTA PÁGINA", "pt": "NESTA PÁGINA", "ec": "EN ESTA PÁGINA",
+             "ve": "EN ESTA PÁGINA"}
 SOURCES_H = {"br": "Fontes", "us": "Sources", "ar": "Fuentes", "mx": "Fuentes", "es": "Fuentes",
              "cl": "Fuentes", "pe": "Fuentes", "co": "Fuentes", "esus": "Fuentes", "uy": "Fuentes",
-             "pt": "Fontes", "ec": "Fuentes"}
+             "pt": "Fontes", "ec": "Fuentes", "ve": "Fuentes"}
 FAQ_HEADING = {"br": "Perguntas frequentes", "us": "FAQ", "ar": "Preguntas frecuentes",
                "mx": "Preguntas frecuentes", "es": "Preguntas frecuentes",
                "cl": "Preguntas frecuentes", "pe": "Preguntas frecuentes",
                "co": "Preguntas frecuentes", "esus": "Preguntas frecuentes",
-               "uy": "Preguntas frecuentes", "pt": "Perguntas frequentes", "ec": "Preguntas frecuentes"}
+               "uy": "Preguntas frecuentes", "pt": "Perguntas frequentes", "ec": "Preguntas frecuentes",
+               "ve": "Preguntas frecuentes"}
 
 
 def esc(s):
@@ -860,7 +863,8 @@ COUNTER_EVENTS_EN = [
 
 COUNTER_NUMFMT = {"ar": "es-AR", "mx": "es-MX", "es": "es-ES", "br": "pt-BR",
                    "cl": "es-CL", "pe": "es-PE", "co": "es-CO", "us": "en-US",
-                   "esus": "es-US", "uy": "es-UY", "pt": "pt", "ec": "es-EC"}
+                   "esus": "es-US", "uy": "es-UY", "pt": "pt", "ec": "es-EC",
+                   "ve": "es-VE"}
 COUNTER_VOSEO_LOCS = {"ar", "uy"}
 
 

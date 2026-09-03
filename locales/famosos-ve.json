@@ -1,0 +1,170 @@
+{
+ "loc": "ve",
+ "locale": "es-VE",
+ "lang": "es",
+ "numfmt": "es-VE",
+ "base": "https://farmearaura.com",
+ "aura_inicial": 1000,
+ "k": 32,
+ "slug_votar": "ve/duelos/famosos/",
+ "slug_ranking": "ve/duelos/famosos/ranking/",
+ "home": "/ve/",
+ "nav": {
+  "calculadora": "Calculadora",
+  "votar": "Duelos",
+  "ranking": "Ranking"
+ },
+ "votar": {
+  "title": "Duelos de aura entre famosos: ¿quién tiene más aura? | Farmear Aura",
+  "description": "Danny Ocean contra Salomón Rondón, Lele Pons contra Dross. Escoge quién tiene más aura entre los famosos venezolanos y mira el ranking en vivo.",
+  "h1": "¿Quién tiene <em>más aura</em> entre los famosos?",
+  "sub": "Dos famosos venezolanos. Escoge uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "seo_h2": "Cómo se reparte la aura entre famosos",
+  "seo_p": "Los famosos empiezan con 1.000 de aura cada uno. En cada duelo el ganador le roba puntos al perdedor: ganarle a uno que va arriba roba bastante, ganarle a uno hundido roba poquito. El ranking se mueve con los votos de toda la gente que entra, no solo con los tuyos, y sí se puede terminar en aura negativa.",
+  "seo_link": "Ver el ranking completo de famosos"
+ },
+ "ranking": {
+  "title": "Ranking de aura entre famosos venezolanos | Farmear Aura",
+  "description": "El ranking de aura de los famosos venezolanos, hecho con los votos de todos. Mira quién manda y quién quedó en negativo.",
+  "h1": "Ranking de <em>aura</em> entre famosos",
+  "sub": "Se mueve con cada voto.",
+  "feed_titulo": "Últimos duelos",
+  "vacio": "Todavía no hay duelos. Estrénalo tú.",
+  "link": "Volver a votar"
+ },
+ "t": {
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "de_aura_label": "de aura",
+  "tiempo": {
+   "seg": "hace %s s",
+   "min": "hace %s min",
+   "hora": "hace %s h",
+   "dia": "hace %s d"
+  }
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso importan.",
+ "figuras": [
+  {
+   "id": "salomonrondon",
+   "emoji": "⚽",
+   "nombre": "Salomón Rondón",
+   "anios": "Fútbol",
+   "oficio": "Máximo goleador histórico de la Vinotinto"
+  },
+  {
+   "id": "yefersonsoteldo",
+   "emoji": "⚽",
+   "nombre": "Yeferson Soteldo",
+   "anios": "Fútbol",
+   "oficio": "Extremo explosivo de la Vinotinto"
+  },
+  {
+   "id": "wuilkerfarinez",
+   "emoji": "🧤",
+   "nombre": "Wuilker Fariñez",
+   "anios": "Fútbol",
+   "oficio": "Arquero titular de la selección"
+  },
+  {
+   "id": "casseresjr",
+   "emoji": "⚽",
+   "nombre": "Cristian Cásseres Jr.",
+   "anios": "Fútbol",
+   "oficio": "Mediocampista, el futuro de la Vinotinto"
+  },
+  {
+   "id": "dannyocean",
+   "emoji": "🎤",
+   "nombre": "Danny Ocean",
+   "anios": "Música",
+   "oficio": "Estrella global del pop, autor de Me Rehúso"
+  },
+  {
+   "id": "elenarose",
+   "emoji": "🎤",
+   "nombre": "Elena Rose",
+   "anios": "Música",
+   "oficio": "Compositora y cantante nominada al Latin Grammy"
+  },
+  {
+   "id": "nacho",
+   "emoji": "🎤",
+   "nombre": "Nacho",
+   "anios": "Música",
+   "oficio": "Ex Chino y Nacho, solista de pop y reguetón"
+  },
+  {
+   "id": "corinasmith",
+   "emoji": "🎤",
+   "nombre": "Corina Smith",
+   "anios": "Música",
+   "oficio": "Cantante de pop, R&B y reguetón"
+  },
+  {
+   "id": "gabyespino",
+   "emoji": "🎭",
+   "nombre": "Gaby Espino",
+   "anios": "Actuación",
+   "oficio": "Protagonista de telenovelas como Santa Diabla"
+  },
+  {
+   "id": "scarletortiz",
+   "emoji": "🎭",
+   "nombre": "Scarlet Ortiz",
+   "anios": "Actuación",
+   "oficio": "Ícono histórico de las telenovelas venezolanas"
+  },
+  {
+   "id": "luisgeronimoabreu",
+   "emoji": "🎭",
+   "nombre": "Luis Gerónimo Abreu",
+   "anios": "Actuación",
+   "oficio": "Galán histórico de telenovelas"
+  },
+  {
+   "id": "norkysbatista",
+   "emoji": "📺",
+   "nombre": "Norkys Batista",
+   "anios": "TV",
+   "oficio": "Actriz, ex reina de belleza y figura de reality shows"
+  },
+  {
+   "id": "dross",
+   "emoji": "🎬",
+   "nombre": "Dross",
+   "anios": "YouTube",
+   "oficio": "Uno de los youtubers hispanos más grandes del mundo"
+  },
+  {
+   "id": "feirlygab",
+   "emoji": "🎮",
+   "nombre": "FeirlyGab",
+   "anios": "Streaming",
+   "oficio": "Referente venezolana en Twitch y TikTok"
+  },
+  {
+   "id": "sadicaz",
+   "emoji": "🎮",
+   "nombre": "sadicaz",
+   "anios": "Streaming",
+   "oficio": "El streamer venezolano más visto en Twitch"
+  },
+  {
+   "id": "lelepons",
+   "emoji": "📱",
+   "nombre": "Lele Pons",
+   "anios": "Redes sociales",
+   "oficio": "Comediante y creadora de contenido con alcance global"
+  },
+  {
+   "id": "thethedonato",
+   "emoji": "🎮",
+   "nombre": "TheTheDonato",
+   "anios": "Streaming",
+   "oficio": "Streamer y youtuber conocido por Free Fire"
+  }
+ ]
+}

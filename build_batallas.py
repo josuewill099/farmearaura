@@ -60,6 +60,8 @@ SHORT_LABEL = {
     "san-andres": "S. Andrés", "norte-de-santander": "N. Sant.",
     "valle-del-cauca": "V. Cauca", "madre-de-dios": "M. de Dios",
     "lima-provincia": "Lima Prov.",
+    "dependencias-federales": "Dep. Fed.", "delta-amacuro": "D. Amacuro",
+    "distrito-capital": "D. Capital", "nueva-esparta": "N. Esparta",
 }
 
 LOCALES = {
@@ -141,6 +143,13 @@ LOCALES = {
         "view_w": 460, "view_h": 346,
         "lang": "en-US", "address_country": "US",
         "update_label": "Map updated:",
+    },
+    "ve": {
+        "home": "/ve/", "slug": "batallas-de-aura",
+        "geo_file": "estados-ve.geo.json",
+        "view_w": 460, "view_h": 392,
+        "lang": "es-VE", "address_country": "VE",
+        "update_label": "Mapa actualizado:",
     },
     "esus": {
         "home": "/es-us/", "slug": "batallas-de-aura",

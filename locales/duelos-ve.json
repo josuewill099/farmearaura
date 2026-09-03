@@ -1,0 +1,169 @@
+{
+ "locale": "es-VE",
+ "lang": "es",
+ "base": "https://farmearaura.com",
+ "brand": "FARMEAR AURA",
+ "aura_inicial": 1000,
+ "k": 32,
+ "nav": {
+  "votar": "Votar",
+  "ranking": "Ranking",
+  "historial": "Duelos",
+  "calculadora": "Calculadora"
+ },
+ "votar": {
+  "slug": "ve/duelos/",
+  "title": "¿Quién tiene más aura? — Duelos de aura | Farmear Aura",
+  "description": "Elige quién tiene más aura. El que gana le roba puntos de aura al otro. Vota y mira el ranking en vivo.",
+  "h1": "¿Quién tiene más aura?",
+  "sub": "Elige uno. El que gana le roba aura al otro.",
+  "cta": "Tiene más aura",
+  "otro": "Otro duelo",
+  "robo": "le robó",
+  "de_aura": "de aura a",
+  "seo_h2": "Cómo funciona el duelo de aura",
+  "seo_p": "Cada personaje arranca con 1.000 de aura. Cuando votas, el que gana le roba puntos al que pierde: si le gana a alguien con más aura, le roba más; si le gana a uno que ya estaba abajo, le roba poquito. Los puntos se actualizan al toque y son los mismos para todos los que entran, así que el ranking lo arma la gente votando. Se puede quedar en números rojos, obvio.",
+  "seo_link": "¿Quieres saber cuánta aura tienes tú? Haz el test de aura."
+ },
+ "ranking": {
+  "slug": "ve/duelos/ranking/",
+  "title": "Ranking de aura — quién tiene más aura ahora | Farmear Aura",
+  "description": "El ranking de aura en vivo, armado con los votos de todos. Mira quién va primero y quién quedó en aura negativa.",
+  "h1": "Ranking de aura",
+  "sub": "Actualizado con cada voto.",
+  "col_aura": "aura",
+  "vacio": "Todavía no hay votos. Ve a votar."
+ },
+ "historial": {
+  "slug": "ve/duelos/historial/",
+  "title": "Últimos duelos de aura | Farmear Aura",
+  "description": "Los votos más recientes, uno por uno. Quién le robó aura a quién en los últimos duelos.",
+  "h1": "Últimos duelos",
+  "sub": "Los votos más recientes, uno por uno.",
+  "vacio": "Todavía no hay duelos. Estrénalo tú."
+ },
+ "offline": "Modo local: los votos todavía no se guardan.",
+ "footer": "Es un juego. Los puntos no significan nada y por eso son importantes.",
+ "candidatos": [
+  {
+   "id": "camionetica-sin-cobre",
+   "emoji": "🚐",
+   "nombre": "El que sube a la camionetica y se da cuenta de que le faltan los reales pa'l pasaje, con toda la cola mirando"
+  },
+  {
+   "id": "camionetica-danada",
+   "emoji": "🚦",
+   "nombre": "La que va tarde a una entrevista y la camionetica decide dañarse justo en plena Cota Mil"
+  },
+  {
+   "id": "metro-dormido",
+   "emoji": "🚇",
+   "nombre": "El que se durmió en el Metro de Caracas y despertó tres estaciones después, del otro lado de la ciudad"
+  },
+  {
+   "id": "guachiman-dormido",
+   "emoji": "💤",
+   "nombre": "El guachimán que jura que solo cerró los ojos un segundo, pero el dueño del edificio ya lo agarró roncando"
+  },
+  {
+   "id": "cachito-queso",
+   "emoji": "🥐",
+   "nombre": "El que se comió un cachito completo y pasó media hora de la reunión con el queso pegado en la cara"
+  },
+  {
+   "id": "cascara-cambur",
+   "emoji": "🍌",
+   "nombre": "La que se resbaló con una cáscara de cambur en la calle, el cliché más viejo del mundo pero de verdad"
+  },
+  {
+   "id": "picante-fino",
+   "emoji": "🌶️",
+   "nombre": "El que le dijeron que el ají no picaba y ahora está sudando y llorando en la mesa frente a todos"
+  },
+  {
+   "id": "audio-mal-enviado",
+   "emoji": "🎙️",
+   "nombre": "La que manda un audio quejándose de alguien y se lo envía por error a esa misma persona"
+  },
+  {
+   "id": "bachaquero-consolas",
+   "emoji": "🎮",
+   "nombre": "El bachaquero de las consolas que revende el PlayStation nuevo al triple apenas sale la caja"
+  },
+  {
+   "id": "apagon-ranked",
+   "emoji": "⚡",
+   "nombre": "El que se le fue la luz justo cuando iba ganando la partida, a un paso de llevarse el torneo"
+  },
+  {
+   "id": "datos-agotados",
+   "emoji": "📵",
+   "nombre": "La que gasta su último dato móvil del mes viendo un video que nunca terminó de cargar"
+  },
+  {
+   "id": "celular-usado",
+   "emoji": "📱",
+   "nombre": "El chamo que le compra el celular usado a un pana y descubre que hasta tiene las fotos de la ex"
+  },
+  {
+   "id": "chuleta-brazo",
+   "emoji": "📝",
+   "nombre": "El que se copia en el examen y el profesor lo agarra con la chuleta pegada en el brazo"
+  },
+  {
+   "id": "cola-liceo",
+   "emoji": "🎒",
+   "nombre": "La que llega tarde al liceo porque la cola para entrar estaba imposible, con la excusa ya lista"
+  },
+  {
+   "id": "tarea-pupitre",
+   "emoji": "✏️",
+   "nombre": "El pana que se le olvida la tarea y trata de copiarla del pupitre de al lado antes de que llegue el profesor"
+  },
+  {
+   "id": "arrechera-nota",
+   "emoji": "😤",
+   "nombre": "El que se arrecha con la nota del examen después de haber estudiado exactamente cero"
+  },
+  {
+   "id": "colado-fiesta",
+   "emoji": "🎉",
+   "nombre": "El que llega a la fiesta sin invitación, más colado que reguetón en boda, y come el pastel primero"
+  },
+  {
+   "id": "misma-ropa",
+   "emoji": "👗",
+   "nombre": "La que se encuentra en la rumba con otra persona vestida exactamente igual y las dos quedan arrechísimas"
+  },
+  {
+   "id": "ultimo-palo",
+   "emoji": "🥃",
+   "nombre": "El que se toma el último palo de ron jurando que \"esta era la última\", y nunca lo es"
+  },
+  {
+   "id": "ubicacion-mal-enviada",
+   "emoji": "📍",
+   "nombre": "La que manda la ubicación de la fiesta al grupo equivocado y le cae gente que ni conoce"
+  },
+  {
+   "id": "cambur-empresa",
+   "emoji": "💼",
+   "nombre": "El que consigue el cambur en la empresa por recomendación y no sabe ni prender la computadora"
+  },
+  {
+   "id": "correo-jefe",
+   "emoji": "📧",
+   "nombre": "La que manda un correo lleno de errores al jefe justo cuando más quería causar buena impresión"
+  },
+  {
+   "id": "reunion-eterna",
+   "emoji": "⏰",
+   "nombre": "El que se queda pegado en una reunión que debía durar quince minutos y ya lleva dos horas"
+  },
+  {
+   "id": "tia-soltera",
+   "emoji": "👵",
+   "nombre": "La tía que llega a la reunión familiar preguntando por qué sigues soltero o soltera antes de siquiera saludar"
+  }
+ ]
+}

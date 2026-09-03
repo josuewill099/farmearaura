@@ -28,7 +28,7 @@ _ROOT = Path(__file__).parent
 
 LEGAL_OF = {"ar": "es", "mx": "es", "es": "es", "br": "pt",
             "cl": "es", "pe": "es", "co": "es", "us": "en", "esus": "es", "uy": "es",
-            "pt": "pt", "ec": "es"}
+            "pt": "pt", "ec": "es", "ve": "es"}
 _legal_cache = {}
 
 
@@ -71,6 +71,7 @@ GUIDE_URLS = {
     "uy": "https://farmearaura.com/uy/que-es-farmear-aura/",
     "pt": "https://farmearaura.com/pt/o-que-e-farmar-aura/",
     "ec": "https://farmearaura.com/ec/que-es-farmear-aura/",
+    "ve": "https://farmearaura.com/ve/que-es-farmear-aura/",
 }
 GUIDE_LABELS = {
     "ar": "¿Qué es farmear aura?", "mx": "¿Qué es farmear aura?",
@@ -79,6 +80,7 @@ GUIDE_LABELS = {
     "co": "¿Qué es farmear aura?", "us": "What is aura farming?",
     "esus": "¿Qué es el aura farming?", "uy": "¿Qué es farmear aura?",
     "pt": "O que é farmar aura?", "ec": "¿Qué es farmear aura?",
+    "ve": "¿Qué es farmear aura?",
 }
 
 # "famosos" existe en las nueve locales (cada una con sus propias figuras --
@@ -119,6 +121,9 @@ NAV_LABELS = {
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Histórico",
            "contador": "Contador", "batallas": "Mapa"},
     "ec": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
+           "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
+           "contador": "Contador", "batallas": "Batallas"},
+    "ve": {"calculadora": "Calculadora", "duelos": "Duelos", "historia": "Duelos Historia",
            "famosos": "Famosos", "ranking": "Ranking", "historial": "Historial",
            "contador": "Contador", "batallas": "Batallas"},
 }
@@ -267,6 +272,18 @@ NAV_URLS = {
         "famosos_ranking": "https://farmearaura.com/ec/duelos/famosos/ranking/",
         "contador": "https://farmearaura.com/ec/contador-de-aura/",
         "batallas": "https://farmearaura.com/ec/batallas-de-aura/",
+    },
+    "ve": {
+        "home": "https://farmearaura.com/ve/",
+        "duelos": "https://farmearaura.com/ve/duelos/",
+        "duelos_ranking": "https://farmearaura.com/ve/duelos/ranking/",
+        "duelos_historial": "https://farmearaura.com/ve/duelos/historial/",
+        "historia": "https://farmearaura.com/ve/duelos/historia/",
+        "historia_ranking": "https://farmearaura.com/ve/duelos/historia/ranking/",
+        "famosos": "https://farmearaura.com/ve/duelos/famosos/",
+        "famosos_ranking": "https://farmearaura.com/ve/duelos/famosos/ranking/",
+        "contador": "https://farmearaura.com/ve/contador-de-aura/",
+        "batallas": "https://farmearaura.com/ve/batallas-de-aura/",
     },
 }
 
