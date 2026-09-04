@@ -393,10 +393,25 @@ def build_guide(l):
         sitefooter=nav_data.site_footer_html(code, l["path"]),
     )
 
+# Fecha real de publicacion de la guia por locale, tomada del primer commit
+# que toco locales/{loc}.json (git log --format=%ad --date=short -- locales/{loc}.json
+# | tail -1) -- reemplaza el "2026-08-14" fijo que antes se repetia en las 17
+# locales sin importar cuando se publico cada una en realidad.
+GUIDE_DATES = {
+    "ar": "2026-08-17", "mx": "2026-08-17", "es": "2026-08-17", "br": "2026-08-17",
+    "cl": "2026-08-20", "pe": "2026-08-20", "co": "2026-08-20",
+    "us": "2026-08-21", "esus": "2026-08-21",
+    "uy": "2026-08-29", "pt": "2026-08-30", "ec": "2026-08-30",
+    "ve": "2026-09-03", "cr": "2026-09-03", "gt": "2026-09-03",
+    "bo": "2026-09-03", "pr": "2026-09-03",
+}
+
 def schema(l):
     g = l["guide"]
+    code = l["_code"]
     base = f'{DOMAIN}{l["path"]}'
     page = f'{base}{g["slug"]}/'
+    pub_date = GUIDE_DATES.get(code, "2026-08-14")
     return {"@context": "https://schema.org", "@graph": [
         {"@type": "WebSite", "@id": f"{DOMAIN}/#website", "url": DOMAIN + "/",
          "name": "farmearaura.com", "inLanguage": l["lang"]},
@@ -426,7 +441,8 @@ def schema(l):
         {"@type": "Article", "@id": f"{page}#article",
          "isPartOf": {"@id": f"{DOMAIN}/#website"}, "headline": g["h1"],
          "description": g["desc"], "inLanguage": l["lang"],
-         "datePublished": "2026-08-14", "dateModified": "2026-08-14",
+         "image": f"{DOMAIN}/og-{code}.jpg",
+         "datePublished": pub_date, "dateModified": pub_date,
          "author": {"@type": "Organization", "name": "farmearaura.com", "url": DOMAIN + "/"},
          "publisher": {"@type": "Organization", "name": "farmearaura.com", "url": DOMAIN + "/"},
          "about": {"@id": f"{page}#termino"},
