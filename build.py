@@ -465,7 +465,14 @@ def check_seasonal():
                       f"(event {ev['event_date']}, status={ev.get('status', '?')}) -> {ev['url']}")
 
 # ----------------------------------------------------------------- crawl files
-def build_sitemap():
+def build_sitemaps():
+    # Un sitemap por locale (nav_data.sitemap_filename) en vez de un unico
+    # dist/sitemap.xml compartido -- cada builder de aca en mas le suma sus
+    # propias URLs (duelos, historia, famosos, articulos, batallas) solo al
+    # archivo de la locale que corresponde. Este scaffold inicial (URLs de
+    # app/guide/legal) es lo primero que se escribe, y tiene que existir
+    # antes de que corra ningun otro builder -- por eso build.py va primero
+    # en el pipeline.
     X = 'xmlns:xhtml="http://www.w3.org/1999/xhtml"'
     def alts(kind):
         def u(l):
@@ -474,13 +481,13 @@ def build_sitemap():
                 for c in ORDER]
         rows.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{u(DEFAULT)}"/>')
         return "\n".join(rows)
-    urls = []
+    urls_by_loc = {c: [] for c in ORDER}
     for kind in ("app", "guide"):
         for c in ORDER:
             l = LOC[c]
-            loc = DOMAIN + l["path"] if kind == "app" else f'{DOMAIN}{l["path"]}{l["guide"]["slug"]}/'
-            urls.append(f'  <url>\n    <loc>{loc}</loc>\n{alts(kind)}\n'
-                        f'    <lastmod>{TODAY}</lastmod>\n  </url>')
+            loc_url = DOMAIN + l["path"] if kind == "app" else f'{DOMAIN}{l["path"]}{l["guide"]["slug"]}/'
+            urls_by_loc[c].append(f'  <url>\n    <loc>{loc_url}</loc>\n{alts(kind)}\n'
+                                   f'    <lastmod>{TODAY}</lastmod>\n  </url>')
     for pair in LEGAL_PAIRS:
         # privacidad/cookies se sirven con robots noindex (ver build_legal()),
         # asi que no van al sitemap: enviarlas daba "Submitted URL marked
@@ -492,12 +499,19 @@ def build_sitemap():
             f'    <xhtml:link rel="alternate" hreflang="{lk}" href="{u}"/>'
             for lk, u in legal_urls.items())
         alt += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{legal_urls["es"]}"/>'
-        for u in legal_urls.values():
-            urls.append(f'  <url>\n    <loc>{u}</loc>\n{alt}\n'
-                        f'    <lastmod>{TODAY}</lastmod>\n  </url>')
-    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+        # Cada URL legal vive en un solo lugar (p.ej. /legal/privacidad/),
+        # no una por locale -- va al sitemap de la locale "dueña" de ese
+        # idioma legal (mismo mapeo que GENERIC: ar/es, br/pt, us/en).
+        for lk, u in legal_urls.items():
+            urls_by_loc[GENERIC[lk]].append(
+                f'  <url>\n    <loc>{u}</loc>\n{alt}\n'
+                f'    <lastmod>{TODAY}</lastmod>\n  </url>')
+    return {
+        c: ('<?xml version="1.0" encoding="UTF-8"?>\n'
             f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" {X}>\n'
-            + "\n".join(urls) + "\n</urlset>\n")
+            + "\n".join(u) + "\n</urlset>\n")
+        for c, u in urls_by_loc.items()
+    }
 
 # /api/* son los endpoints de voto/estado que duelos.js/historia.js/famosos.js
 # piden por fetch() en cada pagina interactiva -- puro JSON de puntajes en
@@ -507,6 +521,12 @@ def build_sitemap():
 # renderiza cada pagina de duelo con Chrome headless para su "segunda ola"
 # de indexacion, lo que dispara esos fetch() y contaba como rastreo de
 # JSON en vez de HTML.
+# Una linea "Sitemap:" por locale -- el protocolo de sitemaps permite
+# declarar varias, asi que no hace falta un sitemap-index.xml aparte
+# (ar siempre primero: es sitemap.xml, el que ya estaba en Search Console).
+SITEMAP_LINES = "\n".join(
+    f"Sitemap: {DOMAIN}/{nav_data.sitemap_filename(c)}" for c in ORDER)
+
 ROBOTS = f"""User-agent: *
 Allow: /
 Disallow: /api/
@@ -527,7 +547,7 @@ User-agent: Google-Extended
 Allow: /
 Disallow: /api/
 
-Sitemap: {DOMAIN}/sitemap.xml
+{SITEMAP_LINES}
 """
 
 SECURITY_TXT = """Contact: mailto:hola@farmearaura.com
@@ -646,7 +666,8 @@ def main():
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html, "utf-8")
         print(f"  legal/{langkey} -> {LEGAL[langkey]['base']}*")
-    (DIST / "sitemap.xml").write_text(build_sitemap(), "utf-8")
+    for _c, _xml in build_sitemaps().items():
+        (DIST / nav_data.sitemap_filename(_c)).write_text(_xml, "utf-8")
     (DIST / "robots.txt").write_text(ROBOTS, "utf-8")
     (DIST / "ads.txt").write_text(ADS_TXT, "utf-8")
     (DIST / "_redirects").write_text(REDIRECTS, "utf-8")

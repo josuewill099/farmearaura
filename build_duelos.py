@@ -7,11 +7,11 @@ dentro de dist/ sin tocar build.py.
     python3 build_duelos.py     # agrega /duelos/, /mx/duelos/, /es/duelos/, ...
 
 Tambien escribe seed.sql (para cargar los candidatos en D1, con su columna
-loc) y suma las URLs a dist/sitemap.xml si ese archivo existe.
+loc) y suma las URLs de cada locale a su propio sitemap (nav_data.
+append_sitemap_urls), si ese archivo ya existe.
 """
 
 import json
-import re
 from datetime import date
 from pathlib import Path
 
@@ -262,7 +262,7 @@ def build():
     js = (SRC / "duelos.js").read_text(encoding="utf-8")
 
     alt = {tipo: alternates(datos, tipo) for tipo in ("votar", "ranking", "historial")}
-    urls = []
+    urls_by_loc = {loc: [] for loc in LOCS}
 
     for loc in LOCS:
         L = datos[loc]
@@ -337,7 +337,7 @@ def build():
             out = DIST / page["slug"] / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(html, encoding="utf-8")
-            urls.append(canonical)
+            urls_by_loc[loc].append(canonical)
             print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))
 
     # seed.sql -- todas las locales juntas, con loc por fila
@@ -353,19 +353,11 @@ def build():
     )
     print("  -> seed.sql (%d candidatos)" % len(filas))
 
-    # sitemap
-    sm = DIST / "sitemap.xml"
-    if sm.exists():
-        xml = sm.read_text(encoding="utf-8")
-        nuevas = [u for u in urls if "<loc>%s</loc>" % u not in xml]
-        if nuevas:
-            bloque = "".join(
-                "<url><loc>%s</loc><lastmod>%s</lastmod>"
-                "<changefreq>daily</changefreq></url>\n" % (u, TODAY) for u in nuevas
-            )
-            xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
-            sm.write_text(xml, encoding="utf-8")
-            print("  -> sitemap.xml (+%d URLs)" % len(nuevas))
+    # sitemap -- una entrada por locale, no un archivo compartido
+    for loc, urls in urls_by_loc.items():
+        n = nav_data.append_sitemap_urls(DIST, loc, urls, "daily", TODAY)
+        if n:
+            print("  -> %s (+%d URLs)" % (nav_data.sitemap_filename(loc), n))
 
 
 if __name__ == "__main__":

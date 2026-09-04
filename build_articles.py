@@ -981,7 +981,7 @@ def build():
     # daba tuteo por error a uy cuando se sumo (uy tambien es voseante).
     VOSEO_LOCS = {"ar", "uy"}
 
-    urls = []
+    urls_by_loc = {loc: [] for loc in data}
     for loc, d in data.items():
         L, lang, home, base = d["L"], d["lang"], d["home"], d["base"]
         articles_by_slug = {a["slug"]: a for a in L["articles"]}
@@ -1097,21 +1097,14 @@ def build():
             out = DIST / home.strip("/") / art["slug"] / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(html, encoding="utf-8")
-            urls.append(canonical)
+            urls_by_loc[loc].append(canonical)
             print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))
 
-    # sitemap
-    sm = DIST / "sitemap.xml"
-    if sm.exists():
-        xml = sm.read_text(encoding="utf-8")
-        nuevas = [u for u in urls if "<loc>%s</loc>" % u not in xml]
-        if nuevas:
-            bloque = "".join(
-                "<url><loc>%s</loc><lastmod>%s</lastmod>"
-                "<changefreq>monthly</changefreq></url>\n" % (u, TODAY) for u in nuevas)
-            xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
-            sm.write_text(xml, encoding="utf-8")
-            print("  -> sitemap.xml (+%d URLs)" % len(nuevas))
+    # sitemap -- una entrada por locale, no un archivo compartido
+    for loc, urls in urls_by_loc.items():
+        n = nav_data.append_sitemap_urls(DIST, loc, urls, "monthly", TODAY)
+        if n:
+            print("  -> %s (+%d URLs)" % (nav_data.sitemap_filename(loc), n))
 
 
 if __name__ == "__main__":

@@ -23,7 +23,6 @@ otro pais.
 """
 
 import json
-import re
 from datetime import date
 from pathlib import Path
 
@@ -362,15 +361,9 @@ def build_one(loc, cfg):
     out.write_text(html, encoding="utf-8")
     print("  ->", out.relative_to(ROOT), "(%.1f KB)" % (len(html) / 1024))
 
-    sm = DIST / "sitemap.xml"
-    if sm.exists():
-        xml = sm.read_text(encoding="utf-8")
-        if f"<loc>{canonical}</loc>" not in xml:
-            bloque = (f"<url><loc>{canonical}</loc><lastmod>{TODAY}</lastmod>"
-                      f"<changefreq>weekly</changefreq></url>\n")
-            xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
-            sm.write_text(xml, encoding="utf-8")
-            print("  -> sitemap.xml (+1 URL)")
+    n = nav_data.append_sitemap_urls(DIST, loc, [canonical], "weekly", TODAY)
+    if n:
+        print("  -> %s (+1 URL)" % nav_data.sitemap_filename(loc))
 
 
 def build():

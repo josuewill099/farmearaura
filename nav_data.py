@@ -18,9 +18,17 @@ site_footer_html(loc, home) arma el <footer> de 4 columnas (Marca / Enlaces
 en todos los tipos de pagina. El texto de la columna de marca es
 BRAND_BLURB, generico por idioma (no por locale) -- una sola frase de
 marketing repetida en todo el sitio, igual en cada tipo de pagina.
+
+sitemap_filename(loc) y append_sitemap_urls(...) viven aca (no duplicadas
+en cada builder) porque el sitemap paso de ser un unico dist/sitemap.xml
+compartido a un archivo por locale -- build.py escribe el scaffold de cada
+uno (con las URLs de app/guide/legal), y build_duelos.py/build_historia.py/
+build_famosos.py/build_articles.py/build_batallas.py le suman sus propias
+URLs al archivo de la locale que corresponda, nunca a uno ajeno.
 """
 
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -38,6 +46,38 @@ def _legal(langkey):
         _legal_cache[langkey] = json.loads(
             (_ROOT / "locales" / ("legal-%s.json" % langkey)).read_text(encoding="utf-8"))
     return _legal_cache[langkey]
+
+
+def sitemap_filename(loc):
+    # ar es la locale por defecto (vive en /), asi que se queda con el
+    # nombre "de siempre" -- todas las demas van a su propio sitemap-{loc}.xml.
+    return "sitemap.xml" if loc == "ar" else "sitemap-%s.xml" % loc
+
+
+def append_sitemap_urls(dist_dir, loc, urls, changefreq, today):
+    """Suma `urls` (URLs absolutas, todas de la locale `loc`) al sitemap de
+    esa locale, sin duplicar las que ya estan. dist_dir es el Path a dist/;
+    el archivo lo crea build.py como scaffold antes de que corra cualquier
+    otro builder, asi que si todavia no existe simplemente no hace nada
+    (mismo comportamiento que el viejo `if sm.exists()` que tenia cada
+    builder por separado). Devuelve cuantas URLs nuevas sumo, para el log."""
+    if not urls:
+        return 0
+    sm = dist_dir / sitemap_filename(loc)
+    if not sm.exists():
+        return 0
+    xml = sm.read_text(encoding="utf-8")
+    nuevas = [u for u in urls if "<loc>%s</loc>" % u not in xml]
+    if not nuevas:
+        return 0
+    bloque = "".join(
+        "<url><loc>%s</loc><lastmod>%s</lastmod>"
+        "<changefreq>%s</changefreq></url>\n" % (u, today, changefreq)
+        for u in nuevas
+    )
+    xml = re.sub(r"</urlset>", bloque + "</urlset>", xml, count=1)
+    sm.write_text(xml, encoding="utf-8")
+    return len(nuevas)
 
 
 FACEBOOK_URL = "https://www.facebook.com/farmearauracom"
